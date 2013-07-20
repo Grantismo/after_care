@@ -27,7 +27,7 @@
 
 -(void) bindToUITableViewCell:(UITableViewCell *)cell{
     WebsiteCell* websiteCell = (WebsiteCell*) cell;
-    websiteCell.titleLabel.text = self.title;
+    websiteCell.titleLabel.text = self.title.uppercaseString;
     websiteCell.descriptionLabel.text = self.descript;
     websiteCell.imageView.image =   [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.imageUrl]]];
 }

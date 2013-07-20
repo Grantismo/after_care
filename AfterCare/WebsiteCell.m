@@ -18,6 +18,12 @@
     return self;
 }
 
+- (void) awakeFromNib{
+    self.titleLabel.font = [UIFont fontWithName:@"OpenSans-Bold" size:self.textLabel.font.pointSize];
+    self.descriptionLabel.font = [UIFont fontWithName:@"OpenSans" size:self.textLabel.font.pointSize];
+
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
