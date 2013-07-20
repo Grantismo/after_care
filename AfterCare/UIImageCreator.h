@@ -12,6 +12,6 @@
 
 +(UIImage*) onePixelImageForColor:(UIColor*) color;
 
-+(UIImage*) hexagonImageWithSize:(CGSize) size borderWidth:(float) borderWidth andColor:(UIColor*) color;
++(UIImage*) hexagonImageWithSize:(CGSize) size borderWidth:(float) borderWidth borderColorOffset:(float) borderColorOffset andColor:(UIColor*) color;
 
 @end

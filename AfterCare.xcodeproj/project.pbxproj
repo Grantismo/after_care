@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E023BB4179B171500DC8FC5 /* Hexagonbutton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E023BB3179B171500DC8FC5 /* Hexagonbutton.m */; };
+		1E023BBA179B212400DC8FC5 /* UIView+FrameManipulators.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E023BB9179B212400DC8FC5 /* UIView+FrameManipulators.m */; };
 		1EAB7C9D1799DBBD00F3DBAA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB7C9C1799DBBD00F3DBAA /* UIKit.framework */; };
 		1EAB7C9F1799DBBD00F3DBAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB7C9E1799DBBD00F3DBAA /* Foundation.framework */; };
 		1EAB7CA11799DBBD00F3DBAA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB7CA01799DBBD00F3DBAA /* CoreGraphics.framework */; };
@@ -35,6 +37,10 @@
 		0FAF4D8C179B016B00028E7A /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		0FAF4D8D179B016B00028E7A /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		0FAF4D8E179B016B00028E7A /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		1E023BB2179B171500DC8FC5 /* Hexagonbutton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hexagonbutton.h; sourceTree = "<group>"; };
+		1E023BB3179B171500DC8FC5 /* Hexagonbutton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hexagonbutton.m; sourceTree = "<group>"; };
+		1E023BB8179B212400DC8FC5 /* UIView+FrameManipulators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameManipulators.h"; sourceTree = "<group>"; };
+		1E023BB9179B212400DC8FC5 /* UIView+FrameManipulators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameManipulators.m"; sourceTree = "<group>"; };
 		1EAB7C991799DBBD00F3DBAA /* AfterCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AfterCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EAB7C9C1799DBBD00F3DBAA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1EAB7C9E1799DBBD00F3DBAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -90,6 +96,24 @@
 			path = "open-sans";
 			sourceTree = "<group>";
 		};
+		1E023BB1179B161C00DC8FC5 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E023BB2179B171500DC8FC5 /* Hexagonbutton.h */,
+				1E023BB3179B171500DC8FC5 /* Hexagonbutton.m */,
+			);
+			name = "Custom Views";
+			sourceTree = "<group>";
+		};
+		1E023BB7179B20FC00DC8FC5 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				1E023BB8179B212400DC8FC5 /* UIView+FrameManipulators.h */,
+				1E023BB9179B212400DC8FC5 /* UIView+FrameManipulators.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		1EAB7C901799DBBD00F3DBAA = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +152,8 @@
 				1EAB7CB51799DBBD00F3DBAA /* ViewController.m */,
 				1EAB7CB71799DBBD00F3DBAA /* ViewController_iPhone.xib */,
 				1EAB7CBA1799DBBD00F3DBAA /* ViewController_iPad.xib */,
+				1E023BB1179B161C00DC8FC5 /* Custom Views */,
+				1E023BB7179B20FC00DC8FC5 /* Categories */,
 				1EAB7CC21799DCB700F3DBAA /* UIImageCreator.h */,
 				1EAB7CC31799DCB700F3DBAA /* UIImageCreator.m */,
 				1EAB7CA31799DBBD00F3DBAA /* Supporting Files */,
@@ -206,17 +232,6 @@
 				1EAB7CB31799DBBD00F3DBAA /* Default-568h@2x.png in Resources */,
 				1EAB7CB91799DBBD00F3DBAA /* ViewController_iPhone.xib in Resources */,
 				1EAB7CBC1799DBBD00F3DBAA /* ViewController_iPad.xib in Resources */,
-				0FAF4D8F179B016B00028E7A /* Apache License.txt in Resources */,
-				0FAF4D90179B016B00028E7A /* OpenSans-Bold.ttf in Resources */,
-				0FAF4D91179B016B00028E7A /* OpenSans-BoldItalic.ttf in Resources */,
-				0FAF4D92179B016B00028E7A /* OpenSans-ExtraBold.ttf in Resources */,
-				0FAF4D93179B016B00028E7A /* OpenSans-ExtraBoldItalic.ttf in Resources */,
-				0FAF4D94179B016B00028E7A /* OpenSans-Italic.ttf in Resources */,
-				0FAF4D95179B016B00028E7A /* OpenSans-Light.ttf in Resources */,
-				0FAF4D96179B016B00028E7A /* OpenSans-LightItalic.ttf in Resources */,
-				0FAF4D97179B016B00028E7A /* OpenSans-Regular.ttf in Resources */,
-				0FAF4D98179B016B00028E7A /* OpenSans-Semibold.ttf in Resources */,
-				0FAF4D99179B016B00028E7A /* OpenSans-SemiboldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +246,8 @@
 				1EAB7CAD1799DBBD00F3DBAA /* AppDelegate.m in Sources */,
 				1EAB7CB61799DBBD00F3DBAA /* ViewController.m in Sources */,
 				1EAB7CC41799DCB700F3DBAA /* UIImageCreator.m in Sources */,
+				1E023BB4179B171500DC8FC5 /* Hexagonbutton.m in Sources */,
+				1E023BBA179B212400DC8FC5 /* UIView+FrameManipulators.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
