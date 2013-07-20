@@ -115,6 +115,30 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		0FAF4DAC179B161900028E7A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0FAF4DAE179B162600028E7A /* Images */,
+				0FAF4DAD179B162000028E7A /* Fonts */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		0FAF4DAD179B162000028E7A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0FAF4D83179B016B00028E7A /* open-sans */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		0FAF4DAE179B162600028E7A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		1EAB7C901799DBBD00F3DBAA = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +268,9 @@
 				1EAB7CB31799DBBD00F3DBAA /* Default-568h@2x.png in Resources */,
 				1EAB7CB91799DBBD00F3DBAA /* ViewController_iPhone.xib in Resources */,
 				1EAB7CBC1799DBBD00F3DBAA /* ViewController_iPad.xib in Resources */,
+				0FAF4DAA179B15D600028E7A /* ResourcesViewController.xib in Resources */,
+				0FAF4DBA179B2B2A00028E7A /* WebViewController.xib in Resources */,
+				0FAF4DC7179B31E200028E7A /* PhoneNumberCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
