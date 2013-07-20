@@ -285,8 +285,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SuicidePrevention/AfterCare-Prefix.pch";
-				INFOPLIST_FILE = "SuicidePrevention/AfterCare-Info.plist";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AfterCare/AfterCare-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/AfterCare/AfterCare-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = AfterCare;
 				WRAPPER_EXTENSION = app;
@@ -297,8 +297,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SuicidePrevention/AfterCare-Prefix.pch";
-				INFOPLIST_FILE = "SuicidePrevention/AfterCare-Info.plist";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AfterCare/AfterCare-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/AfterCare/AfterCare-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = AfterCare;
 				WRAPPER_EXTENSION = app;

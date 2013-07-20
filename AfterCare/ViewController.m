@@ -12,6 +12,8 @@
 
 @interface ViewController (){
     IBOutlet UIScrollView* scrollView;
+    
+    IBOutlet UIImageView* imageView;
 }
 
 @end
@@ -22,6 +24,8 @@
 {
     [super viewDidLoad];
 	
+    imageView.image = [UIImageCreator hexagonImageWithSize:imageView.frame.size borderWidth:10.0 andColor:[UIColor redColor]];
+    
 }
 
 - (void)didReceiveMemoryWarning
