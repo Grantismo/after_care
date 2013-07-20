@@ -64,7 +64,7 @@
 		1EAB7C901799DBBD00F3DBAA = {
 			isa = PBXGroup;
 			children = (
-				1EAB7CA21799DBBD00F3DBAA /* SuicidePrevention */,
+				1EAB7CA21799DBBD00F3DBAA /* AfterCare */,
 				1EAB7C9B1799DBBD00F3DBAA /* Frameworks */,
 				1EAB7C9A1799DBBD00F3DBAA /* Products */,
 			);
@@ -89,7 +89,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1EAB7CA21799DBBD00F3DBAA /* SuicidePrevention */ = {
+		1EAB7CA21799DBBD00F3DBAA /* AfterCare */ = {
 			isa = PBXGroup;
 			children = (
 				1EAB7CAB1799DBBD00F3DBAA /* AppDelegate.h */,
@@ -102,7 +102,7 @@
 				1EAB7CC31799DCB700F3DBAA /* UIImageCreator.m */,
 				1EAB7CA31799DBBD00F3DBAA /* Supporting Files */,
 			);
-			path = SuicidePrevention;
+			path = AfterCare;
 			sourceTree = "<group>";
 		};
 		1EAB7CA31799DBBD00F3DBAA /* Supporting Files */ = {
