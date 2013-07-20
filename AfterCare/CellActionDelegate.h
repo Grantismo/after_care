@@ -1,5 +1,5 @@
 //
-//  CellDataSource.h
+//  CellActionDelegate.h
 //  AfterCare
 //
 //  Created by Grant Warman on 7/20/13.
@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol CellDataSource <NSObject>
--(UITableViewCell*) UITableViewCell;
--(void) onDidSelectCell;
+@protocol CellActionDelegate <NSObject>
+- (void) pushUIViewController: (UIViewController *) controller;
 @end

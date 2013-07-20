@@ -7,6 +7,9 @@
 //
 
 #import "ResourcesViewController.h"
+#import "Website.h"
+#import "CellFactory.h"
+#import "PhoneNumber.h"
 
 @interface ResourcesViewController ()
 
@@ -26,12 +29,35 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.title = @"Resources";
+        
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Website" inManagedObjectContext:self.managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entity];
+    
+    self.dataSources = [self.managedObjectContext executeFetchRequest:request error:nil];
+    for(id<CellDataProvider> source in self.dataSources){
+        source.delegate = self;
+    }
+    
+//    PhoneNumber* number = [[PhoneNumber alloc] init];
+//    number.name = @"Grant";
+//    number.number = @"2486223655";
+//    
+//    [sources addObject:reddit];
+//    [sources addObject:number];
 
+    
+ //   self.dataSources = sources;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (id<CellDataProvider>) cellDataSourceForRowAtIndexPath:(NSIndexPath*) indexPath{
+    return [self.dataSources objectAtIndex:indexPath.row];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,31 +68,24 @@
 
 #pragma mark - Table view data source
 
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return [[self cellDataSourceForRowAtIndexPath:indexPath] cellHeight];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return self.dataSources.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
-    
-    // Configure the cell...
-    
-    return cell;
+   
+    return [CellFactory UITableViewCellFromDataSource:[self cellDataSourceForRowAtIndexPath:indexPath] tableView:tableView];
 }
 
 /*
@@ -112,13 +131,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    [[self cellDataSourceForRowAtIndexPath:indexPath] onDidSelectCell];
 }
+
+- (void) pushUIViewController: (UIViewController *)controller{
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
 
 @end

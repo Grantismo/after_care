@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CellActionDelegate.h"
 
-@interface ResourcesViewController : UITableViewController
+@interface ResourcesViewController : UITableViewController<CellActionDelegate>
 
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NSArray* dataSources;
 @end

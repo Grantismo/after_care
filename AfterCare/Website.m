@@ -7,15 +7,30 @@
 //
 
 #import "Website.h"
+#import "WebsiteCell.h"
+#import "WebViewController.h"
+#import "CellFactory.h"
 
 @implementation Website
 
--(UITableViewCell*) UITableViewCell{
-    return 0;
+@dynamic url;
+@dynamic title;
+@dynamic descript;
+@dynamic imageUrl;
+
+
+-(void)onDidSelectCell{
+    WebViewController* controller = [[WebViewController alloc] init];
+    controller.url = [NSURL URLWithString:self.url];
+    [self.delegate pushUIViewController:controller];
 }
 
--(void) onDidSelectCell{
-    
+-(void) bindToUITableViewCell:(UITableViewCell *)cell{
+    WebsiteCell* websiteCell = (WebsiteCell*) cell;
+    websiteCell.titleLabel.text = self.title;
+    websiteCell.descriptionLabel.text = self.descript;
+    websiteCell.imageView.image =   [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.imageUrl]]];
 }
+
 
 @end

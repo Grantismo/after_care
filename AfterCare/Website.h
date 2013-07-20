@@ -7,13 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CellDataSource.h"
+#import "CellDataProvider.h"
+#import "CellDataProviderBase.h"
 
-@interface Website : NSObject<CellDataSource>
+@interface Website : CellDataProviderBase <CellDataProvider>
 
-@property (nonatomic, strong) NSURL* url;
+@property (nonatomic, strong) NSString* url;
 @property (nonatomic, strong) NSString* title;
-@property (nonatomic, strong) NSString* description;
-@property (nonatomic, strong) NSURL* imageUrl;
+@property (nonatomic, strong) NSString* descript;
+@property (nonatomic, strong) NSString* imageUrl;
+
 
 @end
