@@ -19,6 +19,8 @@
 		1EAB7CB61799DBBD00F3DBAA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB7CB51799DBBD00F3DBAA /* ViewController.m */; };
 		1EAB7CB91799DBBD00F3DBAA /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB7CB71799DBBD00F3DBAA /* ViewController_iPhone.xib */; };
 		1EAB7CBC1799DBBD00F3DBAA /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB7CBA1799DBBD00F3DBAA /* ViewController_iPad.xib */; };
+		1EAB7CC41799DCB700F3DBAA /* UIImageCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB7CC31799DCB700F3DBAA /* UIImageCreator.m */; };
+		1EAB7CC61799DD2C00F3DBAA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB7CC51799DD2C00F3DBAA /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,9 @@
 		1EAB7CB51799DBBD00F3DBAA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1EAB7CB81799DBBD00F3DBAA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		1EAB7CBB1799DBBD00F3DBAA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		1EAB7CC21799DCB700F3DBAA /* UIImageCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageCreator.h; sourceTree = "<group>"; };
+		1EAB7CC31799DCB700F3DBAA /* UIImageCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageCreator.m; sourceTree = "<group>"; };
+		1EAB7CC51799DD2C00F3DBAA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EAB7CC61799DD2C00F3DBAA /* QuartzCore.framework in Frameworks */,
 				1EAB7C9D1799DBBD00F3DBAA /* UIKit.framework in Frameworks */,
 				1EAB7C9F1799DBBD00F3DBAA /* Foundation.framework in Frameworks */,
 				1EAB7CA11799DBBD00F3DBAA /* CoreGraphics.framework in Frameworks */,
@@ -75,6 +81,7 @@
 		1EAB7C9B1799DBBD00F3DBAA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1EAB7CC51799DD2C00F3DBAA /* QuartzCore.framework */,
 				1EAB7C9C1799DBBD00F3DBAA /* UIKit.framework */,
 				1EAB7C9E1799DBBD00F3DBAA /* Foundation.framework */,
 				1EAB7CA01799DBBD00F3DBAA /* CoreGraphics.framework */,
@@ -91,6 +98,8 @@
 				1EAB7CB51799DBBD00F3DBAA /* ViewController.m */,
 				1EAB7CB71799DBBD00F3DBAA /* ViewController_iPhone.xib */,
 				1EAB7CBA1799DBBD00F3DBAA /* ViewController_iPad.xib */,
+				1EAB7CC21799DCB700F3DBAA /* UIImageCreator.h */,
+				1EAB7CC31799DCB700F3DBAA /* UIImageCreator.m */,
 				1EAB7CA31799DBBD00F3DBAA /* Supporting Files */,
 			);
 			path = SuicidePrevention;
@@ -180,6 +189,7 @@
 				1EAB7CA91799DBBD00F3DBAA /* main.m in Sources */,
 				1EAB7CAD1799DBBD00F3DBAA /* AppDelegate.m in Sources */,
 				1EAB7CB61799DBBD00F3DBAA /* ViewController.m in Sources */,
+				1EAB7CC41799DCB700F3DBAA /* UIImageCreator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +287,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SuicidePrevention/SuicidePrevention-Prefix.pch";
 				INFOPLIST_FILE = "SuicidePrevention/SuicidePrevention-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -288,6 +299,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SuicidePrevention/SuicidePrevention-Prefix.pch";
 				INFOPLIST_FILE = "SuicidePrevention/SuicidePrevention-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -312,6 +324,7 @@
 				1EAB7CC11799DBBD00F3DBAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
