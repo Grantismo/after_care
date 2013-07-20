@@ -7,17 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0FAF4D8F179B016B00028E7A /* Apache License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4D84179B016B00028E7A /* Apache License.txt */; };
-		0FAF4D90179B016B00028E7A /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4D85179B016B00028E7A /* OpenSans-Bold.ttf */; };
-		0FAF4D91179B016B00028E7A /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4D86179B016B00028E7A /* OpenSans-BoldItalic.ttf */; };
-		0FAF4D92179B016B00028E7A /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4D87179B016B00028E7A /* OpenSans-ExtraBold.ttf */; };
-		0FAF4D93179B016B00028E7A /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4D88179B016B00028E7A /* OpenSans-ExtraBoldItalic.ttf */; };
-		0FAF4D94179B016B00028E7A /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4D89179B016B00028E7A /* OpenSans-Italic.ttf */; };
-		0FAF4D95179B016B00028E7A /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4D8A179B016B00028E7A /* OpenSans-Light.ttf */; };
-		0FAF4D96179B016B00028E7A /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4D8B179B016B00028E7A /* OpenSans-LightItalic.ttf */; };
-		0FAF4D97179B016B00028E7A /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4D8C179B016B00028E7A /* OpenSans-Regular.ttf */; };
-		0FAF4D98179B016B00028E7A /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4D8D179B016B00028E7A /* OpenSans-Semibold.ttf */; };
-		0FAF4D99179B016B00028E7A /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4D8E179B016B00028E7A /* OpenSans-SemiboldItalic.ttf */; };
 		1EAB7C9D1799DBBD00F3DBAA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB7C9C1799DBBD00F3DBAA /* UIKit.framework */; };
 		1EAB7C9F1799DBBD00F3DBAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB7C9E1799DBBD00F3DBAA /* Foundation.framework */; };
 		1EAB7CA11799DBBD00F3DBAA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB7CA01799DBBD00F3DBAA /* CoreGraphics.framework */; };
