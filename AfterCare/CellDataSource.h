@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-@protocol CellDataSource <NSObject>
-- (void) onDidSelectCell;
-- (UITableViewCell *) UITableViewCell;
 
+@protocol CellDataSource <NSObject>
+-(UITableViewCell*) UITableViewCell;
+-(void) onDidSelectCell;
 @end

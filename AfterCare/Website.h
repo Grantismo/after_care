@@ -11,4 +11,9 @@
 
 @interface Website : NSObject<CellDataSource>
 
+@property (nonatomic, strong) NSURL* url;
+@property (nonatomic, strong) NSString* title;
+@property (nonatomic, strong) NSString* description;
+@property (nonatomic, strong) NSURL* imageUrl;
+
 @end

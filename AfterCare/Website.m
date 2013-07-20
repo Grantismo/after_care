@@ -10,8 +10,8 @@
 
 @implementation Website
 
--(id)UITableViewCell{
-    return;
+-(UITableViewCell*) UITableViewCell{
+    return 0;
 }
 
 -(void) onDidSelectCell{
