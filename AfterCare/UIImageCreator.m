@@ -10,6 +10,12 @@
 
 #import <QuartzCore/QuartzCore.h>
 
+@interface UIImageCreator ()
+
++(UIImage*) createImageFromContext:(CGContextRef) context;
+
+@end
+
 @implementation UIImageCreator
 
 +(UIImage*) onePixelImageForColor:(UIColor *)color{
@@ -20,43 +26,46 @@
     CGContextSetFillColorWithColor(context, color.CGColor);
     CGContextFillRect(context, CGRectMake(0.0, 0.0, 1.0, 1.0));
     
+    return [self createImageFromContext:context];
+}
+
++(UIImage*) hexagonImageWithSize:(CGSize) size borderWidth:(float)borderWidth andColor:(UIColor *)color{
+    UIGraphicsBeginImageContext(size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    // Drawing with a white stroke color
+    CGContextSetRGBStrokeColor(context, 0.0, 1.0, 0.0, 1.0);
+    
+    const float* colors = CGColorGetComponents(color.CGColor);
+    CGContextSetRGBFillColor(context, colors[0], colors[1], colors[2], colors[3]);
+    
+    // Draw them with a 2.0 stroke width so they are a bit more visible.
+    CGContextSetLineWidth(context, borderWidth);
+    
+    
+    CGContextMoveToPoint(context, size.width * .25, borderWidth);
+    
+    CGContextAddLineToPoint(context, size.width * .75, borderWidth);
+    CGContextAddLineToPoint(context, size.width - borderWidth, size.height * .5);
+    CGContextAddLineToPoint(context, size.width * .75, size.height - borderWidth);
+    CGContextAddLineToPoint(context, size.width * .25, size.height - borderWidth);
+    CGContextAddLineToPoint(context, borderWidth, size.height * .5);
+    
+    CGContextClosePath(context);
+    
+    // Now draw the hexagon with the current drawing mode.
+    CGContextDrawPath(context, kCGPathFillStroke);
+    
+    return [self createImageFromContext:context];
+}
+
++(UIImage*) createImageFromContext:(CGContextRef)context{
     CGImageRef imgRef = CGBitmapContextCreateImage(context);
     UIImage* img = [UIImage imageWithCGImage:imgRef];
     CGImageRelease(imgRef);
     CGContextRelease(context);
     
     return img;
-}
-
-+(UIImage*) hexagonImageWithSize:(CGSize) size andColor:(UIColor*) color{
-  
-}
-
--(void)drawInContext:(CGContextRef)context
-{
-    // Drawing with a white stroke color
-    CGContextSetRGBStrokeColor(context, 1.0, 1.0, 1.0, 1.0);
-    // Drawing with a blue fill color
-    CGContextSetRGBFillColor(context, 0.0, 0.0, 1.0, 1.0);
-    // Draw them with a 2.0 stroke width so they are a bit more visible.
-    CGContextSetLineWidth(context, 2.0);
-    
-    CGPoint center;
-    
-    // Now add the hexagon to the current path
-    center = CGPointMake(210.0, 90.0);
-    CGContextMoveToPoint(context, center.x, center.y + 60.0);
-    for(int i = 1; i < 6; ++i)
-    {
-        CGFloat x = 60.0 * sinf(i * 2.0 * M_PI / 6.0);
-        CGFloat y = 60.0 * cosf(i * 2.0 * M_PI / 6.0);
-        CGContextAddLineToPoint(context, center.x + x, center.y + y);
-    }
-    // And close the subpath.
-    CGContextClosePath(context);
-    
-    // Now draw the star & hexagon with the current drawing mode.
-    CGContextDrawPath(context, self.drawingMode);
 }
 
 @end

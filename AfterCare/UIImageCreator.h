@@ -6,12 +6,12 @@
 //  Copyright (c) 2013 TabSprint. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface UIImageCreator : NSObject
 
 +(UIImage*) onePixelImageForColor:(UIColor*) color;
 
-+(UIImage*) hexagonImageWithSize:(CGSize) size andColor:(UIColor*) color;
++(UIImage*) hexagonImageWithSize:(CGSize) size borderWidth:(float) borderWidth andColor:(UIColor*) color;
 
 @end
