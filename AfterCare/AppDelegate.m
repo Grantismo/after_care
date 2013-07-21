@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 
 #import "ViewController.h"
-#import "ResourcesViewController.h"
+//#import "ResourcesViewController.h"
 #import <CoreData/CoreData.h>
 #import "Website.h"
 
@@ -17,7 +17,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+<<<<<<< HEAD
 
+=======
+//    Website *reddit = (Website*)[NSEntityDescription
+//                                    insertNewObjectForEntityForName:@"Website"
+//                                    inManagedObjectContext:self.managedObjectContext];
+//    reddit.url = @"http://www.reddit.com";
+//    reddit.imageUrl = @"http://icdn.pro/images/en/r/e/reddit-icone-7704-96.png";
+//    reddit.title = @"REDDIT";
+//    reddit.descript = @"A wonderful place full of roses and unicorns :}";
+//    
+//    [self.managedObjectContext save:nil];
+>>>>>>> 33bfc1a5a10e69a6f19adc803514aef03672d571
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
@@ -26,10 +38,10 @@
     } else {
         self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
     }
-    ResourcesViewController* controller = [[ResourcesViewController alloc] init];
-    controller.managedObjectContext = self.managedObjectContext;
-    
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:controller];
+//    ResourcesViewController* controller = [[ResourcesViewController alloc] init];
+//    controller.managedObjectContext = self.managedObjectContext;
+//    
+    self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
 }
