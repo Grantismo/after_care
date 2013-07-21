@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1E023BB4179B171500DC8FC5 /* Hexagonbutton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E023BB3179B171500DC8FC5 /* Hexagonbutton.m */; };
 		1E023BBA179B212400DC8FC5 /* UIView+FrameManipulators.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E023BB9179B212400DC8FC5 /* UIView+FrameManipulators.m */; };
+		1E023BBC179C583300DC8FC5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E023BBB179C583300DC8FC5 /* CoreData.framework */; };
 		1EAB7C9D1799DBBD00F3DBAA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB7C9C1799DBBD00F3DBAA /* UIKit.framework */; };
 		1EAB7C9F1799DBBD00F3DBAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB7C9E1799DBBD00F3DBAA /* Foundation.framework */; };
 		1EAB7CA11799DBBD00F3DBAA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB7CA01799DBBD00F3DBAA /* CoreGraphics.framework */; };
@@ -41,6 +42,7 @@
 		1E023BB3179B171500DC8FC5 /* Hexagonbutton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hexagonbutton.m; sourceTree = "<group>"; };
 		1E023BB8179B212400DC8FC5 /* UIView+FrameManipulators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameManipulators.h"; sourceTree = "<group>"; };
 		1E023BB9179B212400DC8FC5 /* UIView+FrameManipulators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameManipulators.m"; sourceTree = "<group>"; };
+		1E023BBB179C583300DC8FC5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1EAB7C991799DBBD00F3DBAA /* AfterCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AfterCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EAB7C9C1799DBBD00F3DBAA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1EAB7C9E1799DBBD00F3DBAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -68,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FAF4DCC179B3DBD00028E7A /* CoreData.framework in Frameworks */,
+				1E023BBC179C583300DC8FC5 /* CoreData.framework in Frameworks */,
 				1EAB7CC61799DD2C00F3DBAA /* QuartzCore.framework in Frameworks */,
 				1EAB7C9D1799DBBD00F3DBAA /* UIKit.framework in Frameworks */,
 				1EAB7C9F1799DBBD00F3DBAA /* Foundation.framework in Frameworks */,
@@ -97,24 +99,6 @@
 			path = "open-sans";
 			sourceTree = "<group>";
 		};
-		1E023BB1179B161C00DC8FC5 /* Custom Views */ = {
-			isa = PBXGroup;
-			children = (
-				1E023BB2179B171500DC8FC5 /* Hexagonbutton.h */,
-				1E023BB3179B171500DC8FC5 /* Hexagonbutton.m */,
-			);
-			name = "Custom Views";
-			sourceTree = "<group>";
-		};
-		1E023BB7179B20FC00DC8FC5 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				1E023BB8179B212400DC8FC5 /* UIView+FrameManipulators.h */,
-				1E023BB9179B212400DC8FC5 /* UIView+FrameManipulators.m */,
-			);
-			name = Categories;
-			sourceTree = "<group>";
-		};
 		0FAF4DAC179B161900028E7A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +123,24 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		1E023BB1179B161C00DC8FC5 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E023BB2179B171500DC8FC5 /* Hexagonbutton.h */,
+				1E023BB3179B171500DC8FC5 /* Hexagonbutton.m */,
+			);
+			name = "Custom Views";
+			sourceTree = "<group>";
+		};
+		1E023BB7179B20FC00DC8FC5 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				1E023BB8179B212400DC8FC5 /* UIView+FrameManipulators.h */,
+				1E023BB9179B212400DC8FC5 /* UIView+FrameManipulators.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		1EAB7C901799DBBD00F3DBAA = {
 			isa = PBXGroup;
 			children = (
@@ -160,11 +162,11 @@
 		1EAB7C9B1799DBBD00F3DBAA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0FAF4DCB179B3DBD00028E7A /* CoreData.framework */,
 				1EAB7CC51799DD2C00F3DBAA /* QuartzCore.framework */,
 				1EAB7C9C1799DBBD00F3DBAA /* UIKit.framework */,
 				1EAB7C9E1799DBBD00F3DBAA /* Foundation.framework */,
 				1EAB7CA01799DBBD00F3DBAA /* CoreGraphics.framework */,
+				1E023BBB179C583300DC8FC5 /* CoreData.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -173,8 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				0FAF4DAC179B161900028E7A /* Assets */,
-				0FAF4DAB179B15EF00028E7A /* CustomCells */,
-				0FAF4DA4179B11EC00028E7A /* CellDataProviders */,
 				1EAB7CAB1799DBBD00F3DBAA /* AppDelegate.h */,
 				1EAB7CAC1799DBBD00F3DBAA /* AppDelegate.m */,
 				1EAB7CB41799DBBD00F3DBAA /* ViewController.h */,
@@ -185,12 +185,6 @@
 				1E023BB7179B20FC00DC8FC5 /* Categories */,
 				1EAB7CC21799DCB700F3DBAA /* UIImageCreator.h */,
 				1EAB7CC31799DCB700F3DBAA /* UIImageCreator.m */,
-				0FAF4DA6179B15D600028E7A /* ResourcesViewController.h */,
-				0FAF4DA7179B15D600028E7A /* ResourcesViewController.m */,
-				0FAF4DA8179B15D600028E7A /* ResourcesViewController.xib */,
-				0FAF4DB6179B2B2A00028E7A /* WebViewController.h */,
-				0FAF4DB7179B2B2A00028E7A /* WebViewController.m */,
-				0FAF4DB8179B2B2A00028E7A /* WebViewController.xib */,
 				1EAB7CA31799DBBD00F3DBAA /* Supporting Files */,
 			);
 			path = AfterCare;
@@ -261,16 +255,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FAF4DCF179B570D00028E7A /* WebsiteCell.xib in Resources */,
 				1EAB7CA71799DBBD00F3DBAA /* InfoPlist.strings in Resources */,
 				1EAB7CAF1799DBBD00F3DBAA /* Default.png in Resources */,
 				1EAB7CB11799DBBD00F3DBAA /* Default@2x.png in Resources */,
 				1EAB7CB31799DBBD00F3DBAA /* Default-568h@2x.png in Resources */,
 				1EAB7CB91799DBBD00F3DBAA /* ViewController_iPhone.xib in Resources */,
 				1EAB7CBC1799DBBD00F3DBAA /* ViewController_iPad.xib in Resources */,
-				0FAF4DAA179B15D600028E7A /* ResourcesViewController.xib in Resources */,
-				0FAF4DBA179B2B2A00028E7A /* WebViewController.xib in Resources */,
-				0FAF4DC7179B31E200028E7A /* PhoneNumberCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,9 +419,7 @@
 		0FAF4DC8179B3A4D00028E7A /* AfterCareDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				0FAF4DC9179B3A4D00028E7A /* AfterCareDataModel.xcdatamodel */,
 			);
-			currentVersion = 0FAF4DC9179B3A4D00028E7A /* AfterCareDataModel.xcdatamodel */;
 			path = AfterCareDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

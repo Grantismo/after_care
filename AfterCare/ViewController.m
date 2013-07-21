@@ -67,7 +67,9 @@
     
     [hexagon setTitle:buttonTitle forState:UIControlStateNormal];
     
-    float xPos = (columnIndex * hexagonWidth * .75);
+    float centeringX = (self.view.bounds.size.width - ((hexagonWidth * numColumns) * 1.5)) / 2.0;
+    
+    float xPos = (columnIndex * hexagonWidth * .75) - centeringX;
 
     int row = [hexagonButtons count] / numColumns;
     int rowNum = ([hexagonButtons count] % numColumns);
