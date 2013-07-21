@@ -7,6 +7,8 @@
 //
 
 #import "NewResourceViewController.h"
+#import <CoreData/CoreData.h>
+#import "Website.h"
 
 @interface NewResourceViewController ()
 
@@ -14,18 +16,19 @@
 
 @implementation NewResourceViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSMutableArray* mutableFields = [[NSMutableArray alloc] init];
+    [mutableFields addObject:@"url"];
+    [mutableFields addObject:@"title"];
+    [mutableFields addObject:@"descript"];
+
+    self.fields = mutableFields;
+    self.website = (Website*)[NSEntityDescription
+                                  insertNewObjectForEntityForName:@"Website"
+                                  inManagedObjectContext:self.managedObjectContext];
+    
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -44,16 +47,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return self.fields.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -62,21 +61,35 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        cell.textLabel.text = [self fieldAtIndexPath:indexPath];
+        
+        UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(110, 10, 185, 30)];
+        textField.adjustsFontSizeToFitWidth = YES;
+        textField.textColor = [UIColor blackColor];
+        [textField setEnabled:YES];
+        textField.tag = indexPath.row;
+        textField.delegate = self;
+        [cell.contentView addSubview:textField];
+
     }
-    
-    // Configure the cell...
     
     return cell;
 }
 
-/*
+- (NSString*) fieldAtIndexPath: (NSIndexPath *) indexPath{
+    return [self.fields objectAtIndex:indexPath.row];
+}
+
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
+
 
 /*
 // Override to support editing the table view.
@@ -119,6 +132,22 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+-(IBAction)cancel:(id)sender{
+    [self.managedObjectContext deleteObject:self.website];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(IBAction)done:(id)sender{
+    
+    [self.managedObjectContext save:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    NSString* field = [self.fields objectAtIndex:textField.tag];
+    [self.website setValue:textField.text forKey:field];
 }
 
 @end

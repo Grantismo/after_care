@@ -21,6 +21,8 @@
 		0FAF4DCA179B3A4D00028E7A /* AfterCareDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DC8179B3A4D00028E7A /* AfterCareDataModel.xcdatamodeld */; };
 		0FAF4DCC179B3DBD00028E7A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FAF4DCB179B3DBD00028E7A /* CoreData.framework */; };
 		0FAF4DCF179B570D00028E7A /* WebsiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4DCD179B56E700028E7A /* WebsiteCell.xib */; };
+		0FAF4DD8179C6F6D00028E7A /* NewResourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DD6179C6F6C00028E7A /* NewResourceViewController.m */; };
+		0FAF4DD9179C6F6D00028E7A /* NewResourceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4DD7179C6F6D00028E7A /* NewResourceViewController.xib */; };
 		1EAB7C9D1799DBBD00F3DBAA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB7C9C1799DBBD00F3DBAA /* UIKit.framework */; };
 		1EAB7C9F1799DBBD00F3DBAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB7C9E1799DBBD00F3DBAA /* Foundation.framework */; };
 		1EAB7CA11799DBBD00F3DBAA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB7CA01799DBBD00F3DBAA /* CoreGraphics.framework */; };
@@ -73,6 +75,9 @@
 		0FAF4DC9179B3A4D00028E7A /* AfterCareDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AfterCareDataModel.xcdatamodel; sourceTree = "<group>"; };
 		0FAF4DCB179B3DBD00028E7A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0FAF4DCD179B56E700028E7A /* WebsiteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebsiteCell.xib; sourceTree = "<group>"; };
+		0FAF4DD5179C6F6C00028E7A /* NewResourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewResourceViewController.h; sourceTree = "<group>"; };
+		0FAF4DD6179C6F6C00028E7A /* NewResourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewResourceViewController.m; sourceTree = "<group>"; };
+		0FAF4DD7179C6F6D00028E7A /* NewResourceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewResourceViewController.xib; sourceTree = "<group>"; };
 		1EAB7C991799DBBD00F3DBAA /* AfterCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AfterCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EAB7C9C1799DBBD00F3DBAA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1EAB7C9E1799DBBD00F3DBAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -233,6 +238,9 @@
 				0FAF4DB6179B2B2A00028E7A /* WebViewController.h */,
 				0FAF4DB7179B2B2A00028E7A /* WebViewController.m */,
 				0FAF4DB8179B2B2A00028E7A /* WebViewController.xib */,
+				0FAF4DD5179C6F6C00028E7A /* NewResourceViewController.h */,
+				0FAF4DD6179C6F6C00028E7A /* NewResourceViewController.m */,
+				0FAF4DD7179C6F6D00028E7A /* NewResourceViewController.xib */,
 				1EAB7CA31799DBBD00F3DBAA /* Supporting Files */,
 			);
 			path = AfterCare;
@@ -313,6 +321,7 @@
 				0FAF4DAA179B15D600028E7A /* ResourcesViewController.xib in Resources */,
 				0FAF4DBA179B2B2A00028E7A /* WebViewController.xib in Resources */,
 				0FAF4DC7179B31E200028E7A /* PhoneNumberCell.xib in Resources */,
+				0FAF4DD9179C6F6D00028E7A /* NewResourceViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +345,7 @@
 				0FAF4DC2179B2F1D00028E7A /* CellDataProviderBase.m in Sources */,
 				0FAF4DC5179B31CF00028E7A /* PhoneNumberCell.m in Sources */,
 				0FAF4DCA179B3A4D00028E7A /* AfterCareDataModel.xcdatamodeld in Sources */,
+				0FAF4DD8179C6F6D00028E7A /* NewResourceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
