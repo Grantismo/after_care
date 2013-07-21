@@ -28,6 +28,8 @@
     UIPanGestureRecognizer* panGR;
     
     float hexSpeed;
+    float hexagonWidth;
+    float hexagonHeight;
 }
 
 -(void) addHexagonWithColor:(UIColor*) color title:(NSString*) buttonTitle;
@@ -44,8 +46,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self){
         hexagonButtons = [[NSMutableArray alloc] init];
-        
         numColumns = 4;
+    
+
     }
     return self;
 }
@@ -53,6 +56,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    hexagonWidth = (self.view.bounds.size.width / (numColumns - 2));
+    hexagonHeight = hexagonWidth * HEXAGON_WIDTH_HEIGHT_RATIO;
     
     panGR = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(scrollHexagons:)];
     [self.view addGestureRecognizer:panGR];
@@ -102,10 +107,6 @@
 #pragma mark private methods
 
 -(void) addHexagonWithColor:(UIColor *)color title:(NSString *)buttonTitle{
-    float hexagonWidth = (self.view.bounds.size.width / (numColumns - 2))
-    ;
-    
-    float hexagonHeight = hexagonWidth * HEXAGON_WIDTH_HEIGHT_RATIO;
     
     Hexagonbutton* hexagon = [[Hexagonbutton alloc] initWithFrame:CGRectMake(0.0, 0.0, hexagonWidth - HEX_PADDING, 0.0)];
     hexagon.color = color;
@@ -181,29 +182,24 @@
 }
 
 -(void) checkButtonForPlacement:(Hexagonbutton *)button{
-    float hexagonWidth = (self.view.bounds.size.width / (numColumns - 2));
-    float hexagonHeight = hexagonWidth * HEXAGON_WIDTH_HEIGHT_RATIO;
-    
     if (button.frame.origin.y + button.frame.size.height < 0.0 && hexSpeed > 0) {
-        int aboveRowIndex = [hexagonButtons indexOfObject:button] - numColumns;
-        
-        int index = aboveRowIndex % [hexagonButtons count];
-        if (aboveRowIndex < 0) index += numColumns;
-        
-        Hexagonbutton* aboveButton = [hexagonButtons objectAtIndex:index];
-        
-        button.center = CGPointMake(button.center.x, aboveButton.center.y + hexagonHeight);
+        [self updateButtonCenter:button above:YES];
     }
+    
     if (button.frame.origin.y > self.view.bounds.size.height && hexSpeed < 0) {
-        int aboveRowIndex = [hexagonButtons indexOfObject:button] + numColumns;
-        
-        int index = aboveRowIndex % [hexagonButtons count];
-        if (aboveRowIndex < 0) index += numColumns;
-        
-        Hexagonbutton* belowButton = [hexagonButtons objectAtIndex:index];
-        
-        button.center = CGPointMake(button.center.x, belowButton.center.y - hexagonHeight);
+        [self updateButtonCenter:button above:NO];
     }
+}
+
+-(void) updateButtonCenter: (Hexagonbutton*) button above: (BOOL) above{
+    int dir = above ? 1 : -1;
+    int referenceIndex = [hexagonButtons indexOfObject:button] - (dir * numColumns);
+    
+    int index = referenceIndex % [hexagonButtons count];
+    if (referenceIndex < 0) index += numColumns;
+    
+    Hexagonbutton* referenceButton = [hexagonButtons objectAtIndex:index];
+    button.center = CGPointMake(button.center.x, referenceButton.center.y + (dir * hexagonHeight));
 }
 
 @end
