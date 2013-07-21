@@ -154,25 +154,30 @@
             }
             
             startY = [panGestureRecognizer locationInView:self.view].y;
+            NSLog(@"started");
             break;
         }
         case UIGestureRecognizerStateChanged:{
           
-            float offset = [panGestureRecognizer locationInView:self.view].y - startY;
+            hexSpeed = -([panGestureRecognizer locationInView:self.view].y - startY);
+            NSLog(@"%f", hexSpeed);
 
             for (Hexagonbutton* button in hexagonButtons) {
-                button.center = CGPointMake(button.center.x, button.scrollBeginY + offset);
-                [self checkButtonForPlacement:button];
+                button.center = CGPointMake(button.center.x, button.scrollBeginY - hexSpeed);
+                //[self checkButtonForPlacement:button];
             }
 
             break;
         }
         case UIGestureRecognizerStateEnded:{
-            displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(automaticallyScrollHexagons:)];
-            [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
-            
             hexSpeed = -([panGestureRecognizer velocityInView:self.view].y / 60.0);
+            
+            if (!displayLink){
+                displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(automaticallyScrollHexagons:)];
+                [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+            }
            
+            NSLog(@"ended");
             break;
         }
         default:
@@ -180,11 +185,11 @@
     }
 }
 
--(void) checkButtonForPlacement:(Hexagonbutton *)button{
-    float hexagonWidth = (self.view.bounds.size.width / (numColumns - 2));
-    float hexagonHeight = hexagonWidth * HEXAGON_WIDTH_HEIGHT_RATIO;
-    
+-(void) checkButtonForPlacement:(Hexagonbutton *)button{    
     if (button.frame.origin.y + button.frame.size.height < 0.0 && hexSpeed > 0) {
+        float hexagonWidth = (self.view.bounds.size.width / (numColumns - 2));
+        float hexagonHeight = hexagonWidth * HEXAGON_WIDTH_HEIGHT_RATIO;
+        
         int aboveRowIndex = [hexagonButtons indexOfObject:button] - numColumns;
         
         int index = aboveRowIndex % [hexagonButtons count];
@@ -195,6 +200,9 @@
         button.center = CGPointMake(button.center.x, aboveButton.center.y + hexagonHeight);
     }
     if (button.frame.origin.y > self.view.bounds.size.height && hexSpeed < 0) {
+        float hexagonWidth = (self.view.bounds.size.width / (numColumns - 2));
+        float hexagonHeight = hexagonWidth * HEXAGON_WIDTH_HEIGHT_RATIO;
+        
         int aboveRowIndex = [hexagonButtons indexOfObject:button] + numColumns;
         
         int index = aboveRowIndex % [hexagonButtons count];
