@@ -28,6 +28,8 @@
     UIPanGestureRecognizer* panGR;
     
     float hexSpeed;
+    float hexagonWidth;
+    float hexagonHeight;
 }
 
 -(void) addHexagonWithColor:(UIColor*) color title:(NSString*) buttonTitle;
@@ -44,8 +46,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self){
         hexagonButtons = [[NSMutableArray alloc] init];
-        
         numColumns = 4;
+    
+
     }
     return self;
 }
@@ -53,6 +56,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    hexagonWidth = (self.view.bounds.size.width / (numColumns - 2));
+    hexagonHeight = hexagonWidth * HEXAGON_WIDTH_HEIGHT_RATIO;
     
     panGR = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(scrollHexagons:)];
     [self.view addGestureRecognizer:panGR];
@@ -102,10 +107,6 @@
 #pragma mark private methods
 
 -(void) addHexagonWithColor:(UIColor *)color title:(NSString *)buttonTitle{
-    float hexagonWidth = (self.view.bounds.size.width / (numColumns - 2))
-    ;
-    
-    float hexagonHeight = hexagonWidth * HEXAGON_WIDTH_HEIGHT_RATIO;
     
     Hexagonbutton* hexagon = [[Hexagonbutton alloc] initWithFrame:CGRectMake(0.0, 0.0, hexagonWidth - HEX_PADDING, 0.0)];
     hexagon.color = color;
@@ -199,6 +200,7 @@
         
         button.center = CGPointMake(button.center.x, aboveButton.center.y + hexagonHeight);
     }
+    
     if (button.frame.origin.y > self.view.bounds.size.height && hexSpeed < 0) {
         float hexagonWidth = (self.view.bounds.size.width / (numColumns - 2));
         float hexagonHeight = hexagonWidth * HEXAGON_WIDTH_HEIGHT_RATIO;
@@ -212,6 +214,17 @@
         
         button.center = CGPointMake(button.center.x, belowButton.center.y - hexagonHeight);
     }
+}
+
+-(void) updateButtonCenter: (Hexagonbutton*) button above: (BOOL) above{
+    int dir = above ? 1 : -1;
+    int referenceIndex = [hexagonButtons indexOfObject:button] - (dir * numColumns);
+    
+    int index = referenceIndex % [hexagonButtons count];
+    if (referenceIndex < 0) index += numColumns;
+    
+    Hexagonbutton* referenceButton = [hexagonButtons objectAtIndex:index];
+    button.center = CGPointMake(button.center.x, referenceButton.center.y + (dir * hexagonHeight));
 }
 
 @end

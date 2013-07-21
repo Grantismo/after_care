@@ -10,6 +10,7 @@
 #import "Website.h"
 #import "CellFactory.h"
 #import "PhoneNumber.h"
+#import "NewResourceViewController.h"
 
 @interface ResourcesViewController ()
 
@@ -30,15 +31,11 @@
 {
     [super viewDidLoad];
     self.navigationItem.title = @"Resources";
+    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addResource:)];
+ 
+    self.navigationItem.rightBarButtonItem = button;
         
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Website" inManagedObjectContext:self.managedObjectContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:entity];
-    
-    self.dataSources = [self.managedObjectContext executeFetchRequest:request error:nil];
-    for(id<CellDataProvider> source in self.dataSources){
-        source.delegate = self;
-    }
+    [self fetchResources];
     
 //    PhoneNumber* number = [[PhoneNumber alloc] init];
 //    number.name = @"Grant";
@@ -56,6 +53,16 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(void) fetchResources{
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Website" inManagedObjectContext:self.managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entity];
+    
+    self.dataSources = [self.managedObjectContext executeFetchRequest:request error:nil];
+    for(id<CellDataProvider> source in self.dataSources){
+        source.delegate = self;
+    }
+}
 - (id<CellDataProvider>) cellDataSourceForRowAtIndexPath:(NSIndexPath*) indexPath{
     return [self.dataSources objectAtIndex:indexPath.row];
 }
@@ -138,5 +145,14 @@
     [self.navigationController pushViewController:controller animated:YES];
 }
 
+-(IBAction) addResource:(id)sender{
+    NewResourceViewController *controller = [[NewResourceViewController alloc] init];
+    controller.managedObjectContext = self.managedObjectContext;
+    
+    [self presentViewController:controller animated:YES completion:^{
+        [self fetchResources];
+        [self.tableView reloadData];
+    }];
+}
 
 @end

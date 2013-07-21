@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FAF4DE2179C953E00028E7A /* Website.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDB179C953E00028E7A /* Website.m */; };
+		0FAF4DE3179C953E00028E7A /* WebsiteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDD179C953E00028E7A /* WebsiteCell.m */; };
+		0FAF4DE4179C953E00028E7A /* WebsiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDE179C953E00028E7A /* WebsiteCell.xib */; };
+		0FAF4DE5179C953E00028E7A /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DE0179C953E00028E7A /* WebViewController.m */; };
+		0FAF4DE6179C953E00028E7A /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4DE1179C953E00028E7A /* WebViewController.xib */; };
+		0FAF4DED179C959700028E7A /* PhoneNumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DEB179C959700028E7A /* PhoneNumberCell.m */; };
+		0FAF4DEE179C959700028E7A /* PhoneNumberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4DEC179C959700028E7A /* PhoneNumberCell.xib */; };
+		0FAF4DF5179C95A400028E7A /* CellDataProviderBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DF2179C95A400028E7A /* CellDataProviderBase.m */; };
+		0FAF4DF6179C95A400028E7A /* CellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DF4179C95A400028E7A /* CellFactory.m */; };
+		0FAF4DF9179C95B200028E7A /* PhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DF8179C95B200028E7A /* PhoneNumber.m */; };
+		0FAF4E00179C95C500028E7A /* NewResourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DFB179C95C500028E7A /* NewResourceViewController.m */; };
+		0FAF4E01179C95C500028E7A /* NewResourceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4DFC179C95C500028E7A /* NewResourceViewController.xib */; };
+		0FAF4E02179C95C500028E7A /* ResourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DFE179C95C500028E7A /* ResourcesViewController.m */; };
+		0FAF4E03179C95C500028E7A /* ResourcesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4DFF179C95C500028E7A /* ResourcesViewController.xib */; };
 		1E023BB4179B171500DC8FC5 /* Hexagonbutton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E023BB3179B171500DC8FC5 /* Hexagonbutton.m */; };
 		1E023BBA179B212400DC8FC5 /* UIView+FrameManipulators.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E023BB9179B212400DC8FC5 /* UIView+FrameManipulators.m */; };
 		1E023BBC179C583300DC8FC5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E023BBB179C583300DC8FC5 /* CoreData.framework */; };
@@ -38,6 +52,31 @@
 		0FAF4D8C179B016B00028E7A /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		0FAF4D8D179B016B00028E7A /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		0FAF4D8E179B016B00028E7A /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		0FAF4DDA179C953D00028E7A /* Website.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Website.h; sourceTree = "<group>"; };
+		0FAF4DDB179C953E00028E7A /* Website.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Website.m; sourceTree = "<group>"; };
+		0FAF4DDC179C953E00028E7A /* WebsiteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebsiteCell.h; sourceTree = "<group>"; };
+		0FAF4DDD179C953E00028E7A /* WebsiteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebsiteCell.m; sourceTree = "<group>"; };
+		0FAF4DDE179C953E00028E7A /* WebsiteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebsiteCell.xib; sourceTree = "<group>"; };
+		0FAF4DDF179C953E00028E7A /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		0FAF4DE0179C953E00028E7A /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		0FAF4DE1179C953E00028E7A /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		0FAF4DEA179C959700028E7A /* PhoneNumberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneNumberCell.h; sourceTree = "<group>"; };
+		0FAF4DEB179C959700028E7A /* PhoneNumberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneNumberCell.m; sourceTree = "<group>"; };
+		0FAF4DEC179C959700028E7A /* PhoneNumberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhoneNumberCell.xib; sourceTree = "<group>"; };
+		0FAF4DEF179C95A400028E7A /* CellActionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellActionDelegate.h; sourceTree = "<group>"; };
+		0FAF4DF0179C95A400028E7A /* CellDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellDataProvider.h; sourceTree = "<group>"; };
+		0FAF4DF1179C95A400028E7A /* CellDataProviderBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellDataProviderBase.h; sourceTree = "<group>"; };
+		0FAF4DF2179C95A400028E7A /* CellDataProviderBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellDataProviderBase.m; sourceTree = "<group>"; };
+		0FAF4DF3179C95A400028E7A /* CellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellFactory.h; sourceTree = "<group>"; };
+		0FAF4DF4179C95A400028E7A /* CellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellFactory.m; sourceTree = "<group>"; };
+		0FAF4DF7179C95B200028E7A /* PhoneNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneNumber.h; sourceTree = "<group>"; };
+		0FAF4DF8179C95B200028E7A /* PhoneNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneNumber.m; sourceTree = "<group>"; };
+		0FAF4DFA179C95C500028E7A /* NewResourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewResourceViewController.h; sourceTree = "<group>"; };
+		0FAF4DFB179C95C500028E7A /* NewResourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewResourceViewController.m; sourceTree = "<group>"; };
+		0FAF4DFC179C95C500028E7A /* NewResourceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewResourceViewController.xib; sourceTree = "<group>"; };
+		0FAF4DFD179C95C500028E7A /* ResourcesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourcesViewController.h; sourceTree = "<group>"; };
+		0FAF4DFE179C95C500028E7A /* ResourcesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourcesViewController.m; sourceTree = "<group>"; };
+		0FAF4DFF179C95C500028E7A /* ResourcesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResourcesViewController.xib; sourceTree = "<group>"; };
 		1E023BB2179B171500DC8FC5 /* Hexagonbutton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hexagonbutton.h; sourceTree = "<group>"; };
 		1E023BB3179B171500DC8FC5 /* Hexagonbutton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hexagonbutton.m; sourceTree = "<group>"; };
 		1E023BB8179B212400DC8FC5 /* UIView+FrameManipulators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameManipulators.h"; sourceTree = "<group>"; };
@@ -123,6 +162,54 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		0FAF4DE7179C954400028E7A /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				0FAF4DF7179C95B200028E7A /* PhoneNumber.h */,
+				0FAF4DF8179C95B200028E7A /* PhoneNumber.m */,
+				0FAF4DEF179C95A400028E7A /* CellActionDelegate.h */,
+				0FAF4DF0179C95A400028E7A /* CellDataProvider.h */,
+				0FAF4DF1179C95A400028E7A /* CellDataProviderBase.h */,
+				0FAF4DF2179C95A400028E7A /* CellDataProviderBase.m */,
+				0FAF4DF3179C95A400028E7A /* CellFactory.h */,
+				0FAF4DF4179C95A400028E7A /* CellFactory.m */,
+			);
+			name = Providers;
+			sourceTree = "<group>";
+		};
+		0FAF4DE8179C955000028E7A /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0FAF4DEA179C959700028E7A /* PhoneNumberCell.h */,
+				0FAF4DEB179C959700028E7A /* PhoneNumberCell.m */,
+				0FAF4DEC179C959700028E7A /* PhoneNumberCell.xib */,
+				0FAF4DDC179C953E00028E7A /* WebsiteCell.h */,
+				0FAF4DDD179C953E00028E7A /* WebsiteCell.m */,
+				0FAF4DDE179C953E00028E7A /* WebsiteCell.xib */,
+			);
+			name = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		0FAF4DE9179C955C00028E7A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0FAF4DFA179C95C500028E7A /* NewResourceViewController.h */,
+				0FAF4DFB179C95C500028E7A /* NewResourceViewController.m */,
+				0FAF4DFC179C95C500028E7A /* NewResourceViewController.xib */,
+				0FAF4DFD179C95C500028E7A /* ResourcesViewController.h */,
+				0FAF4DFE179C95C500028E7A /* ResourcesViewController.m */,
+				0FAF4DFF179C95C500028E7A /* ResourcesViewController.xib */,
+				0FAF4DDF179C953E00028E7A /* WebViewController.h */,
+				0FAF4DE0179C953E00028E7A /* WebViewController.m */,
+				0FAF4DE1179C953E00028E7A /* WebViewController.xib */,
+				1EAB7CB41799DBBD00F3DBAA /* ViewController.h */,
+				1EAB7CB51799DBBD00F3DBAA /* ViewController.m */,
+				1EAB7CB71799DBBD00F3DBAA /* ViewController_iPhone.xib */,
+				1EAB7CBA1799DBBD00F3DBAA /* ViewController_iPad.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		1E023BB1179B161C00DC8FC5 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,13 +261,14 @@
 		1EAB7CA21799DBBD00F3DBAA /* AfterCare */ = {
 			isa = PBXGroup;
 			children = (
+				0FAF4DE9179C955C00028E7A /* Controllers */,
+				0FAF4DE8179C955000028E7A /* Custom Cells */,
+				0FAF4DE7179C954400028E7A /* Providers */,
+				0FAF4DDA179C953D00028E7A /* Website.h */,
+				0FAF4DDB179C953E00028E7A /* Website.m */,
 				0FAF4DAC179B161900028E7A /* Assets */,
 				1EAB7CAB1799DBBD00F3DBAA /* AppDelegate.h */,
 				1EAB7CAC1799DBBD00F3DBAA /* AppDelegate.m */,
-				1EAB7CB41799DBBD00F3DBAA /* ViewController.h */,
-				1EAB7CB51799DBBD00F3DBAA /* ViewController.m */,
-				1EAB7CB71799DBBD00F3DBAA /* ViewController_iPhone.xib */,
-				1EAB7CBA1799DBBD00F3DBAA /* ViewController_iPad.xib */,
 				1E023BB1179B161C00DC8FC5 /* Custom Views */,
 				1E023BB7179B20FC00DC8FC5 /* Categories */,
 				1EAB7CC21799DCB700F3DBAA /* UIImageCreator.h */,
@@ -261,6 +349,11 @@
 				1EAB7CB31799DBBD00F3DBAA /* Default-568h@2x.png in Resources */,
 				1EAB7CB91799DBBD00F3DBAA /* ViewController_iPhone.xib in Resources */,
 				1EAB7CBC1799DBBD00F3DBAA /* ViewController_iPad.xib in Resources */,
+				0FAF4DE4179C953E00028E7A /* WebsiteCell.xib in Resources */,
+				0FAF4DE6179C953E00028E7A /* WebViewController.xib in Resources */,
+				0FAF4DEE179C959700028E7A /* PhoneNumberCell.xib in Resources */,
+				0FAF4E01179C95C500028E7A /* NewResourceViewController.xib in Resources */,
+				0FAF4E03179C95C500028E7A /* ResourcesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +370,15 @@
 				1EAB7CC41799DCB700F3DBAA /* UIImageCreator.m in Sources */,
 				1E023BB4179B171500DC8FC5 /* Hexagonbutton.m in Sources */,
 				1E023BBA179B212400DC8FC5 /* UIView+FrameManipulators.m in Sources */,
+				0FAF4DE2179C953E00028E7A /* Website.m in Sources */,
+				0FAF4DE3179C953E00028E7A /* WebsiteCell.m in Sources */,
+				0FAF4DE5179C953E00028E7A /* WebViewController.m in Sources */,
+				0FAF4DED179C959700028E7A /* PhoneNumberCell.m in Sources */,
+				0FAF4DF5179C95A400028E7A /* CellDataProviderBase.m in Sources */,
+				0FAF4DF6179C95A400028E7A /* CellFactory.m in Sources */,
+				0FAF4DF9179C95B200028E7A /* PhoneNumber.m in Sources */,
+				0FAF4E00179C95C500028E7A /* NewResourceViewController.m in Sources */,
+				0FAF4E02179C95C500028E7A /* ResourcesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
