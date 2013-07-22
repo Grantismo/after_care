@@ -21,8 +21,11 @@
     self = [super initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.width * HEXAGON_WIDTH_HEIGHT_RATIO)];
     if (self) {
         self.color = [UIColor redColor];
-        self.borderColorOffset = .3;
+        self.borderColorOffset = -.06;
         self.borderWidth = 10.0;
+        
+        [self setTitleColor:[UIColor afterCareOffWhiteColor] forState:UIControlStateNormal];
+        [self.titleLabel setFont:[UIFont boldSystemFontOfSize:20.0]];
         
         [self setBackgroundImageFromProperties];
     }

@@ -15,6 +15,4 @@
 @property (nonatomic) float borderColorOffset;
 @property (nonatomic) float borderWidth;
 
-@property (nonatomic) float scrollBeginY;
-
 @end

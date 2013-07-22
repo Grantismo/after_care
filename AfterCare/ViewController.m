@@ -16,7 +16,9 @@
 #define HEX_PADDING 6.0
 
 @interface ViewController (){
-    IBOutlet UIScrollView* scrollView;
+    IBOutlet UINavigationBar* navBar;
+    IBOutlet UIView* contentView;
+    IBOutlet UIButton* safetyPlanButton;
     
     NSMutableArray* hexagonButtons;
     
@@ -30,6 +32,8 @@
     float hexSpeed;
     float hexagonWidth;
     float hexagonHeight;
+    
+    BOOL levelOutScrollSpeed;
 }
 
 -(void) addHexagonWithColor:(UIColor*) color title:(NSString*) buttonTitle;
@@ -47,8 +51,8 @@
     if (self){
         hexagonButtons = [[NSMutableArray alloc] init];
         numColumns = 4;
-    
-
+        
+        levelOutScrollSpeed = TRUE;
     }
     return self;
 }
@@ -56,43 +60,48 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    hexagonWidth = (self.view.bounds.size.width / (numColumns - 2));
+    hexagonWidth = (self.view.bounds.size.width * (4.0 / 7.0));
     hexagonHeight = hexagonWidth * HEXAGON_WIDTH_HEIGHT_RATIO;
+    
+    self.view.backgroundColor = [UIColor afterCareOffBlackColor];
+    
+    [safetyPlanButton setBackgroundImage:[UIImageCreator onePixelImageForColor:[UIColor afterCareOffWhiteColor]] forState:UIControlStateNormal];
     
     panGR = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(scrollHexagons:)];
     [self.view addGestureRecognizer:panGR];
 	
-    [self addHexagonWithColor:[UIColor redColor] title:nil];
-    [self addHexagonWithColor:[UIColor greenColor] title:@"Button 1"];
-    [self addHexagonWithColor:[UIColor yellowColor] title:nil];
-    [self addHexagonWithColor:[UIColor redColor] title:nil];
+    [self addHexagonWithColor:[UIColor afterCareColor1] title:nil];
+    [self addHexagonWithColor:[UIColor afterCareColor2] title:@"POSITIVE"];
+    [self addHexagonWithColor:[UIColor afterCareColor7] title:@"IRRITATED"];
+    [self addHexagonWithColor:[UIColor afterCareColor4] title:nil];
     
-    [self addHexagonWithColor:[UIColor greenColor] title:nil];
-    [self addHexagonWithColor:[UIColor yellowColor] title:@"Button 3"];
-    [self addHexagonWithColor:[UIColor redColor] title:@"Button 2"];
-    [self addHexagonWithColor:[UIColor greenColor] title:nil];
+    [self addHexagonWithColor:[UIColor afterCareColor3] title:nil];
+    [self addHexagonWithColor:[UIColor afterCareColor5] title:@"GENEROUS"];
+    [self addHexagonWithColor:[UIColor afterCareColor1] title:@"DEPRESSED"];
+    [self addHexagonWithColor:[UIColor afterCareColor7] title:nil];
     
-    [self addHexagonWithColor:[UIColor yellowColor] title:nil];
-    [self addHexagonWithColor:[UIColor redColor] title:@"Button 5"];
-    [self addHexagonWithColor:[UIColor greenColor] title:@"Button 4"];
-    [self addHexagonWithColor:[UIColor yellowColor] title:nil];
+    [self addHexagonWithColor:[UIColor afterCareColor2] title:nil];
+    [self addHexagonWithColor:[UIColor afterCareColor4] title:@"SPITEFUL"];
+    [self addHexagonWithColor:[UIColor afterCareColor6] title:@"AN ASSHOLE"];
+    [self addHexagonWithColor:[UIColor afterCareColor3] title:nil];
     
-    [self addHexagonWithColor:[UIColor redColor] title:nil];
-    [self addHexagonWithColor:[UIColor greenColor] title:nil];
-    [self addHexagonWithColor:[UIColor yellowColor] title:nil];
-    [self addHexagonWithColor:[UIColor blueColor] title:nil];
+    [self addHexagonWithColor:[UIColor afterCareColor7] title:nil];
+    [self addHexagonWithColor:[UIColor afterCareColor1] title:@"HURT"];
+    [self addHexagonWithColor:[UIColor afterCareColor2] title:@"ANGRY"];
+    [self addHexagonWithColor:[UIColor afterCareColor6] title:nil];
     
-    [self addHexagonWithColor:[UIColor blueColor] title:nil];
-    [self addHexagonWithColor:[UIColor blueColor] title:nil];
-    [self addHexagonWithColor:[UIColor blueColor] title:nil];
-    [self addHexagonWithColor:[UIColor blueColor] title:nil];
+    [self addHexagonWithColor:[UIColor afterCareColor3] title:nil];
+    [self addHexagonWithColor:[UIColor afterCareColor5] title:@"APATHETIC"];
+    [self addHexagonWithColor:[UIColor afterCareColor4] title:@"LONELY"];
+    [self addHexagonWithColor:[UIColor afterCareColor2] title:nil];
     
+    [navBar setBackgroundImage:[UIImageCreator onePixelImageForColor:[UIColor afterCareOffBlackColor]] forBarMetrics:UIBarMetricsDefault];
 }
 
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    hexSpeed = .5;
+    hexSpeed = -1;
     
     displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(automaticallyScrollHexagons:)];
     [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
@@ -114,9 +123,9 @@
     [hexagon setTitle:buttonTitle forState:UIControlStateNormal];
     
     //This is hardcoded in, can't figure out the math.
-    float centeringX = (self.view.bounds.size.width / 16.0);
+    float centeringX = (self.view.bounds.size.width / 2.0) - (hexagonWidth * 9.0 / 8.0);
     
-    float xPos = (columnIndex * hexagonWidth * .75) - centeringX;
+    float xPos = (columnIndex * hexagonWidth * .75) + centeringX;
 
     int row = [hexagonButtons count] / numColumns;
     int rowNum = ([hexagonButtons count] % numColumns);
@@ -128,57 +137,41 @@
     hexagon.center = CGPointMake(xPos, yPos);
     
     [hexagonButtons addObject:hexagon];
-    [self.view addSubview:hexagon];
+    [contentView addSubview:hexagon];
     
     columnIndex = (columnIndex + 1) % numColumns;
 }
 
 -(void) automaticallyScrollHexagons:(CADisplayLink *)displayLink{
-    hexSpeed += (.5 - hexSpeed) / 15.0;
+    if (levelOutScrollSpeed) hexSpeed += (-.5 - hexSpeed) / 15.0;
      
     for (Hexagonbutton* button in hexagonButtons) {
-        button.center = CGPointMake(button.center.x, button.center.y - hexSpeed);
-        
+        button.center = CGPointMake(button.center.x, button.center.y + hexSpeed);
+    }
+    
+    for (Hexagonbutton* button in hexagonButtons) {
         [self checkButtonForPlacement:button];
     }
 }
 
 -(void) scrollHexagons:(UIPanGestureRecognizer *)panGestureRecognizer{
-    static float startY;
     switch (panGR.state) {
         case UIGestureRecognizerStateBegan:{
-            [displayLink invalidate];
-            displayLink = nil;
-            
-            for (Hexagonbutton* button in hexagonButtons) {
-                button.scrollBeginY = button.center.y;
-            }
-            
-            startY = [panGestureRecognizer locationInView:self.view].y;
-            NSLog(@"started");
+            levelOutScrollSpeed = FALSE;
             break;
         }
         case UIGestureRecognizerStateChanged:{
-          
-            hexSpeed = -([panGestureRecognizer locationInView:self.view].y - startY);
-            NSLog(@"%f", hexSpeed);
-
-            for (Hexagonbutton* button in hexagonButtons) {
-                button.center = CGPointMake(button.center.x, button.scrollBeginY - hexSpeed);
-                //[self checkButtonForPlacement:button];
-            }
+            static float lastYLocation;
+            float currentYLocation = [panGestureRecognizer locationInView:self.view].y;
+            hexSpeed = currentYLocation - lastYLocation;
+            lastYLocation = currentYLocation;
 
             break;
         }
         case UIGestureRecognizerStateEnded:{
-            hexSpeed = -([panGestureRecognizer velocityInView:self.view].y / 60.0);
+            hexSpeed = [panGestureRecognizer velocityInView:self.view].y / 60.0;
             
-            if (!displayLink){
-                displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(automaticallyScrollHexagons:)];
-                [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
-            }
-           
-            NSLog(@"ended");
+            levelOutScrollSpeed = TRUE;
             break;
         }
         default:
@@ -186,33 +179,13 @@
     }
 }
 
--(void) checkButtonForPlacement:(Hexagonbutton *)button{    
-    if (button.frame.origin.y + button.frame.size.height < 0.0 && hexSpeed > 0) {
-        float hexagonWidth = (self.view.bounds.size.width / (numColumns - 2));
-        float hexagonHeight = hexagonWidth * HEXAGON_WIDTH_HEIGHT_RATIO;
-        
-        int aboveRowIndex = [hexagonButtons indexOfObject:button] - numColumns;
-        
-        int index = aboveRowIndex % [hexagonButtons count];
-        if (aboveRowIndex < 0) index += numColumns;
-        
-        Hexagonbutton* aboveButton = [hexagonButtons objectAtIndex:index];
-        
-        button.center = CGPointMake(button.center.x, aboveButton.center.y + hexagonHeight);
+-(void) checkButtonForPlacement:(Hexagonbutton *)button{
+    if (button.frame.origin.y + button.frame.size.height < 0.0 && hexSpeed < 0) {
+        [self updateButtonCenter:button above:YES];
     }
     
-    if (button.frame.origin.y > self.view.bounds.size.height && hexSpeed < 0) {
-        float hexagonWidth = (self.view.bounds.size.width / (numColumns - 2));
-        float hexagonHeight = hexagonWidth * HEXAGON_WIDTH_HEIGHT_RATIO;
-        
-        int aboveRowIndex = [hexagonButtons indexOfObject:button] + numColumns;
-        
-        int index = aboveRowIndex % [hexagonButtons count];
-        if (aboveRowIndex < 0) index += numColumns;
-        
-        Hexagonbutton* belowButton = [hexagonButtons objectAtIndex:index];
-        
-        button.center = CGPointMake(button.center.x, belowButton.center.y - hexagonHeight);
+    if (button.frame.origin.y > contentView.bounds.size.height && hexSpeed > 0) {
+        [self updateButtonCenter:button above:NO];
     }
 }
 

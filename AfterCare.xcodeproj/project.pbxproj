@@ -24,6 +24,7 @@
 		1E023BB4179B171500DC8FC5 /* Hexagonbutton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E023BB3179B171500DC8FC5 /* Hexagonbutton.m */; };
 		1E023BBA179B212400DC8FC5 /* UIView+FrameManipulators.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E023BB9179B212400DC8FC5 /* UIView+FrameManipulators.m */; };
 		1E023BBC179C583300DC8FC5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E023BBB179C583300DC8FC5 /* CoreData.framework */; };
+		1E023BBF179CA98E00DC8FC5 /* UIColor+AfterCareColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E023BBE179CA98E00DC8FC5 /* UIColor+AfterCareColors.m */; };
 		1EAB7C9D1799DBBD00F3DBAA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB7C9C1799DBBD00F3DBAA /* UIKit.framework */; };
 		1EAB7C9F1799DBBD00F3DBAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB7C9E1799DBBD00F3DBAA /* Foundation.framework */; };
 		1EAB7CA11799DBBD00F3DBAA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB7CA01799DBBD00F3DBAA /* CoreGraphics.framework */; };
@@ -82,6 +83,8 @@
 		1E023BB8179B212400DC8FC5 /* UIView+FrameManipulators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameManipulators.h"; sourceTree = "<group>"; };
 		1E023BB9179B212400DC8FC5 /* UIView+FrameManipulators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameManipulators.m"; sourceTree = "<group>"; };
 		1E023BBB179C583300DC8FC5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1E023BBD179CA98E00DC8FC5 /* UIColor+AfterCareColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AfterCareColors.h"; sourceTree = "<group>"; };
+		1E023BBE179CA98E00DC8FC5 /* UIColor+AfterCareColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AfterCareColors.m"; sourceTree = "<group>"; };
 		1EAB7C991799DBBD00F3DBAA /* AfterCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AfterCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EAB7C9C1799DBBD00F3DBAA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1EAB7C9E1799DBBD00F3DBAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -224,6 +227,8 @@
 			children = (
 				1E023BB8179B212400DC8FC5 /* UIView+FrameManipulators.h */,
 				1E023BB9179B212400DC8FC5 /* UIView+FrameManipulators.m */,
+				1E023BBD179CA98E00DC8FC5 /* UIColor+AfterCareColors.h */,
+				1E023BBE179CA98E00DC8FC5 /* UIColor+AfterCareColors.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -379,6 +384,7 @@
 				0FAF4DF9179C95B200028E7A /* PhoneNumber.m in Sources */,
 				0FAF4E00179C95C500028E7A /* NewResourceViewController.m in Sources */,
 				0FAF4E02179C95C500028E7A /* ResourcesViewController.m in Sources */,
+				1E023BBF179CA98E00DC8FC5 /* UIColor+AfterCareColors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
