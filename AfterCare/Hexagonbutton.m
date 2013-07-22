@@ -27,6 +27,8 @@
         [self setTitleColor:[UIColor afterCareOffWhiteColor] forState:UIControlStateNormal];
         [self.titleLabel setFont:[UIFont boldSystemFontOfSize:20.0]];
         
+        self.autoresizingMask = UIViewAutoresizingNone;
+        
         [self setBackgroundImageFromProperties];
     }
     return self;

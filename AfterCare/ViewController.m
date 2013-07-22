@@ -13,6 +13,8 @@
 
 #import <QuartzCore/QuartzCore.h>
 
+#import "WebViewController.h"
+
 #define HEX_PADDING 6.0
 
 @interface ViewController (){
@@ -35,6 +37,8 @@
     
     BOOL levelOutScrollSpeed;
 }
+
+-(IBAction) hexagonPress:(Hexagonbutton*) button;
 
 -(void) addHexagonWithColor:(UIColor*) color title:(NSString*) buttonTitle;
 
@@ -113,6 +117,33 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark Actions
+
+-(IBAction) hexagonPress:(Hexagonbutton *)button{
+    [displayLink invalidate];
+    displayLink = nil;
+    
+    [contentView addSubview:button];
+    
+    [UIView animateWithDuration:2.0 delay:.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        for (Hexagonbutton* hexButton in hexagonButtons) {
+            if (hexButton != button){
+                hexButton.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(.7, .7), CGAffineTransformMakeRotation(1.0));
+            }
+        }
+        
+        button.transform = CGAffineTransformMakeScale(10.0, 10.0);
+        button.titleLabel.alpha = 0.0;
+        
+        contentView.frame = self.view.bounds;
+        
+        [navBar setOrigin:CGPointMake(navBar.frame.origin.x, -navBar.frame.size.height)];
+        [safetyPlanButton setOrigin:CGPointMake(safetyPlanButton.frame.origin.x, self.view.bounds.size.height)];
+    } completion:^(BOOL finished) {
+    
+    }];
+}
+
 #pragma mark private methods
 
 -(void) addHexagonWithColor:(UIColor *)color title:(NSString *)buttonTitle{
@@ -121,6 +152,8 @@
     hexagon.color = color;
     
     [hexagon setTitle:buttonTitle forState:UIControlStateNormal];
+    
+    [hexagon addTarget:self action:@selector(hexagonPress:) forControlEvents:UIControlEventTouchUpInside];
     
     //This is hardcoded in, can't figure out the math.
     float centeringX = (self.view.bounds.size.width / 2.0) - (hexagonWidth * 9.0 / 8.0);
