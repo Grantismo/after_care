@@ -11,13 +11,23 @@
 +(UIColor*) afterCareOffWhiteColor;
 +(UIColor*) afterCareOffBlackColor;
 
-+(UIColor*) afterCareColor1;
-+(UIColor*) afterCareColor2;
-+(UIColor*) afterCareColor3;
-+(UIColor*) afterCareColor4;
-+(UIColor*) afterCareColor5;
-+(UIColor*) afterCareColor6;
-+(UIColor*) afterCareColor7;
++(UIColor*) lonelyColor;
++(UIColor*) angryColor;
++(UIColor*) depressedColor;
++(UIColor*) hurtColor;
++(UIColor*) positiveColor;
++(UIColor*) gratefulColor;
++(UIColor*) disinterestedColor;
++(UIColor*) worthlessColor;
+
++(UIColor*) afterCareTransparentColor1;
++(UIColor*) afterCareTransparentColor2;
++(UIColor*) afterCareTransparentColor3;
++(UIColor*) afterCareTransparentColor4;
++(UIColor*) afterCareTransparentColor5;
++(UIColor*) afterCareTransparentColor6;
++(UIColor*) afterCareTransparentColor7;
++(UIColor*) afterCareTransparentColor8;
 
 
 @end

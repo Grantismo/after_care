@@ -25,6 +25,8 @@
 		1E023BBA179B212400DC8FC5 /* UIView+FrameManipulators.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E023BB9179B212400DC8FC5 /* UIView+FrameManipulators.m */; };
 		1E023BBC179C583300DC8FC5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E023BBB179C583300DC8FC5 /* CoreData.framework */; };
 		1E023BBF179CA98E00DC8FC5 /* UIColor+AfterCareColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E023BBE179CA98E00DC8FC5 /* UIColor+AfterCareColors.m */; };
+		1E09EF6917AC439500FB3E49 /* SafetyPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E09EF6717AC439500FB3E49 /* SafetyPlanViewController.m */; };
+		1E09EF6A17AC439500FB3E49 /* SafetyPlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E09EF6817AC439500FB3E49 /* SafetyPlanViewController.xib */; };
 		1EAB7C9D1799DBBD00F3DBAA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB7C9C1799DBBD00F3DBAA /* UIKit.framework */; };
 		1EAB7C9F1799DBBD00F3DBAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB7C9E1799DBBD00F3DBAA /* Foundation.framework */; };
 		1EAB7CA11799DBBD00F3DBAA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB7CA01799DBBD00F3DBAA /* CoreGraphics.framework */; };
@@ -34,9 +36,8 @@
 		1EAB7CAF1799DBBD00F3DBAA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB7CAE1799DBBD00F3DBAA /* Default.png */; };
 		1EAB7CB11799DBBD00F3DBAA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB7CB01799DBBD00F3DBAA /* Default@2x.png */; };
 		1EAB7CB31799DBBD00F3DBAA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB7CB21799DBBD00F3DBAA /* Default-568h@2x.png */; };
-		1EAB7CB61799DBBD00F3DBAA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB7CB51799DBBD00F3DBAA /* ViewController.m */; };
-		1EAB7CB91799DBBD00F3DBAA /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB7CB71799DBBD00F3DBAA /* ViewController_iPhone.xib */; };
-		1EAB7CBC1799DBBD00F3DBAA /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB7CBA1799DBBD00F3DBAA /* ViewController_iPad.xib */; };
+		1EAB7CB61799DBBD00F3DBAA /* HexagonMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB7CB51799DBBD00F3DBAA /* HexagonMainViewController.m */; };
+		1EAB7CB91799DBBD00F3DBAA /* HexagonMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB7CB71799DBBD00F3DBAA /* HexagonMainViewController.xib */; };
 		1EAB7CC41799DCB700F3DBAA /* UIImageCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB7CC31799DCB700F3DBAA /* UIImageCreator.m */; };
 		1EAB7CC61799DD2C00F3DBAA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB7CC51799DD2C00F3DBAA /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -85,6 +86,9 @@
 		1E023BBB179C583300DC8FC5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1E023BBD179CA98E00DC8FC5 /* UIColor+AfterCareColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AfterCareColors.h"; sourceTree = "<group>"; };
 		1E023BBE179CA98E00DC8FC5 /* UIColor+AfterCareColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AfterCareColors.m"; sourceTree = "<group>"; };
+		1E09EF6617AC439500FB3E49 /* SafetyPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafetyPlanViewController.h; sourceTree = "<group>"; };
+		1E09EF6717AC439500FB3E49 /* SafetyPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafetyPlanViewController.m; sourceTree = "<group>"; };
+		1E09EF6817AC439500FB3E49 /* SafetyPlanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SafetyPlanViewController.xib; sourceTree = "<group>"; };
 		1EAB7C991799DBBD00F3DBAA /* AfterCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AfterCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EAB7C9C1799DBBD00F3DBAA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1EAB7C9E1799DBBD00F3DBAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,10 +102,9 @@
 		1EAB7CAE1799DBBD00F3DBAA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		1EAB7CB01799DBBD00F3DBAA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		1EAB7CB21799DBBD00F3DBAA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		1EAB7CB41799DBBD00F3DBAA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1EAB7CB51799DBBD00F3DBAA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		1EAB7CB81799DBBD00F3DBAA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		1EAB7CBB1799DBBD00F3DBAA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		1EAB7CB41799DBBD00F3DBAA /* HexagonMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HexagonMainViewController.h; sourceTree = "<group>"; };
+		1EAB7CB51799DBBD00F3DBAA /* HexagonMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HexagonMainViewController.m; sourceTree = "<group>"; };
+		1EAB7CB81799DBBD00F3DBAA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HexagonMainViewController.xib; sourceTree = "<group>"; };
 		1EAB7CC21799DCB700F3DBAA /* UIImageCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageCreator.h; sourceTree = "<group>"; };
 		1EAB7CC31799DCB700F3DBAA /* UIImageCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageCreator.m; sourceTree = "<group>"; };
 		1EAB7CC51799DD2C00F3DBAA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -205,10 +208,12 @@
 				0FAF4DDF179C953E00028E7A /* WebViewController.h */,
 				0FAF4DE0179C953E00028E7A /* WebViewController.m */,
 				0FAF4DE1179C953E00028E7A /* WebViewController.xib */,
-				1EAB7CB41799DBBD00F3DBAA /* ViewController.h */,
-				1EAB7CB51799DBBD00F3DBAA /* ViewController.m */,
-				1EAB7CB71799DBBD00F3DBAA /* ViewController_iPhone.xib */,
-				1EAB7CBA1799DBBD00F3DBAA /* ViewController_iPad.xib */,
+				1EAB7CB41799DBBD00F3DBAA /* HexagonMainViewController.h */,
+				1EAB7CB51799DBBD00F3DBAA /* HexagonMainViewController.m */,
+				1EAB7CB71799DBBD00F3DBAA /* HexagonMainViewController.xib */,
+				1E09EF6617AC439500FB3E49 /* SafetyPlanViewController.h */,
+				1E09EF6717AC439500FB3E49 /* SafetyPlanViewController.m */,
+				1E09EF6817AC439500FB3E49 /* SafetyPlanViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -352,13 +357,13 @@
 				1EAB7CAF1799DBBD00F3DBAA /* Default.png in Resources */,
 				1EAB7CB11799DBBD00F3DBAA /* Default@2x.png in Resources */,
 				1EAB7CB31799DBBD00F3DBAA /* Default-568h@2x.png in Resources */,
-				1EAB7CB91799DBBD00F3DBAA /* ViewController_iPhone.xib in Resources */,
-				1EAB7CBC1799DBBD00F3DBAA /* ViewController_iPad.xib in Resources */,
+				1EAB7CB91799DBBD00F3DBAA /* HexagonMainViewController.xib in Resources */,
 				0FAF4DE4179C953E00028E7A /* WebsiteCell.xib in Resources */,
 				0FAF4DE6179C953E00028E7A /* WebViewController.xib in Resources */,
 				0FAF4DEE179C959700028E7A /* PhoneNumberCell.xib in Resources */,
 				0FAF4E01179C95C500028E7A /* NewResourceViewController.xib in Resources */,
 				0FAF4E03179C95C500028E7A /* ResourcesViewController.xib in Resources */,
+				1E09EF6A17AC439500FB3E49 /* SafetyPlanViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +376,7 @@
 			files = (
 				1EAB7CA91799DBBD00F3DBAA /* main.m in Sources */,
 				1EAB7CAD1799DBBD00F3DBAA /* AppDelegate.m in Sources */,
-				1EAB7CB61799DBBD00F3DBAA /* ViewController.m in Sources */,
+				1EAB7CB61799DBBD00F3DBAA /* HexagonMainViewController.m in Sources */,
 				1EAB7CC41799DCB700F3DBAA /* UIImageCreator.m in Sources */,
 				1E023BB4179B171500DC8FC5 /* Hexagonbutton.m in Sources */,
 				1E023BBA179B212400DC8FC5 /* UIView+FrameManipulators.m in Sources */,
@@ -385,6 +390,7 @@
 				0FAF4E00179C95C500028E7A /* NewResourceViewController.m in Sources */,
 				0FAF4E02179C95C500028E7A /* ResourcesViewController.m in Sources */,
 				1E023BBF179CA98E00DC8FC5 /* UIColor+AfterCareColors.m in Sources */,
+				1E09EF6917AC439500FB3E49 /* SafetyPlanViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,20 +405,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		1EAB7CB71799DBBD00F3DBAA /* ViewController_iPhone.xib */ = {
+		1EAB7CB71799DBBD00F3DBAA /* HexagonMainViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1EAB7CB81799DBBD00F3DBAA /* en */,
 			);
-			name = ViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		1EAB7CBA1799DBBD00F3DBAA /* ViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1EAB7CBB1799DBBD00F3DBAA /* en */,
-			);
-			name = ViewController_iPad.xib;
+			name = HexagonMainViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

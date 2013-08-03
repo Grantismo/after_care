@@ -25,7 +25,7 @@
         self.borderWidth = 10.0;
         
         [self setTitleColor:[UIColor afterCareOffWhiteColor] forState:UIControlStateNormal];
-        [self.titleLabel setFont:[UIFont boldSystemFontOfSize:20.0]];
+        [self.titleLabel setFont:[UIFont boldSystemFontOfSize:17.0]];
         
         self.autoresizingMask = UIViewAutoresizingNone;
         

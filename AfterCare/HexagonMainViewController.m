@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 TabSprint. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "HexagonMainViewController.h"
 
 #import "UIView+FrameManipulators.h"
 #import "Hexagonbutton.h"
@@ -15,12 +15,12 @@
 
 #import "WebViewController.h"
 
+#import "SafetyPlanViewController.h"
+
 #define HEX_PADDING 6.0
 
-@interface ViewController (){
-    IBOutlet UINavigationBar* navBar;
+@interface HexagonMainViewController ()<SafetyPlanDelegate>{
     IBOutlet UIView* contentView;
-    IBOutlet UIButton* safetyPlanButton;
     
     NSMutableArray* hexagonButtons;
     
@@ -36,6 +36,9 @@
     float hexagonHeight;
     
     BOOL levelOutScrollSpeed;
+    
+    UINavigationController* safetyNavigationController;
+    SafetyPlanViewController* safetyPlanViewController;
 }
 
 -(IBAction) hexagonPress:(Hexagonbutton*) button;
@@ -46,9 +49,11 @@
 -(void) scrollHexagons:(UIPanGestureRecognizer*) panGestureRecognizer;
 -(void) checkButtonForPlacement:(Hexagonbutton*) button;
 
+-(void)animateSafetyPlanIn:(UITapGestureRecognizer*) navTapGR;
+
 @end
 
-@implementation ViewController
+@implementation HexagonMainViewController
 
 -(id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -57,6 +62,8 @@
         numColumns = 4;
         
         levelOutScrollSpeed = TRUE;
+        
+        self.title= @"How Are You Feeling Today?";
     }
     return self;
 }
@@ -69,37 +76,50 @@
     
     self.view.backgroundColor = [UIColor afterCareOffBlackColor];
     
-    [safetyPlanButton setBackgroundImage:[UIImageCreator onePixelImageForColor:[UIColor afterCareOffWhiteColor]] forState:UIControlStateNormal];
-    
     panGR = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(scrollHexagons:)];
     [self.view addGestureRecognizer:panGR];
 	
-    [self addHexagonWithColor:[UIColor afterCareColor1] title:nil];
-    [self addHexagonWithColor:[UIColor afterCareColor2] title:@"POSITIVE"];
-    [self addHexagonWithColor:[UIColor afterCareColor7] title:@"IRRITATED"];
-    [self addHexagonWithColor:[UIColor afterCareColor4] title:nil];
+    [self addHexagonWithColor:[UIColor afterCareTransparentColor1] title:nil];
+    [self addHexagonWithColor:[UIColor positiveColor] title:@"POSITIVE"];
+    [self addHexagonWithColor:[UIColor angryColor] title:@"ANGRY"];
+    [self addHexagonWithColor:[UIColor afterCareTransparentColor2] title:nil];
     
-    [self addHexagonWithColor:[UIColor afterCareColor3] title:nil];
-    [self addHexagonWithColor:[UIColor afterCareColor5] title:@"GENEROUS"];
-    [self addHexagonWithColor:[UIColor afterCareColor1] title:@"DEPRESSED"];
-    [self addHexagonWithColor:[UIColor afterCareColor7] title:nil];
+    [self addHexagonWithColor:[UIColor afterCareTransparentColor3] title:nil];
+    [self addHexagonWithColor:[UIColor lonelyColor] title:@"LONELY"];
+    [self addHexagonWithColor:[UIColor depressedColor] title:@"DEPRESSED"];
+    [self addHexagonWithColor:[UIColor afterCareTransparentColor4] title:nil];
     
-    [self addHexagonWithColor:[UIColor afterCareColor2] title:nil];
-    [self addHexagonWithColor:[UIColor afterCareColor4] title:@"SPITEFUL"];
-    [self addHexagonWithColor:[UIColor afterCareColor6] title:@"AN ASSHOLE"];
-    [self addHexagonWithColor:[UIColor afterCareColor3] title:nil];
+    [self addHexagonWithColor:[UIColor afterCareTransparentColor5] title:nil];
+    [self addHexagonWithColor:[UIColor hurtColor] title:@"HURT"];
+    [self addHexagonWithColor:[UIColor gratefulColor] title:@"GRATEFUL"];
+    [self addHexagonWithColor:[UIColor afterCareTransparentColor6] title:nil];
     
-    [self addHexagonWithColor:[UIColor afterCareColor7] title:nil];
-    [self addHexagonWithColor:[UIColor afterCareColor1] title:@"HURT"];
-    [self addHexagonWithColor:[UIColor afterCareColor2] title:@"ANGRY"];
-    [self addHexagonWithColor:[UIColor afterCareColor6] title:nil];
+    [self addHexagonWithColor:[UIColor afterCareTransparentColor7] title:nil];
+    [self addHexagonWithColor:[UIColor worthlessColor] title:@"WORTHLESS"];
+    [self addHexagonWithColor:[UIColor disinterestedColor] title:@"DISINTERESTED"];
+    [self addHexagonWithColor:[UIColor afterCareTransparentColor1] title:nil];
     
-    [self addHexagonWithColor:[UIColor afterCareColor3] title:nil];
-    [self addHexagonWithColor:[UIColor afterCareColor5] title:@"APATHETIC"];
-    [self addHexagonWithColor:[UIColor afterCareColor4] title:@"LONELY"];
-    [self addHexagonWithColor:[UIColor afterCareColor2] title:nil];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImageCreator onePixelImageForColor:[UIColor afterCareOffBlackColor]] forBarMetrics:UIBarMetricsDefault];
     
-    [navBar setBackgroundImage:[UIImageCreator onePixelImageForColor:[UIColor afterCareOffBlackColor]] forBarMetrics:UIBarMetricsDefault];
+    safetyPlanViewController = [[SafetyPlanViewController alloc] initWithNibName:NSStringFromClass([SafetyPlanViewController class]) bundle:nil];
+    safetyPlanViewController.delegate = self;
+    
+    safetyNavigationController = [[UINavigationController alloc] initWithRootViewController:safetyPlanViewController];
+    
+    safetyNavigationController.view.frame = CGRectMake(safetyNavigationController.view.frame.origin.x,
+                                          self.navigationController.view.bounds.size.height - safetyNavigationController.navigationBar.frame.size.height - [UIApplication sharedApplication].statusBarFrame.size.height,
+                                          safetyNavigationController.view.frame.size.width,
+                                          safetyNavigationController.view.frame.size.height);
+    
+    UITapGestureRecognizer* navTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(animateSafetyPlanIn:)];
+    navTap.numberOfTapsRequired = 1;
+    navTap.numberOfTouchesRequired = 1;
+    
+    [safetyNavigationController.view addGestureRecognizer:navTap];
+    
+    [self.navigationController.view addSubview:safetyNavigationController.view];
+    
+    contentView.frame = CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height - safetyNavigationController.navigationBar.frame.size.height - .5);
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -117,6 +137,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark safetyPlanDelegate methods
+
+-(void) dismissSafetyPlayController:(SafetyPlanViewController *)controller{
+    self.view.hidden = FALSE;
+    [UIView animateWithDuration:.2 animations:^{
+        safetyNavigationController.view.frame = CGRectMake(safetyNavigationController.view.frame.origin.x,
+                                                           self.navigationController.view.bounds.size.height - safetyNavigationController.navigationBar.frame.size.height - [UIApplication sharedApplication].statusBarFrame.size.height,
+                                                           safetyNavigationController.view.frame.size.width,
+                                                           safetyNavigationController.view.frame.size.height);
+    } completion:^(BOOL finished) {
+        displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(automaticallyScrollHexagons:)];
+        [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+    }];
+}
+
 #pragma mark Actions
 
 -(IBAction) hexagonPress:(Hexagonbutton *)button{
@@ -124,24 +159,6 @@
     displayLink = nil;
     
     [contentView addSubview:button];
-    
-    [UIView animateWithDuration:2.0 delay:.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        for (Hexagonbutton* hexButton in hexagonButtons) {
-            if (hexButton != button){
-                hexButton.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(.7, .7), CGAffineTransformMakeRotation(1.0));
-            }
-        }
-        
-        button.transform = CGAffineTransformMakeScale(10.0, 10.0);
-        button.titleLabel.alpha = 0.0;
-        
-        contentView.frame = self.view.bounds;
-        
-        [navBar setOrigin:CGPointMake(navBar.frame.origin.x, -navBar.frame.size.height)];
-        [safetyPlanButton setOrigin:CGPointMake(safetyPlanButton.frame.origin.x, self.view.bounds.size.height)];
-    } completion:^(BOOL finished) {
-    
-    }];
 }
 
 #pragma mark private methods
@@ -223,14 +240,32 @@
 }
 
 -(void) updateButtonCenter: (Hexagonbutton*) button above: (BOOL) above{
-    int dir = above ? 1 : -1;
-    int referenceIndex = [hexagonButtons indexOfObject:button] - (dir * numColumns);
     
-    int index = referenceIndex % [hexagonButtons count];
-    if (referenceIndex < 0) index += numColumns;
+    int referenceIndex = [hexagonButtons indexOfObject:button];
+    
+    int index = 0;
+    if (above) {
+        index =  (referenceIndex + hexagonButtons.count - numColumns) % hexagonButtons.count;
+    }
+    else{
+        index =  (referenceIndex - hexagonButtons.count + numColumns) % hexagonButtons.count;
+    }
     
     Hexagonbutton* referenceButton = [hexagonButtons objectAtIndex:index];
+    int dir = above ? 1 : -1;
     button.center = CGPointMake(button.center.x, referenceButton.center.y + (dir * hexagonHeight));
+}
+
+-(void) animateSafetyPlanIn:(UITapGestureRecognizer *)navTapGR{
+    [displayLink invalidate];
+    displayLink = nil;
+    
+    [UIView animateWithDuration:.5 delay:.1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        safetyNavigationController.view.frame = self.navigationController.view.bounds;
+    } completion:^(BOOL finished) {
+        [safetyPlanViewController addBackButton];
+        self.view.hidden = TRUE;
+    }];
 }
 
 @end

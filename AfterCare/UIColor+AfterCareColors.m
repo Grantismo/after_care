@@ -11,39 +11,94 @@
 @implementation UIColor (AfterCareColors)
 
 +(UIColor*) afterCareOffWhiteColor{
-    return UIColorFromRGB(0xC7C7C7);
+    return UIColorFromRGB(0xeaeae5, 1.0);
 }
 
 +(UIColor*) afterCareOffBlackColor{
-    return UIColorFromRGB(0x2B2823);
+    return UIColorFromRGB(0x2B2823, 1.0);
 }
 
-+(UIColor*) afterCareColor1{
-    return UIColorFromRGB(0x408CCC);
++(UIColor*) lonelyColor{
+    return UIColorFromRGB(0x95dc8c, 1.0);
 }
 
-+(UIColor*) afterCareColor2{
-    return UIColorFromRGB(0xFF6F69);
++(UIColor*) angryColor{
+    return UIColorFromRGB(0xcbd6b4, 1.0);
 }
 
-+(UIColor*) afterCareColor3{
-    return UIColorFromRGB(0xFFCC5C);
++(UIColor*) depressedColor{
+    return UIColorFromRGB(0xefca16, 1.0);
 }
 
-+(UIColor*) afterCareColor4{
-    return UIColorFromRGB(0x69FF9F);
++(UIColor*) hurtColor{
+    return UIColorFromRGB(0x40898b, 1.0);
 }
 
-+(UIColor*) afterCareColor5{
-    return UIColorFromRGB(0xFF5CE9);
++(UIColor*) positiveColor{
+    return UIColorFromRGB(0xcb7522, 1.0);
 }
 
-+(UIColor*) afterCareColor6{
-    return UIColorFromRGB(0x989ECE);
++(UIColor*) gratefulColor{
+    return UIColorFromRGB(0x66c0a0, 1.0);
 }
 
-+(UIColor*) afterCareColor7{
-    return UIColorFromRGB(0x99867C);
++(UIColor*) disinterestedColor{
+    return UIColorFromRGB(0x583f22, 1.0);
+}
+
++(UIColor*) worthlessColor{
+    return UIColorFromRGB(0xeba2071, 1.0);
+}
+
+//Transparent colors
+
++(UIColor*) afterCareTransparentColor1{
+    return [self changeBrightness:[self lonelyColor] amount:1.5];
+}
+
++(UIColor*) afterCareTransparentColor2{
+   return [self changeBrightness:[self angryColor] amount:1.5];
+}
+
++(UIColor*) afterCareTransparentColor3{
+    return [self changeBrightness:[self depressedColor] amount:1.5];
+}
++(UIColor*) afterCareTransparentColor4{
+    return [self changeBrightness:[self hurtColor] amount:1.5];
+}
+
++(UIColor*) afterCareTransparentColor5{
+    return [self changeBrightness:[self positiveColor] amount:1.5];
+}
+
++(UIColor*) afterCareTransparentColor6{
+    return [self changeBrightness:[self gratefulColor] amount:1.5];
+}
+
++(UIColor*) afterCareTransparentColor7{
+    return [self changeBrightness:[self disinterestedColor] amount:1.5];
+}
+
++(UIColor*) afterCareTransparentColor8{
+    return [self changeBrightness:[self worthlessColor] amount:1.5];
+}
+
++ (UIColor*)changeBrightness:(UIColor*)color amount:(CGFloat)amount{
+    CGFloat hue, saturation, brightness, alpha;
+    if ([color getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha]) {
+        brightness += (amount-1.0);
+        brightness = MAX(MIN(brightness, 1.0), 0.0);
+        return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:alpha];
+    }
+    
+    CGFloat white;
+    if ([color getWhite:&white alpha:&alpha]) {
+        white += (amount-1.0);
+        white = MAX(MIN(white, 1.0), 0.0);
+        return [UIColor colorWithWhite:white alpha:alpha];
+    }
+    
+    return nil;
 }
 
 @end

@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "ViewController.h"
+#import "HexagonMainViewController.h"
 //#import "ResourcesViewController.h"
 #import <CoreData/CoreData.h>
 #import "Website.h"
@@ -20,15 +20,14 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPhone" bundle:nil];
-    } else {
-        self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
-    }
+    self.viewController = [[HexagonMainViewController alloc] initWithNibName:NSStringFromClass([HexagonMainViewController class]) bundle:nil];
 //    ResourcesViewController* controller = [[ResourcesViewController alloc] init];
 //    controller.managedObjectContext = self.managedObjectContext;
-//    
-    self.window.rootViewController = self.viewController;
+    
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:@{UITextAttributeTextShadowOffset : [NSValue valueWithCGPoint:CGPointMake(0.0, 0.0)]}];
+    
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
     [self.window makeKeyAndVisible];
     return YES;
 }
