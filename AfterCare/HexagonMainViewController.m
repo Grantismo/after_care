@@ -123,7 +123,7 @@
     
     [self.navigationController.view addSubview:safetyNavigationController.view];
     
-    contentView.frame = CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height - safetyNavigationController.navigationBar.frame.size.height - .5);
+    contentView.frame = CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height - safetyNavigationController.navigationBar.frame.size.height);
 }
 
 -(void) viewWillAppear:(BOOL)animated{

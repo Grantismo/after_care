@@ -32,13 +32,17 @@ typedef enum SafetyPlanContentTag{
     IBOutlet UIView* contentView;
     
     IBOutlet SafetyPlanWarningSignsScreen* warningSignScreen;
+    
+    id<SafetyPlanScreen> currentScreen;
+    
+    SafetyPlanContentTag currentTag;
 }
 
 -(IBAction) dismiss:(id) sender;
 -(IBAction)setContent:(UIButton*) sender;
 
 
--(void) animateTitleLabelWithNewText:(NSString*) titleText andDescriptionLabelWithNewText:(NSString*) descriptionText;
+-(void) animateNewScreen:(id<SafetyPlanScreen>) screen withNewTitleText:(NSString*) titleText withNewDescriptionText:(NSString*) descriptionText;
 
 @end
 
@@ -77,6 +81,9 @@ typedef enum SafetyPlanContentTag{
     
     [[StyleManager sharedStyleManager] setBoldFontForLabel:backButton.titleLabel];
     [[StyleManager sharedStyleManager] setItalicFontForLabel:descriptionLabel];
+    
+    currentScreen = warningSignScreen;
+    [currentScreen addToView:contentView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -96,31 +103,33 @@ typedef enum SafetyPlanContentTag{
 }
 
 -(IBAction)setContent:(UIButton *)sender{
-    switch (sender.tag) {
-        case SafetyPlanContentTag_WarningSigns:
-            [self animateTitleLabelWithNewText:@"Part 1: Warning Signs" andDescriptionLabelWithNewText:@"These are thoughts, images, moods, situations or behavior that indicate a crisis that may be developing."];
-            
-            [warningSignScreen addToView:contentView];
-            break;
-        case SafetyPlanContentTag_Tag2:
-            [self animateTitleLabelWithNewText:@"Part 2: Things" andDescriptionLabelWithNewText:@"Things happen."];
-            break;
-        case SafetyPlanContentTag_Places:
-            [self animateTitleLabelWithNewText:@"Part 3: Places and Social Settings" andDescriptionLabelWithNewText:@"These are active, engaging locations like parks, museums, or even a friend's house, that provide distraction."];
-            break;
-        case SafetyPlanContentTag_Tag4:
-            [self animateTitleLabelWithNewText:@"Part 4: More Shit" andDescriptionLabelWithNewText:@"Shit happens too."];
-            break;
-        case SafetyPlanContentTag_Agencies:
-            [self animateTitleLabelWithNewText:@"Part 5: Professionals and Agencies" andDescriptionLabelWithNewText:@"It's helpful to have contact information for professionals, clinics, urgent care services, and lifelines. Enter yours here."];
-            break;
-        case SafetyPlanContentTag_Tag6:
-            [self animateTitleLabelWithNewText:@"Part 6: Even More" andDescriptionLabelWithNewText:@"Even More."];
-            break;
-            
-        default:
-            break;
+    if (currentTag != sender.tag){
+        switch (sender.tag) {
+            case SafetyPlanContentTag_WarningSigns:
+                [self animateNewScreen:warningSignScreen withNewTitleText:@"Part 1: Warning Signs" withNewDescriptionText:@"These are thoughts, images, moods, situations or behavior that indicate a crisis that may be developing."];
+                break;
+            case SafetyPlanContentTag_Tag2:
+                [self animateNewScreen:warningSignScreen withNewTitleText:@"Part 2: Things" withNewDescriptionText:@"Things happen."];
+                break;
+            case SafetyPlanContentTag_Places:
+                [self animateNewScreen:warningSignScreen withNewTitleText:@"Part 3: Places and Social Settings" withNewDescriptionText:@"These are active, engaging locations like parks, museums, or even a friend's house, that provide distraction."];
+                break;
+            case SafetyPlanContentTag_Tag4:
+                [self animateNewScreen:warningSignScreen withNewTitleText:@"Part 4: More Shit" withNewDescriptionText:@"Shit happens too."];
+                break;
+            case SafetyPlanContentTag_Agencies:
+                [self animateNewScreen:warningSignScreen withNewTitleText:@"Part 5: Professionals and Agencies" withNewDescriptionText:@"It's helpful to have contact information for professionals, clinics, urgent care services, and lifelines. Enter yours here."];
+                break;
+            case SafetyPlanContentTag_Tag6:
+                [self animateNewScreen:warningSignScreen withNewTitleText:@"Part 6: Even More" withNewDescriptionText:@"Even More."];
+                break;
+                
+            default:
+                break;
+        }
     }
+    
+    currentTag = sender.tag;
 }
 
 #pragma mark public methods
@@ -139,16 +148,23 @@ typedef enum SafetyPlanContentTag{
 
 #pragma mark private methods
 
--(void) animateTitleLabelWithNewText:(NSString *)titleText andDescriptionLabelWithNewText:(NSString *)descriptionText{
+-(void) animateNewScreen:(id<SafetyPlanScreen>)screen withNewTitleText:(NSString *)titleText withNewDescriptionText:(NSString *)descriptionText{
     [UIView animateWithDuration:.2 animations:^{
         titleLabel.alpha = 0.0;
         descriptionLabel.alpha = 0.0;
+        
+        [currentScreen animateOut];
     } completion:^(BOOL finished) {
         titleLabel.text = titleText;
         descriptionLabel.text = descriptionText;
         
+        currentScreen = screen;
+        [currentScreen addToView:contentView];
+        
         [UIView animateWithDuration:.2 animations:^{
             titleLabel.alpha = 1.0;
+            
+            [currentScreen animateIn];
         }];
         
         [UIView animateWithDuration:.4 animations:^{

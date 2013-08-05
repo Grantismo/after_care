@@ -13,4 +13,7 @@
 -(void) addToView:(UIView*) view;
 -(void) removeFromSuperview;
 
+-(void) animateIn;
+-(void) animateOut;
+
 @end
