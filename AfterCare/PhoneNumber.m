@@ -13,6 +13,9 @@
 @implementation PhoneNumber
 @dynamic name;
 @dynamic number;
+@dynamic descript;
+@synthesize color;
+
 
 
 -(void)onDidSelectCell{
@@ -20,13 +23,15 @@
     NSLog(@"Calling number... %@", phoneNumber);
 
     BOOL opened = [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
-    NSLog(@"Opened... %d", opened);
 
 }
 
 -(void) bindToUITableViewCell:(UITableViewCell *)cell{
     PhoneNumberCell* phoneCell = (PhoneNumberCell*) cell;
-    phoneCell.nameLabel.text = [@"Call " stringByAppendingString:self.name];
+    phoneCell.titleLabel.text = [@"Call " stringByAppendingString:self.name];
+    phoneCell.descriptionLabel.text = self.descript;
+    phoneCell.imageView.image = [UIImage imageNamed: @"resource_image1.png"]; // [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.imageUrl]]];
+    phoneCell.contentView.backgroundColor = self.color;
 }
 
 @end

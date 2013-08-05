@@ -76,9 +76,13 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    _managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"AfterCare" ofType:@"momd"];
+    NSURL *momURL = [NSURL fileURLWithPath:path];
+    _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:momURL];
     
     return _managedObjectModel;
+
 }
 
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
