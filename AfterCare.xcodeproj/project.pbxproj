@@ -61,6 +61,8 @@
 		9C15586E17B0226C00D1919C /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C15586D17B0226C00D1919C /* phone.png */; };
 		9C15587017B0229A00D1919C /* house.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C15586F17B0229A00D1919C /* house.png */; };
 		9C15587117B02B0200D1919C /* AfterCareDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DC8179B3A4D00028E7A /* AfterCareDataModel.xcdatamodeld */; };
+		9C15587617B0373000D1919C /* SafetyPlanWarningSignsScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C15587517B0373000D1919C /* SafetyPlanWarningSignsScreen.m */; };
+		9C15587817B037C800D1919C /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C15587717B037C800D1919C /* plus.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +142,10 @@
 		9C15586B17B0221E00D1919C /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person.png; sourceTree = "<group>"; };
 		9C15586D17B0226C00D1919C /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone.png; sourceTree = "<group>"; };
 		9C15586F17B0229A00D1919C /* house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = house.png; sourceTree = "<group>"; };
+		9C15587317B0360400D1919C /* SafetyPlanScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SafetyPlanScreen.h; sourceTree = "<group>"; };
+		9C15587417B0373000D1919C /* SafetyPlanWarningSignsScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafetyPlanWarningSignsScreen.h; sourceTree = "<group>"; };
+		9C15587517B0373000D1919C /* SafetyPlanWarningSignsScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafetyPlanWarningSignsScreen.m; sourceTree = "<group>"; };
+		9C15587717B037C800D1919C /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +203,7 @@
 				9C15586B17B0221E00D1919C /* person.png */,
 				9C15586D17B0226C00D1919C /* phone.png */,
 				9C15586F17B0229A00D1919C /* house.png */,
+				9C15587717B037C800D1919C /* plus.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -247,6 +254,9 @@
 				1E09EF6617AC439500FB3E49 /* SafetyPlanViewController.h */,
 				1E09EF6717AC439500FB3E49 /* SafetyPlanViewController.m */,
 				1E09EF6817AC439500FB3E49 /* SafetyPlanViewController.xib */,
+				9C15587317B0360400D1919C /* SafetyPlanScreen.h */,
+				9C15587417B0373000D1919C /* SafetyPlanWarningSignsScreen.h */,
+				9C15587517B0373000D1919C /* SafetyPlanWarningSignsScreen.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -304,19 +314,19 @@
 			isa = PBXGroup;
 			children = (
 				0FAF4DC8179B3A4D00028E7A /* AfterCareDataModel.xcdatamodeld */,
+				1EAB7CAB1799DBBD00F3DBAA /* AppDelegate.h */,
+				1EAB7CAC1799DBBD00F3DBAA /* AppDelegate.m */,
 				9C15585017AFF48E00D1919C /* Managers */,
 				0FAF4DE9179C955C00028E7A /* Controllers */,
 				0FAF4DE8179C955000028E7A /* Custom Cells */,
 				0FAF4DE7179C954400028E7A /* Providers */,
 				0FAF4DDA179C953D00028E7A /* Website.h */,
 				0FAF4DDB179C953E00028E7A /* Website.m */,
-				0FAF4DAC179B161900028E7A /* Assets */,
-				1EAB7CAB1799DBBD00F3DBAA /* AppDelegate.h */,
-				1EAB7CAC1799DBBD00F3DBAA /* AppDelegate.m */,
 				1E023BB1179B161C00DC8FC5 /* Custom Views */,
 				1E023BB7179B20FC00DC8FC5 /* Categories */,
 				1EAB7CC21799DCB700F3DBAA /* UIImageCreator.h */,
 				1EAB7CC31799DCB700F3DBAA /* UIImageCreator.m */,
+				0FAF4DAC179B161900028E7A /* Assets */,
 				1EAB7CA31799DBBD00F3DBAA /* Supporting Files */,
 			);
 			path = AfterCare;
@@ -426,6 +436,7 @@
 				9C15586C17B0221E00D1919C /* person.png in Resources */,
 				9C15586E17B0226C00D1919C /* phone.png in Resources */,
 				9C15587017B0229A00D1919C /* house.png in Resources */,
+				9C15587817B037C800D1919C /* plus.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +466,7 @@
 				1E09EF6917AC439500FB3E49 /* SafetyPlanViewController.m in Sources */,
 				9C15585317AFF49B00D1919C /* StyleManager.m in Sources */,
 				9C15587117B02B0200D1919C /* AfterCareDataModel.xcdatamodeld in Sources */,
+				9C15587617B0373000D1919C /* SafetyPlanWarningSignsScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

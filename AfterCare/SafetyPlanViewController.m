@@ -10,6 +10,8 @@
 #import "StyleManager.h"
 #import "UIImageCreator.h"
 
+#import "SafetyPlanWarningSignsScreen.h"
+
 typedef enum SafetyPlanContentTag{
     SafetyPlanContentTag_WarningSigns,
     SafetyPlanContentTag_Tag2,
@@ -26,10 +28,15 @@ typedef enum SafetyPlanContentTag{
     
     IBOutlet UILabel* titleLabel;
     IBOutlet UILabel* descriptionLabel;
+    
+    IBOutlet UIView* contentView;
+    
+    IBOutlet SafetyPlanWarningSignsScreen* warningSignScreen;
 }
 
 -(IBAction) dismiss:(id) sender;
 -(IBAction)setContent:(UIButton*) sender;
+
 
 -(void) animateTitleLabelWithNewText:(NSString*) titleText andDescriptionLabelWithNewText:(NSString*) descriptionText;
 
@@ -92,6 +99,8 @@ typedef enum SafetyPlanContentTag{
     switch (sender.tag) {
         case SafetyPlanContentTag_WarningSigns:
             [self animateTitleLabelWithNewText:@"Part 1: Warning Signs" andDescriptionLabelWithNewText:@"These are thoughts, images, moods, situations or behavior that indicate a crisis that may be developing."];
+            
+            [warningSignScreen addToView:contentView];
             break;
         case SafetyPlanContentTag_Tag2:
             [self animateTitleLabelWithNewText:@"Part 2: Things" andDescriptionLabelWithNewText:@"Things happen."];
