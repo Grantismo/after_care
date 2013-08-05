@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface HexagonMainViewController : UIViewController
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 @end

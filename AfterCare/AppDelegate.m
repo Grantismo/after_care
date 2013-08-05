@@ -22,7 +22,12 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[HexagonMainViewController alloc] initWithNibName:NSStringFromClass([HexagonMainViewController class]) bundle:nil];
+    
+    HexagonMainViewController* hex = [[HexagonMainViewController alloc] initWithNibName:NSStringFromClass([HexagonMainViewController class]) bundle:nil];
+    
+    hex.managedObjectContext = self.managedObjectContext;
+    self.viewController = hex;
+
    // self.viewController = [[ResourcesViewController alloc] initWithNSManagedObjectContext:self.managedObjectContext];
     
     [[StyleManager sharedStyleManager] initialize];
@@ -77,7 +82,7 @@
         return _managedObjectModel;
     }
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"AfterCare" ofType:@"momd"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"AfterCareDataModel" ofType:@"momd"];
     NSURL *momURL = [NSURL fileURLWithPath:path];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:momURL];
     

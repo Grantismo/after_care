@@ -41,6 +41,7 @@
     
     UINavigationController* safetyNavigationController;
     SafetyPlanViewController* safetyPlanViewController;
+    
 }
 
 -(IBAction) hexagonPress:(Hexagonbutton*) button;
@@ -166,8 +167,8 @@
     [displayLink invalidate];
     displayLink = nil;
     
-    UIViewController * resourceView = [ResourceViewController alloc] init
-    self.navigationController pushViewController:<#(UIViewController *)#> animated:<#(BOOL)#>
+    UIViewController * resourceView = [[ResourcesViewController alloc] initWithNSManagedObjectContext:self.managedObjectContext];
+    [self.navigationController pushViewController:resourceView animated:YES];
 }
 
 #pragma mark private methods

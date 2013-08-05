@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F114C0717B04A0800A96F21 /* AfterCareDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F114C0517B04A0800A96F21 /* AfterCareDataModel.xcdatamodeld */; };
 		0FAF4DE2179C953E00028E7A /* Website.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDB179C953E00028E7A /* Website.m */; };
 		0FAF4DE3179C953E00028E7A /* WebsiteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDD179C953E00028E7A /* WebsiteCell.m */; };
 		0FAF4DE4179C953E00028E7A /* WebsiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDE179C953E00028E7A /* WebsiteCell.xib */; };
@@ -61,12 +62,12 @@
 		9C15586C17B0221E00D1919C /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C15586B17B0221E00D1919C /* person.png */; };
 		9C15586E17B0226C00D1919C /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C15586D17B0226C00D1919C /* phone.png */; };
 		9C15587017B0229A00D1919C /* house.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C15586F17B0229A00D1919C /* house.png */; };
-		9C15587117B02B0200D1919C /* AfterCareDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DC8179B3A4D00028E7A /* AfterCareDataModel.xcdatamodeld */; };
 		9C15587617B0373000D1919C /* SafetyPlanWarningSignsScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C15587517B0373000D1919C /* SafetyPlanWarningSignsScreen.m */; };
 		9C15587817B037C800D1919C /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C15587717B037C800D1919C /* plus.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F114C0617B04A0800A96F21 /* AfterCareDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AfterCareDataModel.xcdatamodel; sourceTree = "<group>"; };
 		0FAF4D84179B016B00028E7A /* Apache License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Apache License.txt"; sourceTree = "<group>"; };
 		0FAF4D85179B016B00028E7A /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		0FAF4D86179B016B00028E7A /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -214,6 +215,8 @@
 		0FAF4DE7179C954400028E7A /* Providers */ = {
 			isa = PBXGroup;
 			children = (
+				0FAF4DDA179C953D00028E7A /* Website.h */,
+				0FAF4DDB179C953E00028E7A /* Website.m */,
 				0FAF4DF7179C95B200028E7A /* PhoneNumber.h */,
 				0FAF4DF8179C95B200028E7A /* PhoneNumber.m */,
 				0FAF4DEF179C95A400028E7A /* CellActionDelegate.h */,
@@ -316,21 +319,19 @@
 		1EAB7CA21799DBBD00F3DBAA /* AfterCare */ = {
 			isa = PBXGroup;
 			children = (
-				0FAF4DC8179B3A4D00028E7A /* AfterCareDataModel.xcdatamodeld */,
 				1EAB7CAB1799DBBD00F3DBAA /* AppDelegate.h */,
 				1EAB7CAC1799DBBD00F3DBAA /* AppDelegate.m */,
 				9C15585017AFF48E00D1919C /* Managers */,
 				0FAF4DE9179C955C00028E7A /* Controllers */,
 				0FAF4DE8179C955000028E7A /* Custom Cells */,
 				0FAF4DE7179C954400028E7A /* Providers */,
-				0FAF4DDA179C953D00028E7A /* Website.h */,
-				0FAF4DDB179C953E00028E7A /* Website.m */,
 				1E023BB1179B161C00DC8FC5 /* Custom Views */,
 				1E023BB7179B20FC00DC8FC5 /* Categories */,
 				1EAB7CC21799DCB700F3DBAA /* UIImageCreator.h */,
 				1EAB7CC31799DCB700F3DBAA /* UIImageCreator.m */,
 				0FAF4DAC179B161900028E7A /* Assets */,
 				1EAB7CA31799DBBD00F3DBAA /* Supporting Files */,
+				0F114C0517B04A0800A96F21 /* AfterCareDataModel.xcdatamodeld */,
 			);
 			path = AfterCare;
 			sourceTree = "<group>";
@@ -469,8 +470,8 @@
 				1E023BBF179CA98E00DC8FC5 /* UIColor+AfterCareColors.m in Sources */,
 				1E09EF6917AC439500FB3E49 /* SafetyPlanViewController.m in Sources */,
 				9C15585317AFF49B00D1919C /* StyleManager.m in Sources */,
-				9C15587117B02B0200D1919C /* AfterCareDataModel.xcdatamodeld in Sources */,
 				9C15587617B0373000D1919C /* SafetyPlanWarningSignsScreen.m in Sources */,
+				0F114C0717B04A0800A96F21 /* AfterCareDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,12 +605,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		0FAF4DC8179B3A4D00028E7A /* AfterCareDataModel.xcdatamodeld */ = {
+		0F114C0517B04A0800A96F21 /* AfterCareDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				0F114C0617B04A0800A96F21 /* AfterCareDataModel.xcdatamodel */,
 			);
+			currentVersion = 0F114C0617B04A0800A96F21 /* AfterCareDataModel.xcdatamodel */;
 			path = AfterCareDataModel.xcdatamodeld;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
