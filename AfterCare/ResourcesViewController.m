@@ -11,6 +11,7 @@
 #import "CellFactory.h"
 #import "PhoneNumber.h"
 #import "NewResourceViewController.h"
+#import "UIImageCreator.h"
 
 @interface ResourcesViewController ()
 
@@ -18,11 +19,10 @@
 
 @implementation ResourcesViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
+
+- (id) initWithNSManagedObjectContext: (NSManagedObjectContext *) context{
+    if(self = [super initWithNibName: NSStringFromClass([ResourcesViewController class]) bundle: nil]){
+        self.managedObjectContext = context;
     }
     return self;
 }
@@ -30,11 +30,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImageCreator onePixelImageForColor:[UIColor positiveColor]] forBarMetrics:UIBarMetricsDefault];
     self.navigationItem.title = @"Resources";
-    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addResource:)];
- 
-    self.navigationItem.rightBarButtonItem = button;
-        
+//    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addResource:)];
+// 
+//    self.navigationItem.rightBarButtonItem = button;
+    
     [self fetchResources];
     
 //    PhoneNumber* number = [[PhoneNumber alloc] init];
