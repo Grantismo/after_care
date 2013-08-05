@@ -21,11 +21,6 @@
 		0FAF4E01179C95C500028E7A /* NewResourceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4DFC179C95C500028E7A /* NewResourceViewController.xib */; };
 		0FAF4E02179C95C500028E7A /* ResourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DFE179C95C500028E7A /* ResourcesViewController.m */; };
 		0FAF4E03179C95C500028E7A /* ResourcesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4DFF179C95C500028E7A /* ResourcesViewController.xib */; };
-		0FD90E7E17B0334300DACBA6 /* resource_image1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FD90E7A17B0334300DACBA6 /* resource_image1.png */; };
-		0FD90E7F17B0334300DACBA6 /* resource_image2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FD90E7B17B0334300DACBA6 /* resource_image2.png */; };
-		0FD90E8017B0334300DACBA6 /* right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FD90E7C17B0334300DACBA6 /* right_arrow.png */; };
-		0FD90E8117B0334300DACBA6 /* transparent_phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FD90E7D17B0334300DACBA6 /* transparent_phone.png */; };
-		0FD90E8417B0366E00DACBA6 /* AfterCare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FD90E8217B0366E00DACBA6 /* AfterCare.xcdatamodeld */; };
 		1E023BB4179B171500DC8FC5 /* Hexagonbutton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E023BB3179B171500DC8FC5 /* Hexagonbutton.m */; };
 		1E023BBA179B212400DC8FC5 /* UIView+FrameManipulators.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E023BB9179B212400DC8FC5 /* UIView+FrameManipulators.m */; };
 		1E023BBC179C583300DC8FC5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E023BBB179C583300DC8FC5 /* CoreData.framework */; };
@@ -65,6 +60,9 @@
 		9C15586C17B0221E00D1919C /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C15586B17B0221E00D1919C /* person.png */; };
 		9C15586E17B0226C00D1919C /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C15586D17B0226C00D1919C /* phone.png */; };
 		9C15587017B0229A00D1919C /* house.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C15586F17B0229A00D1919C /* house.png */; };
+		9C15587117B02B0200D1919C /* AfterCareDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DC8179B3A4D00028E7A /* AfterCareDataModel.xcdatamodeld */; };
+		9C15587617B0373000D1919C /* SafetyPlanWarningSignsScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C15587517B0373000D1919C /* SafetyPlanWarningSignsScreen.m */; };
+		9C15587817B037C800D1919C /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C15587717B037C800D1919C /* plus.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,11 +102,6 @@
 		0FAF4DFD179C95C500028E7A /* ResourcesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourcesViewController.h; sourceTree = "<group>"; };
 		0FAF4DFE179C95C500028E7A /* ResourcesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourcesViewController.m; sourceTree = "<group>"; };
 		0FAF4DFF179C95C500028E7A /* ResourcesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResourcesViewController.xib; sourceTree = "<group>"; };
-		0FD90E7A17B0334300DACBA6 /* resource_image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resource_image1.png; sourceTree = "<group>"; };
-		0FD90E7B17B0334300DACBA6 /* resource_image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resource_image2.png; sourceTree = "<group>"; };
-		0FD90E7C17B0334300DACBA6 /* right_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_arrow.png; sourceTree = "<group>"; };
-		0FD90E7D17B0334300DACBA6 /* transparent_phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparent_phone.png; sourceTree = "<group>"; };
-		0FD90E8317B0366E00DACBA6 /* AfterCAre.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AfterCAre.xcdatamodel; sourceTree = "<group>"; };
 		1E023BB2179B171500DC8FC5 /* Hexagonbutton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hexagonbutton.h; sourceTree = "<group>"; };
 		1E023BB3179B171500DC8FC5 /* Hexagonbutton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hexagonbutton.m; sourceTree = "<group>"; };
 		1E023BB8179B212400DC8FC5 /* UIView+FrameManipulators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameManipulators.h"; sourceTree = "<group>"; };
@@ -149,6 +142,10 @@
 		9C15586B17B0221E00D1919C /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person.png; sourceTree = "<group>"; };
 		9C15586D17B0226C00D1919C /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone.png; sourceTree = "<group>"; };
 		9C15586F17B0229A00D1919C /* house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = house.png; sourceTree = "<group>"; };
+		9C15587317B0360400D1919C /* SafetyPlanScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SafetyPlanScreen.h; sourceTree = "<group>"; };
+		9C15587417B0373000D1919C /* SafetyPlanWarningSignsScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafetyPlanWarningSignsScreen.h; sourceTree = "<group>"; };
+		9C15587517B0373000D1919C /* SafetyPlanWarningSignsScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafetyPlanWarningSignsScreen.m; sourceTree = "<group>"; };
+		9C15587717B037C800D1919C /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,10 +194,6 @@
 		0FAF4DAE179B162600028E7A /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				0FD90E7A17B0334300DACBA6 /* resource_image1.png */,
-				0FD90E7B17B0334300DACBA6 /* resource_image2.png */,
-				0FD90E7C17B0334300DACBA6 /* right_arrow.png */,
-				0FD90E7D17B0334300DACBA6 /* transparent_phone.png */,
 				9C15584E17AFF0D700D1919C /* back-button.png */,
 				9C15585F17B0037400D1919C /* arrow.png */,
 				9C15586317B0184C00D1919C /* yellow_button_background.png */,
@@ -210,6 +203,7 @@
 				9C15586B17B0221E00D1919C /* person.png */,
 				9C15586D17B0226C00D1919C /* phone.png */,
 				9C15586F17B0229A00D1919C /* house.png */,
+				9C15587717B037C800D1919C /* plus.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -217,8 +211,6 @@
 		0FAF4DE7179C954400028E7A /* Providers */ = {
 			isa = PBXGroup;
 			children = (
-				0FAF4DDA179C953D00028E7A /* Website.h */,
-				0FAF4DDB179C953E00028E7A /* Website.m */,
 				0FAF4DF7179C95B200028E7A /* PhoneNumber.h */,
 				0FAF4DF8179C95B200028E7A /* PhoneNumber.m */,
 				0FAF4DEF179C95A400028E7A /* CellActionDelegate.h */,
@@ -262,6 +254,9 @@
 				1E09EF6617AC439500FB3E49 /* SafetyPlanViewController.h */,
 				1E09EF6717AC439500FB3E49 /* SafetyPlanViewController.m */,
 				1E09EF6817AC439500FB3E49 /* SafetyPlanViewController.xib */,
+				9C15587317B0360400D1919C /* SafetyPlanScreen.h */,
+				9C15587417B0373000D1919C /* SafetyPlanWarningSignsScreen.h */,
+				9C15587517B0373000D1919C /* SafetyPlanWarningSignsScreen.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -318,19 +313,21 @@
 		1EAB7CA21799DBBD00F3DBAA /* AfterCare */ = {
 			isa = PBXGroup;
 			children = (
+				0FAF4DC8179B3A4D00028E7A /* AfterCareDataModel.xcdatamodeld */,
+				1EAB7CAB1799DBBD00F3DBAA /* AppDelegate.h */,
+				1EAB7CAC1799DBBD00F3DBAA /* AppDelegate.m */,
 				9C15585017AFF48E00D1919C /* Managers */,
 				0FAF4DE9179C955C00028E7A /* Controllers */,
 				0FAF4DE8179C955000028E7A /* Custom Cells */,
 				0FAF4DE7179C954400028E7A /* Providers */,
-				0FAF4DAC179B161900028E7A /* Assets */,
-				1EAB7CAB1799DBBD00F3DBAA /* AppDelegate.h */,
-				1EAB7CAC1799DBBD00F3DBAA /* AppDelegate.m */,
+				0FAF4DDA179C953D00028E7A /* Website.h */,
+				0FAF4DDB179C953E00028E7A /* Website.m */,
 				1E023BB1179B161C00DC8FC5 /* Custom Views */,
 				1E023BB7179B20FC00DC8FC5 /* Categories */,
 				1EAB7CC21799DCB700F3DBAA /* UIImageCreator.h */,
 				1EAB7CC31799DCB700F3DBAA /* UIImageCreator.m */,
+				0FAF4DAC179B161900028E7A /* Assets */,
 				1EAB7CA31799DBBD00F3DBAA /* Supporting Files */,
-				0FD90E8217B0366E00DACBA6 /* AfterCare.xcdatamodeld */,
 			);
 			path = AfterCare;
 			sourceTree = "<group>";
@@ -439,10 +436,7 @@
 				9C15586C17B0221E00D1919C /* person.png in Resources */,
 				9C15586E17B0226C00D1919C /* phone.png in Resources */,
 				9C15587017B0229A00D1919C /* house.png in Resources */,
-				0FD90E7E17B0334300DACBA6 /* resource_image1.png in Resources */,
-				0FD90E7F17B0334300DACBA6 /* resource_image2.png in Resources */,
-				0FD90E8017B0334300DACBA6 /* right_arrow.png in Resources */,
-				0FD90E8117B0334300DACBA6 /* transparent_phone.png in Resources */,
+				9C15587817B037C800D1919C /* plus.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,7 +465,8 @@
 				1E023BBF179CA98E00DC8FC5 /* UIColor+AfterCareColors.m in Sources */,
 				1E09EF6917AC439500FB3E49 /* SafetyPlanViewController.m in Sources */,
 				9C15585317AFF49B00D1919C /* StyleManager.m in Sources */,
-				0FD90E8417B0366E00DACBA6 /* AfterCare.xcdatamodeld in Sources */,
+				9C15587117B02B0200D1919C /* AfterCareDataModel.xcdatamodeld in Sources */,
+				9C15587617B0373000D1919C /* SafetyPlanWarningSignsScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,15 +600,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		0FD90E8217B0366E00DACBA6 /* AfterCare.xcdatamodeld */ = {
+		0FAF4DC8179B3A4D00028E7A /* AfterCareDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				0FD90E8317B0366E00DACBA6 /* AfterCAre.xcdatamodel */,
 			);
-			currentVersion = 0FD90E8317B0366E00DACBA6 /* AfterCAre.xcdatamodel */;
-			name = AfterCare.xcdatamodeld;
-			path = AfterCAre.xcdatamodeld;
-			sourceTree = "<group>";
+			path = AfterCareDataModel.xcdatamodeld;
+			sourceTree = SOURCE_ROOT;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */

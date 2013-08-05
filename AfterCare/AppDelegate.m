@@ -22,8 +22,8 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    //self.viewController = [[HexagonMainViewController alloc] initWithNibName:NSStringFromClass([HexagonMainViewController class]) bundle:nil];
-    self.viewController = [[ResourcesViewController alloc] initWithNSManagedObjectContext:self.managedObjectContext];
+    self.viewController = [[HexagonMainViewController alloc] initWithNibName:NSStringFromClass([HexagonMainViewController class]) bundle:nil];
+   // self.viewController = [[ResourcesViewController alloc] initWithNSManagedObjectContext:self.managedObjectContext];
     
     [[StyleManager sharedStyleManager] initialize];
     

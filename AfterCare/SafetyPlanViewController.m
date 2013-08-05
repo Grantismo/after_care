@@ -10,6 +10,8 @@
 #import "StyleManager.h"
 #import "UIImageCreator.h"
 
+#import "SafetyPlanWarningSignsScreen.h"
+
 typedef enum SafetyPlanContentTag{
     SafetyPlanContentTag_WarningSigns,
     SafetyPlanContentTag_Tag2,
@@ -26,10 +28,15 @@ typedef enum SafetyPlanContentTag{
     
     IBOutlet UILabel* titleLabel;
     IBOutlet UILabel* descriptionLabel;
+    
+    IBOutlet UIView* contentView;
+    
+    IBOutlet SafetyPlanWarningSignsScreen* warningSignScreen;
 }
 
 -(IBAction) dismiss:(id) sender;
 -(IBAction)setContent:(UIButton*) sender;
+
 
 -(void) animateTitleLabelWithNewText:(NSString*) titleText andDescriptionLabelWithNewText:(NSString*) descriptionText;
 
@@ -92,9 +99,23 @@ typedef enum SafetyPlanContentTag{
     switch (sender.tag) {
         case SafetyPlanContentTag_WarningSigns:
             [self animateTitleLabelWithNewText:@"Part 1: Warning Signs" andDescriptionLabelWithNewText:@"These are thoughts, images, moods, situations or behavior that indicate a crisis that may be developing."];
+            
+            [warningSignScreen addToView:contentView];
             break;
         case SafetyPlanContentTag_Tag2:
-            [self animateTitleLabelWithNewText:@"Part 1: Warning Signs" andDescriptionLabelWithNewText:@"These are thoughts, images, moods, situations or behavior that indicate a crisis that may be developing."];
+            [self animateTitleLabelWithNewText:@"Part 2: Things" andDescriptionLabelWithNewText:@"Things happen."];
+            break;
+        case SafetyPlanContentTag_Places:
+            [self animateTitleLabelWithNewText:@"Part 3: Places and Social Settings" andDescriptionLabelWithNewText:@"These are active, engaging locations like parks, museums, or even a friend's house, that provide distraction."];
+            break;
+        case SafetyPlanContentTag_Tag4:
+            [self animateTitleLabelWithNewText:@"Part 4: More Shit" andDescriptionLabelWithNewText:@"Shit happens too."];
+            break;
+        case SafetyPlanContentTag_Agencies:
+            [self animateTitleLabelWithNewText:@"Part 5: Professionals and Agencies" andDescriptionLabelWithNewText:@"It's helpful to have contact information for professionals, clinics, urgent care services, and lifelines. Enter yours here."];
+            break;
+        case SafetyPlanContentTag_Tag6:
+            [self animateTitleLabelWithNewText:@"Part 6: Even More" andDescriptionLabelWithNewText:@"Even More."];
             break;
             
         default:
@@ -119,15 +140,18 @@ typedef enum SafetyPlanContentTag{
 #pragma mark private methods
 
 -(void) animateTitleLabelWithNewText:(NSString *)titleText andDescriptionLabelWithNewText:(NSString *)descriptionText{
-    [UIView animateWithDuration:.3 animations:^{
+    [UIView animateWithDuration:.2 animations:^{
         titleLabel.alpha = 0.0;
         descriptionLabel.alpha = 0.0;
     } completion:^(BOOL finished) {
         titleLabel.text = titleText;
         descriptionLabel.text = descriptionText;
         
-        [UIView animateWithDuration:.3 animations:^{
+        [UIView animateWithDuration:.2 animations:^{
             titleLabel.alpha = 1.0;
+        }];
+        
+        [UIView animateWithDuration:.4 animations:^{
             descriptionLabel.alpha = 1.0;
         }];
     }];
