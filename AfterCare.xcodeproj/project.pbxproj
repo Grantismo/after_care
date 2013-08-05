@@ -60,6 +60,7 @@
 		9C15586C17B0221E00D1919C /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C15586B17B0221E00D1919C /* person.png */; };
 		9C15586E17B0226C00D1919C /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C15586D17B0226C00D1919C /* phone.png */; };
 		9C15587017B0229A00D1919C /* house.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C15586F17B0229A00D1919C /* house.png */; };
+		9C15587117B02B0200D1919C /* AfterCareDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DC8179B3A4D00028E7A /* AfterCareDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -273,7 +274,6 @@
 		1EAB7C901799DBBD00F3DBAA = {
 			isa = PBXGroup;
 			children = (
-				0FAF4DC8179B3A4D00028E7A /* AfterCareDataModel.xcdatamodeld */,
 				1EAB7CA21799DBBD00F3DBAA /* AfterCare */,
 				1EAB7C9B1799DBBD00F3DBAA /* Frameworks */,
 				1EAB7C9A1799DBBD00F3DBAA /* Products */,
@@ -303,6 +303,7 @@
 		1EAB7CA21799DBBD00F3DBAA /* AfterCare */ = {
 			isa = PBXGroup;
 			children = (
+				0FAF4DC8179B3A4D00028E7A /* AfterCareDataModel.xcdatamodeld */,
 				9C15585017AFF48E00D1919C /* Managers */,
 				0FAF4DE9179C955C00028E7A /* Controllers */,
 				0FAF4DE8179C955000028E7A /* Custom Cells */,
@@ -453,6 +454,7 @@
 				1E023BBF179CA98E00DC8FC5 /* UIColor+AfterCareColors.m in Sources */,
 				1E09EF6917AC439500FB3E49 /* SafetyPlanViewController.m in Sources */,
 				9C15585317AFF49B00D1919C /* StyleManager.m in Sources */,
+				9C15587117B02B0200D1919C /* AfterCareDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,7 +593,7 @@
 			children = (
 			);
 			path = AfterCareDataModel.xcdatamodeld;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */

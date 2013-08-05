@@ -13,7 +13,10 @@
 #import "NewResourceViewController.h"
 #import "UIImageCreator.h"
 
-@interface ResourcesViewController ()
+@interface ResourcesViewController (){
+    IBOutlet UIView* navBarFooterContentView;
+    IBOutlet UIImageView* navBarFooterImageView;
+}
 
 @end
 
@@ -32,6 +35,11 @@
     [super viewDidLoad];
     [self.navigationController.navigationBar setBackgroundImage:[UIImageCreator onePixelImageForColor:[UIColor positiveColor]] forBarMetrics:UIBarMetricsDefault];
     self.navigationItem.title = @"Resources";
+    
+    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
+    
+    navBarFooterImageView.image = [UIImageCreator arrowImageWithSize:navBarFooterImageView.frame.size andArrowSize:CGSizeMake(20.0, 8.0) andArrowWidthRatio:.5 andColor:[UIColor positiveColor]];
+    
 //    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addResource:)];
 // 
 //    self.navigationItem.rightBarButtonItem = button;

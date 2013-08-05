@@ -14,4 +14,6 @@
 
 +(UIImage*) hexagonImageWithSize:(CGSize) size borderWidth:(float) borderWidth borderColorOffset:(float) borderColorOffset andColor:(UIColor*) color;
 
++(UIImage*) arrowImageWithSize:(CGSize) size andArrowSize:(CGSize) arrowSize andArrowWidthRatio:(float) ratio andColor:(UIColor*) color;
+
 @end

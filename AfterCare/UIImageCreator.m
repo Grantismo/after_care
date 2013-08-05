@@ -76,6 +76,36 @@
     return [self createImageFromContext:context];
 }
 
++(UIImage*) arrowImageWithSize:(CGSize)size andArrowSize:(CGSize)arrowSize andArrowWidthRatio:(float)ratio andColor:(UIColor *)color{
+    if (UIGraphicsBeginImageContextWithOptions != NULL) {
+        UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
+    } else {
+        UIGraphicsBeginImageContext(size);
+    }
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGFloat rectHeight = size.height - arrowSize.height;
+    
+    CGContextSetFillColorWithColor(context, color.CGColor);
+    CGContextFillRect(context, CGRectMake(0.0, 0.0, size.width, rectHeight));
+    
+    CGFloat startPointX = (size.width * ratio) - (arrowSize.width / 2.0);
+    CGContextMoveToPoint(context, startPointX, rectHeight);
+    
+    CGFloat midPointX = (size.width * ratio);
+    CGContextAddLineToPoint(context, midPointX, size.height);
+    
+    CGFloat endPointX = (size.width * ratio) + (arrowSize.width / 2.0);
+    CGContextAddLineToPoint(context, endPointX, rectHeight);
+    
+    // And close the subpath.
+    CGContextClosePath(context);
+    CGContextFillPath(context);
+    
+    return [self createImageFromContext:context];
+}
+
 +(UIImage*) createImageFromContext:(CGContextRef)context{
     CGImageRef imgRef = CGBitmapContextCreateImage(context);
     UIImage* img = [UIImage imageWithCGImage:imgRef];
