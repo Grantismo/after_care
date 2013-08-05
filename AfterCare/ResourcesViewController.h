@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "CellActionDelegate.h"
 
-@interface ResourcesViewController : UITableViewController<CellActionDelegate>
+@interface ResourcesViewController : UIViewController<CellActionDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) NSArray* dataSources;
+- (id) initWithNSManagedObjectContext: (NSManagedObjectContext *) context;
+@property (nonatomic, strong) IBOutlet UITableView * tableView;
 @end

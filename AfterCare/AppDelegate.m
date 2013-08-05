@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 
 #import "HexagonMainViewController.h"
-//#import "ResourcesViewController.h"
+#import "ResourcesViewController.h"
 #import <CoreData/CoreData.h>
 #import "Website.h"
 
@@ -20,9 +20,8 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[HexagonMainViewController alloc] initWithNibName:NSStringFromClass([HexagonMainViewController class]) bundle:nil];
-//    ResourcesViewController* controller = [[ResourcesViewController alloc] init];
-//    controller.managedObjectContext = self.managedObjectContext;
+    //self.viewController = [[HexagonMainViewController alloc] initWithNibName:NSStringFromClass([HexagonMainViewController class]) bundle:nil];
+    self.viewController = [[ResourcesViewController alloc] initWithNSManagedObjectContext:self.managedObjectContext];
     
     
     [[UINavigationBar appearance] setTitleTextAttributes:@{UITextAttributeTextShadowOffset : [NSValue valueWithCGPoint:CGPointMake(0.0, 0.0)]}];
