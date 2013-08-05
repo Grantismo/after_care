@@ -13,6 +13,8 @@
 #import <CoreData/CoreData.h>
 #import "Website.h"
 
+#import "StyleManager.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -24,8 +26,7 @@
 //    ResourcesViewController* controller = [[ResourcesViewController alloc] init];
 //    controller.managedObjectContext = self.managedObjectContext;
     
-    
-    [[UINavigationBar appearance] setTitleTextAttributes:@{UITextAttributeTextShadowOffset : [NSValue valueWithCGPoint:CGPointMake(0.0, 0.0)]}];
+    [[StyleManager sharedStyleManager] initialize];
     
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
     [self.window makeKeyAndVisible];
