@@ -36,11 +36,21 @@
 // 
 //    self.navigationItem.rightBarButtonItem = button;
     
-    [self fetchResources];
+    PhoneNumber* number = (PhoneNumber*)[NSEntityDescription
+                              insertNewObjectForEntityForName:@"PhoneNumber"
+                              inManagedObjectContext:self.managedObjectContext];
+    number.name = @"Grant";
+    number.number = @"2486223655";
+    number.descript = @"description goes here";
+    number.color = [UIColor depressedColor];
+
+    
+    self.dataSources = [NSArray arrayWithObject:number];
+    
+    //[self fetchResources];
     
 //    PhoneNumber* number = [[PhoneNumber alloc] init];
-//    number.name = @"Grant";
-//    number.number = @"2486223655";
+
 //    
 //    [sources addObject:reddit];
 //    [sources addObject:number];
@@ -55,10 +65,10 @@
 }
 
 -(void) fetchResources{
+    
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Website" inManagedObjectContext:self.managedObjectContext];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entity];
-    
     self.dataSources = [self.managedObjectContext executeFetchRequest:request error:nil];
     for(id<CellDataProvider> source in self.dataSources){
         source.delegate = self;
