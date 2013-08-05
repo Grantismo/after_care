@@ -22,4 +22,6 @@
 
 -(void) addBackButton;
 
+-(void) animateArrow:(BOOL) toSide withDuration:(NSTimeInterval) duration;
+
 @end

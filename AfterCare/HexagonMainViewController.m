@@ -16,6 +16,7 @@
 #import "WebViewController.h"
 
 #import "SafetyPlanViewController.h"
+#import "StyleManager.h"
 
 #define HEX_PADDING 6.0
 
@@ -63,7 +64,7 @@
         
         levelOutScrollSpeed = TRUE;
         
-        self.title= @"How Are You Feeling Today?";
+        self.title= @"How are you feeling today?";
     }
     return self;
 }
@@ -71,6 +72,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[StyleManager sharedStyleManager] appendTitleTextAttributes:@{UITextAttributeTextColor : [UIColor afterCareOffWhiteColor]} toNavigationBar:self.navigationController.navigationBar];
+    
     hexagonWidth = (self.view.bounds.size.width * (4.0 / 7.0));
     hexagonHeight = hexagonWidth * HEXAGON_WIDTH_HEIGHT_RATIO;
     
@@ -141,6 +145,9 @@
 
 -(void) dismissSafetyPlayController:(SafetyPlanViewController *)controller{
     self.view.hidden = FALSE;
+    
+    [safetyPlanViewController animateArrow:FALSE withDuration:.2];
+    
     [UIView animateWithDuration:.2 animations:^{
         safetyNavigationController.view.frame = CGRectMake(safetyNavigationController.view.frame.origin.x,
                                                            self.navigationController.view.bounds.size.height - safetyNavigationController.navigationBar.frame.size.height - [UIApplication sharedApplication].statusBarFrame.size.height,
@@ -259,6 +266,8 @@
 -(void) animateSafetyPlanIn:(UITapGestureRecognizer *)navTapGR{
     [displayLink invalidate];
     displayLink = nil;
+    
+    [safetyPlanViewController animateArrow:TRUE withDuration:.5];
     
     [UIView animateWithDuration:.5 delay:.1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         safetyNavigationController.view.frame = self.navigationController.view.bounds;

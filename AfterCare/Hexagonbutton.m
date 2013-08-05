@@ -7,6 +7,7 @@
 //
 
 #import "Hexagonbutton.h"
+#import "StyleManager.h"
 
 @interface Hexagonbutton ()
 
@@ -25,7 +26,7 @@
         self.borderWidth = 10.0;
         
         [self setTitleColor:[UIColor afterCareOffWhiteColor] forState:UIControlStateNormal];
-        [self.titleLabel setFont:[UIFont boldSystemFontOfSize:17.0]];
+        [[StyleManager sharedStyleManager] setBoldFontForLabel:self.titleLabel];
         
         self.autoresizingMask = UIViewAutoresizingNone;
         
