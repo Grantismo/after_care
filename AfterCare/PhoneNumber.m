@@ -14,6 +14,7 @@
 @dynamic name;
 @dynamic number;
 @dynamic descript;
+@dynamic imageUrl;
 @synthesize color;
 
 

@@ -21,6 +21,7 @@
 		0FAF4E01179C95C500028E7A /* NewResourceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4DFC179C95C500028E7A /* NewResourceViewController.xib */; };
 		0FAF4E02179C95C500028E7A /* ResourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DFE179C95C500028E7A /* ResourcesViewController.m */; };
 		0FAF4E03179C95C500028E7A /* ResourcesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4DFF179C95C500028E7A /* ResourcesViewController.xib */; };
+		0FD90E8617B043C000DACBA6 /* right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FD90E8517B043C000DACBA6 /* right_arrow.png */; };
 		1E023BB4179B171500DC8FC5 /* Hexagonbutton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E023BB3179B171500DC8FC5 /* Hexagonbutton.m */; };
 		1E023BBA179B212400DC8FC5 /* UIView+FrameManipulators.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E023BB9179B212400DC8FC5 /* UIView+FrameManipulators.m */; };
 		1E023BBC179C583300DC8FC5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E023BBB179C583300DC8FC5 /* CoreData.framework */; };
@@ -102,6 +103,7 @@
 		0FAF4DFD179C95C500028E7A /* ResourcesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourcesViewController.h; sourceTree = "<group>"; };
 		0FAF4DFE179C95C500028E7A /* ResourcesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourcesViewController.m; sourceTree = "<group>"; };
 		0FAF4DFF179C95C500028E7A /* ResourcesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResourcesViewController.xib; sourceTree = "<group>"; };
+		0FD90E8517B043C000DACBA6 /* right_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_arrow.png; sourceTree = "<group>"; };
 		1E023BB2179B171500DC8FC5 /* Hexagonbutton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hexagonbutton.h; sourceTree = "<group>"; };
 		1E023BB3179B171500DC8FC5 /* Hexagonbutton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hexagonbutton.m; sourceTree = "<group>"; };
 		1E023BB8179B212400DC8FC5 /* UIView+FrameManipulators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameManipulators.h"; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		0FAF4DAE179B162600028E7A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0FD90E8517B043C000DACBA6 /* right_arrow.png */,
 				9C15584E17AFF0D700D1919C /* back-button.png */,
 				9C15585F17B0037400D1919C /* arrow.png */,
 				9C15586317B0184C00D1919C /* yellow_button_background.png */,
@@ -437,6 +440,7 @@
 				9C15586E17B0226C00D1919C /* phone.png in Resources */,
 				9C15587017B0229A00D1919C /* house.png in Resources */,
 				9C15587817B037C800D1919C /* plus.png in Resources */,
+				0FD90E8617B043C000DACBA6 /* right_arrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

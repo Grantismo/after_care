@@ -17,6 +17,7 @@
 
 #import "SafetyPlanViewController.h"
 #import "StyleManager.h"
+#import "ResourcesViewController.h"
 
 #define HEX_PADDING 6.0
 
@@ -165,7 +166,8 @@
     [displayLink invalidate];
     displayLink = nil;
     
-    [contentView addSubview:button];
+    UIViewController * resourceView = [ResourceViewController alloc] init
+    self.navigationController pushViewController:<#(UIViewController *)#> animated:<#(BOOL)#>
 }
 
 #pragma mark private methods
