@@ -11,7 +11,9 @@
 #import "UIImageCreator.h"
 
 #import "SafetyPlanWarningSignsScreen.h"
+#import "SafetyPlanInternalScreen.h"
 #import "SafetyPlanPlacesScreen.h"
+#import "SafetyPlanPeopleScreen.h"
 
 @interface SafetyPlanViewController (){
     IBOutlet UIButton* backButton;
@@ -31,10 +33,14 @@
     IBOutlet UIButton* houseButton;
     
     IBOutlet SafetyPlanWarningSignsScreen* warningSignScreen;
+    IBOutlet SafetyPlanInternalScreen* internalScreen;
     IBOutlet SafetyPlanPlacesScreen* placesScreen;
+    IBOutlet SafetyPlanPeopleScreen* peopleScreen;
     
     NSArray* screens;
     int currentScreenIndex;
+    
+    NSArray* buttons;
 }
 
 -(IBAction) dismiss:(id) sender;
@@ -86,7 +92,8 @@
     
     warningSignScreen.managedObjectContext = self.managedObjectContext;
     
-    screens = @[warningSignScreen, placesScreen];
+    screens = @[warningSignScreen, internalScreen, placesScreen, peopleScreen];
+    buttons = @[warningButton, pencilButton, treeButton, personButton, phoneButton, houseButton];
     
     currentScreenIndex = -1;
     [self setContent:warningButton];
@@ -115,7 +122,8 @@
         
         currentScreenIndex = sender.tag;
         
-        [sender setSelected:TRUE];
+        UIButton* button = [buttons objectAtIndex:sender.tag];
+        [button setSelected:TRUE];
     }
 }
 
@@ -139,7 +147,7 @@
     SafetyPlanScreen* currentScreen = [self currentScreen];
     SafetyPlanScreen* targetScreen = [screens objectAtIndex:index];
     
-    [UIView animateWithDuration:.2 animations:^{
+    [UIView animateWithDuration:.5 animations:^{
         titleLabel.alpha = 0.0;
         descriptionLabel.alpha = 0.0;
         
@@ -150,15 +158,13 @@
         
         [currentScreen removeFromSuperview];
         [targetScreen addToView:contentView];
-        
-        [UIView animateWithDuration:.2 animations:^{
-            titleLabel.alpha = 1.0;
-            
-            [targetScreen animateIn];
-        }];
+        [targetScreen animateOut];
         
         [UIView animateWithDuration:.4 animations:^{
+            titleLabel.alpha = 1.0;
             descriptionLabel.alpha = 1.0;
+            
+            [targetScreen animateIn];
         }];
     }];
 }

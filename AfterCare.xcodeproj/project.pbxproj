@@ -84,6 +84,9 @@
 		9C1558B017B145C300D1919C /* button_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C1558A917B145C300D1919C /* button_yellow.png */; };
 		9C1558B317B1558200D1919C /* SafetyPlanPlacesScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1558B217B1558100D1919C /* SafetyPlanPlacesScreen.m */; };
 		9C1558B917B158BC00D1919C /* SafetyPlanScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1558B817B158BC00D1919C /* SafetyPlanScreen.m */; };
+		9C758BF717B192ED00478BF6 /* SafetyPlanInternalScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758BF617B192ED00478BF6 /* SafetyPlanInternalScreen.m */; };
+		9C758BFA17B195E500478BF6 /* SafetyPlanPeopleScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758BF917B195E500478BF6 /* SafetyPlanPeopleScreen.m */; };
+		9C758BFD17B198D500478BF6 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758BFC17B198D500478BF6 /* DataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -192,6 +195,12 @@
 		9C1558B217B1558100D1919C /* SafetyPlanPlacesScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafetyPlanPlacesScreen.m; sourceTree = "<group>"; };
 		9C1558B717B158BC00D1919C /* SafetyPlanScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafetyPlanScreen.h; sourceTree = "<group>"; };
 		9C1558B817B158BC00D1919C /* SafetyPlanScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafetyPlanScreen.m; sourceTree = "<group>"; };
+		9C758BF517B192ED00478BF6 /* SafetyPlanInternalScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafetyPlanInternalScreen.h; sourceTree = "<group>"; };
+		9C758BF617B192ED00478BF6 /* SafetyPlanInternalScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafetyPlanInternalScreen.m; sourceTree = "<group>"; };
+		9C758BF817B195E500478BF6 /* SafetyPlanPeopleScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafetyPlanPeopleScreen.h; sourceTree = "<group>"; };
+		9C758BF917B195E500478BF6 /* SafetyPlanPeopleScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafetyPlanPeopleScreen.m; sourceTree = "<group>"; };
+		9C758BFB17B198D500478BF6 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		9C758BFC17B198D500478BF6 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,8 +315,12 @@
 				9C1558B817B158BC00D1919C /* SafetyPlanScreen.m */,
 				9C15587417B0373000D1919C /* SafetyPlanWarningSignsScreen.h */,
 				9C15587517B0373000D1919C /* SafetyPlanWarningSignsScreen.m */,
+				9C758BF517B192ED00478BF6 /* SafetyPlanInternalScreen.h */,
+				9C758BF617B192ED00478BF6 /* SafetyPlanInternalScreen.m */,
 				9C1558B117B1558100D1919C /* SafetyPlanPlacesScreen.h */,
 				9C1558B217B1558100D1919C /* SafetyPlanPlacesScreen.m */,
+				9C758BF817B195E500478BF6 /* SafetyPlanPeopleScreen.h */,
+				9C758BF917B195E500478BF6 /* SafetyPlanPeopleScreen.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -404,6 +417,8 @@
 			children = (
 				9C15585117AFF49B00D1919C /* StyleManager.h */,
 				9C15585217AFF49B00D1919C /* StyleManager.m */,
+				9C758BFB17B198D500478BF6 /* DataManager.h */,
+				9C758BFC17B198D500478BF6 /* DataManager.m */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -574,6 +589,9 @@
 				9C1558A117B1440600D1919C /* DotProgressView.m in Sources */,
 				9C1558B317B1558200D1919C /* SafetyPlanPlacesScreen.m in Sources */,
 				9C1558B917B158BC00D1919C /* SafetyPlanScreen.m in Sources */,
+				9C758BF717B192ED00478BF6 /* SafetyPlanInternalScreen.m in Sources */,
+				9C758BFA17B195E500478BF6 /* SafetyPlanPeopleScreen.m in Sources */,
+				9C758BFD17B198D500478BF6 /* DataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

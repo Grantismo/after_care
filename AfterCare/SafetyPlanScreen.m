@@ -47,8 +47,6 @@
 }
 
 -(void) addToView:(UIView *)view{
-    [self animateOut];
-    
     [view addSubview:addButton1];
     [view addSubview:addButton2];
     [view addSubview:addButton3];
