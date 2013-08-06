@@ -14,6 +14,7 @@
 #import "SafetyPlanInternalScreen.h"
 #import "SafetyPlanPlacesScreen.h"
 #import "SafetyPlanPeopleScreen.h"
+#import "SafetyPlanProfessionalsScreen.h"
 
 @interface SafetyPlanViewController (){
     IBOutlet UIButton* backButton;
@@ -36,6 +37,7 @@
     IBOutlet SafetyPlanInternalScreen* internalScreen;
     IBOutlet SafetyPlanPlacesScreen* placesScreen;
     IBOutlet SafetyPlanPeopleScreen* peopleScreen;
+    IBOutlet SafetyPlanProfessionalsScreen* professionalsScreen;
     
     NSArray* screens;
     int currentScreenIndex;
@@ -92,7 +94,7 @@
     
     warningSignScreen.managedObjectContext = self.managedObjectContext;
     
-    screens = @[warningSignScreen, internalScreen, placesScreen, peopleScreen];
+    screens = @[warningSignScreen, internalScreen, placesScreen, peopleScreen, professionalsScreen];
     buttons = @[warningButton, pencilButton, treeButton, personButton, phoneButton, houseButton];
     
     currentScreenIndex = -1;
