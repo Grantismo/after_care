@@ -29,10 +29,13 @@
 
 -(void) bindToUITableViewCell:(UITableViewCell *)cell{
     PhoneNumberCell* phoneCell = (PhoneNumberCell*) cell;
-    phoneCell.titleLabel.text = [@"Call " stringByAppendingString:self.name];
+    phoneCell.titleLabel.text = self.name.uppercaseString;
     phoneCell.descriptionLabel.text = self.descript;
-    phoneCell.imageView.image = [UIImage imageNamed: @"resource_image1.png"]; // [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.imageUrl]]];
-    phoneCell.contentView.backgroundColor = self.color;
+    phoneCell.descriptionLabel.textColor = [UIColor changeBrightness:self.color amount:.6];
+    
+    phoneCell.sideImageView.image = [UIImage imageNamed:@"cell_phone_mouth"]; // [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.imageUrl]]];
+    phoneCell.sideImageView.overlayColor = self.color;
+    phoneCell.informationContentView.backgroundColor = self.color;
 }
 
 @end

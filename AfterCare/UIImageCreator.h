@@ -16,4 +16,6 @@
 
 +(UIImage*) arrowImageWithSize:(CGSize) size andArrowSize:(CGSize) arrowSize andArrowWidthRatio:(float) ratio andColor:(UIColor*) color;
 
++(UIImage*) tintedImageFromImage:(UIImage*) image withColor:(UIColor*) color;
+
 @end

@@ -17,8 +17,7 @@
     }
     
     [provider bindToUITableViewCell: cell];
-    NSLog(@"%@", cell);
-
+    
     return cell;
 }
 

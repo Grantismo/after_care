@@ -105,8 +105,6 @@
     [self addHexagonWithColor:[UIColor disinterestedColor] title:@"DISINTERESTED"];
     [self addHexagonWithColor:[UIColor afterCareTransparentColor1] title:nil];
     
-    [self.navigationController.navigationBar setBackgroundImage:[UIImageCreator onePixelImageForColor:[UIColor afterCareOffBlackColor]] forBarMetrics:UIBarMetricsDefault];
-    
     safetyPlanViewController = [[SafetyPlanViewController alloc] initWithNibName:NSStringFromClass([SafetyPlanViewController class]) bundle:nil];
     safetyPlanViewController.delegate = self;
     
@@ -132,6 +130,8 @@
     [super viewWillAppear:animated];
     
     hexSpeed = -1;
+    
+     [self.navigationController.navigationBar setBackgroundImage:[UIImageCreator onePixelImageForColor:[UIColor afterCareOffBlackColor]] forBarMetrics:UIBarMetricsDefault];
     
     displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(automaticallyScrollHexagons:)];
     [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
@@ -167,14 +167,13 @@
     [displayLink invalidate];
     displayLink = nil;
     
-    UIViewController * resourceView = [[ResourcesViewController alloc] initWithNSManagedObjectContext:self.managedObjectContext];
-    [self.navigationController pushViewController:resourceView animated:YES];
+    ResourcesViewController* resourceViewController = [[ResourcesViewController alloc] initWithNSManagedObjectContext:self.managedObjectContext andColor:button.color];
+    [self.navigationController pushViewController:resourceViewController animated:YES];
 }
 
 #pragma mark private methods
 
 -(void) addHexagonWithColor:(UIColor *)color title:(NSString *)buttonTitle{
-    
     Hexagonbutton* hexagon = [[Hexagonbutton alloc] initWithFrame:CGRectMake(0.0, 0.0, hexagonWidth - HEX_PADDING, 0.0)];
     hexagon.color = color;
     

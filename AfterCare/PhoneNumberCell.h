@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ColorTintImageView.h"
 
 @interface PhoneNumberCell : UITableViewCell
 
+@property (nonatomic, strong) IBOutlet UIView* informationContentView;
 @property (nonatomic, strong) IBOutlet UILabel* titleLabel;
 @property (nonatomic, strong) IBOutlet UILabel* descriptionLabel;
-@property (nonatomic, strong) IBOutlet UIImageView* imageView;
+@property (nonatomic, strong) IBOutlet ColorTintImageView* sideImageView;
 
 
 @end

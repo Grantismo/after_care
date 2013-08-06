@@ -106,6 +106,10 @@
     return [self createImageFromContext:context];
 }
 
++(UIImage*) tintedImageFromImage:(UIImage *)image withColor:(UIColor *)color{
+    return nil;
+}
+
 +(UIImage*) createImageFromContext:(CGContextRef)context{
     CGImageRef imgRef = CGBitmapContextCreateImage(context);
     UIImage* img = [UIImage imageWithCGImage:imgRef];

@@ -29,5 +29,6 @@
 +(UIColor*) afterCareTransparentColor7;
 +(UIColor*) afterCareTransparentColor8;
 
++ (UIColor*)changeBrightness:(UIColor*)color amount:(CGFloat)amount;
 
 @end

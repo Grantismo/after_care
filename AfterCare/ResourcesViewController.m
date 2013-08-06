@@ -13,32 +13,47 @@
 #import "NewResourceViewController.h"
 #import "UIImageCreator.h"
 
+#import <QuartzCore/QuartzCore.h>
+
 @interface ResourcesViewController (){
     IBOutlet UIView* navBarFooterContentView;
     IBOutlet UIImageView* navBarFooterImageView;
+    
+    IBOutlet UIButton* backButton;
 }
+
+-(IBAction)po0pSelf:(id)sender;
 
 @end
 
 @implementation ResourcesViewController
 
 
-- (id) initWithNSManagedObjectContext: (NSManagedObjectContext *) context{
+- (id) initWithNSManagedObjectContext: (NSManagedObjectContext *) context andColor:(UIColor *)color{
     if(self = [super initWithNibName: NSStringFromClass([ResourcesViewController class]) bundle: nil]){
         self.managedObjectContext = context;
+        
+        self.color = color;
     }
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
-    [self.navigationController.navigationBar setBackgroundImage:[UIImageCreator onePixelImageForColor:[UIColor positiveColor]] forBarMetrics:UIBarMetricsDefault];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImageCreator onePixelImageForColor:self.color] forBarMetrics:UIBarMetricsDefault];
     self.navigationItem.title = @"Resources";
     
     [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
     
-    navBarFooterImageView.image = [UIImageCreator arrowImageWithSize:navBarFooterImageView.frame.size andArrowSize:CGSizeMake(20.0, 8.0) andArrowWidthRatio:.5 andColor:[UIColor positiveColor]];
+    navBarFooterImageView.image = [UIImageCreator arrowImageWithSize:navBarFooterImageView.frame.size andArrowSize:CGSizeMake(20.0, 8.0) andArrowWidthRatio:.5 andColor:self.color];
+    
+    navBarFooterImageView.layer.shadowOffset = CGSizeMake(0.0, 3.0);
+    navBarFooterImageView.layer.shadowColor = [UIColor blackColor].CGColor;
+    navBarFooterImageView.layer.shadowRadius = 2.0;
+    navBarFooterImageView.layer.shadowOpacity = .5;
     
 //    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addResource:)];
 // 
@@ -47,9 +62,9 @@
     PhoneNumber* number = (PhoneNumber*)[NSEntityDescription
                               insertNewObjectForEntityForName:@"PhoneNumber"
                               inManagedObjectContext:self.managedObjectContext];
-    number.name = @"Grant";
+    number.name = @"SUICIDE ANONYMOUS";
     number.number = @"2486223655";
-    number.descript = @"description goes here";
+    number.descript = @"Suicidenonymous.net is a website that provides resources that provides worldwide Skype meetings and other support systems.";
     number.color = [UIColor depressedColor];
 
     
@@ -164,6 +179,8 @@
     [self.navigationController pushViewController:controller animated:YES];
 }
 
+#pragma mark Actions
+
 -(IBAction) addResource:(id)sender{
     NewResourceViewController *controller = [[NewResourceViewController alloc] init];
     controller.managedObjectContext = self.managedObjectContext;
@@ -172,6 +189,10 @@
         [self fetchResources];
         [self.tableView reloadData];
     }];
+}
+
+-(IBAction)po0pSelf:(id)sender{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
