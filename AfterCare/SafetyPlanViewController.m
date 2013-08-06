@@ -31,6 +31,13 @@ typedef enum SafetyPlanContentTag{
     
     IBOutlet UIView* contentView;
     
+    IBOutlet UIButton* warningButton;
+    IBOutlet UIButton* pencilButton;
+    IBOutlet UIButton* treeButton;
+    IBOutlet UIButton* personButton;
+    IBOutlet UIButton* phoneButton;
+    IBOutlet UIButton* houseButton;
+    
     IBOutlet SafetyPlanWarningSignsScreen* warningSignScreen;
     
     id<SafetyPlanScreen> currentScreen;
@@ -43,6 +50,8 @@ typedef enum SafetyPlanContentTag{
 
 
 -(void) animateNewScreen:(id<SafetyPlanScreen>) screen withNewTitleText:(NSString*) titleText withNewDescriptionText:(NSString*) descriptionText;
+
+-(void) setAllButtonesDeselected;
 
 @end
 
@@ -103,24 +112,31 @@ typedef enum SafetyPlanContentTag{
 }
 
 -(IBAction)setContent:(UIButton *)sender{
+    [self setAllButtonesDeselected];
     if (currentTag != sender.tag){
         switch (sender.tag) {
             case SafetyPlanContentTag_WarningSigns:
+                [warningButton setSelected:TRUE];
                 [self animateNewScreen:warningSignScreen withNewTitleText:@"Part 1: Warning Signs" withNewDescriptionText:@"These are thoughts, images, moods, situations or behavior that indicate a crisis that may be developing."];
                 break;
             case SafetyPlanContentTag_Tag2:
+                [pencilButton setSelected:TRUE];
                 [self animateNewScreen:warningSignScreen withNewTitleText:@"Part 2: Things" withNewDescriptionText:@"Things happen."];
                 break;
             case SafetyPlanContentTag_Places:
+                [treeButton setSelected:TRUE];
                 [self animateNewScreen:warningSignScreen withNewTitleText:@"Part 3: Places and Social Settings" withNewDescriptionText:@"These are active, engaging locations like parks, museums, or even a friend's house, that provide distraction."];
                 break;
             case SafetyPlanContentTag_Tag4:
+                [personButton setSelected:TRUE];
                 [self animateNewScreen:warningSignScreen withNewTitleText:@"Part 4: More Shit" withNewDescriptionText:@"Shit happens too."];
                 break;
             case SafetyPlanContentTag_Agencies:
+                [phoneButton setSelected:TRUE];
                 [self animateNewScreen:warningSignScreen withNewTitleText:@"Part 5: Professionals and Agencies" withNewDescriptionText:@"It's helpful to have contact information for professionals, clinics, urgent care services, and lifelines. Enter yours here."];
                 break;
             case SafetyPlanContentTag_Tag6:
+                [houseButton setSelected:TRUE];
                 [self animateNewScreen:warningSignScreen withNewTitleText:@"Part 6: Even More" withNewDescriptionText:@"Even More."];
                 break;
                 
@@ -171,6 +187,15 @@ typedef enum SafetyPlanContentTag{
             descriptionLabel.alpha = 1.0;
         }];
     }];
+}
+
+-(void) setAllButtonesDeselected{
+    [warningButton setSelected:FALSE];
+    [pencilButton setSelected:FALSE];
+    [treeButton setSelected:FALSE];
+    [personButton setSelected:FALSE];
+    [phoneButton setSelected:FALSE];
+    [houseButton setSelected:FALSE];
 }
 
 
