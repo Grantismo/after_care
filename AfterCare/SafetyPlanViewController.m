@@ -61,8 +61,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"Setup my safety plan.";
-        
+        self.title = @"Setup my safety plan.";        
     }
     return self;
 }

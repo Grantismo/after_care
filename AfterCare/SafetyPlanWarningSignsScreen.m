@@ -8,6 +8,7 @@
 
 #import "SafetyPlanWarningSignsScreen.h"
 #import "DotProgressView.h"
+#import "DataManager.h"
 
 @interface SafetyPlanWarningSignsScreen ()<UIAlertViewDelegate>
 
@@ -37,7 +38,6 @@
 -(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex == 1){
         //Add to core data;
-        
         switch (alertView.tag) {
             case 0:
                 
