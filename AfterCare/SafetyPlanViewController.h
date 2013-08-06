@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
 @class SafetyPlanViewController;
 
@@ -19,6 +20,7 @@
 @interface SafetyPlanViewController : UIViewController
 
 @property (nonatomic, assign) id<SafetyPlanDelegate> delegate;
+@property (nonatomic, strong) NSManagedObjectContext* managedObjectContext;
 
 -(void) addBackButton;
 

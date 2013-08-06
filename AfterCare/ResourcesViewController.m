@@ -14,6 +14,7 @@
 #import "UIImageCreator.h"
 
 #import <QuartzCore/QuartzCore.h>
+#import "StyleManager.h"
 
 @interface ResourcesViewController (){
     IBOutlet UIView* navBarFooterContentView;
@@ -44,8 +45,7 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
     
     [self.navigationController.navigationBar setBackgroundImage:[UIImageCreator onePixelImageForColor:self.color] forBarMetrics:UIBarMetricsDefault];
-    self.navigationItem.title = @"Resources";
-    
+
     [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
     
     navBarFooterImageView.image = [UIImageCreator arrowImageWithSize:navBarFooterImageView.frame.size andArrowSize:CGSizeMake(20.0, 8.0) andArrowWidthRatio:.5 andColor:self.color];
@@ -54,6 +54,8 @@
     navBarFooterImageView.layer.shadowColor = [UIColor blackColor].CGColor;
     navBarFooterImageView.layer.shadowRadius = 2.0;
     navBarFooterImageView.layer.shadowOpacity = .5;
+    
+    [[StyleManager sharedStyleManager] setBoldFontForLabel:backButton.titleLabel];
     
 //    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addResource:)];
 // 
@@ -64,7 +66,7 @@
                               inManagedObjectContext:self.managedObjectContext];
     number.name = @"SUICIDE ANONYMOUS";
     number.number = @"2486223655";
-    number.descript = @"Suicidenonymous.net is a website that provides resources that provides worldwide Skype meetings and other support systems.";
+    number.descript = @"Suicideanonymous.net is a website that provides resources that provide worldwide Skype meetings and other support systems.";
     number.color = [UIColor depressedColor];
 
     

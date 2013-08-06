@@ -15,4 +15,6 @@
 @property (nonatomic) float borderColorOffset;
 @property (nonatomic) float borderWidth;
 
+@property (nonatomic, strong) NSString* emotion;
+
 @end

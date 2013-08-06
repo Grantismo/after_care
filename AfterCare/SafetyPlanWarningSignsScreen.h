@@ -8,6 +8,8 @@
 
 #import "SafetyPlanScreen.h"
 
-@interface SafetyPlanWarningSignsScreen : NSObject<SafetyPlanScreen>
+@interface SafetyPlanWarningSignsScreen : SafetyPlanScreen
+
+@property (nonatomic, strong) NSManagedObjectContext* managedObjectContext;
 
 @end

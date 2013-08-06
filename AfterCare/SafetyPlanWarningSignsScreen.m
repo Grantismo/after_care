@@ -7,73 +7,77 @@
 //
 
 #import "SafetyPlanWarningSignsScreen.h"
+#import "DotProgressView.h"
 
-@interface SafetyPlanWarningSignsScreen (){
-    IBOutlet UIButton* addFirstWarningSignButton;
-    IBOutlet UIButton* addSecondWarningSignButton;
-    IBOutlet UIButton* addThirdWarningSignButton;
-    
-    IBOutlet UIImageView* plusButton1;
-    IBOutlet UIImageView* plusButton2;
-    IBOutlet UIImageView* plusButton3;
-}
+@interface SafetyPlanWarningSignsScreen ()<UIAlertViewDelegate>
 
 @end
 
 @implementation SafetyPlanWarningSignsScreen
 
 -(void) awakeFromNib{
-    plusButton1.center = CGPointMake(plusButton1.center.x, addFirstWarningSignButton.frame.size.height / 2.0);
-    [addFirstWarningSignButton addSubview:plusButton1];
+    [super awakeFromNib];
     
-    plusButton2.center = CGPointMake(plusButton2.center.x, addSecondWarningSignButton.frame.size.height / 2.0);
-    [addSecondWarningSignButton addSubview:plusButton2];
-    
-    
-    addSecondWarningSignButton.frame = CGRectMake(0.0,
-                                                  addFirstWarningSignButton.frame.size.height,
-                                                  addSecondWarningSignButton.frame.size.width,
-                                                  addSecondWarningSignButton.frame.size.height);
-    
-    plusButton3.center = CGPointMake(plusButton3.center.x, addThirdWarningSignButton.frame.size.height / 2.0);
-    [addThirdWarningSignButton addSubview:plusButton3];
-    
-    addThirdWarningSignButton.frame = CGRectMake(0.0,
-                                                 addFirstWarningSignButton.frame.size.height + addSecondWarningSignButton.frame.size.height,
-                                                 addThirdWarningSignButton.frame.size.width,
-                                                 addThirdWarningSignButton.frame.size.height);
-    
-    addFirstWarningSignButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-    addSecondWarningSignButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-    addThirdWarningSignButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    //get core data stuff here.
 }
 
--(void) addToView:(UIView *)view{
-    [view addSubview:addFirstWarningSignButton];
-    [view addSubview:addSecondWarningSignButton];
-    [view addSubview:addThirdWarningSignButton];
+-(NSString*) titleText{
+    return @"Part 1: Warning Signs";
 }
 
--(void) removeFromSuperview{
-    [addFirstWarningSignButton removeFromSuperview];
-    [addSecondWarningSignButton removeFromSuperview];
-    [addThirdWarningSignButton removeFromSuperview];
+-(NSString*) descriptionText{
+    return @"These are thoughts, moods, situations or behaviors that indicate a crisis may be developing.";
 }
 
--(void) animateIn{
-    addFirstWarningSignButton.center = CGPointMake(addFirstWarningSignButton.superview.frame.size.width / 2.0, addFirstWarningSignButton.center.y);
+#pragma mark UIAlertView delegate methods
+
+-(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 1){
+        //Add to core data;
+        
+        switch (alertView.tag) {
+            case 0:
+                
+                break;
+            case 1:
+                
+                break;
+            case 2:
+               
+                break;
+                
+            default:
+                break;
+        }
+    }
+}
+
+#pragma mark actions
+
+-(IBAction)addToSafetyPlan:(UIButton *)sender{
+    NSString* titleName = nil;
+    switch (sender.tag) {
+        case 0:
+            titleName = @"First";
+            break;
+        case 1:
+            titleName = @"Second";
+            break;
+        case 2:
+            titleName = @"Third";
+            break;
+            
+        default:
+            break;
+    }
     
-    addSecondWarningSignButton.center = CGPointMake(addSecondWarningSignButton.superview.frame.size.width / 2.0, addSecondWarningSignButton.center.y);
     
-    addThirdWarningSignButton.center = CGPointMake(addThirdWarningSignButton.superview.frame.size.width / 2.0, addThirdWarningSignButton.center.y);
-}
-
--(void) animateOut{
-    addFirstWarningSignButton.center = CGPointMake(-addFirstWarningSignButton.frame.size.width, addFirstWarningSignButton.center.y);
-    addSecondWarningSignButton.center = CGPointMake(-addSecondWarningSignButton.frame.size.width, addSecondWarningSignButton.center.y);
-
-    addThirdWarningSignButton.center = CGPointMake(-addThirdWarningSignButton.frame.size.width, addThirdWarningSignButton.center.y);
-
+    UIAlertView* addWarningAlert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Add %@ Warning Sign", titleName] message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Enter", nil];
+    
+    addWarningAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    addWarningAlert.tag = sender.tag;
+    
+    [addWarningAlert show];
 }
 
 @end

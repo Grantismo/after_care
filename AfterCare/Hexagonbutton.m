@@ -43,6 +43,12 @@
     [self setBackgroundImageFromProperties];
 }
 
+-(void) setEmotion:(NSString *)emotion{
+    _emotion = emotion;
+    
+    [self setTitle:emotion.uppercaseString forState:UIControlStateNormal];
+}
+
 -(void) setBorderColorOffset:(float)borderColorOffset{
     _borderColorOffset = borderColorOffset;
     

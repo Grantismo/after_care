@@ -86,27 +86,28 @@
     [self.view addGestureRecognizer:panGR];
 	
     [self addHexagonWithColor:[UIColor afterCareTransparentColor1] title:nil];
-    [self addHexagonWithColor:[UIColor positiveColor] title:@"POSITIVE"];
-    [self addHexagonWithColor:[UIColor angryColor] title:@"ANGRY"];
+    [self addHexagonWithColor:[UIColor positiveColor] title:@"Positive"];
+    [self addHexagonWithColor:[UIColor angryColor] title:@"Angry"];
     [self addHexagonWithColor:[UIColor afterCareTransparentColor2] title:nil];
     
     [self addHexagonWithColor:[UIColor afterCareTransparentColor3] title:nil];
-    [self addHexagonWithColor:[UIColor lonelyColor] title:@"LONELY"];
-    [self addHexagonWithColor:[UIColor depressedColor] title:@"DEPRESSED"];
+    [self addHexagonWithColor:[UIColor lonelyColor] title:@"Lonely"];
+    [self addHexagonWithColor:[UIColor depressedColor] title:@"Depressed"];
     [self addHexagonWithColor:[UIColor afterCareTransparentColor4] title:nil];
     
     [self addHexagonWithColor:[UIColor afterCareTransparentColor5] title:nil];
-    [self addHexagonWithColor:[UIColor hurtColor] title:@"HURT"];
-    [self addHexagonWithColor:[UIColor gratefulColor] title:@"GRATEFUL"];
+    [self addHexagonWithColor:[UIColor hurtColor] title:@"Hurt"];
+    [self addHexagonWithColor:[UIColor gratefulColor] title:@"Grateful"];
     [self addHexagonWithColor:[UIColor afterCareTransparentColor6] title:nil];
     
     [self addHexagonWithColor:[UIColor afterCareTransparentColor7] title:nil];
-    [self addHexagonWithColor:[UIColor worthlessColor] title:@"WORTHLESS"];
-    [self addHexagonWithColor:[UIColor disinterestedColor] title:@"DISINTERESTED"];
+    [self addHexagonWithColor:[UIColor worthlessColor] title:@"Worthless"];
+    [self addHexagonWithColor:[UIColor disinterestedColor] title:@"Disinterested"];
     [self addHexagonWithColor:[UIColor afterCareTransparentColor1] title:nil];
     
     safetyPlanViewController = [[SafetyPlanViewController alloc] initWithNibName:NSStringFromClass([SafetyPlanViewController class]) bundle:nil];
     safetyPlanViewController.delegate = self;
+    safetyPlanViewController.managedObjectContext = self.managedObjectContext;
     
     safetyNavigationController = [[UINavigationController alloc] initWithRootViewController:safetyPlanViewController];
     
@@ -168,6 +169,9 @@
     displayLink = nil;
     
     ResourcesViewController* resourceViewController = [[ResourcesViewController alloc] initWithNSManagedObjectContext:self.managedObjectContext andColor:button.color];
+    
+    resourceViewController.title = [NSString stringWithFormat:@"I'm Feeling %@", button.emotion];
+    
     [self.navigationController pushViewController:resourceViewController animated:YES];
 }
 
@@ -177,7 +181,7 @@
     Hexagonbutton* hexagon = [[Hexagonbutton alloc] initWithFrame:CGRectMake(0.0, 0.0, hexagonWidth - HEX_PADDING, 0.0)];
     hexagon.color = color;
     
-    [hexagon setTitle:buttonTitle forState:UIControlStateNormal];
+    hexagon.emotion = buttonTitle;
     
     [hexagon addTarget:self action:@selector(hexagonPress:) forControlEvents:UIControlEventTouchUpInside];
     
