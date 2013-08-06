@@ -18,6 +18,9 @@
 -(void) awakeFromNib{
     [super awakeFromNib];
     
+    progressView.numberOfDots = 3;
+    [progressView setActivatedDotImage:[UIImage imageNamed:@"button_orange"]];
+    
     //get core data stuff here.
 }
 

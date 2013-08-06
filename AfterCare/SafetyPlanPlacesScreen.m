@@ -15,9 +15,14 @@
 
 @implementation SafetyPlanPlacesScreen
 
--(void) awakeFromNib{
-    
+-(NSString*) titleText{
+    return @"Part 2: Internal Coping Strategies";
 }
+
+-(NSString*) descriptionText{
+    return @"Things I can do by myself to take my mind off my problems, like relaxation techniques, writing, or physical activity.";
+}
+
 
 #pragma mark actions
 

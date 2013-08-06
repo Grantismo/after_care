@@ -11,6 +11,7 @@
 #import "UIImageCreator.h"
 
 #import "SafetyPlanWarningSignsScreen.h"
+#import "SafetyPlanPlacesScreen.h"
 
 @interface SafetyPlanViewController (){
     IBOutlet UIButton* backButton;
@@ -30,6 +31,7 @@
     IBOutlet UIButton* houseButton;
     
     IBOutlet SafetyPlanWarningSignsScreen* warningSignScreen;
+    IBOutlet SafetyPlanPlacesScreen* placesScreen;
     
     NSArray* screens;
     int currentScreenIndex;
@@ -84,7 +86,7 @@
     
     warningSignScreen.managedObjectContext = self.managedObjectContext;
     
-    screens = @[warningSignScreen];
+    screens = @[warningSignScreen, placesScreen];
     
     currentScreenIndex = -1;
     [self setContent:warningButton];
@@ -108,10 +110,10 @@
 
 -(IBAction)setContent:(UIButton *)sender{
     if (currentScreenIndex != sender.tag){
-        currentScreenIndex = sender.tag;
-        
         [self setAllButtonesDeselected];
         [self animateNewScreenAtIndex:sender.tag];
+        
+        currentScreenIndex = sender.tag;
         
         [sender setSelected:TRUE];
     }
@@ -137,8 +139,6 @@
     SafetyPlanScreen* currentScreen = [self currentScreen];
     SafetyPlanScreen* targetScreen = [screens objectAtIndex:index];
     
-    NSLog(@"%@ %@", currentScreen, targetScreen);
-    
     [UIView animateWithDuration:.2 animations:^{
         titleLabel.alpha = 0.0;
         descriptionLabel.alpha = 0.0;
@@ -148,12 +148,13 @@
         titleLabel.text = [targetScreen titleText];
         descriptionLabel.text = [targetScreen descriptionText];
         
-        [currentScreen addToView:contentView];
+        [currentScreen removeFromSuperview];
+        [targetScreen addToView:contentView];
         
         [UIView animateWithDuration:.2 animations:^{
             titleLabel.alpha = 1.0;
             
-            [currentScreen animateIn];
+            [targetScreen animateIn];
         }];
         
         [UIView animateWithDuration:.4 animations:^{
@@ -172,7 +173,9 @@
 }
 
 -(SafetyPlanScreen*) currentScreen{
-    return [screens objectAtIndex:currentScreenIndex];
+    if (currentScreenIndex >= 0 && currentScreenIndex < screens.count)
+        return [screens objectAtIndex:currentScreenIndex];
+    else return nil;
 }
 
 
