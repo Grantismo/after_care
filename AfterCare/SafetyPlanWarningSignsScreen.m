@@ -9,11 +9,7 @@
 #import "SafetyPlanWarningSignsScreen.h"
 #import "DotProgressView.h"
 
-#import "SafetyPlanManager.h"
-
 @interface SafetyPlanWarningSignsScreen ()
-
--(void) refreshButtonsFromSafetyPlan;
 
 @end
 
@@ -42,7 +38,7 @@
     return [[SafetyPlanManager sharedManager] warningSignAtIndex:tag].warningSign;
 }
 
--(NSString*) editAlertTextForTag:(int)tag{
+-(NSString*) editAlertTitleForTag:(int)tag{
     NSString* titleName = nil;
     switch (tag) {
         case 0:
@@ -70,7 +66,11 @@
     return [[SafetyPlanManager sharedManager] warningSignAtIndex:tag].warningSign;
 }
 
--(void) textWasEdited:(NSString *)text forTag:(int)tag{
+-(UIAlertViewStyle) alertStyle{
+    return UIAlertViewStylePlainTextInput;
+}
+
+-(void) textWasEdited:(NSString *)text text1:(NSString *)text1 forTag:(int)tag{
     WarningSign* warningSign = nil;
     if (text && ![text isEqualToString:@""]){
         warningSign = [[WarningSign alloc] init];
@@ -85,8 +85,6 @@
 -(BOOL) shouldEditForTag:(int)tag{
     return [[SafetyPlanManager sharedManager] warningSignAtIndex:tag] ? TRUE : FALSE;
 }
-
-#pragma mark private methods
 
 -(void) refreshButtonsFromSafetyPlan{
     SafetyPlanManager* manager = [SafetyPlanManager sharedManager];
@@ -105,7 +103,7 @@
     }
     else{
         [progressView setDotDeactivatedAtIndex:1];
-        [addButton2 setTitle:@"Your second warning sign." forState:UIControlStateNormal];
+        [addButton2 setTitle:@"Add your second warning sign." forState:UIControlStateNormal];
     }
     if ([manager warningSignAtIndex:2]) {
         [progressView setDotActivatedAtIndex:2];

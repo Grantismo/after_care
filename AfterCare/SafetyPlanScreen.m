@@ -109,13 +109,22 @@
     if (alertView == editAlert){
         if (buttonIndex == 1){
             NSString* text = [alertView textFieldAtIndex:0].text;
-            [self textWasEdited:text forTag:alertView.tag];
+            
+            NSString* text1 = nil;
+            if (alertView.alertViewStyle == UIAlertViewStyleLoginAndPasswordInput)
+                text1 = [alertView textFieldAtIndex:1].text;
+            
+            [self textWasEdited:text text1:text1 forTag:alertView.tag];
         }
     }
     else{
         if (buttonIndex == 1){
             [self createEditAlertFromTag:alertView.tag];
             [editAlert show];
+        }
+        else if (buttonIndex == 2){
+            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"telprompt://%@", [self phoneNumberForTag:alertView.tag]]];
+            [[UIApplication sharedApplication] openURL:url];
         }
     }
 }
@@ -126,7 +135,10 @@
     UIAlertView* showAlert = nil;
     
     if ([self shouldEditForTag:sender.tag]){
-        showAlert = [[UIAlertView alloc] initWithTitle:nil message:[self alertMessageInfoForTag:sender.tag] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Edit",nil];
+        
+        NSString* phoneNumberTitle = [self phoneNumberForTag:sender.tag] ? @"Call" : nil;
+        
+        showAlert = [[UIAlertView alloc] initWithTitle:nil message:[self alertMessageInfoForTag:sender.tag] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Edit", phoneNumberTitle, nil];
         
         showAlert.tag = sender.tag;
     }
@@ -146,7 +158,7 @@
     return nil;
 }
 
--(NSString*) editAlertTextForTag:(int)tag{
+-(NSString*) editAlertTitleForTag:(int)tag{
     //Let subclasses override
     return nil;
 }
@@ -156,13 +168,32 @@
     return nil;
 }
 
--(void) textWasEdited:(NSString *)text forTag:(int)tag{
+-(NSString*) editPlaceholderText1ForTag:(int)tag{
     //Let subclasses override
+    return nil;
+}
+
+-(NSString*) phoneNumberForTag:(int)tag{
+    //Let subclasses override
+    return nil;
+}
+
+-(UIAlertViewStyle) alertStyle{
+    //Let subclasses override
+    return UIAlertViewStyleDefault;
 }
 
 -(BOOL) shouldEditForTag:(int)tag{
     //Let subclasses override
     return FALSE;
+}
+
+-(void) textWasEdited:(NSString *)text text1:(NSString *)text1 forTag:(int)tag{
+    //Let subclasses override
+}
+
+-(void) refreshButtonsFromSafetyPlan{
+     //Let subclasses override
 }
 
 #pragma mark private methods
@@ -181,11 +212,20 @@
 }
 
 -(void) createEditAlertFromTag:(int)tag{
-    editAlert = [[UIAlertView alloc] initWithTitle:[self editAlertTextForTag:tag] message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Enter", nil];
-    
-    editAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
-    
+    editAlert = [[UIAlertView alloc] initWithTitle:[self editAlertTitleForTag:tag] message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Enter", nil];
     editAlert.tag = tag;
+    
+    editAlert.alertViewStyle = [self alertStyle];
+    
+    if ([self alertStyle] == UIAlertViewStyleLoginAndPasswordInput){
+        [[editAlert textFieldAtIndex:1] setSecureTextEntry:FALSE];
+        
+        [editAlert textFieldAtIndex:1].text = [self editPlaceholderText1ForTag:tag];
+        [editAlert textFieldAtIndex:1].keyboardType = UIKeyboardTypePhonePad;
+        
+        [editAlert textFieldAtIndex:0].placeholder = @"Name";
+        [editAlert textFieldAtIndex:1].placeholder = @"Phone Number";
+    }
     
     [editAlert textFieldAtIndex:0].text = [self editPlaceholderTextForTag:tag];
 }

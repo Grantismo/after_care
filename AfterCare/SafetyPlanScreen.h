@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 TabSprint. All rights reserved.
 //
 
+#import "SafetyPlanManager.h"
 #import "DotProgressView.h"
 
 @interface SafetyPlanScreen : NSObject{
@@ -34,13 +35,20 @@
 
 -(IBAction)addToSafetyPlan:(UIButton*)sender;
 
-//protected methds
+//protected methods
 -(NSString*) alertMessageInfoForTag:(int) tag;
--(NSString*) editAlertTextForTag:(int) tag;
+-(NSString*) editAlertTitleForTag:(int) tag;
+
 -(NSString*) editPlaceholderTextForTag:(int) tag;
+-(NSString*) editPlaceholderText1ForTag:(int) tag;
+
+-(NSString*) phoneNumberForTag:(int) tag;
+
+-(UIAlertViewStyle) alertStyle;
 
 -(BOOL) shouldEditForTag:(int) tag;
+-(void) textWasEdited:(NSString*) text text1:(NSString*) text1 forTag:(int) tag;
 
--(void) textWasEdited:(NSString*) text forTag:(int) tag;
+-(void) refreshButtonsFromSafetyPlan;
 
 @end

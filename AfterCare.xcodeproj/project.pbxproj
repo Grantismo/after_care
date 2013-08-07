@@ -84,7 +84,7 @@
 		9C1558B017B145C300D1919C /* button_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C1558A917B145C300D1919C /* button_yellow.png */; };
 		9C1558B317B1558200D1919C /* SafetyPlanPlacesScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1558B217B1558100D1919C /* SafetyPlanPlacesScreen.m */; };
 		9C1558B917B158BC00D1919C /* SafetyPlanScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1558B817B158BC00D1919C /* SafetyPlanScreen.m */; };
-		9C758BF717B192ED00478BF6 /* SafetyPlanInternalScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758BF617B192ED00478BF6 /* SafetyPlanInternalScreen.m */; };
+		9C758BF717B192ED00478BF6 /* SafetyPlanCopingStrategyScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758BF617B192ED00478BF6 /* SafetyPlanCopingStrategyScreen.m */; };
 		9C758BFA17B195E500478BF6 /* SafetyPlanPeopleScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758BF917B195E500478BF6 /* SafetyPlanPeopleScreen.m */; };
 		9C758BFD17B198D500478BF6 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758BFC17B198D500478BF6 /* DataManager.m */; };
 		9C758C0117B19A1800478BF6 /* SafetyPlanProfessionalsScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758C0017B19A1800478BF6 /* SafetyPlanProfessionalsScreen.m */; };
@@ -98,12 +98,14 @@
 		9C758C1417B295D200478BF6 /* WarningSign.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758C1317B295D200478BF6 /* WarningSign.m */; };
 		9C758C1717B2995600478BF6 /* SafetyPlanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758C1617B2995600478BF6 /* SafetyPlanManager.m */; };
 		9C758C1A17B2A42900478BF6 /* CopingStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758C1917B2A42900478BF6 /* CopingStrategy.m */; };
+		9C758C1D17B2C31B00478BF6 /* SocialPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758C1C17B2C31B00478BF6 /* SocialPlace.m */; };
+		9C758C2017B2D0DD00478BF6 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758C1F17B2D0DD00478BF6 /* Person.m */; };
+		9C758C2317B2D3E900478BF6 /* Professional.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758C2217B2D3E900478BF6 /* Professional.m */; };
+		9C758C2617B2D91200478BF6 /* SafeEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758C2517B2D91200478BF6 /* SafeEnvironment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0F114C0617B04A0800A96F21 /* AfterCareDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AfterCareDataModel.xcdatamodel; sourceTree = "<group>"; };
-		0F114C0917B1A4BF00A96F21 /* SafetyPlan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafetyPlan.h; sourceTree = "<group>"; };
-		0F114C0A17B1A4BF00A96F21 /* SafetyPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafetyPlan.m; sourceTree = "<group>"; };
 		0FAF4D84179B016B00028E7A /* Apache License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Apache License.txt"; sourceTree = "<group>"; };
 		0FAF4D85179B016B00028E7A /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		0FAF4D86179B016B00028E7A /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -208,8 +210,8 @@
 		9C1558B217B1558100D1919C /* SafetyPlanPlacesScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafetyPlanPlacesScreen.m; sourceTree = "<group>"; };
 		9C1558B717B158BC00D1919C /* SafetyPlanScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafetyPlanScreen.h; sourceTree = "<group>"; };
 		9C1558B817B158BC00D1919C /* SafetyPlanScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafetyPlanScreen.m; sourceTree = "<group>"; };
-		9C758BF517B192ED00478BF6 /* SafetyPlanInternalScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafetyPlanInternalScreen.h; sourceTree = "<group>"; };
-		9C758BF617B192ED00478BF6 /* SafetyPlanInternalScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafetyPlanInternalScreen.m; sourceTree = "<group>"; };
+		9C758BF517B192ED00478BF6 /* SafetyPlanCopingStrategyScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafetyPlanCopingStrategyScreen.h; sourceTree = "<group>"; };
+		9C758BF617B192ED00478BF6 /* SafetyPlanCopingStrategyScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafetyPlanCopingStrategyScreen.m; sourceTree = "<group>"; };
 		9C758BF817B195E500478BF6 /* SafetyPlanPeopleScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafetyPlanPeopleScreen.h; sourceTree = "<group>"; };
 		9C758BF917B195E500478BF6 /* SafetyPlanPeopleScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafetyPlanPeopleScreen.m; sourceTree = "<group>"; };
 		9C758BFB17B198D500478BF6 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
@@ -230,6 +232,14 @@
 		9C758C1617B2995600478BF6 /* SafetyPlanManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafetyPlanManager.m; sourceTree = "<group>"; };
 		9C758C1817B2A42900478BF6 /* CopingStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopingStrategy.h; sourceTree = "<group>"; };
 		9C758C1917B2A42900478BF6 /* CopingStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopingStrategy.m; sourceTree = "<group>"; };
+		9C758C1B17B2C31B00478BF6 /* SocialPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialPlace.h; sourceTree = "<group>"; };
+		9C758C1C17B2C31B00478BF6 /* SocialPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialPlace.m; sourceTree = "<group>"; };
+		9C758C1E17B2D0DD00478BF6 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		9C758C1F17B2D0DD00478BF6 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		9C758C2117B2D3E900478BF6 /* Professional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Professional.h; sourceTree = "<group>"; };
+		9C758C2217B2D3E900478BF6 /* Professional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Professional.m; sourceTree = "<group>"; };
+		9C758C2417B2D91100478BF6 /* SafeEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafeEnvironment.h; sourceTree = "<group>"; };
+		9C758C2517B2D91200478BF6 /* SafeEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafeEnvironment.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,12 +261,18 @@
 		0F114C0817B1A44200A96F21 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0F114C0917B1A4BF00A96F21 /* SafetyPlan.h */,
-				0F114C0A17B1A4BF00A96F21 /* SafetyPlan.m */,
 				9C758C1217B295D200478BF6 /* WarningSign.h */,
 				9C758C1317B295D200478BF6 /* WarningSign.m */,
 				9C758C1817B2A42900478BF6 /* CopingStrategy.h */,
 				9C758C1917B2A42900478BF6 /* CopingStrategy.m */,
+				9C758C1B17B2C31B00478BF6 /* SocialPlace.h */,
+				9C758C1C17B2C31B00478BF6 /* SocialPlace.m */,
+				9C758C1E17B2D0DD00478BF6 /* Person.h */,
+				9C758C1F17B2D0DD00478BF6 /* Person.m */,
+				9C758C2117B2D3E900478BF6 /* Professional.h */,
+				9C758C2217B2D3E900478BF6 /* Professional.m */,
+				9C758C2417B2D91100478BF6 /* SafeEnvironment.h */,
+				9C758C2517B2D91200478BF6 /* SafeEnvironment.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -358,8 +374,8 @@
 				9C1558B817B158BC00D1919C /* SafetyPlanScreen.m */,
 				9C15587417B0373000D1919C /* SafetyPlanWarningSignsScreen.h */,
 				9C15587517B0373000D1919C /* SafetyPlanWarningSignsScreen.m */,
-				9C758BF517B192ED00478BF6 /* SafetyPlanInternalScreen.h */,
-				9C758BF617B192ED00478BF6 /* SafetyPlanInternalScreen.m */,
+				9C758BF517B192ED00478BF6 /* SafetyPlanCopingStrategyScreen.h */,
+				9C758BF617B192ED00478BF6 /* SafetyPlanCopingStrategyScreen.m */,
 				9C1558B117B1558100D1919C /* SafetyPlanPlacesScreen.h */,
 				9C1558B217B1558100D1919C /* SafetyPlanPlacesScreen.m */,
 				9C758BF817B195E500478BF6 /* SafetyPlanPeopleScreen.h */,
@@ -658,7 +674,7 @@
 				9C1558A117B1440600D1919C /* DotProgressView.m in Sources */,
 				9C1558B317B1558200D1919C /* SafetyPlanPlacesScreen.m in Sources */,
 				9C1558B917B158BC00D1919C /* SafetyPlanScreen.m in Sources */,
-				9C758BF717B192ED00478BF6 /* SafetyPlanInternalScreen.m in Sources */,
+				9C758BF717B192ED00478BF6 /* SafetyPlanCopingStrategyScreen.m in Sources */,
 				9C758BFA17B195E500478BF6 /* SafetyPlanPeopleScreen.m in Sources */,
 				9C758BFD17B198D500478BF6 /* DataManager.m in Sources */,
 				9C758C0117B19A1800478BF6 /* SafetyPlanProfessionalsScreen.m in Sources */,
@@ -666,6 +682,10 @@
 				9C758C1417B295D200478BF6 /* WarningSign.m in Sources */,
 				9C758C1717B2995600478BF6 /* SafetyPlanManager.m in Sources */,
 				9C758C1A17B2A42900478BF6 /* CopingStrategy.m in Sources */,
+				9C758C1D17B2C31B00478BF6 /* SocialPlace.m in Sources */,
+				9C758C2017B2D0DD00478BF6 /* Person.m in Sources */,
+				9C758C2317B2D3E900478BF6 /* Professional.m in Sources */,
+				9C758C2617B2D91200478BF6 /* SafeEnvironment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
