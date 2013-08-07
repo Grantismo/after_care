@@ -33,6 +33,8 @@
     IBOutlet UIButton* phoneButton;
     IBOutlet UIButton* houseButton;
     
+    IBOutlet UIButton* nextButton;
+    
     IBOutlet SafetyPlanWarningSignsScreen* warningSignScreen;
     IBOutlet SafetyPlanInternalScreen* internalScreen;
     IBOutlet SafetyPlanPlacesScreen* placesScreen;
@@ -43,6 +45,8 @@
     int currentScreenIndex;
     
     NSArray* buttons;
+    
+    NSArray* nextButtonImages;
 }
 
 -(IBAction) dismiss:(id) sender;
@@ -96,6 +100,13 @@
     
     screens = @[warningSignScreen, internalScreen, placesScreen, peopleScreen, professionalsScreen];
     buttons = @[warningButton, pencilButton, treeButton, personButton, phoneButton, houseButton];
+    
+    nextButtonImages = @[[UIImage imageNamed:@"next_1"],
+                         [UIImage imageNamed:@"next_2"],
+                         [UIImage imageNamed:@"next_3"],
+                         [UIImage imageNamed:@"next_4"],
+                         [UIImage imageNamed:@"next_5"],
+                         [UIImage imageNamed:@"next_6"]];
     
     currentScreenIndex = -1;
     [self setContent:warningButton];
@@ -153,6 +164,8 @@
         titleLabel.alpha = 0.0;
         descriptionLabel.alpha = 0.0;
         
+        nextButton.alpha = 0.0;
+        
         [currentScreen animateOut];
     } completion:^(BOOL finished) {
         titleLabel.text = [targetScreen titleText];
@@ -162,9 +175,14 @@
         [targetScreen addToView:contentView];
         [targetScreen animateOut];
         
+        UIImage* nextButtonImage = nextButtonImages[index];
+        [nextButton setImage:nextButtonImage forState:UIControlStateNormal];
+        
         [UIView animateWithDuration:.4 animations:^{
             titleLabel.alpha = 1.0;
             descriptionLabel.alpha = 1.0;
+            
+            nextButton.alpha = 0.0;
             
             [targetScreen animateIn];
         }];

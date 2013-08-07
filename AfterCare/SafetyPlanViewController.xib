@@ -343,7 +343,7 @@
 						<string key="NSFrame">{{10, 54}, {40, 8}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="552149715"/>
+						<reference key="NSNextKeyView" ref="1020901929"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -360,7 +360,7 @@
 						<string key="NSFrame">{{118, 54}, {40, 8}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="371066478"/>
+						<reference key="NSNextKeyView" ref="920602945"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -369,7 +369,7 @@
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
-					<object class="IBUIView" id="371066478">
+					<object class="IBUIView" id="920602945">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">301</int>
 						<string key="NSFrame">{{169, 54}, {40, 8}}</string>
@@ -384,7 +384,7 @@
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
-					<object class="IBUIView" id="561502473">
+					<object class="IBUIView" id="564277047">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">301</int>
 						<string key="NSFrame">{{220, 54}, {40, 8}}</string>
@@ -398,7 +398,7 @@
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
-					<object class="IBUIView" id="552149715">
+					<object class="IBUIView" id="1020901929">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">301</int>
 						<string key="NSFrame">{{64, 54}, {40, 8}}</string>
@@ -639,10 +639,10 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<reference key="IBUIImage" ref="339818066"/>
 			</object>
-			<object class="IBUICustomObject" id="43459744">
+			<object class="IBUICustomObject" id="661792305">
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
-			<object class="IBUIButton" id="812956459">
+			<object class="IBUIButton" id="170898625">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{280, 44}</string>
@@ -668,7 +668,7 @@
 				<reference key="IBUIFontDescription" ref="347237692"/>
 				<reference key="IBUIFont" ref="848870966"/>
 			</object>
-			<object class="IBUIButton" id="781553811">
+			<object class="IBUIButton" id="544985103">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{280, 44}</string>
@@ -695,7 +695,7 @@
 				<reference key="IBUIFontDescription" ref="347237692"/>
 				<reference key="IBUIFont" ref="848870966"/>
 			</object>
-			<object class="IBUIButton" id="971236037">
+			<object class="IBUIButton" id="742853705">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{280, 44}</string>
@@ -722,7 +722,7 @@
 				<reference key="IBUIFontDescription" ref="347237692"/>
 				<reference key="IBUIFont" ref="848870966"/>
 			</object>
-			<object class="IBUIImageView" id="15374534">
+			<object class="IBUIImageView" id="222901544">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 30}</string>
@@ -734,7 +734,7 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<reference key="IBUIImage" ref="339818066"/>
 			</object>
-			<object class="IBUIImageView" id="800351114">
+			<object class="IBUIImageView" id="716074618">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
@@ -746,7 +746,7 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<reference key="IBUIImage" ref="339818066"/>
 			</object>
-			<object class="IBUIImageView" id="666476753">
+			<object class="IBUIImageView" id="782661673">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
@@ -761,7 +761,7 @@
 			<object class="IBUICustomObject" id="1025149592">
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
-			<object class="IBUIButton" id="17515155">
+			<object class="IBUIButton" id="522040334">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{280, 44}</string>
@@ -787,7 +787,7 @@
 				<reference key="IBUIFontDescription" ref="347237692"/>
 				<reference key="IBUIFont" ref="848870966"/>
 			</object>
-			<object class="IBUIButton" id="993086932">
+			<object class="IBUIButton" id="1003841657">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{280, 44}</string>
@@ -814,7 +814,7 @@
 				<reference key="IBUIFontDescription" ref="347237692"/>
 				<reference key="IBUIFont" ref="848870966"/>
 			</object>
-			<object class="IBUIButton" id="311926481">
+			<object class="IBUIButton" id="71280584">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{280, 44}</string>
@@ -841,7 +841,7 @@
 				<reference key="IBUIFontDescription" ref="347237692"/>
 				<reference key="IBUIFont" ref="848870966"/>
 			</object>
-			<object class="IBUIImageView" id="77954951">
+			<object class="IBUIImageView" id="438629959">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
@@ -853,7 +853,7 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<reference key="IBUIImage" ref="339818066"/>
 			</object>
-			<object class="IBUIImageView" id="253400434">
+			<object class="IBUIImageView" id="918024307">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
@@ -865,7 +865,7 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<reference key="IBUIImage" ref="339818066"/>
 			</object>
-			<object class="IBUIImageView" id="106313486">
+			<object class="IBUIImageView" id="799718701">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
@@ -877,10 +877,10 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<reference key="IBUIImage" ref="339818066"/>
 			</object>
-			<object class="IBUICustomObject" id="186358928">
+			<object class="IBUICustomObject" id="784902491">
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
-			<object class="IBUIButton" id="534662055">
+			<object class="IBUIButton" id="82397365">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{280, 44}</string>
@@ -906,7 +906,7 @@
 				<reference key="IBUIFontDescription" ref="347237692"/>
 				<reference key="IBUIFont" ref="848870966"/>
 			</object>
-			<object class="IBUIButton" id="193401046">
+			<object class="IBUIButton" id="580919445">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{280, 44}</string>
@@ -933,7 +933,7 @@
 				<reference key="IBUIFontDescription" ref="347237692"/>
 				<reference key="IBUIFont" ref="848870966"/>
 			</object>
-			<object class="IBUIButton" id="18838344">
+			<object class="IBUIButton" id="770834602">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{280, 44}</string>
@@ -960,7 +960,7 @@
 				<reference key="IBUIFontDescription" ref="347237692"/>
 				<reference key="IBUIFont" ref="848870966"/>
 			</object>
-			<object class="IBUIImageView" id="593281269">
+			<object class="IBUIImageView" id="497247487">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 30}</string>
@@ -972,7 +972,7 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<reference key="IBUIImage" ref="339818066"/>
 			</object>
-			<object class="IBUIImageView" id="747748638">
+			<object class="IBUIImageView" id="20327167">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
@@ -984,7 +984,7 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<reference key="IBUIImage" ref="339818066"/>
 			</object>
-			<object class="IBUIImageView" id="248238551">
+			<object class="IBUIImageView" id="576578643">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
@@ -996,10 +996,10 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<reference key="IBUIImage" ref="339818066"/>
 			</object>
-			<object class="IBUICustomObject" id="731181993">
+			<object class="IBUICustomObject" id="468818607">
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
-			<object class="IBUIButton" id="1013044529">
+			<object class="IBUIButton" id="1060909601">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{280, 44}</string>
@@ -1025,7 +1025,7 @@
 				<reference key="IBUIFontDescription" ref="347237692"/>
 				<reference key="IBUIFont" ref="848870966"/>
 			</object>
-			<object class="IBUIButton" id="903553054">
+			<object class="IBUIButton" id="300767679">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{280, 44}</string>
@@ -1052,7 +1052,7 @@
 				<reference key="IBUIFontDescription" ref="347237692"/>
 				<reference key="IBUIFont" ref="848870966"/>
 			</object>
-			<object class="IBUIButton" id="833079270">
+			<object class="IBUIButton" id="147051904">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{280, 44}</string>
@@ -1079,7 +1079,7 @@
 				<reference key="IBUIFontDescription" ref="347237692"/>
 				<reference key="IBUIFont" ref="848870966"/>
 			</object>
-			<object class="IBUIButton" id="17533664">
+			<object class="IBUIButton" id="546502002">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{280, 44}</string>
@@ -1106,7 +1106,7 @@
 				<reference key="IBUIFontDescription" ref="347237692"/>
 				<reference key="IBUIFont" ref="848870966"/>
 			</object>
-			<object class="IBUIImageView" id="236207394">
+			<object class="IBUIImageView" id="647545710">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 30}</string>
@@ -1118,7 +1118,7 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<reference key="IBUIImage" ref="339818066"/>
 			</object>
-			<object class="IBUIImageView" id="504056211">
+			<object class="IBUIImageView" id="242369946">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
@@ -1130,7 +1130,7 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<reference key="IBUIImage" ref="339818066"/>
 			</object>
-			<object class="IBUIImageView" id="831353571">
+			<object class="IBUIImageView" id="656177450">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
@@ -1142,7 +1142,7 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<reference key="IBUIImage" ref="339818066"/>
 			</object>
-			<object class="IBUIImageView" id="881977075">
+			<object class="IBUIImageView" id="183454204">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
@@ -1280,7 +1280,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">internalScreen</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="43459744"/>
+						<reference key="destination" ref="661792305"/>
 					</object>
 					<int key="connectionID">126</int>
 				</object>
@@ -1288,7 +1288,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">peopleScreen</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="186358928"/>
+						<reference key="destination" ref="784902491"/>
 					</object>
 					<int key="connectionID">156</int>
 				</object>
@@ -1296,9 +1296,17 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">professionalsScreen</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="731181993"/>
+						<reference key="destination" ref="468818607"/>
 					</object>
 					<int key="connectionID">168</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">nextButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="1008525144"/>
+					</object>
+					<int key="connectionID">186</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -1467,7 +1475,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">addButton1</string>
 						<reference key="source" ref="1025149592"/>
-						<reference key="destination" ref="17515155"/>
+						<reference key="destination" ref="522040334"/>
 					</object>
 					<int key="connectionID">105</int>
 				</object>
@@ -1475,7 +1483,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">addButton2</string>
 						<reference key="source" ref="1025149592"/>
-						<reference key="destination" ref="993086932"/>
+						<reference key="destination" ref="1003841657"/>
 					</object>
 					<int key="connectionID">106</int>
 				</object>
@@ -1483,7 +1491,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">addButton3</string>
 						<reference key="source" ref="1025149592"/>
-						<reference key="destination" ref="311926481"/>
+						<reference key="destination" ref="71280584"/>
 					</object>
 					<int key="connectionID">107</int>
 				</object>
@@ -1491,7 +1499,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">detailImage1</string>
 						<reference key="source" ref="1025149592"/>
-						<reference key="destination" ref="77954951"/>
+						<reference key="destination" ref="438629959"/>
 					</object>
 					<int key="connectionID">113</int>
 				</object>
@@ -1499,7 +1507,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">detailImage2</string>
 						<reference key="source" ref="1025149592"/>
-						<reference key="destination" ref="253400434"/>
+						<reference key="destination" ref="918024307"/>
 					</object>
 					<int key="connectionID">114</int>
 				</object>
@@ -1507,14 +1515,14 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">detailImage3</string>
 						<reference key="source" ref="1025149592"/>
-						<reference key="destination" ref="106313486"/>
+						<reference key="destination" ref="799718701"/>
 					</object>
 					<int key="connectionID">115</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">addToSafetyPlan:</string>
-						<reference key="source" ref="17515155"/>
+						<reference key="source" ref="522040334"/>
 						<reference key="destination" ref="828582174"/>
 						<int key="IBEventType">7</int>
 					</object>
@@ -1523,7 +1531,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">addToSafetyPlan:</string>
-						<reference key="source" ref="993086932"/>
+						<reference key="source" ref="1003841657"/>
 						<reference key="destination" ref="828582174"/>
 						<int key="IBEventType">7</int>
 					</object>
@@ -1532,7 +1540,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">addToSafetyPlan:</string>
-						<reference key="source" ref="311926481"/>
+						<reference key="source" ref="71280584"/>
 						<reference key="destination" ref="828582174"/>
 						<int key="IBEventType">7</int>
 					</object>
@@ -1541,8 +1549,8 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">addToSafetyPlan:</string>
-						<reference key="source" ref="812956459"/>
-						<reference key="destination" ref="43459744"/>
+						<reference key="source" ref="170898625"/>
+						<reference key="destination" ref="661792305"/>
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">127</int>
@@ -1550,8 +1558,8 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">addToSafetyPlan:</string>
-						<reference key="source" ref="781553811"/>
-						<reference key="destination" ref="43459744"/>
+						<reference key="source" ref="544985103"/>
+						<reference key="destination" ref="661792305"/>
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">129</int>
@@ -1559,64 +1567,64 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">addButton1</string>
-						<reference key="source" ref="43459744"/>
-						<reference key="destination" ref="812956459"/>
+						<reference key="source" ref="661792305"/>
+						<reference key="destination" ref="170898625"/>
 					</object>
 					<int key="connectionID">128</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">addButton2</string>
-						<reference key="source" ref="43459744"/>
-						<reference key="destination" ref="781553811"/>
+						<reference key="source" ref="661792305"/>
+						<reference key="destination" ref="544985103"/>
 					</object>
 					<int key="connectionID">130</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">addButton3</string>
-						<reference key="source" ref="43459744"/>
-						<reference key="destination" ref="971236037"/>
+						<reference key="source" ref="661792305"/>
+						<reference key="destination" ref="742853705"/>
 					</object>
 					<int key="connectionID">132</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">detailImage1</string>
-						<reference key="source" ref="43459744"/>
-						<reference key="destination" ref="15374534"/>
+						<reference key="source" ref="661792305"/>
+						<reference key="destination" ref="222901544"/>
 					</object>
 					<int key="connectionID">135</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">detailImage2</string>
-						<reference key="source" ref="43459744"/>
-						<reference key="destination" ref="800351114"/>
+						<reference key="source" ref="661792305"/>
+						<reference key="destination" ref="716074618"/>
 					</object>
 					<int key="connectionID">136</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">detailImage3</string>
-						<reference key="source" ref="43459744"/>
-						<reference key="destination" ref="666476753"/>
+						<reference key="source" ref="661792305"/>
+						<reference key="destination" ref="782661673"/>
 					</object>
 					<int key="connectionID">137</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">progressView</string>
-						<reference key="source" ref="43459744"/>
-						<reference key="destination" ref="552149715"/>
+						<reference key="source" ref="661792305"/>
+						<reference key="destination" ref="1020901929"/>
 					</object>
 					<int key="connectionID">158</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">addToSafetyPlan:</string>
-						<reference key="source" ref="971236037"/>
-						<reference key="destination" ref="43459744"/>
+						<reference key="source" ref="742853705"/>
+						<reference key="destination" ref="661792305"/>
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">131</int>
@@ -1624,8 +1632,8 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">addToSafetyPlan:</string>
-						<reference key="source" ref="534662055"/>
-						<reference key="destination" ref="186358928"/>
+						<reference key="source" ref="82397365"/>
+						<reference key="destination" ref="784902491"/>
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">148</int>
@@ -1633,8 +1641,8 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">addToSafetyPlan:</string>
-						<reference key="source" ref="193401046"/>
-						<reference key="destination" ref="186358928"/>
+						<reference key="source" ref="580919445"/>
+						<reference key="destination" ref="784902491"/>
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">150</int>
@@ -1642,8 +1650,8 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">addToSafetyPlan:</string>
-						<reference key="source" ref="18838344"/>
-						<reference key="destination" ref="186358928"/>
+						<reference key="source" ref="770834602"/>
+						<reference key="destination" ref="784902491"/>
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">152</int>
@@ -1651,136 +1659,136 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">addButton1</string>
-						<reference key="source" ref="186358928"/>
-						<reference key="destination" ref="534662055"/>
+						<reference key="source" ref="784902491"/>
+						<reference key="destination" ref="82397365"/>
 					</object>
 					<int key="connectionID">147</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">addButton2</string>
-						<reference key="source" ref="186358928"/>
-						<reference key="destination" ref="193401046"/>
+						<reference key="source" ref="784902491"/>
+						<reference key="destination" ref="580919445"/>
 					</object>
 					<int key="connectionID">149</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">addButton3</string>
-						<reference key="source" ref="186358928"/>
-						<reference key="destination" ref="18838344"/>
+						<reference key="source" ref="784902491"/>
+						<reference key="destination" ref="770834602"/>
 					</object>
 					<int key="connectionID">151</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">detailImage1</string>
-						<reference key="source" ref="186358928"/>
-						<reference key="destination" ref="593281269"/>
+						<reference key="source" ref="784902491"/>
+						<reference key="destination" ref="497247487"/>
 					</object>
 					<int key="connectionID">153</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">detailImage2</string>
-						<reference key="source" ref="186358928"/>
-						<reference key="destination" ref="747748638"/>
+						<reference key="source" ref="784902491"/>
+						<reference key="destination" ref="20327167"/>
 					</object>
 					<int key="connectionID">154</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">detailImage3</string>
-						<reference key="source" ref="186358928"/>
-						<reference key="destination" ref="248238551"/>
+						<reference key="source" ref="784902491"/>
+						<reference key="destination" ref="576578643"/>
 					</object>
 					<int key="connectionID">155</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">progressView</string>
-						<reference key="source" ref="186358928"/>
-						<reference key="destination" ref="371066478"/>
+						<reference key="source" ref="784902491"/>
+						<reference key="destination" ref="920602945"/>
 					</object>
 					<int key="connectionID">160</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">addButton1</string>
-						<reference key="source" ref="731181993"/>
-						<reference key="destination" ref="1013044529"/>
+						<reference key="source" ref="468818607"/>
+						<reference key="destination" ref="1060909601"/>
 					</object>
 					<int key="connectionID">170</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">addButton2</string>
-						<reference key="source" ref="731181993"/>
-						<reference key="destination" ref="903553054"/>
+						<reference key="source" ref="468818607"/>
+						<reference key="destination" ref="300767679"/>
 					</object>
 					<int key="connectionID">171</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">addButton3</string>
-						<reference key="source" ref="731181993"/>
-						<reference key="destination" ref="833079270"/>
+						<reference key="source" ref="468818607"/>
+						<reference key="destination" ref="147051904"/>
 					</object>
 					<int key="connectionID">173</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">addButton4</string>
-						<reference key="source" ref="731181993"/>
-						<reference key="destination" ref="17533664"/>
+						<reference key="source" ref="468818607"/>
+						<reference key="destination" ref="546502002"/>
 					</object>
 					<int key="connectionID">177</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">detailImage1</string>
-						<reference key="source" ref="731181993"/>
-						<reference key="destination" ref="236207394"/>
+						<reference key="source" ref="468818607"/>
+						<reference key="destination" ref="647545710"/>
 					</object>
 					<int key="connectionID">179</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">detailImage2</string>
-						<reference key="source" ref="731181993"/>
-						<reference key="destination" ref="504056211"/>
+						<reference key="source" ref="468818607"/>
+						<reference key="destination" ref="242369946"/>
 					</object>
 					<int key="connectionID">180</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">detailImage3</string>
-						<reference key="source" ref="731181993"/>
-						<reference key="destination" ref="831353571"/>
+						<reference key="source" ref="468818607"/>
+						<reference key="destination" ref="656177450"/>
 					</object>
 					<int key="connectionID">181</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">detailImage4</string>
-						<reference key="source" ref="731181993"/>
-						<reference key="destination" ref="881977075"/>
+						<reference key="source" ref="468818607"/>
+						<reference key="destination" ref="183454204"/>
 					</object>
 					<int key="connectionID">183</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">progressView</string>
-						<reference key="source" ref="731181993"/>
-						<reference key="destination" ref="561502473"/>
+						<reference key="source" ref="468818607"/>
+						<reference key="destination" ref="564277047"/>
 					</object>
 					<int key="connectionID">185</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">addToSafetyPlan:</string>
-						<reference key="source" ref="1013044529"/>
-						<reference key="destination" ref="731181993"/>
+						<reference key="source" ref="1060909601"/>
+						<reference key="destination" ref="468818607"/>
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">169</int>
@@ -1788,8 +1796,8 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">addToSafetyPlan:</string>
-						<reference key="source" ref="833079270"/>
-						<reference key="destination" ref="731181993"/>
+						<reference key="source" ref="147051904"/>
+						<reference key="destination" ref="468818607"/>
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">174</int>
@@ -1797,8 +1805,8 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">addToSafetyPlan:</string>
-						<reference key="source" ref="903553054"/>
-						<reference key="destination" ref="731181993"/>
+						<reference key="source" ref="300767679"/>
+						<reference key="destination" ref="468818607"/>
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">172</int>
@@ -1806,8 +1814,8 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">addToSafetyPlan:</string>
-						<reference key="source" ref="17533664"/>
-						<reference key="destination" ref="731181993"/>
+						<reference key="source" ref="546502002"/>
+						<reference key="destination" ref="468818607"/>
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">178</int>
@@ -1837,9 +1845,9 @@
 							<reference ref="225920033"/>
 							<reference ref="817720859"/>
 							<reference ref="953809367"/>
-							<reference ref="552149715"/>
-							<reference ref="371066478"/>
-							<reference ref="561502473"/>
+							<reference ref="1020901929"/>
+							<reference ref="920602945"/>
+							<reference ref="564277047"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -1975,162 +1983,162 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">97</int>
-						<reference key="object" ref="17515155"/>
+						<reference key="object" ref="522040334"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">98</int>
-						<reference key="object" ref="993086932"/>
+						<reference key="object" ref="1003841657"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">99</int>
-						<reference key="object" ref="311926481"/>
+						<reference key="object" ref="71280584"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">109</int>
-						<reference key="object" ref="77954951"/>
+						<reference key="object" ref="438629959"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">110</int>
-						<reference key="object" ref="253400434"/>
+						<reference key="object" ref="918024307"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">111</int>
-						<reference key="object" ref="106313486"/>
+						<reference key="object" ref="799718701"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">117</int>
-						<reference key="object" ref="15374534"/>
+						<reference key="object" ref="222901544"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">118</int>
-						<reference key="object" ref="812956459"/>
+						<reference key="object" ref="170898625"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">119</int>
-						<reference key="object" ref="800351114"/>
+						<reference key="object" ref="716074618"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">121</int>
-						<reference key="object" ref="781553811"/>
+						<reference key="object" ref="544985103"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">122</int>
-						<reference key="object" ref="666476753"/>
+						<reference key="object" ref="782661673"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">123</int>
-						<reference key="object" ref="43459744"/>
+						<reference key="object" ref="661792305"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">124</int>
-						<reference key="object" ref="971236037"/>
+						<reference key="object" ref="742853705"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">139</int>
-						<reference key="object" ref="534662055"/>
+						<reference key="object" ref="82397365"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">140</int>
-						<reference key="object" ref="593281269"/>
+						<reference key="object" ref="497247487"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">141</int>
-						<reference key="object" ref="747748638"/>
+						<reference key="object" ref="20327167"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">142</int>
-						<reference key="object" ref="193401046"/>
+						<reference key="object" ref="580919445"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">143</int>
-						<reference key="object" ref="248238551"/>
+						<reference key="object" ref="576578643"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">144</int>
-						<reference key="object" ref="18838344"/>
+						<reference key="object" ref="770834602"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">145</int>
-						<reference key="object" ref="186358928"/>
+						<reference key="object" ref="784902491"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">157</int>
-						<reference key="object" ref="552149715"/>
+						<reference key="object" ref="1020901929"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">159</int>
-						<reference key="object" ref="371066478"/>
+						<reference key="object" ref="920602945"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">161</int>
-						<reference key="object" ref="731181993"/>
+						<reference key="object" ref="468818607"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">162</int>
-						<reference key="object" ref="236207394"/>
+						<reference key="object" ref="647545710"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">163</int>
-						<reference key="object" ref="504056211"/>
+						<reference key="object" ref="242369946"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">164</int>
-						<reference key="object" ref="1013044529"/>
+						<reference key="object" ref="1060909601"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">165</int>
-						<reference key="object" ref="831353571"/>
+						<reference key="object" ref="656177450"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">166</int>
-						<reference key="object" ref="833079270"/>
+						<reference key="object" ref="147051904"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">167</int>
-						<reference key="object" ref="903553054"/>
+						<reference key="object" ref="300767679"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">176</int>
-						<reference key="object" ref="17533664"/>
+						<reference key="object" ref="546502002"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">182</int>
-						<reference key="object" ref="881977075"/>
+						<reference key="object" ref="183454204"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">184</int>
-						<reference key="object" ref="561502473"/>
+						<reference key="object" ref="564277047"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>
@@ -2234,7 +2242,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">185</int>
+			<int key="maxID">186</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2382,6 +2390,7 @@
 						<string key="internalScreen">SafetyPlanInternalScreen</string>
 						<string key="littleYellowArrowImage">UIImageView</string>
 						<string key="littleYellowArrowImageContainer">UIView</string>
+						<string key="nextButton">UIButton</string>
 						<string key="pencilButton">UIButton</string>
 						<string key="peopleScreen">SafetyPlanPeopleScreen</string>
 						<string key="personButton">UIButton</string>
@@ -2421,6 +2430,10 @@
 						<object class="IBToOneOutletInfo" key="littleYellowArrowImageContainer">
 							<string key="name">littleYellowArrowImageContainer</string>
 							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="nextButton">
+							<string key="name">nextButton</string>
+							<string key="candidateClassName">UIButton</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="pencilButton">
 							<string key="name">pencilButton</string>

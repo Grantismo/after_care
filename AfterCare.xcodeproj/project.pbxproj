@@ -88,6 +88,12 @@
 		9C758BFA17B195E500478BF6 /* SafetyPlanPeopleScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758BF917B195E500478BF6 /* SafetyPlanPeopleScreen.m */; };
 		9C758BFD17B198D500478BF6 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758BFC17B198D500478BF6 /* DataManager.m */; };
 		9C758C0117B19A1800478BF6 /* SafetyPlanProfessionalsScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758C0017B19A1800478BF6 /* SafetyPlanProfessionalsScreen.m */; };
+		9C758C0917B288CA00478BF6 /* next_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C758C0317B288CA00478BF6 /* next_1.png */; };
+		9C758C0A17B288CA00478BF6 /* next_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C758C0417B288CA00478BF6 /* next_2.png */; };
+		9C758C0B17B288CA00478BF6 /* next_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C758C0517B288CA00478BF6 /* next_3.png */; };
+		9C758C0C17B288CA00478BF6 /* next_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C758C0617B288CA00478BF6 /* next_4.png */; };
+		9C758C0D17B288CA00478BF6 /* next_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C758C0717B288CA00478BF6 /* next_5.png */; };
+		9C758C0E17B288CA00478BF6 /* next_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C758C0817B288CA00478BF6 /* next_6.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -204,6 +210,12 @@
 		9C758BFC17B198D500478BF6 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		9C758BFF17B19A1800478BF6 /* SafetyPlanProfessionalsScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafetyPlanProfessionalsScreen.h; sourceTree = "<group>"; };
 		9C758C0017B19A1800478BF6 /* SafetyPlanProfessionalsScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafetyPlanProfessionalsScreen.m; sourceTree = "<group>"; };
+		9C758C0317B288CA00478BF6 /* next_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next_1.png; sourceTree = "<group>"; };
+		9C758C0417B288CA00478BF6 /* next_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next_2.png; sourceTree = "<group>"; };
+		9C758C0517B288CA00478BF6 /* next_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next_3.png; sourceTree = "<group>"; };
+		9C758C0617B288CA00478BF6 /* next_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next_4.png; sourceTree = "<group>"; };
+		9C758C0717B288CA00478BF6 /* next_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next_5.png; sourceTree = "<group>"; };
+		9C758C0817B288CA00478BF6 /* next_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next_6.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +272,7 @@
 				9C15585F17B0037400D1919C /* arrow.png */,
 				9C15586317B0184C00D1919C /* yellow_button_background.png */,
 				9C15587717B037C800D1919C /* plus.png */,
+				9C758C0217B288BC00478BF6 /* Next Buttons */,
 				9C1558A217B145B700D1919C /* Dot indicators */,
 				9C15588617B13DB800D1919C /* Safety Plan Icons */,
 			);
@@ -461,6 +474,19 @@
 			name = "Dot indicators";
 			sourceTree = "<group>";
 		};
+		9C758C0217B288BC00478BF6 /* Next Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				9C758C0317B288CA00478BF6 /* next_1.png */,
+				9C758C0417B288CA00478BF6 /* next_2.png */,
+				9C758C0517B288CA00478BF6 /* next_3.png */,
+				9C758C0617B288CA00478BF6 /* next_4.png */,
+				9C758C0717B288CA00478BF6 /* next_5.png */,
+				9C758C0817B288CA00478BF6 /* next_6.png */,
+			);
+			name = "Next Buttons";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -560,6 +586,12 @@
 				9C1558AE17B145C300D1919C /* button_orange.png in Resources */,
 				9C1558AF17B145C300D1919C /* button_red.png in Resources */,
 				9C1558B017B145C300D1919C /* button_yellow.png in Resources */,
+				9C758C0917B288CA00478BF6 /* next_1.png in Resources */,
+				9C758C0A17B288CA00478BF6 /* next_2.png in Resources */,
+				9C758C0B17B288CA00478BF6 /* next_3.png in Resources */,
+				9C758C0C17B288CA00478BF6 /* next_4.png in Resources */,
+				9C758C0D17B288CA00478BF6 /* next_5.png in Resources */,
+				9C758C0E17B288CA00478BF6 /* next_6.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
