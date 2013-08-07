@@ -17,6 +17,7 @@
 @dynamic title;
 @dynamic descript;
 @dynamic imageUrl;
+@synthesize color;
 
 
 -(void)onDidSelectCell{
@@ -29,7 +30,11 @@
     WebsiteCell* websiteCell = (WebsiteCell*) cell;
     websiteCell.titleLabel.text = self.title.uppercaseString;
     websiteCell.descriptionLabel.text = self.descript;
-    websiteCell.imageView.image =   [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.imageUrl]]];
+    websiteCell.descriptionLabel.textColor = [UIColor changeBrightness:self.color amount:.6];
+    
+    websiteCell.sideImageView.image = [UIImage imageNamed:@"cell_phone_mouth"];
+    websiteCell.sideImageView.overlayColor = self.color;
+    websiteCell.informationContentView.backgroundColor = self.color;
 }
 
 

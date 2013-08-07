@@ -50,7 +50,6 @@
 										<int key="NSvFlags">300</int>
 										<string key="NSFrameSize">{108, 109}</string>
 										<reference key="NSSuperview" ref="112961393"/>
-										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="81360122"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<object class="NSColor" key="IBUIBackgroundColor" id="575414947">
@@ -65,7 +64,6 @@
 										<int key="NSvFlags">300</int>
 										<string key="NSFrame">{{13, 4.5}, {280, 39}}</string>
 										<reference key="NSSuperview" ref="112961393"/>
-										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="657677809"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="IBUIOpaque">NO</bool>
@@ -102,7 +100,6 @@
 										<int key="NSvFlags">297</int>
 										<string key="NSFrame">{{111, 49}, {159, 51}}</string>
 										<reference key="NSSuperview" ref="112961393"/>
-										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="638531602"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="IBUIOpaque">NO</bool>
@@ -135,8 +132,6 @@
 										<int key="NSvFlags">296</int>
 										<string key="NSFrame">{{278, 44}, {20, 20}}</string>
 										<reference key="NSSuperview" ref="112961393"/>
-										<reference key="NSWindow"/>
-										<reference key="NSNextKeyView"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="IBUIUserInteractionEnabled">NO</bool>
 										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -148,7 +143,6 @@
 								</array>
 								<string key="NSFrame">{{4, 4}, {312, 108}}</string>
 								<reference key="NSSuperview" ref="690771787"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="487962511"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
@@ -160,7 +154,6 @@
 						</array>
 						<string key="NSFrameSize">{320, 115}</string>
 						<reference key="NSSuperview" ref="436722801"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="112961393"/>
 						<string key="NSReuseIdentifierKey">_NS:11</string>
 						<reference key="IBUIBackgroundColor" ref="575414947"/>
@@ -173,7 +166,6 @@
 				</array>
 				<string key="NSFrameSize">{320, 116}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="690771787"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -296,50 +288,7 @@
 			<nil key="sourceID"/>
 			<int key="maxID">69</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<object class="IBPartialClassDescription">
-					<string key="className">ColorTintImageView</string>
-					<string key="superclassName">UIView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/ColorTintImageView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">PhoneNumberCell</string>
-					<string key="superclassName">UITableViewCell</string>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="descriptionLabel">UILabel</string>
-						<string key="informationContentView">UIView</string>
-						<string key="sideImageView">ColorTintImageView</string>
-						<string key="titleLabel">UILabel</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="descriptionLabel">
-							<string key="name">descriptionLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="informationContentView">
-							<string key="name">informationContentView</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sideImageView">
-							<string key="name">sideImageView</string>
-							<string key="candidateClassName">ColorTintImageView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="titleLabel">
-							<string key="name">titleLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/PhoneNumberCell.h</string>
-					</object>
-				</object>
-			</array>
-		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>

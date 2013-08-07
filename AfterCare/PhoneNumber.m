@@ -33,7 +33,7 @@
     phoneCell.descriptionLabel.text = self.descript;
     phoneCell.descriptionLabel.textColor = [UIColor changeBrightness:self.color amount:.6];
     
-    phoneCell.sideImageView.image = [UIImage imageNamed:@"cell_phone_mouth"]; // [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.imageUrl]]];
+    phoneCell.sideImageView.image = [UIImage imageNamed:@"cell_phone_mouth"];
     phoneCell.sideImageView.overlayColor = self.color;
     phoneCell.informationContentView.backgroundColor = self.color;
 }
