@@ -11,6 +11,41 @@
 		0F114DDD17B2DB6000A96F21 /* Emotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F114DDC17B2DB6000A96F21 /* Emotion.m */; };
 		0F114DE017B2DB6F00A96F21 /* NSManagedObject+FetchRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F114DDF17B2DB6F00A96F21 /* NSManagedObject+FetchRequests.m */; };
 		0F114DE317B2DF4700A96F21 /* resources.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F114DE217B2DF4700A96F21 /* resources.json */; };
+		0F114DE517B2FBB500A96F21 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114DE417B2FBB500A96F21 /* Icon.png */; };
+		0F114F3717B30DDB00A96F21 /* 1000awesomethingscom.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F1517B30DDB00A96F21 /* 1000awesomethingscom.png */; };
+		0F114F3817B30DDB00A96F21 /* aasuicidology.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F1617B30DDB00A96F21 /* aasuicidology.png */; };
+		0F114F3917B30DDB00A96F21 /* attemptsurvivorscom.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F1717B30DDB00A96F21 /* attemptsurvivorscom.png */; };
+		0F114F3A17B30DDB00A96F21 /* copingwithsuicidalthoughts.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F1817B30DDB00A96F21 /* copingwithsuicidalthoughts.png */; };
+		0F114F3B17B30DDB00A96F21 /* default_image_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F1917B30DDB00A96F21 /* default_image_1.png */; };
+		0F114F3C17B30DDB00A96F21 /* default_image_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F1A17B30DDB00A96F21 /* default_image_2.png */; };
+		0F114F3D17B30DDB00A96F21 /* default_image_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F1B17B30DDB00A96F21 /* default_image_3.png */; };
+		0F114F3E17B30DDB00A96F21 /* default_image_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F1C17B30DDB00A96F21 /* default_image_4.png */; };
+		0F114F3F17B30DDB00A96F21 /* default_image_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F1D17B30DDB00A96F21 /* default_image_5.png */; };
+		0F114F4017B30DDB00A96F21 /* gethelpforyourself.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F1E17B30DDB00A96F21 /* gethelpforyourself.png */; };
+		0F114F4117B30DDB00A96F21 /* helpingyourselfwhenyouaresuicidal.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F1F17B30DDB00A96F21 /* helpingyourselfwhenyouaresuicidal.png */; };
+		0F114F4217B30DDB00A96F21 /* helpprocom.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F2017B30DDB00A96F21 /* helpprocom.png */; };
+		0F114F4317B30DDB00A96F21 /* makeasurvivalkitorhopecards.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F2117B30DDB00A96F21 /* makeasurvivalkitorhopecards.png */; };
+		0F114F4417B30DDB00A96F21 /* mentalhealthtreatmentserviceslocator.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F2217B30DDB00A96F21 /* mentalhealthtreatmentserviceslocator.png */; };
+		0F114F4517B30DDB00A96F21 /* nationwidetherapistlocator.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F2317B30DDB00A96F21 /* nationwidetherapistlocator.png */; };
+		0F114F4617B30DDB00A96F21 /* nowaytounderstandunlessyouvebeenthere.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F2417B30DDB00A96F21 /* nowaytounderstandunlessyouvebeenthere.png */; };
+		0F114F4717B30DDB00A96F21 /* onlinecrisisnetwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F2517B30DDB00A96F21 /* onlinecrisisnetwork.png */; };
+		0F114F4817B30DDB00A96F21 /* postemergencyselfcare.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F2617B30DDB00A96F21 /* postemergencyselfcare.png */; };
+		0F114F4917B30DDB00A96F21 /* readinglist.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F2717B30DDB00A96F21 /* readinglist.png */; };
+		0F114F4A17B30DDB00A96F21 /* reasonstogoonliving.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F2817B30DDB00A96F21 /* reasonstogoonliving.png */; };
+		0F114F4B17B30DDB00A96F21 /* sendanecard.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F2917B30DDB00A96F21 /* sendanecard.png */; };
+		0F114F4D17B30DDB00A96F21 /* suicideanonymous.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F2B17B30DDB00A96F21 /* suicideanonymous.png */; };
+		0F114F4E17B30DDB00A96F21 /* suicideattemptsupportmeetupgroups.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F2C17B30DDB00A96F21 /* suicideattemptsupportmeetupgroups.png */; };
+		0F114F4F17B30DDB00A96F21 /* suicidepreventiononlinechat.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F2D17B30DDB00A96F21 /* suicidepreventiononlinechat.png */; };
+		0F114F5017B30DDB00A96F21 /* suicidepreventionvideogallery.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F2E17B30DDB00A96F21 /* suicidepreventionvideogallery.png */; };
+		0F114F5117B30DDB00A96F21 /* suicidereadthisfirst.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F2F17B30DDB00A96F21 /* suicidereadthisfirst.png */; };
+		0F114F5217B30DDB00A96F21 /* suicidesurvivalkit.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F3017B30DDB00A96F21 /* suicidesurvivalkit.png */; };
+		0F114F5317B30DDB00A96F21 /* suicidewatchonreddit.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F3117B30DDB00A96F21 /* suicidewatchonreddit.png */; };
+		0F114F5417B30DDB00A96F21 /* survivorstorykevinhines.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F3217B30DDB00A96F21 /* survivorstorykevinhines.png */; };
+		0F114F5517B30DDB00A96F21 /* the3asofawesome.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F3317B30DDB00A96F21 /* the3asofawesome.png */; };
+		0F114F5617B30DDB00A96F21 /* thelittlebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F3417B30DDB00A96F21 /* thelittlebook.png */; };
+		0F114F5717B30DDB00A96F21 /* therapistgrouplocators.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F3517B30DDB00A96F21 /* therapistgrouplocators.png */; };
+		0F114F5817B30DDB00A96F21 /* wakingupalive.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F3617B30DDB00A96F21 /* wakingupalive.png */; };
+		0F114F5C17B311AF00A96F21 /* nationalsuicidepreventionlifeline.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F5B17B311AF00A96F21 /* nationalsuicidepreventionlifeline.png */; };
 		0FAF4DE2179C953E00028E7A /* Website.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDB179C953E00028E7A /* Website.m */; };
 		0FAF4DE3179C953E00028E7A /* WebsiteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDD179C953E00028E7A /* WebsiteCell.m */; };
 		0FAF4DE4179C953E00028E7A /* WebsiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDE179C953E00028E7A /* WebsiteCell.xib */; };
@@ -63,7 +98,6 @@
 		9C15587817B037C800D1919C /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C15587717B037C800D1919C /* plus.png */; };
 		9C15587E17B04C5700D1919C /* transparent_phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C15587D17B04C5700D1919C /* transparent_phone.png */; };
 		9C15588117B0635300D1919C /* ColorTintImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C15588017B0635300D1919C /* ColorTintImageView.m */; };
-		9C15588317B0654700D1919C /* cell_phone_mouth.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C15588217B0654700D1919C /* cell_phone_mouth.png */; };
 		9C15588517B0735300D1919C /* back_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C15588417B0735200D1919C /* back_button.png */; };
 		9C15589317B13DC800D1919C /* 1_warning_signs_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C15588717B13DC800D1919C /* 1_warning_signs_off.png */; };
 		9C15589417B13DC800D1919C /* 1_warning_signs_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C15588817B13DC800D1919C /* 1_warning_signs_on.png */; };
@@ -114,6 +148,41 @@
 		0F114DDE17B2DB6F00A96F21 /* NSManagedObject+FetchRequests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+FetchRequests.h"; sourceTree = "<group>"; };
 		0F114DDF17B2DB6F00A96F21 /* NSManagedObject+FetchRequests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+FetchRequests.m"; sourceTree = "<group>"; };
 		0F114DE217B2DF4700A96F21 /* resources.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resources.json; sourceTree = "<group>"; };
+		0F114DE417B2FBB500A96F21 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		0F114F1517B30DDB00A96F21 /* 1000awesomethingscom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1000awesomethingscom.png; sourceTree = "<group>"; };
+		0F114F1617B30DDB00A96F21 /* aasuicidology.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aasuicidology.png; sourceTree = "<group>"; };
+		0F114F1717B30DDB00A96F21 /* attemptsurvivorscom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attemptsurvivorscom.png; sourceTree = "<group>"; };
+		0F114F1817B30DDB00A96F21 /* copingwithsuicidalthoughts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = copingwithsuicidalthoughts.png; sourceTree = "<group>"; };
+		0F114F1917B30DDB00A96F21 /* default_image_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_image_1.png; sourceTree = "<group>"; };
+		0F114F1A17B30DDB00A96F21 /* default_image_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_image_2.png; sourceTree = "<group>"; };
+		0F114F1B17B30DDB00A96F21 /* default_image_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_image_3.png; sourceTree = "<group>"; };
+		0F114F1C17B30DDB00A96F21 /* default_image_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_image_4.png; sourceTree = "<group>"; };
+		0F114F1D17B30DDB00A96F21 /* default_image_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_image_5.png; sourceTree = "<group>"; };
+		0F114F1E17B30DDB00A96F21 /* gethelpforyourself.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gethelpforyourself.png; sourceTree = "<group>"; };
+		0F114F1F17B30DDB00A96F21 /* helpingyourselfwhenyouaresuicidal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helpingyourselfwhenyouaresuicidal.png; sourceTree = "<group>"; };
+		0F114F2017B30DDB00A96F21 /* helpprocom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helpprocom.png; sourceTree = "<group>"; };
+		0F114F2117B30DDB00A96F21 /* makeasurvivalkitorhopecards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = makeasurvivalkitorhopecards.png; sourceTree = "<group>"; };
+		0F114F2217B30DDB00A96F21 /* mentalhealthtreatmentserviceslocator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mentalhealthtreatmentserviceslocator.png; sourceTree = "<group>"; };
+		0F114F2317B30DDB00A96F21 /* nationwidetherapistlocator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nationwidetherapistlocator.png; sourceTree = "<group>"; };
+		0F114F2417B30DDB00A96F21 /* nowaytounderstandunlessyouvebeenthere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nowaytounderstandunlessyouvebeenthere.png; sourceTree = "<group>"; };
+		0F114F2517B30DDB00A96F21 /* onlinecrisisnetwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onlinecrisisnetwork.png; sourceTree = "<group>"; };
+		0F114F2617B30DDB00A96F21 /* postemergencyselfcare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = postemergencyselfcare.png; sourceTree = "<group>"; };
+		0F114F2717B30DDB00A96F21 /* readinglist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readinglist.png; sourceTree = "<group>"; };
+		0F114F2817B30DDB00A96F21 /* reasonstogoonliving.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reasonstogoonliving.png; sourceTree = "<group>"; };
+		0F114F2917B30DDB00A96F21 /* sendanecard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sendanecard.png; sourceTree = "<group>"; };
+		0F114F2B17B30DDB00A96F21 /* suicideanonymous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = suicideanonymous.png; sourceTree = "<group>"; };
+		0F114F2C17B30DDB00A96F21 /* suicideattemptsupportmeetupgroups.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = suicideattemptsupportmeetupgroups.png; sourceTree = "<group>"; };
+		0F114F2D17B30DDB00A96F21 /* suicidepreventiononlinechat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = suicidepreventiononlinechat.png; sourceTree = "<group>"; };
+		0F114F2E17B30DDB00A96F21 /* suicidepreventionvideogallery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = suicidepreventionvideogallery.png; sourceTree = "<group>"; };
+		0F114F2F17B30DDB00A96F21 /* suicidereadthisfirst.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = suicidereadthisfirst.png; sourceTree = "<group>"; };
+		0F114F3017B30DDB00A96F21 /* suicidesurvivalkit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = suicidesurvivalkit.png; sourceTree = "<group>"; };
+		0F114F3117B30DDB00A96F21 /* suicidewatchonreddit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = suicidewatchonreddit.png; sourceTree = "<group>"; };
+		0F114F3217B30DDB00A96F21 /* survivorstorykevinhines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = survivorstorykevinhines.png; sourceTree = "<group>"; };
+		0F114F3317B30DDB00A96F21 /* the3asofawesome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = the3asofawesome.png; sourceTree = "<group>"; };
+		0F114F3417B30DDB00A96F21 /* thelittlebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thelittlebook.png; sourceTree = "<group>"; };
+		0F114F3517B30DDB00A96F21 /* therapistgrouplocators.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = therapistgrouplocators.png; sourceTree = "<group>"; };
+		0F114F3617B30DDB00A96F21 /* wakingupalive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wakingupalive.png; sourceTree = "<group>"; };
+		0F114F5B17B311AF00A96F21 /* nationalsuicidepreventionlifeline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nationalsuicidepreventionlifeline.png; sourceTree = "<group>"; };
 		0FAF4D84179B016B00028E7A /* Apache License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Apache License.txt"; sourceTree = "<group>"; };
 		0FAF4D85179B016B00028E7A /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		0FAF4D86179B016B00028E7A /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -191,7 +260,6 @@
 		9C15587D17B04C5700D1919C /* transparent_phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparent_phone.png; sourceTree = "<group>"; };
 		9C15587F17B0635300D1919C /* ColorTintImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorTintImageView.h; sourceTree = "<group>"; };
 		9C15588017B0635300D1919C /* ColorTintImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorTintImageView.m; sourceTree = "<group>"; };
-		9C15588217B0654700D1919C /* cell_phone_mouth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_phone_mouth.png; sourceTree = "<group>"; };
 		9C15588417B0735200D1919C /* back_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_button.png; sourceTree = "<group>"; };
 		9C15588717B13DC800D1919C /* 1_warning_signs_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1_warning_signs_off.png; sourceTree = "<group>"; };
 		9C15588817B13DC800D1919C /* 1_warning_signs_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1_warning_signs_on.png; sourceTree = "<group>"; };
@@ -295,6 +363,47 @@
 			name = SeedData;
 			sourceTree = "<group>";
 		};
+		0F114DE617B30D7C00A96F21 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0F114F5B17B311AF00A96F21 /* nationalsuicidepreventionlifeline.png */,
+				0F114F1517B30DDB00A96F21 /* 1000awesomethingscom.png */,
+				0F114F1617B30DDB00A96F21 /* aasuicidology.png */,
+				0F114F1717B30DDB00A96F21 /* attemptsurvivorscom.png */,
+				0F114F1817B30DDB00A96F21 /* copingwithsuicidalthoughts.png */,
+				0F114F1917B30DDB00A96F21 /* default_image_1.png */,
+				0F114F1A17B30DDB00A96F21 /* default_image_2.png */,
+				0F114F1B17B30DDB00A96F21 /* default_image_3.png */,
+				0F114F1C17B30DDB00A96F21 /* default_image_4.png */,
+				0F114F1D17B30DDB00A96F21 /* default_image_5.png */,
+				0F114F1E17B30DDB00A96F21 /* gethelpforyourself.png */,
+				0F114F1F17B30DDB00A96F21 /* helpingyourselfwhenyouaresuicidal.png */,
+				0F114F2017B30DDB00A96F21 /* helpprocom.png */,
+				0F114F2117B30DDB00A96F21 /* makeasurvivalkitorhopecards.png */,
+				0F114F2217B30DDB00A96F21 /* mentalhealthtreatmentserviceslocator.png */,
+				0F114F2317B30DDB00A96F21 /* nationwidetherapistlocator.png */,
+				0F114F2417B30DDB00A96F21 /* nowaytounderstandunlessyouvebeenthere.png */,
+				0F114F2517B30DDB00A96F21 /* onlinecrisisnetwork.png */,
+				0F114F2617B30DDB00A96F21 /* postemergencyselfcare.png */,
+				0F114F2717B30DDB00A96F21 /* readinglist.png */,
+				0F114F2817B30DDB00A96F21 /* reasonstogoonliving.png */,
+				0F114F2917B30DDB00A96F21 /* sendanecard.png */,
+				0F114F2B17B30DDB00A96F21 /* suicideanonymous.png */,
+				0F114F2C17B30DDB00A96F21 /* suicideattemptsupportmeetupgroups.png */,
+				0F114F2D17B30DDB00A96F21 /* suicidepreventiononlinechat.png */,
+				0F114F2E17B30DDB00A96F21 /* suicidepreventionvideogallery.png */,
+				0F114F2F17B30DDB00A96F21 /* suicidereadthisfirst.png */,
+				0F114F3017B30DDB00A96F21 /* suicidesurvivalkit.png */,
+				0F114F3117B30DDB00A96F21 /* suicidewatchonreddit.png */,
+				0F114F3217B30DDB00A96F21 /* survivorstorykevinhines.png */,
+				0F114F3317B30DDB00A96F21 /* the3asofawesome.png */,
+				0F114F3417B30DDB00A96F21 /* thelittlebook.png */,
+				0F114F3517B30DDB00A96F21 /* therapistgrouplocators.png */,
+				0F114F3617B30DDB00A96F21 /* wakingupalive.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		0FAF4DAC179B161900028E7A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,8 +434,8 @@
 		0FAF4DAE179B162600028E7A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0F114DE617B30D7C00A96F21 /* Resources */,
 				9C15588417B0735200D1919C /* back_button.png */,
-				9C15588217B0654700D1919C /* cell_phone_mouth.png */,
 				9C15587D17B04C5700D1919C /* transparent_phone.png */,
 				0FD90E8517B043C000DACBA6 /* right_arrow.png */,
 				9C15584E17AFF0D700D1919C /* back-button.png */,
@@ -435,6 +544,7 @@
 		1EAB7C901799DBBD00F3DBAA = {
 			isa = PBXGroup;
 			children = (
+				0F114DE417B2FBB500A96F21 /* Icon.png */,
 				1EAB7CA21799DBBD00F3DBAA /* AfterCare */,
 				1EAB7C9B1799DBBD00F3DBAA /* Frameworks */,
 				1EAB7C9A1799DBBD00F3DBAA /* Products */,
@@ -634,7 +744,6 @@
 				9C15587817B037C800D1919C /* plus.png in Resources */,
 				0FD90E8617B043C000DACBA6 /* right_arrow.png in Resources */,
 				9C15587E17B04C5700D1919C /* transparent_phone.png in Resources */,
-				9C15588317B0654700D1919C /* cell_phone_mouth.png in Resources */,
 				9C15588517B0735300D1919C /* back_button.png in Resources */,
 				9C15589317B13DC800D1919C /* 1_warning_signs_off.png in Resources */,
 				9C15589417B13DC800D1919C /* 1_warning_signs_on.png in Resources */,
@@ -662,6 +771,41 @@
 				9C758C0D17B288CA00478BF6 /* next_5.png in Resources */,
 				9C758C0E17B288CA00478BF6 /* next_6.png in Resources */,
 				0F114DE317B2DF4700A96F21 /* resources.json in Resources */,
+				0F114DE517B2FBB500A96F21 /* Icon.png in Resources */,
+				0F114F3717B30DDB00A96F21 /* 1000awesomethingscom.png in Resources */,
+				0F114F3817B30DDB00A96F21 /* aasuicidology.png in Resources */,
+				0F114F3917B30DDB00A96F21 /* attemptsurvivorscom.png in Resources */,
+				0F114F3A17B30DDB00A96F21 /* copingwithsuicidalthoughts.png in Resources */,
+				0F114F3B17B30DDB00A96F21 /* default_image_1.png in Resources */,
+				0F114F3C17B30DDB00A96F21 /* default_image_2.png in Resources */,
+				0F114F3D17B30DDB00A96F21 /* default_image_3.png in Resources */,
+				0F114F3E17B30DDB00A96F21 /* default_image_4.png in Resources */,
+				0F114F3F17B30DDB00A96F21 /* default_image_5.png in Resources */,
+				0F114F4017B30DDB00A96F21 /* gethelpforyourself.png in Resources */,
+				0F114F4117B30DDB00A96F21 /* helpingyourselfwhenyouaresuicidal.png in Resources */,
+				0F114F4217B30DDB00A96F21 /* helpprocom.png in Resources */,
+				0F114F4317B30DDB00A96F21 /* makeasurvivalkitorhopecards.png in Resources */,
+				0F114F4417B30DDB00A96F21 /* mentalhealthtreatmentserviceslocator.png in Resources */,
+				0F114F4517B30DDB00A96F21 /* nationwidetherapistlocator.png in Resources */,
+				0F114F4617B30DDB00A96F21 /* nowaytounderstandunlessyouvebeenthere.png in Resources */,
+				0F114F4717B30DDB00A96F21 /* onlinecrisisnetwork.png in Resources */,
+				0F114F4817B30DDB00A96F21 /* postemergencyselfcare.png in Resources */,
+				0F114F4917B30DDB00A96F21 /* readinglist.png in Resources */,
+				0F114F4A17B30DDB00A96F21 /* reasonstogoonliving.png in Resources */,
+				0F114F4B17B30DDB00A96F21 /* sendanecard.png in Resources */,
+				0F114F4D17B30DDB00A96F21 /* suicideanonymous.png in Resources */,
+				0F114F4E17B30DDB00A96F21 /* suicideattemptsupportmeetupgroups.png in Resources */,
+				0F114F4F17B30DDB00A96F21 /* suicidepreventiononlinechat.png in Resources */,
+				0F114F5017B30DDB00A96F21 /* suicidepreventionvideogallery.png in Resources */,
+				0F114F5117B30DDB00A96F21 /* suicidereadthisfirst.png in Resources */,
+				0F114F5217B30DDB00A96F21 /* suicidesurvivalkit.png in Resources */,
+				0F114F5317B30DDB00A96F21 /* suicidewatchonreddit.png in Resources */,
+				0F114F5417B30DDB00A96F21 /* survivorstorykevinhines.png in Resources */,
+				0F114F5517B30DDB00A96F21 /* the3asofawesome.png in Resources */,
+				0F114F5617B30DDB00A96F21 /* thelittlebook.png in Resources */,
+				0F114F5717B30DDB00A96F21 /* therapistgrouplocators.png in Resources */,
+				0F114F5817B30DDB00A96F21 /* wakingupalive.png in Resources */,
+				0F114F5C17B311AF00A96F21 /* nationalsuicidepreventionlifeline.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

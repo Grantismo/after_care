@@ -76,6 +76,11 @@
 
 -(void) fetchResources{
     self.dataSources = [self.emotion.resources allObjects];
+    NSArray* colorChoices = [UIColor complementingColors:self.emotion.color];
+
+    for(int i = 0; i < self.dataSources.count; i++){
+        [[self.dataSources objectAtIndex:i] setValue:[colorChoices objectAtIndex:(i % colorChoices.count)]forKey:@"color"];
+    }
 
 }
 - (id<CellDataProvider>) cellDataSourceForRowAtIndexPath:(NSIndexPath*) indexPath{

@@ -17,12 +17,17 @@
 
 + (NSArray*) fetchWithNames: (NSString*) names fromManagedObjectContext: (NSManagedObjectContext*) context{
     
+    NSMutableArray* emotionNames = [[names componentsSeparatedByString: @"/"] mutableCopy];
+
+    NSFetchRequest* request = [self fetchRequest:context];
+
+    if( [(NSString*)emotionNames[0] isEqualToString:@"ALL"]){
+        return [context executeFetchRequest:request error:nil];
+    }
+    
+    
     NSCharacterSet *charactersToRemove =
     [[ NSCharacterSet alphanumericCharacterSet ] invertedSet ];
-    
-    
-    
-    NSMutableArray* emotionNames = [[names componentsSeparatedByString: @"/"] mutableCopy];
     
     for(int i = 0; i < emotionNames.count; i++){
         NSString *trimmedReplacement =
@@ -32,12 +37,8 @@
         [emotionNames replaceObjectAtIndex:i withObject:trimmedReplacement];
     }
     
-    NSLog(@"emotions: %@ ", emotionNames);
-    NSFetchRequest* request = [self fetchRequest:context];
 
-    if( [(NSString*)emotionNames[0] isEqualToString:@"ALL"]){
-        return [context executeFetchRequest:request error:nil];
-    }
+    
     
     request.predicate = [NSPredicate predicateWithFormat:@"name IN [c] %@",
                               emotionNames, nil];

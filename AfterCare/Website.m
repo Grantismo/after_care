@@ -32,7 +32,7 @@
     websiteCell.descriptionLabel.text = self.descript;
     websiteCell.descriptionLabel.textColor = [UIColor changeBrightness:self.color amount:.6];
     
-    websiteCell.sideImageView.image = [UIImage imageNamed:@"cell_phone_mouth"];
+    websiteCell.sideImageView.image = [UIImage imageNamed:self.imageUrl];
     websiteCell.sideImageView.overlayColor = self.color;
     websiteCell.informationContentView.backgroundColor = self.color;
 }

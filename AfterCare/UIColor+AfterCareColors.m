@@ -50,6 +50,13 @@
     return UIColorFromRGB(0xeba2071, 1.0);
 }
 
+
++(NSArray*) complementingColors: (UIColor*) color{
+    NSMutableArray* allColors = [NSMutableArray arrayWithObjects:[self worthlessColor], [self disinterestedColor], [self gratefulColor], [self positiveColor], [self hurtColor], [self depressedColor], [self angryColor], [self lonelyColor], nil];
+    [allColors removeObject:color];
+    return allColors;
+}
+
 //Transparent colors
 
 +(UIColor*) afterCareTransparentColor1{

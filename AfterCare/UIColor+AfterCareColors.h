@@ -19,6 +19,7 @@
 +(UIColor*) gratefulColor;
 +(UIColor*) disinterestedColor;
 +(UIColor*) worthlessColor;
++(NSArray*) complementingColors: (UIColor*) color;
 
 +(UIColor*) afterCareTransparentColor1;
 +(UIColor*) afterCareTransparentColor2;
