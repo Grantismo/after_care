@@ -7,27 +7,15 @@
 //
 
 #import "WebsiteCell.h"
+#import "StyleManager.h"
 
 @implementation WebsiteCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-    }
-    return self;
-}
-
-- (void) awakeFromNib{
-    self.titleLabel.font = [UIFont fontWithName:@"OpenSans-Bold" size:self.textLabel.font.pointSize];
-    self.descriptionLabel.font = [UIFont fontWithName:@"OpenSans" size:self.textLabel.font.pointSize];
-
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
+-(void) awakeFromNib{
+    [[StyleManager sharedStyleManager] setBoldFontForLabel:self.titleLabel];
+    [[StyleManager sharedStyleManager] setItalicFontForLabel:self.descriptionLabel];
+    
+    self.contentView.backgroundColor = [UIColor afterCareOffBlackColor];
 }
 
 @end

@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSString* title;
 @property (nonatomic, strong) NSString* descript;
 @property (nonatomic, strong) NSString* imageUrl;
+@property (nonatomic, strong) UIColor* color;
 
 
 @end
