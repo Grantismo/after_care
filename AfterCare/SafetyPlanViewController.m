@@ -11,7 +11,7 @@
 #import "UIImageCreator.h"
 
 #import "SafetyPlanWarningSignsScreen.h"
-#import "SafetyPlanInternalScreen.h"
+#import "SafetyPlanCopingStrategyScreen.h"
 #import "SafetyPlanPlacesScreen.h"
 #import "SafetyPlanPeopleScreen.h"
 #import "SafetyPlanProfessionalsScreen.h"
@@ -37,7 +37,7 @@
     IBOutlet UIButton* nextButton;
     
     IBOutlet SafetyPlanWarningSignsScreen* warningSignScreen;
-    IBOutlet SafetyPlanInternalScreen* internalScreen;
+    IBOutlet SafetyPlanCopingStrategyScreen* internalScreen;
     IBOutlet SafetyPlanPlacesScreen* placesScreen;
     IBOutlet SafetyPlanPeopleScreen* peopleScreen;
     IBOutlet SafetyPlanProfessionalsScreen* professionalsScreen;

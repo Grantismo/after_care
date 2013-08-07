@@ -8,6 +8,6 @@
 
 #import "SafetyPlanScreen.h"
 
-@interface SafetyPlanInternalScreen : SafetyPlanScreen
+@interface SafetyPlanCopingStrategyScreen : SafetyPlanScreen
 
 @end
