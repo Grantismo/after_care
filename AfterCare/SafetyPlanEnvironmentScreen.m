@@ -89,19 +89,19 @@
     
     if ([manager safeEnvironmentAtIndex:0]) {
         [progressView setDotActivatedAtIndex:0];
-        [addButton1 setTitle:@"Your first warning sign." forState:UIControlStateNormal];
+        [addButton1 setTitle:@"My first environmental safety step." forState:UIControlStateNormal];
     }
     else{
         [progressView setDotDeactivatedAtIndex:0];
-        [addButton1 setTitle:@"Add your first warning sign." forState:UIControlStateNormal];
+        [addButton1 setTitle:@"What's a first step I can take to make my environment safe?" forState:UIControlStateNormal];
     }
     if ([manager safeEnvironmentAtIndex:1]) {
         [progressView setDotActivatedAtIndex:1];
-        [addButton2 setTitle:@"Your second warning sign." forState:UIControlStateNormal];
+        [addButton2 setTitle:@"My second environmental safety step." forState:UIControlStateNormal];
     }
     else{
         [progressView setDotDeactivatedAtIndex:1];
-        [addButton2 setTitle:@"Add your second warning sign." forState:UIControlStateNormal];
+        [addButton2 setTitle:@"What's a second step I can take to make my environment safe?" forState:UIControlStateNormal];
     }
 }
 

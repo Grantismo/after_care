@@ -63,7 +63,7 @@
 }
 
 -(void) saveSafeEnvironment:(SafeEnvironment *)safeEnvironment atIndex:(int)index{
-    [[DataManager sharedDataManager] writeObject:professional toFile:[NSString stringWithFormat:@"%@.%d", SAFE_ENVIRONMENT_PATH_HEADER, index]];
+    [[DataManager sharedDataManager] writeObject:safeEnvironment toFile:[NSString stringWithFormat:@"%@.%d", SAFE_ENVIRONMENT_PATH_HEADER, index]];
 }
 
 +(SafetyPlanManager*) sharedManager{
