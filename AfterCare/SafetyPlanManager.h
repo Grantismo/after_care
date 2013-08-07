@@ -7,11 +7,15 @@
 //
 
 #import "WarningSign.h"
+#import "CopingStrategy.h"
 
 @interface SafetyPlanManager : NSObject
 
 -(WarningSign*) warningSignAtIndex:(int) index;
 -(void) saveWarningSign:(WarningSign*) warningSign atIndex:(int) index;
+
+-(CopingStrategy*) copingStrategyAtIndex:(int) index;
+-(void) saveCopingStrategy:(CopingStrategy*) copingStrategy atIndex:(int) index;
 
 +(SafetyPlanManager*) sharedManager;
 

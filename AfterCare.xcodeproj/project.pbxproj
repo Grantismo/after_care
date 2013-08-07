@@ -97,6 +97,7 @@
 		9C758C1117B28A4F00478BF6 /* SafetyPlanEnvironmentScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758C1017B28A4E00478BF6 /* SafetyPlanEnvironmentScreen.m */; };
 		9C758C1417B295D200478BF6 /* WarningSign.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758C1317B295D200478BF6 /* WarningSign.m */; };
 		9C758C1717B2995600478BF6 /* SafetyPlanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758C1617B2995600478BF6 /* SafetyPlanManager.m */; };
+		9C758C1A17B2A42900478BF6 /* CopingStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758C1917B2A42900478BF6 /* CopingStrategy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -227,6 +228,8 @@
 		9C758C1317B295D200478BF6 /* WarningSign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarningSign.m; sourceTree = "<group>"; };
 		9C758C1517B2995600478BF6 /* SafetyPlanManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafetyPlanManager.h; sourceTree = "<group>"; };
 		9C758C1617B2995600478BF6 /* SafetyPlanManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafetyPlanManager.m; sourceTree = "<group>"; };
+		9C758C1817B2A42900478BF6 /* CopingStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopingStrategy.h; sourceTree = "<group>"; };
+		9C758C1917B2A42900478BF6 /* CopingStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopingStrategy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +255,8 @@
 				0F114C0A17B1A4BF00A96F21 /* SafetyPlan.m */,
 				9C758C1217B295D200478BF6 /* WarningSign.h */,
 				9C758C1317B295D200478BF6 /* WarningSign.m */,
+				9C758C1817B2A42900478BF6 /* CopingStrategy.h */,
+				9C758C1917B2A42900478BF6 /* CopingStrategy.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -660,6 +665,7 @@
 				9C758C1117B28A4F00478BF6 /* SafetyPlanEnvironmentScreen.m in Sources */,
 				9C758C1417B295D200478BF6 /* WarningSign.m in Sources */,
 				9C758C1717B2995600478BF6 /* SafetyPlanManager.m in Sources */,
+				9C758C1A17B2A42900478BF6 /* CopingStrategy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

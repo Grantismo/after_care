@@ -11,13 +11,9 @@
 
 #import "SafetyPlanManager.h"
 
-@interface SafetyPlanWarningSignsScreen ()<UIAlertViewDelegate>{
-    UIAlertView* editAlert;
-}
+@interface SafetyPlanWarningSignsScreen ()
 
 -(void) refreshButtonsFromSafetyPlan;
-
--(void) createEditAlertFromTag:(int) tag;
 
 @end
 
@@ -40,50 +36,54 @@
     return @"These are thoughts, moods, situations or behaviors that indicate a crisis may be developing.";
 }
 
-#pragma mark UIAlertView delegate methods
+#pragma mark protected methods
 
--(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if (alertView == editAlert){
-        if (buttonIndex == 1){
-            
-            NSString* text = [alertView textFieldAtIndex:0].text;
-            
-            WarningSign* warningSign = nil;
-            if (text && ![text isEqualToString:@""]){
-                warningSign = [[WarningSign alloc] init];
-                warningSign.warningSign = [alertView textFieldAtIndex:0].text;
-            }
-            
-            [[SafetyPlanManager sharedManager] saveWarningSign:warningSign atIndex:alertView.tag];
-            
-            [self refreshButtonsFromSafetyPlan];
-        }
-    }
-    else{
-        if (buttonIndex == 1){
-            [self createEditAlertFromTag:alertView.tag];
-            [editAlert show];
-        }
-    }
+-(NSString*) alertMessageInfoForTag:(int)tag{
+    return [[SafetyPlanManager sharedManager] warningSignAtIndex:tag].warningSign;
 }
 
-#pragma mark actions
+-(NSString*) editAlertTextForTag:(int)tag{
+    NSString* titleName = nil;
+    switch (tag) {
+        case 0:
+            titleName = @"First";
+            break;
+        case 1:
+            titleName = @"Second";
+            break;
+        case 2:
+            titleName = @"Third";
+            break;
+            
+        default:
+            break;
+    }
+    
+    BOOL hasWarning = [[SafetyPlanManager sharedManager] warningSignAtIndex:tag] ? TRUE : FALSE;
+    
+    NSString* actionString = hasWarning ? @"Edit" : @"Add";
+    
+    return [NSString stringWithFormat:@"%@ %@ Warning Sign", actionString, titleName];
+}
 
--(IBAction)addToSafetyPlan:(UIButton *)sender{
-    UIAlertView* showAlert = nil;
-    
-    if ([[SafetyPlanManager sharedManager] warningSignAtIndex:sender.tag]){
-        showAlert = [[UIAlertView alloc] initWithTitle:nil message:[[SafetyPlanManager sharedManager] warningSignAtIndex:sender.tag].warningSign delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Edit",nil];
-        
-        showAlert.tag = sender.tag;
+-(NSString*) editPlaceholderTextForTag:(int)tag{
+    return [[SafetyPlanManager sharedManager] warningSignAtIndex:tag].warningSign;
+}
+
+-(void) editText:(NSString *)text forTag:(int)tag{
+    WarningSign* warningSign = nil;
+    if (text && ![text isEqualToString:@""]){
+        warningSign = [[WarningSign alloc] init];
+        warningSign.warningSign = text;
     }
-    else{
-        [self createEditAlertFromTag:sender.tag];
-        showAlert = editAlert;
-    }
-   
     
-    [showAlert show];
+    [[SafetyPlanManager sharedManager] saveWarningSign:warningSign atIndex:tag];
+    
+    [self refreshButtonsFromSafetyPlan];
+}
+
+-(BOOL) shouldEditForTag:(int)tag{
+    return [[SafetyPlanManager sharedManager] warningSignAtIndex:tag] ? TRUE : FALSE;
 }
 
 #pragma mark private methods
@@ -115,36 +115,6 @@
         [progressView setDotDeactivatedAtIndex:2];
         [addButton3 setTitle:@"Add your third warning sign." forState:UIControlStateNormal];
     }
-}
-
--(void) createEditAlertFromTag:(int)tag{
-    NSString* titleName = nil;
-    switch (tag) {
-        case 0:
-            titleName = @"First";
-            break;
-        case 1:
-            titleName = @"Second";
-            break;
-        case 2:
-            titleName = @"Third";
-            break;
-            
-        default:
-            break;
-    }
-    
-    BOOL hasWarning = [[SafetyPlanManager sharedManager] warningSignAtIndex:tag] ? TRUE : FALSE;
-    
-    NSString* actionString = hasWarning ? @"Edit" : @"Add";
-   
-    editAlert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%@ %@ Warning Sign", actionString, titleName] message:[[SafetyPlanManager sharedManager] warningSignAtIndex:tag].warningSign delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Enter", nil];
-    
-    editAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
-    
-    editAlert.tag = tag;
-    
-    [editAlert textFieldAtIndex:0].text = [[SafetyPlanManager sharedManager] warningSignAtIndex:tag].warningSign;
 }
 
 @end

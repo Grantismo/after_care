@@ -8,13 +8,16 @@
 
 #import "SafetyPlanScreen.h"
 
-@interface SafetyPlanScreen ()
+@interface SafetyPlanScreen ()<UIAlertViewDelegate>{
+    UIAlertView* editAlert;
+}
 
 -(void) animateViewIn:(UIView*) view;
 -(void) animateViewOut:(UIView*) view;
 
 -(void) addDetailImageView:(UIImageView*)imageView toButton:(UIButton*) button;
 
+-(void) createEditAlertFromTag:(int) tag;
 
 @end
 
@@ -100,10 +103,66 @@
     [self animateViewOut:addButton4];
 }
 
+#pragma mark UIAlertView delegate methods
+
+-(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (alertView == editAlert){
+        if (buttonIndex == 1){
+            NSString* text = [alertView textFieldAtIndex:0].text;
+            [self editText:text forTag:alertView.tag];
+        }
+    }
+    else{
+        if (buttonIndex == 1){
+            [self createEditAlertFromTag:alertView.tag];
+            [editAlert show];
+        }
+    }
+}
+
 #pragma mark Actions
 
 -(IBAction)addToSafetyPlan:(UIButton *)sender{
+    UIAlertView* showAlert = nil;
+    
+    if ([self shouldEditForTag:sender.tag]){
+        showAlert = [[UIAlertView alloc] initWithTitle:nil message:[self alertMessageInfoForTag:sender.tag] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Edit",nil];
+        
+        showAlert.tag = sender.tag;
+    }
+    else{
+        [self createEditAlertFromTag:sender.tag];
+        showAlert = editAlert;
+    }
+    
+    
+    [showAlert show];
+}
+
+#pragma mark protected methods
+
+-(NSString*) alertMessageInfoForTag:(int)tag{
     //Let subclasses override
+    return nil;
+}
+
+-(NSString*) editAlertTextForTag:(int)tag{
+    //Let subclasses override
+    return nil;
+}
+
+-(NSString*) editPlaceholderTextForTag:(int)tag{
+    //Let subclasses override
+    return nil;
+}
+
+-(void) editText:(NSString *)text forTag:(int)tag{
+    //Let subclasses override
+}
+
+-(BOOL) shouldEditForTag:(int)tag{
+    //Let subclasses override
+    return FALSE;
 }
 
 #pragma mark private methods
@@ -119,6 +178,16 @@
 -(void) addDetailImageView:(UIImageView *)imageView toButton:(UIButton *)button{
     imageView.center = CGPointMake(imageView.center.x, button.frame.size.height / 2.0);
     [button addSubview:imageView];
+}
+
+-(void) createEditAlertFromTag:(int)tag{
+    editAlert = [[UIAlertView alloc] initWithTitle:[self editAlertTextForTag:tag] message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Enter", nil];
+    
+    editAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    
+    editAlert.tag = tag;
+    
+    [editAlert textFieldAtIndex:0].text = [self editPlaceholderTextForTag:tag];
 }
 
 @end
