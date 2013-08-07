@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F114C0717B04A0800A96F21 /* AfterCareDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F114C0517B04A0800A96F21 /* AfterCareDataModel.xcdatamodeld */; };
+		0F114C0B17B1A4BF00A96F21 /* SafetyPlan.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F114C0A17B1A4BF00A96F21 /* SafetyPlan.m */; };
 		0FAF4DE2179C953E00028E7A /* Website.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDB179C953E00028E7A /* Website.m */; };
 		0FAF4DE3179C953E00028E7A /* WebsiteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDD179C953E00028E7A /* WebsiteCell.m */; };
 		0FAF4DE4179C953E00028E7A /* WebsiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDE179C953E00028E7A /* WebsiteCell.xib */; };
@@ -99,6 +100,8 @@
 
 /* Begin PBXFileReference section */
 		0F114C0617B04A0800A96F21 /* AfterCareDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AfterCareDataModel.xcdatamodel; sourceTree = "<group>"; };
+		0F114C0917B1A4BF00A96F21 /* SafetyPlan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafetyPlan.h; sourceTree = "<group>"; };
+		0F114C0A17B1A4BF00A96F21 /* SafetyPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafetyPlan.m; sourceTree = "<group>"; };
 		0FAF4D84179B016B00028E7A /* Apache License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Apache License.txt"; sourceTree = "<group>"; };
 		0FAF4D85179B016B00028E7A /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		0FAF4D86179B016B00028E7A /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -237,6 +240,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F114C0817B1A44200A96F21 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0F114C0917B1A4BF00A96F21 /* SafetyPlan.h */,
+				0F114C0A17B1A4BF00A96F21 /* SafetyPlan.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		0FAF4DAC179B161900028E7A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +421,7 @@
 				9C15585017AFF48E00D1919C /* Managers */,
 				0FAF4DE9179C955C00028E7A /* Controllers */,
 				0FAF4DE8179C955000028E7A /* Custom Cells */,
+				0F114C0817B1A44200A96F21 /* Models */,
 				0FAF4DE7179C954400028E7A /* Providers */,
 				1E023BB1179B161C00DC8FC5 /* Custom Views */,
 				1E023BB7179B20FC00DC8FC5 /* Categories */,
