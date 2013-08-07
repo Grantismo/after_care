@@ -109,7 +109,7 @@
     if (alertView == editAlert){
         if (buttonIndex == 1){
             NSString* text = [alertView textFieldAtIndex:0].text;
-            [self editText:text forTag:alertView.tag];
+            [self textWasEdited:text forTag:alertView.tag];
         }
     }
     else{
@@ -156,7 +156,7 @@
     return nil;
 }
 
--(void) editText:(NSString *)text forTag:(int)tag{
+-(void) textWasEdited:(NSString *)text forTag:(int)tag{
     //Let subclasses override
 }
 

@@ -41,6 +41,6 @@
 
 -(BOOL) shouldEditForTag:(int) tag;
 
--(void) editText:(NSString*) text forTag:(int) tag;
+-(void) textWasEdited:(NSString*) text forTag:(int) tag;
 
 @end

@@ -70,7 +70,7 @@
     return [[SafetyPlanManager sharedManager] warningSignAtIndex:tag].warningSign;
 }
 
--(void) editText:(NSString *)text forTag:(int)tag{
+-(void) textWasEdited:(NSString *)text forTag:(int)tag{
     WarningSign* warningSign = nil;
     if (text && ![text isEqualToString:@""]){
         warningSign = [[WarningSign alloc] init];
