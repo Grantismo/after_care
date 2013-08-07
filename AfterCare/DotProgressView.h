@@ -20,5 +20,6 @@
 
 -(void) addDot:(BOOL) active;
 -(void) setDotActivatedAtIndex:(int) index;
+-(void) setDotDeactivatedAtIndex:(int) index;
 
 @end

@@ -174,7 +174,6 @@
         
         [currentScreen removeFromSuperview];
         [targetScreen addToView:contentView];
-        [targetScreen animateOut];
         
         float contentY = [targetScreen descriptionText] ? descriptionLabel.frame.origin.y + descriptionLabel.frame.size.height: descriptionLabel.frame.origin.y;
         
@@ -182,8 +181,10 @@
         
         contentView.frame = CGRectMake(contentView.frame.origin.x,
                                        contentY,
-                                       contentView.frame.size.width, contentHeight);
+                                       contentView.frame.size.width,
+                                       contentHeight);
         [targetScreen layoutViews];
+        [targetScreen animateOut];
         
         UIImage* nextButtonImage = nextButtonImages[index];
         [nextButton setImage:nextButtonImage forState:UIControlStateNormal];
