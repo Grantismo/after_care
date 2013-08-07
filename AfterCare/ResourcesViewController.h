@@ -8,14 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "CellActionDelegate.h"
+#import "Emotion.h"
 
 @interface ResourcesViewController : UIViewController<CellActionDelegate, UITableViewDataSource, UITableViewDelegate>
 
-- (id) initWithNSManagedObjectContext: (NSManagedObjectContext *) context andColor:(UIColor*) color;
+- (id) initWithEmotion: (Emotion *) emotion;
 
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+
 @property (nonatomic, strong) NSArray* dataSources;
 @property (nonatomic, strong) IBOutlet UITableView * tableView;
 
-@property (nonatomic, strong) UIColor* color;
+@property (nonatomic, strong) Emotion* emotion;
+
 @end

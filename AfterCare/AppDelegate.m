@@ -12,6 +12,9 @@
 #import "ResourcesViewController.h"
 #import <CoreData/CoreData.h>
 #import "Website.h"
+#import "PhoneNumber.h"
+#import "Website.h"
+#import "Emotion.h"
 
 #import "StyleManager.h"
 
@@ -19,11 +22,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
+    [self seedCoreDataIfEmpty];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
     HexagonMainViewController* hex = [[HexagonMainViewController alloc] initWithNibName:NSStringFromClass([HexagonMainViewController class]) bundle:nil];
+    
+    
+    
     
     hex.managedObjectContext = self.managedObjectContext;
     self.viewController = hex;
@@ -119,6 +125,44 @@
     _managedObjectModel = nil;
     _managedObjectContext = nil;
     _persistentStoreCoordinator = nil;
+}
+
+- (BOOL)coreDataHasEntriesForEntityName:(NSString *)entityName {
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:self.managedObjectContext];
+    [request setEntity:entity];
+    [request setFetchLimit:1];
+    NSError *error = nil;
+    NSArray *results = [self.managedObjectContext executeFetchRequest:request error:&error];
+    if ([results count] == 0) {
+        return NO;
+    }
+    return YES;
+}
+
+- (void) seedCoreDataIfEmpty{
+    if(![self coreDataHasEntriesForEntityName:@"Emotion"]){
+        NSDictionary *emotionDict = @{@"Positive": @0xcb7522, @"Angry": @0xcbd6b4, @"Lonely": @0x95dc8c, @"Depressed": @0xefca16, @"Hurt": @0x40898b, @"Grateful": @0x66c0a0, @"Worthless": @0xeba2071, @"Disinterested": @0x583f22};
+        
+        for(NSString* key in emotionDict){
+            NSString* name = key;
+            UIColor* color = UIColorFromRGB([[emotionDict objectForKey:key] integerValue], 1.0);
+            Emotion* emotion = (Emotion*)[NSEntityDescription
+                                    insertNewObjectForEntityForName:@"Emotion"inManagedObjectContext:self.managedObjectContext];
+            emotion.name = name;
+            emotion.color = color;
+        }
+        [self.managedObjectContext save:nil];
+
+//        
+//       
+////        number.name = @"SUICIDE ANONYMOUS";
+////        number.number = @"2486223655";
+////        number.descript = @"Suicideanonymous.net is a website that provides resources that provide worldwide Skype meetings and other support systems.";
+////        number.color = [UIColor depressedColor];
+
+    }
+
 }
 
 @end

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0F114C0717B04A0800A96F21 /* AfterCareDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F114C0517B04A0800A96F21 /* AfterCareDataModel.xcdatamodeld */; };
 		0F114C0B17B1A4BF00A96F21 /* SafetyPlan.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F114C0A17B1A4BF00A96F21 /* SafetyPlan.m */; };
+		0F114C1917B2D03200A96F21 /* NSManagedObject+FetchRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F114C1817B2D03200A96F21 /* NSManagedObject+FetchRequests.m */; };
+		0F114C1C17B2D8ED00A96F21 /* Emotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F114C1B17B2D8ED00A96F21 /* Emotion.m */; };
 		0FAF4DE2179C953E00028E7A /* Website.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDB179C953E00028E7A /* Website.m */; };
 		0FAF4DE3179C953E00028E7A /* WebsiteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDD179C953E00028E7A /* WebsiteCell.m */; };
 		0FAF4DE4179C953E00028E7A /* WebsiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDE179C953E00028E7A /* WebsiteCell.xib */; };
@@ -95,6 +97,10 @@
 		0F114C0617B04A0800A96F21 /* AfterCareDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AfterCareDataModel.xcdatamodel; sourceTree = "<group>"; };
 		0F114C0917B1A4BF00A96F21 /* SafetyPlan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafetyPlan.h; sourceTree = "<group>"; };
 		0F114C0A17B1A4BF00A96F21 /* SafetyPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafetyPlan.m; sourceTree = "<group>"; };
+		0F114C1717B2D03200A96F21 /* NSManagedObject+FetchRequests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+FetchRequests.h"; sourceTree = "<group>"; };
+		0F114C1817B2D03200A96F21 /* NSManagedObject+FetchRequests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+FetchRequests.m"; sourceTree = "<group>"; };
+		0F114C1A17B2D8ED00A96F21 /* Emotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Emotion.h; sourceTree = "<group>"; };
+		0F114C1B17B2D8ED00A96F21 /* Emotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Emotion.m; sourceTree = "<group>"; };
 		0FAF4D84179B016B00028E7A /* Apache License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Apache License.txt"; sourceTree = "<group>"; };
 		0FAF4D85179B016B00028E7A /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		0FAF4D86179B016B00028E7A /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -228,8 +234,20 @@
 		0F114C0817B1A44200A96F21 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0FAF4DDA179C953D00028E7A /* Website.h */,
+				0FAF4DDB179C953E00028E7A /* Website.m */,
+				0FAF4DF7179C95B200028E7A /* PhoneNumber.h */,
+				0FAF4DF8179C95B200028E7A /* PhoneNumber.m */,
+				0FAF4DEF179C95A400028E7A /* CellActionDelegate.h */,
+				0FAF4DF0179C95A400028E7A /* CellDataProvider.h */,
+				0FAF4DF1179C95A400028E7A /* CellDataProviderBase.h */,
+				0FAF4DF2179C95A400028E7A /* CellDataProviderBase.m */,
+				0FAF4DF3179C95A400028E7A /* CellFactory.h */,
+				0FAF4DF4179C95A400028E7A /* CellFactory.m */,
 				0F114C0917B1A4BF00A96F21 /* SafetyPlan.h */,
 				0F114C0A17B1A4BF00A96F21 /* SafetyPlan.m */,
+				0F114C1A17B2D8ED00A96F21 /* Emotion.h */,
+				0F114C1B17B2D8ED00A96F21 /* Emotion.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -276,23 +294,6 @@
 				9C15588617B13DB800D1919C /* Safety Plan Icons */,
 			);
 			name = Images;
-			sourceTree = "<group>";
-		};
-		0FAF4DE7179C954400028E7A /* Providers */ = {
-			isa = PBXGroup;
-			children = (
-				0FAF4DDA179C953D00028E7A /* Website.h */,
-				0FAF4DDB179C953E00028E7A /* Website.m */,
-				0FAF4DF7179C95B200028E7A /* PhoneNumber.h */,
-				0FAF4DF8179C95B200028E7A /* PhoneNumber.m */,
-				0FAF4DEF179C95A400028E7A /* CellActionDelegate.h */,
-				0FAF4DF0179C95A400028E7A /* CellDataProvider.h */,
-				0FAF4DF1179C95A400028E7A /* CellDataProviderBase.h */,
-				0FAF4DF2179C95A400028E7A /* CellDataProviderBase.m */,
-				0FAF4DF3179C95A400028E7A /* CellFactory.h */,
-				0FAF4DF4179C95A400028E7A /* CellFactory.m */,
-			);
-			name = Providers;
 			sourceTree = "<group>";
 		};
 		0FAF4DE8179C955000028E7A /* Custom Cells */ = {
@@ -362,6 +363,8 @@
 				1E023BB9179B212400DC8FC5 /* UIView+FrameManipulators.m */,
 				1E023BBD179CA98E00DC8FC5 /* UIColor+AfterCareColors.h */,
 				1E023BBE179CA98E00DC8FC5 /* UIColor+AfterCareColors.m */,
+				0F114C1717B2D03200A96F21 /* NSManagedObject+FetchRequests.h */,
+				0F114C1817B2D03200A96F21 /* NSManagedObject+FetchRequests.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -404,7 +407,6 @@
 				0FAF4DE9179C955C00028E7A /* Controllers */,
 				0FAF4DE8179C955000028E7A /* Custom Cells */,
 				0F114C0817B1A44200A96F21 /* Models */,
-				0FAF4DE7179C954400028E7A /* Providers */,
 				1E023BB1179B161C00DC8FC5 /* Custom Views */,
 				1E023BB7179B20FC00DC8FC5 /* Categories */,
 				1EAB7CC21799DCB700F3DBAA /* UIImageCreator.h */,
@@ -612,6 +614,8 @@
 				9C758BFD17B198D500478BF6 /* DataManager.m in Sources */,
 				9C758C0117B19A1800478BF6 /* SafetyPlanProfessionalsScreen.m in Sources */,
 				0F114C0B17B1A4BF00A96F21 /* SafetyPlan.m in Sources */,
+				0F114C1917B2D03200A96F21 /* NSManagedObject+FetchRequests.m in Sources */,
+				0F114C1C17B2D8ED00A96F21 /* Emotion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

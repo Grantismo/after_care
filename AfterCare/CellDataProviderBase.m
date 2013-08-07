@@ -9,10 +9,12 @@
 #import "CellDataProviderBase.h"
 #import "CellFactory.h"
 
+
 @implementation CellDataProviderBase
 @synthesize reuseIdentifier;
 @synthesize delegate;
 @synthesize staticCellHeight;
+@dynamic emotions;
 
 
 - (id) initWithEntity:(NSEntityDescription *)entity insertIntoManagedObjectContext:(NSManagedObjectContext *)context{
@@ -32,5 +34,7 @@
 -(CGFloat)cellHeight{
     return self.staticCellHeight;
 }
+
+
 
 @end

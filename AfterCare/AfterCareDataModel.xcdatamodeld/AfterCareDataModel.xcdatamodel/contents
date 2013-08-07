@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="PhoneNumber" representedClassName="PhoneNumber" syncable="YES">
+    <entity name="CellDataProviderBase" representedClassName="CellDataProviderBase" isAbstract="YES" syncable="YES">
+        <relationship name="emotions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Emotion" inverseName="resources" inverseEntity="Emotion" syncable="YES"/>
+    </entity>
+    <entity name="Emotion" representedClassName="Emotion" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="Transformable" valueTransformerName="ColorToDataTransformer" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="resources" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CellDataProviderBase" inverseName="emotions" inverseEntity="CellDataProviderBase" syncable="YES"/>
+    </entity>
+    <entity name="PhoneNumber" representedClassName="PhoneNumber" parentEntity="CellDataProviderBase" syncable="YES">
         <attribute name="descript" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imageUrl" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="number" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Website" representedClassName="Website" syncable="YES">
+    <entity name="Website" representedClassName="Website" parentEntity="CellDataProviderBase" syncable="YES">
         <attribute name="descript" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imageUrl" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Website" positionX="160" positionY="192" width="128" height="105"/>
-        <element name="PhoneNumber" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="CellDataProviderBase" positionX="0" positionY="0" width="128" height="60"/>
+        <element name="Emotion" positionX="0" positionY="0" width="128" height="90"/>
+        <element name="PhoneNumber" positionX="0" positionY="0" width="128" height="105"/>
+        <element name="Website" positionX="0" positionY="0" width="128" height="105"/>
     </elements>
 </model>
