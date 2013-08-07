@@ -34,4 +34,13 @@
 
 -(IBAction)addToSafetyPlan:(UIButton*)sender;
 
+//protected methds
+-(NSString*) alertMessageInfoForTag:(int) tag;
+-(NSString*) editAlertTextForTag:(int) tag;
+-(NSString*) editPlaceholderTextForTag:(int) tag;
+
+-(BOOL) shouldEditForTag:(int) tag;
+
+-(void) textWasEdited:(NSString*) text forTag:(int) tag;
+
 @end

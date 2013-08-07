@@ -15,6 +15,7 @@
 #import "SafetyPlanPlacesScreen.h"
 #import "SafetyPlanPeopleScreen.h"
 #import "SafetyPlanProfessionalsScreen.h"
+#import "SafetyPlanEnvironmentScreen.h"
 
 @interface SafetyPlanViewController (){
     IBOutlet UIButton* backButton;
@@ -33,16 +34,21 @@
     IBOutlet UIButton* phoneButton;
     IBOutlet UIButton* houseButton;
     
+    IBOutlet UIButton* nextButton;
+    
     IBOutlet SafetyPlanWarningSignsScreen* warningSignScreen;
     IBOutlet SafetyPlanInternalScreen* internalScreen;
     IBOutlet SafetyPlanPlacesScreen* placesScreen;
     IBOutlet SafetyPlanPeopleScreen* peopleScreen;
     IBOutlet SafetyPlanProfessionalsScreen* professionalsScreen;
+    IBOutlet SafetyPlanEnvironmentScreen* environmentScreen;
     
     NSArray* screens;
     int currentScreenIndex;
     
     NSArray* buttons;
+    
+    NSArray* nextButtonImages;
 }
 
 -(IBAction) dismiss:(id) sender;
@@ -93,8 +99,15 @@
     
     warningSignScreen.managedObjectContext = self.managedObjectContext;
     
-    screens = @[warningSignScreen, internalScreen, placesScreen, peopleScreen, professionalsScreen];
+    screens = @[warningSignScreen, internalScreen, placesScreen, peopleScreen, professionalsScreen, environmentScreen];
     buttons = @[warningButton, pencilButton, treeButton, personButton, phoneButton, houseButton];
+    
+    nextButtonImages = @[[UIImage imageNamed:@"next_1"],
+                         [UIImage imageNamed:@"next_2"],
+                         [UIImage imageNamed:@"next_3"],
+                         [UIImage imageNamed:@"next_4"],
+                         [UIImage imageNamed:@"next_5"],
+                         [UIImage imageNamed:@"next_6"]];
     
     currentScreenIndex = -1;
     [self setContent:warningButton];
@@ -152,6 +165,8 @@
         titleLabel.alpha = 0.0;
         descriptionLabel.alpha = 0.0;
         
+        nextButton.alpha = 0.0;
+        
         [currentScreen animateOut];
     } completion:^(BOOL finished) {
         titleLabel.text = [targetScreen titleText];
@@ -159,11 +174,28 @@
         
         [currentScreen removeFromSuperview];
         [targetScreen addToView:contentView];
+        
+        float contentY = [targetScreen descriptionText] ? descriptionLabel.frame.origin.y + descriptionLabel.frame.size.height: descriptionLabel.frame.origin.y;
+        
+        float contentHeight = nextButton.frame.origin.y - 10.0 - contentY;
+        
+        contentView.frame = CGRectMake(contentView.frame.origin.x,
+                                       contentY,
+                                       contentView.frame.size.width,
+                                       contentHeight);
+        [targetScreen layoutViews];
         [targetScreen animateOut];
+        
+        UIImage* nextButtonImage = nextButtonImages[index];
+        [nextButton setImage:nextButtonImage forState:UIControlStateNormal];
+        nextButton.tag = (index + 1) % screens.count;
         
         [UIView animateWithDuration:.4 animations:^{
             titleLabel.alpha = 1.0;
             descriptionLabel.alpha = 1.0;
+            
+            if (currentScreenIndex < screens.count)
+                nextButton.alpha = 1.0;
             
             [targetScreen animateIn];
         }];

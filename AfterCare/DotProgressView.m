@@ -67,13 +67,24 @@
 }
 
 -(void) setDotActivatedAtIndex:(int)index{
-    if (index > 0 && index < [activatedArray count]){
-        [activatedArray replaceObjectAtIndex:index withObject:[NSNumber numberWithBool:TRUE]];
+    if (index >= 0 && index < [activatedArray count]){
+        [activatedArray replaceObjectAtIndex:index withObject:[NSNumber numberWithBool:FALSE]];
         UIImageView* imageView = [imageViewArray objectAtIndex:index];
         imageView.image = self.activatedDotImage;
     }
     else{
         NSLog(@"Cannot set dot active at %d, value must be between 0 and %d", index, activatedArray.count);
+    }
+}
+
+-(void) setDotDeactivatedAtIndex:(int)index{
+    if (index >= 0 && index < [activatedArray count]){
+        [activatedArray replaceObjectAtIndex:index withObject:[NSNumber numberWithBool:TRUE]];
+        UIImageView* imageView = [imageViewArray objectAtIndex:index];
+        imageView.image = self.deactivatedDotImage;
+    }
+    else{
+        NSLog(@"Cannot set dot inactive at %d, value must be between 0 and %d", index, activatedArray.count);
     }
 }
 

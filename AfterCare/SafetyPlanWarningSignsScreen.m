@@ -8,9 +8,12 @@
 
 #import "SafetyPlanWarningSignsScreen.h"
 #import "DotProgressView.h"
-#import "DataManager.h"
 
-@interface SafetyPlanWarningSignsScreen ()<UIAlertViewDelegate>
+#import "SafetyPlanManager.h"
+
+@interface SafetyPlanWarningSignsScreen ()
+
+-(void) refreshButtonsFromSafetyPlan;
 
 @end
 
@@ -22,7 +25,7 @@
     progressView.numberOfDots = 3;
     [progressView setActivatedDotImage:[UIImage imageNamed:@"button_orange"]];
     
-    //get core data stuff here.
+    [self refreshButtonsFromSafetyPlan];
 }
 
 -(NSString*) titleText{
@@ -33,33 +36,15 @@
     return @"These are thoughts, moods, situations or behaviors that indicate a crisis may be developing.";
 }
 
-#pragma mark UIAlertView delegate methods
+#pragma mark protected methods
 
--(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if (buttonIndex == 1){
-        //Add to core data;
-        switch (alertView.tag) {
-            case 0:
-                
-                break;
-            case 1:
-                
-                break;
-            case 2:
-               
-                break;
-                
-            default:
-                break;
-        }
-    }
+-(NSString*) alertMessageInfoForTag:(int)tag{
+    return [[SafetyPlanManager sharedManager] warningSignAtIndex:tag].warningSign;
 }
 
-#pragma mark actions
-
--(IBAction)addToSafetyPlan:(UIButton *)sender{
+-(NSString*) editAlertTextForTag:(int)tag{
     NSString* titleName = nil;
-    switch (sender.tag) {
+    switch (tag) {
         case 0:
             titleName = @"First";
             break;
@@ -74,13 +59,62 @@
             break;
     }
     
+    BOOL hasWarning = [[SafetyPlanManager sharedManager] warningSignAtIndex:tag] ? TRUE : FALSE;
     
-    UIAlertView* addWarningAlert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Add %@ Warning Sign", titleName] message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Enter", nil];
+    NSString* actionString = hasWarning ? @"Edit" : @"Add";
     
-    addWarningAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
-    addWarningAlert.tag = sender.tag;
+    return [NSString stringWithFormat:@"%@ %@ Warning Sign", actionString, titleName];
+}
+
+-(NSString*) editPlaceholderTextForTag:(int)tag{
+    return [[SafetyPlanManager sharedManager] warningSignAtIndex:tag].warningSign;
+}
+
+-(void) textWasEdited:(NSString *)text forTag:(int)tag{
+    WarningSign* warningSign = nil;
+    if (text && ![text isEqualToString:@""]){
+        warningSign = [[WarningSign alloc] init];
+        warningSign.warningSign = text;
+    }
     
-    [addWarningAlert show];
+    [[SafetyPlanManager sharedManager] saveWarningSign:warningSign atIndex:tag];
+    
+    [self refreshButtonsFromSafetyPlan];
+}
+
+-(BOOL) shouldEditForTag:(int)tag{
+    return [[SafetyPlanManager sharedManager] warningSignAtIndex:tag] ? TRUE : FALSE;
+}
+
+#pragma mark private methods
+
+-(void) refreshButtonsFromSafetyPlan{
+    SafetyPlanManager* manager = [SafetyPlanManager sharedManager];
+    
+    if ([manager warningSignAtIndex:0]) {
+        [progressView setDotActivatedAtIndex:0];
+        [addButton1 setTitle:@"Your first warning sign." forState:UIControlStateNormal];
+    }
+    else{
+        [progressView setDotDeactivatedAtIndex:0];
+        [addButton1 setTitle:@"Add your first warning sign." forState:UIControlStateNormal];
+    }
+    if ([manager warningSignAtIndex:1]) {
+        [progressView setDotActivatedAtIndex:1];
+        [addButton2 setTitle:@"Your second warning sign." forState:UIControlStateNormal];
+    }
+    else{
+        [progressView setDotDeactivatedAtIndex:1];
+        [addButton2 setTitle:@"Your second warning sign." forState:UIControlStateNormal];
+    }
+    if ([manager warningSignAtIndex:2]) {
+        [progressView setDotActivatedAtIndex:2];
+        [addButton3 setTitle:@"Your third warning sign." forState:UIControlStateNormal];
+    }
+    else{
+        [progressView setDotDeactivatedAtIndex:2];
+        [addButton3 setTitle:@"Add your third warning sign." forState:UIControlStateNormal];
+    }
 }
 
 @end
