@@ -10,6 +10,7 @@
 		0F114C0717B04A0800A96F21 /* AfterCareDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F114C0517B04A0800A96F21 /* AfterCareDataModel.xcdatamodeld */; };
 		0F114DDD17B2DB6000A96F21 /* Emotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F114DDC17B2DB6000A96F21 /* Emotion.m */; };
 		0F114DE017B2DB6F00A96F21 /* NSManagedObject+FetchRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F114DDF17B2DB6F00A96F21 /* NSManagedObject+FetchRequests.m */; };
+		0F114DE317B2DF4700A96F21 /* resources.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F114DE217B2DF4700A96F21 /* resources.json */; };
 		0FAF4DE2179C953E00028E7A /* Website.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDB179C953E00028E7A /* Website.m */; };
 		0FAF4DE3179C953E00028E7A /* WebsiteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDD179C953E00028E7A /* WebsiteCell.m */; };
 		0FAF4DE4179C953E00028E7A /* WebsiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDE179C953E00028E7A /* WebsiteCell.xib */; };
@@ -112,6 +113,7 @@
 		0F114DDC17B2DB6000A96F21 /* Emotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Emotion.m; sourceTree = "<group>"; };
 		0F114DDE17B2DB6F00A96F21 /* NSManagedObject+FetchRequests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+FetchRequests.h"; sourceTree = "<group>"; };
 		0F114DDF17B2DB6F00A96F21 /* NSManagedObject+FetchRequests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+FetchRequests.m"; sourceTree = "<group>"; };
+		0F114DE217B2DF4700A96F21 /* resources.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resources.json; sourceTree = "<group>"; };
 		0FAF4D84179B016B00028E7A /* Apache License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Apache License.txt"; sourceTree = "<group>"; };
 		0FAF4D85179B016B00028E7A /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		0FAF4D86179B016B00028E7A /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -285,6 +287,14 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		0F114DE117B2DF3800A96F21 /* SeedData */ = {
+			isa = PBXGroup;
+			children = (
+				0F114DE217B2DF4700A96F21 /* resources.json */,
+			);
+			name = SeedData;
+			sourceTree = "<group>";
+		};
 		0FAF4DAC179B161900028E7A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -454,6 +464,7 @@
 		1EAB7CA21799DBBD00F3DBAA /* AfterCare */ = {
 			isa = PBXGroup;
 			children = (
+				0F114DE117B2DF3800A96F21 /* SeedData */,
 				1EAB7CAB1799DBBD00F3DBAA /* AppDelegate.h */,
 				1EAB7CAC1799DBBD00F3DBAA /* AppDelegate.m */,
 				9C15585017AFF48E00D1919C /* Managers */,
@@ -650,6 +661,7 @@
 				9C758C0C17B288CA00478BF6 /* next_4.png in Resources */,
 				9C758C0D17B288CA00478BF6 /* next_5.png in Resources */,
 				9C758C0E17B288CA00478BF6 /* next_6.png in Resources */,
+				0F114DE317B2DF4700A96F21 /* resources.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,7 +32,7 @@
 - (id) initWithEmotion: (Emotion *) emotion{
     if(self = [super initWithNibName: NSStringFromClass([ResourcesViewController class]) bundle: nil]){        
         self.emotion = emotion;
-        self.title = [NSString stringWithFormat:@"I'm Feeling %@", emotion.name];
+        self.title = [NSString stringWithFormat:@"I'm Feeling %@", emotion.name.capitalizedString];
     }
     return self;
 }

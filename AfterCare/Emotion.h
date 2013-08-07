@@ -18,4 +18,5 @@
 
 @property (nonatomic, retain) NSSet *resources;
 
++ (NSArray*) fetchWithNames: (NSString*) names fromManagedObjectContext: (NSManagedObjectContext*) context;
 @end

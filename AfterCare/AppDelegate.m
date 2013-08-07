@@ -142,7 +142,7 @@
 
 - (void) seedCoreDataIfEmpty{
     if(![self coreDataHasEntriesForEntityName:@"Emotion"]){
-        NSDictionary *emotionDict = @{@"Positive": @0xcb7522, @"Angry": @0xcbd6b4, @"Lonely": @0x95dc8c, @"Depressed": @0xefca16, @"Hurt": @0x40898b, @"Grateful": @0x66c0a0, @"Worthless": @0xeba2071, @"Disinterested": @0x583f22};
+        NSDictionary *emotionDict = @{@"positive": @0xcb7522, @"angry": @0xcbd6b4, @"lonely": @0x95dc8c, @"depressed": @0xefca16, @"hurt": @0x40898b, @"grateful": @0x66c0a0, @"worthless": @0xeba2071, @"disinterested": @0x583f22};
         
         for(NSString* key in emotionDict){
             NSString* name = key;
@@ -152,8 +152,43 @@
             emotion.name = name;
             emotion.color = color;
         }
-        [self.managedObjectContext save:nil];
+        
+        PhoneNumber *number = (PhoneNumber*)[NSEntityDescription
+                   insertNewObjectForEntityForName:@"PhoneNumber"inManagedObjectContext:self.managedObjectContext];
+        
+        number.name = @"NATIONAL SUICIDE PREVENTION LIFELINE";
+        number.descript = @"No matter what problems you are dealing with we can help.";
+        number.number = @"1-800-273-8255";
+        
+        number.emotions = [NSSet setWithArray:[Emotion fetchWithNames:@"ALL" fromManagedObjectContext:self.managedObjectContext]];
+        
+        NSLog(@"emotions : %d", number.emotions.count);
 
+
+        
+        NSError* err = nil;
+        NSString* dataPath = [[NSBundle mainBundle] pathForResource:@"resources" ofType:@"json"];
+        NSArray* resources = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:dataPath]
+                                                                 options:kNilOptions
+                                                                   error:&err];
+        for(id obj in resources){
+            Website *site = (Website*)[NSEntityDescription
+                                                 insertNewObjectForEntityForName:@"Website"inManagedObjectContext:self.managedObjectContext];
+            site.title = [obj objectForKey:@"title"];
+            NSLog(@"title : %@", site.title);
+            site.url = [obj objectForKey:@"link"];
+            site.descript = [obj objectForKey:@"description"];
+            site.emotions = [NSSet setWithArray:[Emotion fetchWithNames: [obj objectForKey:@"emotions"] fromManagedObjectContext:self.managedObjectContext]];
+            NSLog(@"emotions : %d", site.emotions.count);
+
+        }
+        
+        
+        [self.managedObjectContext save:nil];
+        
+        
+
+      
 //        
 //       
 ////        number.name = @"SUICIDE ANONYMOUS";
@@ -162,6 +197,9 @@
 ////        number.color = [UIColor depressedColor];
 
     }
+    
+
+
 
 }
 
