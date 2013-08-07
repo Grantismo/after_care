@@ -15,6 +15,7 @@
 #import "SafetyPlanPlacesScreen.h"
 #import "SafetyPlanPeopleScreen.h"
 #import "SafetyPlanProfessionalsScreen.h"
+#import "SafetyPlanEnvironmentScreen.h"
 
 @interface SafetyPlanViewController (){
     IBOutlet UIButton* backButton;
@@ -40,6 +41,7 @@
     IBOutlet SafetyPlanPlacesScreen* placesScreen;
     IBOutlet SafetyPlanPeopleScreen* peopleScreen;
     IBOutlet SafetyPlanProfessionalsScreen* professionalsScreen;
+    IBOutlet SafetyPlanEnvironmentScreen* environmentScreen;
     
     NSArray* screens;
     int currentScreenIndex;
@@ -98,7 +100,7 @@
     
     warningSignScreen.managedObjectContext = self.managedObjectContext;
     
-    screens = @[warningSignScreen, internalScreen, placesScreen, peopleScreen, professionalsScreen];
+    screens = @[warningSignScreen, internalScreen, placesScreen, peopleScreen, professionalsScreen, environmentScreen];
     buttons = @[warningButton, pencilButton, treeButton, personButton, phoneButton, houseButton];
     
     nextButtonImages = @[[UIImage imageNamed:@"next_1"],
@@ -175,14 +177,25 @@
         [targetScreen addToView:contentView];
         [targetScreen animateOut];
         
+        float contentY = [targetScreen descriptionText] ? descriptionLabel.frame.origin.y + descriptionLabel.frame.size.height: descriptionLabel.frame.origin.y;
+        
+        float contentHeight = nextButton.frame.origin.y - 10.0 - contentY;
+        
+        contentView.frame = CGRectMake(contentView.frame.origin.x,
+                                       contentY,
+                                       contentView.frame.size.width, contentHeight);
+        [targetScreen layoutViews];
+        
         UIImage* nextButtonImage = nextButtonImages[index];
         [nextButton setImage:nextButtonImage forState:UIControlStateNormal];
+        nextButton.tag = (index + 1) % screens.count;
         
         [UIView animateWithDuration:.4 animations:^{
             titleLabel.alpha = 1.0;
             descriptionLabel.alpha = 1.0;
             
-            nextButton.alpha = 0.0;
+            if (currentScreenIndex < screens.count)
+                nextButton.alpha = 1.0;
             
             [targetScreen animateIn];
         }];

@@ -61,23 +61,29 @@
 }
 
 -(void) layoutViews{
-    addButton1.frame = CGRectMake(0.0,
+    float numButtons = (addButton1 ? 1 : 0) + (addButton2 ? 1 :0) + (addButton3 ? 1 :0) + (addButton4 ? 1 :0);
+    
+    NSLog(@"%f", numButtons);
+    
+    CGFloat frameStep = addButton1.superview.frame.size.height/ numButtons;
+    
+    addButton1.frame = CGRectMake(addButton1.frame.origin.x,
                                   0.0,
                                   addButton1.frame.size.width,
                                   addButton1.frame.size.height);
     
-    addButton2.frame = CGRectMake(0.0,
-                                  addButton1.frame.size.height,
+    addButton2.frame = CGRectMake(addButton2.frame.origin.x,
+                                  frameStep,
                                   addButton2.frame.size.width,
                                   addButton2.frame.size.height);
     
-    addButton3.frame = CGRectMake(0.0,
-                                  addButton1.frame.size.height + addButton2.frame.size.height,
+    addButton3.frame = CGRectMake(addButton3.frame.origin.x,
+                                  frameStep * 2.0,
                                   addButton3.frame.size.width,
                                   addButton3.frame.size.height);
     
-    addButton4.frame = CGRectMake(0.0,
-                                  addButton1.frame.size.height + addButton2.frame.size.height + addButton3.frame.size.height,
+    addButton4.frame = CGRectMake(addButton4.frame.origin.x,
+                                  frameStep * 3.0,
                                   addButton4.frame.size.width,
                                   addButton4.frame.size.height);
 }
