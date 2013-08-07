@@ -41,18 +41,20 @@
     
     UINavigationController* safetyNavigationController;
     SafetyPlanViewController* safetyPlanViewController;
-    
+    NSArray* emotions;
+    NSArray* alternateColors;
 }
 
 -(IBAction) hexagonPress:(Hexagonbutton*) button;
 
--(void) addHexagonWithColor:(UIColor*) color title:(NSString*) buttonTitle;
+-(void) addHexagonWithColor:(UIColor *)color title:(NSString *)buttonTitle index: (int) emotionIndex;
 
 -(void) automaticallyScrollHexagons:(CADisplayLink*) displayLink;
 -(void) scrollHexagons:(UIPanGestureRecognizer*) panGestureRecognizer;
 -(void) checkButtonForPlacement:(Hexagonbutton*) button;
 
 -(void)animateSafetyPlanIn:(UITapGestureRecognizer*) navTapGR;
+-(Emotion *) emotionAtButton: (Hexagonbutton*) button;
 
 @end
 
@@ -75,6 +77,10 @@
 {
     [super viewDidLoad];
     
+    emotions = [self.managedObjectContext executeFetchRequest:[Emotion fetchRequest: self.managedObjectContext] error:nil];
+    alternateColors = [NSArray arrayWithObjects:[UIColor afterCareTransparentColor1], [UIColor afterCareTransparentColor2], [UIColor afterCareTransparentColor3], [UIColor afterCareTransparentColor4], [UIColor afterCareTransparentColor5], [UIColor afterCareTransparentColor6], [UIColor afterCareTransparentColor7], nil];
+    
+    
     [[StyleManager sharedStyleManager] appendTitleTextAttributes:@{UITextAttributeTextColor : [UIColor afterCareOffWhiteColor]} toNavigationBar:self.navigationController.navigationBar];
     
     hexagonWidth = (self.view.bounds.size.width * (4.0 / 7.0));
@@ -83,27 +89,34 @@
     self.view.backgroundColor = [UIColor afterCareOffBlackColor];
     
     panGR = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(scrollHexagons:)];
+    
     [self.view addGestureRecognizer:panGR];
 	
-    [self addHexagonWithColor:[UIColor afterCareTransparentColor1] title:nil];
-    [self addHexagonWithColor:[UIColor positiveColor] title:@"Positive"];
-    [self addHexagonWithColor:[UIColor angryColor] title:@"Angry"];
-    [self addHexagonWithColor:[UIColor afterCareTransparentColor2] title:nil];
+    int altColorIndex = 0;
+    int emotionIndex = 0;
     
-    [self addHexagonWithColor:[UIColor afterCareTransparentColor3] title:nil];
-    [self addHexagonWithColor:[UIColor lonelyColor] title:@"Lonely"];
-    [self addHexagonWithColor:[UIColor depressedColor] title:@"Depressed"];
-    [self addHexagonWithColor:[UIColor afterCareTransparentColor4] title:nil];
-    
-    [self addHexagonWithColor:[UIColor afterCareTransparentColor5] title:nil];
-    [self addHexagonWithColor:[UIColor hurtColor] title:@"Hurt"];
-    [self addHexagonWithColor:[UIColor gratefulColor] title:@"Grateful"];
-    [self addHexagonWithColor:[UIColor afterCareTransparentColor6] title:nil];
-    
-    [self addHexagonWithColor:[UIColor afterCareTransparentColor7] title:nil];
-    [self addHexagonWithColor:[UIColor worthlessColor] title:@"Worthless"];
-    [self addHexagonWithColor:[UIColor disinterestedColor] title:@"Disinterested"];
-    [self addHexagonWithColor:[UIColor afterCareTransparentColor1] title:nil];
+    for(int i = 0; i < 16; i++){
+        NSString* title;
+        UIColor* color;
+        int index;
+
+        
+        int col = i % 4;
+        if(col == 0 || col == 3){
+            title = @"";
+            color = [alternateColors objectAtIndex:(altColorIndex % alternateColors.count)];
+            altColorIndex++;
+            index = -1;
+        }else{
+            Emotion *emotion = [emotions objectAtIndex:emotionIndex];
+            title = emotion.name;
+            color = emotion.color;
+            index = emotionIndex;
+            emotionIndex++;
+        }
+        
+        [self addHexagonWithColor:color title:title index:index];
+    }
     
     safetyPlanViewController = [[SafetyPlanViewController alloc] initWithNibName:NSStringFromClass([SafetyPlanViewController class]) bundle:nil];
     safetyPlanViewController.delegate = self;
@@ -162,26 +175,37 @@
     }];
 }
 
+-(Emotion *) emotionAtButton: (Hexagonbutton*) button{
+    int index = button.tag;
+    if(index == -1){
+        return nil;
+    }
+    return [emotions objectAtIndex:index];
+}
+
 #pragma mark Actions
 
 -(IBAction) hexagonPress:(Hexagonbutton *)button{
-    [displayLink invalidate];
-    displayLink = nil;
     
-    ResourcesViewController* resourceViewController = [[ResourcesViewController alloc] initWithNSManagedObjectContext:self.managedObjectContext andColor:button.color];
     
-    resourceViewController.title = [NSString stringWithFormat:@"I'm Feeling %@", button.emotion];
+    Emotion* emotion = [self emotionAtButton:button];
+    if(emotion != nil){
+        [displayLink invalidate];
+        displayLink = nil;
+        ResourcesViewController* resourceViewController = [[ResourcesViewController alloc] initWithEmotion: emotion];
+        [self.navigationController pushViewController:resourceViewController animated:YES];
+    }
     
-    [self.navigationController pushViewController:resourceViewController animated:YES];
+    
 }
 
 #pragma mark private methods
 
--(void) addHexagonWithColor:(UIColor *)color title:(NSString *)buttonTitle{
+-(void) addHexagonWithColor:(UIColor *)color title:(NSString *)buttonTitle index: (int) emotionIndex{
     Hexagonbutton* hexagon = [[Hexagonbutton alloc] initWithFrame:CGRectMake(0.0, 0.0, hexagonWidth - HEX_PADDING, 0.0)];
     hexagon.color = color;
-    
-    hexagon.emotion = buttonTitle;
+    hexagon.text = buttonTitle;
+    hexagon.tag = emotionIndex;
     
     [hexagon addTarget:self action:@selector(hexagonPress:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -203,6 +227,7 @@
     [contentView addSubview:hexagon];
     
     columnIndex = (columnIndex + 1) % numColumns;
+    
 }
 
 -(void) automaticallyScrollHexagons:(CADisplayLink *)displayLink{

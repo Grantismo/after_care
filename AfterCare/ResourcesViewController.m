@@ -23,32 +23,31 @@
     IBOutlet UIButton* backButton;
 }
 
--(IBAction)po0pSelf:(id)sender;
+-(IBAction)popSelf:(id)sender;
 
 @end
 
 @implementation ResourcesViewController
 
-
-- (id) initWithNSManagedObjectContext: (NSManagedObjectContext *) context andColor:(UIColor *)color{
-    if(self = [super initWithNibName: NSStringFromClass([ResourcesViewController class]) bundle: nil]){
-        self.managedObjectContext = context;
-        
-        self.color = color;
+- (id) initWithEmotion: (Emotion *) emotion{
+    if(self = [super initWithNibName: NSStringFromClass([ResourcesViewController class]) bundle: nil]){        
+        self.emotion = emotion;
+        self.title = [NSString stringWithFormat:@"I'm Feeling %@", emotion.name];
     }
     return self;
 }
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    UIColor* color = self.emotion.color;
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
     
-    [self.navigationController.navigationBar setBackgroundImage:[UIImageCreator onePixelImageForColor:self.color] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImageCreator onePixelImageForColor:color] forBarMetrics:UIBarMetricsDefault];
 
     [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
     
-    navBarFooterImageView.image = [UIImageCreator arrowImageWithSize:navBarFooterImageView.frame.size andArrowSize:CGSizeMake(20.0, 8.0) andArrowWidthRatio:.5 andColor:self.color];
+    navBarFooterImageView.image = [UIImageCreator arrowImageWithSize:navBarFooterImageView.frame.size andArrowSize:CGSizeMake(20.0, 8.0) andArrowWidthRatio:.5 andColor:color];
     
     navBarFooterImageView.layer.shadowOffset = CGSizeMake(0.0, 3.0);
     navBarFooterImageView.layer.shadowColor = [UIColor blackColor].CGColor;
@@ -61,43 +60,23 @@
 // 
 //    self.navigationItem.rightBarButtonItem = button;
     
-    PhoneNumber* number = (PhoneNumber*)[NSEntityDescription
-                              insertNewObjectForEntityForName:@"PhoneNumber"
-                              inManagedObjectContext:self.managedObjectContext];
-    number.name = @"SUICIDE ANONYMOUS";
-    number.number = @"2486223655";
-    number.descript = @"Suicideanonymous.net is a website that provides resources that provide worldwide Skype meetings and other support systems.";
-    number.color = [UIColor depressedColor];
+//    PhoneNumber* number = (PhoneNumber*)[NSEntityDescription
+//                              insertNewObjectForEntityForName:@"PhoneNumber"
+//                              inManagedObjectContext:self.managedObjectContext];
+//    number.name = @"SUICIDE ANONYMOUS";
+//    number.number = @"2486223655";
+//    number.descript = @"Suicideanonymous.net is a website that provides resources that provide worldwide Skype meetings and other support systems.";
+//    number.color = [UIColor depressedColor];
 
     
-    self.dataSources = [NSArray arrayWithObject:number];
-    
-    //[self fetchResources];
-    
-//    PhoneNumber* number = [[PhoneNumber alloc] init];
+        
+    [self fetchResources];
 
-//    
-//    [sources addObject:reddit];
-//    [sources addObject:number];
-
-    
- //   self.dataSources = sources;
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 -(void) fetchResources{
-    
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Website" inManagedObjectContext:self.managedObjectContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:entity];
-    self.dataSources = [self.managedObjectContext executeFetchRequest:request error:nil];
-    for(id<CellDataProvider> source in self.dataSources){
-        source.delegate = self;
-    }
+    self.dataSources = [self.emotion.resources allObjects];
+
 }
 - (id<CellDataProvider>) cellDataSourceForRowAtIndexPath:(NSIndexPath*) indexPath{
     return [self.dataSources objectAtIndex:indexPath.row];
@@ -185,7 +164,6 @@
 
 -(IBAction) addResource:(id)sender{
     NewResourceViewController *controller = [[NewResourceViewController alloc] init];
-    controller.managedObjectContext = self.managedObjectContext;
     
     [self presentViewController:controller animated:YES completion:^{
         [self fetchResources];
@@ -193,7 +171,7 @@
     }];
 }
 
--(IBAction)po0pSelf:(id)sender{
+-(IBAction)popSelf:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
 }
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0F114C0717B04A0800A96F21 /* AfterCareDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F114C0517B04A0800A96F21 /* AfterCareDataModel.xcdatamodeld */; };
+		0F114DDD17B2DB6000A96F21 /* Emotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F114DDC17B2DB6000A96F21 /* Emotion.m */; };
+		0F114DE017B2DB6F00A96F21 /* NSManagedObject+FetchRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F114DDF17B2DB6F00A96F21 /* NSManagedObject+FetchRequests.m */; };
 		0FAF4DE2179C953E00028E7A /* Website.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDB179C953E00028E7A /* Website.m */; };
 		0FAF4DE3179C953E00028E7A /* WebsiteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDD179C953E00028E7A /* WebsiteCell.m */; };
 		0FAF4DE4179C953E00028E7A /* WebsiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDE179C953E00028E7A /* WebsiteCell.xib */; };
@@ -106,6 +108,10 @@
 
 /* Begin PBXFileReference section */
 		0F114C0617B04A0800A96F21 /* AfterCareDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AfterCareDataModel.xcdatamodel; sourceTree = "<group>"; };
+		0F114DDB17B2DB6000A96F21 /* Emotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Emotion.h; sourceTree = "<group>"; };
+		0F114DDC17B2DB6000A96F21 /* Emotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Emotion.m; sourceTree = "<group>"; };
+		0F114DDE17B2DB6F00A96F21 /* NSManagedObject+FetchRequests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+FetchRequests.h"; sourceTree = "<group>"; };
+		0F114DDF17B2DB6F00A96F21 /* NSManagedObject+FetchRequests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+FetchRequests.m"; sourceTree = "<group>"; };
 		0FAF4D84179B016B00028E7A /* Apache License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Apache License.txt"; sourceTree = "<group>"; };
 		0FAF4D85179B016B00028E7A /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		0FAF4D86179B016B00028E7A /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -261,6 +267,8 @@
 		0F114C0817B1A44200A96F21 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0F114DDB17B2DB6000A96F21 /* Emotion.h */,
+				0F114DDC17B2DB6000A96F21 /* Emotion.m */,
 				9C758C1217B295D200478BF6 /* WarningSign.h */,
 				9C758C1317B295D200478BF6 /* WarningSign.m */,
 				9C758C1817B2A42900478BF6 /* CopingStrategy.h */,
@@ -404,6 +412,8 @@
 		1E023BB7179B20FC00DC8FC5 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				0F114DDE17B2DB6F00A96F21 /* NSManagedObject+FetchRequests.h */,
+				0F114DDF17B2DB6F00A96F21 /* NSManagedObject+FetchRequests.m */,
 				1E023BB8179B212400DC8FC5 /* UIView+FrameManipulators.h */,
 				1E023BB9179B212400DC8FC5 /* UIView+FrameManipulators.m */,
 				1E023BBD179CA98E00DC8FC5 /* UIColor+AfterCareColors.h */,
@@ -686,6 +696,8 @@
 				9C758C2017B2D0DD00478BF6 /* Person.m in Sources */,
 				9C758C2317B2D3E900478BF6 /* Professional.m in Sources */,
 				9C758C2617B2D91200478BF6 /* SafeEnvironment.m in Sources */,
+				0F114DDD17B2DB6000A96F21 /* Emotion.m in Sources */,
+				0F114DE017B2DB6F00A96F21 /* NSManagedObject+FetchRequests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
