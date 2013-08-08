@@ -141,15 +141,34 @@
 }
 
 - (void)seedEmotions {
-    NSDictionary *emotionDict = @{@"positive": @0xcb7522, @"angry": @0xcbd6b4, @"lonely": @0x95dc8c, @"depressed": @0xefca16, @"hurt": @0x40898b, @"grateful": @0x66c0a0, @"worthless": @0xeba2071, @"disinterested": @0x583f22};
+    NSDictionary *emotionColorDict = @{@"positive": @0xcb7522, @"angry": @0xcbd6b4, @"lonely": @0x95dc8c, @"depressed": @0xefca16, @"hurt": @0x40898b, @"grateful": @0x66c0a0, @"worthless": @0xeba2071, @"disinterested": @0x583f22};
     
-    for(NSString* key in emotionDict){
+    NSDictionary *emotionDescriptionDict = @{@"positive":
+                                                 @"When you are feeling positive about recovery, it’s a great time to reach out and help others who may be going through their own struggles. Connect with them.",
+                                             @"angry":
+                                                 @"Anger, fear, and rage can push others away, leading to isolation and depression. These resources can connect you to people who can help you cope.",
+                                             @"lonely":
+                                                 @"Many individuals coping with suicidal thoughts feel lonely and isolated. Withdrawing further can seem natural, but these resources can connect you to others who can help.",
+                                             @"depressed":
+                                                 @"Severe depression has a high association with those considering suicide or recovering from a suicide attempt. Here are some resources and groups that can help.",
+                                             @"hurt":
+                                                 @"Feeling like you’ve been hurt or wounded is common amongst those with suicidal thoughts. Here are some resources that can help you address the hurt.",
+                                             @"grateful":
+                                                 @"Being open and honest with others who are struggling can be a true help to them, and you as well. These resources can assist during recovery, and connect you with others.",
+                                             @"worthless":
+                                                 @"Self-reproach, worthlessness and guilt are common sources of despair. You are not alone in these feelings, and these resources can connect you to others who can help.",
+                                             @"disinterested":
+                                                 @"A loss of interest or pleasure in hobbies, outdoor activites or being around friends and family can be frequent. These resources may help engage your mind and interest."};
+    
+    for(NSString* key in emotionColorDict){
         NSString* name = key;
-        UIColor* color = UIColorFromRGB([[emotionDict objectForKey:key] integerValue], 1.0);
+        UIColor* color = UIColorFromRGB([[emotionColorDict objectForKey:key] integerValue], 1.0);
         Emotion* emotion = (Emotion*)[NSEntityDescription
                                       insertNewObjectForEntityForName:@"Emotion"inManagedObjectContext:self.managedObjectContext];
         emotion.name = name;
         emotion.color = color;
+        
+        emotion.emotionDescription = [emotionDescriptionDict objectForKey:key];
     }
 }
 

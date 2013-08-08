@@ -193,6 +193,7 @@
         [displayLink invalidate];
         displayLink = nil;
         ResourcesViewController* resourceViewController = [[ResourcesViewController alloc] initWithEmotion: emotion];
+        
         [self.navigationController pushViewController:resourceViewController animated:YES];
     }
     

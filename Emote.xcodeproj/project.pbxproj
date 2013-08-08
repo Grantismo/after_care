@@ -73,9 +73,6 @@
 		1EAB7CA71799DBBD00F3DBAA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB7CA51799DBBD00F3DBAA /* InfoPlist.strings */; };
 		1EAB7CA91799DBBD00F3DBAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB7CA81799DBBD00F3DBAA /* main.m */; };
 		1EAB7CAD1799DBBD00F3DBAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB7CAC1799DBBD00F3DBAA /* AppDelegate.m */; };
-		1EAB7CAF1799DBBD00F3DBAA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB7CAE1799DBBD00F3DBAA /* Default.png */; };
-		1EAB7CB11799DBBD00F3DBAA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB7CB01799DBBD00F3DBAA /* Default@2x.png */; };
-		1EAB7CB31799DBBD00F3DBAA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB7CB21799DBBD00F3DBAA /* Default-568h@2x.png */; };
 		1EAB7CB61799DBBD00F3DBAA /* HexagonMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB7CB51799DBBD00F3DBAA /* HexagonMainViewController.m */; };
 		1EAB7CB91799DBBD00F3DBAA /* HexagonMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB7CB71799DBBD00F3DBAA /* HexagonMainViewController.xib */; };
 		1EAB7CC41799DCB700F3DBAA /* UIImageCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB7CC31799DCB700F3DBAA /* UIImageCreator.m */; };
@@ -139,6 +136,12 @@
 		9C758C2017B2D0DD00478BF6 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758C1F17B2D0DD00478BF6 /* Person.m */; };
 		9C758C2317B2D3E900478BF6 /* Professional.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758C2217B2D3E900478BF6 /* Professional.m */; };
 		9C758C2617B2D91200478BF6 /* SafeEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758C2517B2D91200478BF6 /* SafeEnvironment.m */; };
+		9C758C2817B3CDA100478BF6 /* emote_icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C758C2717B3CDA000478BF6 /* emote_icon114.png */; };
+		9C758C2B17B3DFC800478BF6 /* AddYourOwnResourcesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758C2A17B3DFC800478BF6 /* AddYourOwnResourcesTableViewCell.m */; };
+		9C758C2D17B3E73D00478BF6 /* grey_plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C758C2C17B3E73A00478BF6 /* grey_plus.png */; };
+		9C758C2F17B3EBCB00478BF6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C758C2E17B3EBCA00478BF6 /* Default@2x.png */; };
+		9C758C3117B3EBD500478BF6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C758C3017B3EBD300478BF6 /* Default-568h@2x.png */; };
+		9C758C3417B3EC2000478BF6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C758C3317B3EC1F00478BF6 /* Default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -230,19 +233,16 @@
 		1E09EF6617AC439500FB3E49 /* SafetyPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafetyPlanViewController.h; sourceTree = "<group>"; };
 		1E09EF6717AC439500FB3E49 /* SafetyPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafetyPlanViewController.m; sourceTree = "<group>"; };
 		1E09EF6817AC439500FB3E49 /* SafetyPlanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SafetyPlanViewController.xib; sourceTree = "<group>"; };
-		1EAB7C991799DBBD00F3DBAA /* AfterCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AfterCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EAB7C991799DBBD00F3DBAA /* Emote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EAB7C9C1799DBBD00F3DBAA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1EAB7C9E1799DBBD00F3DBAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1EAB7CA01799DBBD00F3DBAA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		1EAB7CA41799DBBD00F3DBAA /* AfterCare-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AfterCare-Info.plist"; sourceTree = "<group>"; };
+		1EAB7CA41799DBBD00F3DBAA /* Emote-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Emote-Info.plist"; sourceTree = "<group>"; };
 		1EAB7CA61799DBBD00F3DBAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1EAB7CA81799DBBD00F3DBAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1EAB7CAA1799DBBD00F3DBAA /* AfterCare-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AfterCare-Prefix.pch"; sourceTree = "<group>"; };
 		1EAB7CAB1799DBBD00F3DBAA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1EAB7CAC1799DBBD00F3DBAA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1EAB7CAE1799DBBD00F3DBAA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		1EAB7CB01799DBBD00F3DBAA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		1EAB7CB21799DBBD00F3DBAA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1EAB7CB41799DBBD00F3DBAA /* HexagonMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HexagonMainViewController.h; sourceTree = "<group>"; };
 		1EAB7CB51799DBBD00F3DBAA /* HexagonMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HexagonMainViewController.m; sourceTree = "<group>"; };
 		1EAB7CB81799DBBD00F3DBAA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HexagonMainViewController.xib; sourceTree = "<group>"; };
@@ -316,6 +316,13 @@
 		9C758C2217B2D3E900478BF6 /* Professional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Professional.m; sourceTree = "<group>"; };
 		9C758C2417B2D91100478BF6 /* SafeEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafeEnvironment.h; sourceTree = "<group>"; };
 		9C758C2517B2D91200478BF6 /* SafeEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafeEnvironment.m; sourceTree = "<group>"; };
+		9C758C2717B3CDA000478BF6 /* emote_icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emote_icon114.png; sourceTree = "<group>"; };
+		9C758C2917B3DFC800478BF6 /* AddYourOwnResourcesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddYourOwnResourcesTableViewCell.h; sourceTree = "<group>"; };
+		9C758C2A17B3DFC800478BF6 /* AddYourOwnResourcesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddYourOwnResourcesTableViewCell.m; sourceTree = "<group>"; };
+		9C758C2C17B3E73A00478BF6 /* grey_plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey_plus.png; sourceTree = "<group>"; };
+		9C758C2E17B3EBCA00478BF6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		9C758C3017B3EBD300478BF6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9C758C3317B3EC1F00478BF6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -440,6 +447,7 @@
 				0FD90E8517B043C000DACBA6 /* right_arrow.png */,
 				9C15584E17AFF0D700D1919C /* back-button.png */,
 				9C15585F17B0037400D1919C /* arrow.png */,
+				9C758C2C17B3E73A00478BF6 /* grey_plus.png */,
 				9C15586317B0184C00D1919C /* yellow_button_background.png */,
 				9C15587717B037C800D1919C /* plus.png */,
 				9C758C0217B288BC00478BF6 /* Next Buttons */,
@@ -475,6 +483,8 @@
 				0FAF4DDC179C953E00028E7A /* WebsiteCell.h */,
 				0FAF4DDD179C953E00028E7A /* WebsiteCell.m */,
 				0FAF4DDE179C953E00028E7A /* WebsiteCell.xib */,
+				9C758C2917B3DFC800478BF6 /* AddYourOwnResourcesTableViewCell.h */,
+				9C758C2A17B3DFC800478BF6 /* AddYourOwnResourcesTableViewCell.m */,
 			);
 			name = "Custom Cells";
 			sourceTree = "<group>";
@@ -544,6 +554,10 @@
 		1EAB7C901799DBBD00F3DBAA = {
 			isa = PBXGroup;
 			children = (
+				9C758C3317B3EC1F00478BF6 /* Default.png */,
+				9C758C3017B3EBD300478BF6 /* Default-568h@2x.png */,
+				9C758C2E17B3EBCA00478BF6 /* Default@2x.png */,
+				9C758C2717B3CDA000478BF6 /* emote_icon114.png */,
 				0F114DE417B2FBB500A96F21 /* Icon.png */,
 				1EAB7CA21799DBBD00F3DBAA /* AfterCare */,
 				1EAB7C9B1799DBBD00F3DBAA /* Frameworks */,
@@ -554,7 +568,7 @@
 		1EAB7C9A1799DBBD00F3DBAA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1EAB7C991799DBBD00F3DBAA /* AfterCare.app */,
+				1EAB7C991799DBBD00F3DBAA /* Emote.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -596,13 +610,10 @@
 		1EAB7CA31799DBBD00F3DBAA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1EAB7CA41799DBBD00F3DBAA /* AfterCare-Info.plist */,
+				1EAB7CA41799DBBD00F3DBAA /* Emote-Info.plist */,
 				1EAB7CA51799DBBD00F3DBAA /* InfoPlist.strings */,
 				1EAB7CA81799DBBD00F3DBAA /* main.m */,
 				1EAB7CAA1799DBBD00F3DBAA /* AfterCare-Prefix.pch */,
-				1EAB7CAE1799DBBD00F3DBAA /* Default.png */,
-				1EAB7CB01799DBBD00F3DBAA /* Default@2x.png */,
-				1EAB7CB21799DBBD00F3DBAA /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -669,9 +680,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1EAB7C981799DBBD00F3DBAA /* AfterCare */ = {
+		1EAB7C981799DBBD00F3DBAA /* Emote */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1EAB7CBF1799DBBD00F3DBAA /* Build configuration list for PBXNativeTarget "AfterCare" */;
+			buildConfigurationList = 1EAB7CBF1799DBBD00F3DBAA /* Build configuration list for PBXNativeTarget "Emote" */;
 			buildPhases = (
 				1EAB7C951799DBBD00F3DBAA /* Sources */,
 				1EAB7C961799DBBD00F3DBAA /* Frameworks */,
@@ -681,9 +692,9 @@
 			);
 			dependencies = (
 			);
-			name = AfterCare;
+			name = Emote;
 			productName = SuicidePrevention;
-			productReference = 1EAB7C991799DBBD00F3DBAA /* AfterCare.app */;
+			productReference = 1EAB7C991799DBBD00F3DBAA /* Emote.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -695,7 +706,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = TabSprint;
 			};
-			buildConfigurationList = 1EAB7C941799DBBD00F3DBAA /* Build configuration list for PBXProject "AfterCare" */;
+			buildConfigurationList = 1EAB7C941799DBBD00F3DBAA /* Build configuration list for PBXProject "Emote" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -707,7 +718,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1EAB7C981799DBBD00F3DBAA /* AfterCare */,
+				1EAB7C981799DBBD00F3DBAA /* Emote */,
 			);
 		};
 /* End PBXProject section */
@@ -728,9 +739,6 @@
 				9C15585D17AFF88500D1919C /* OpenSans-Semibold.ttf in Resources */,
 				9C15585E17AFF88500D1919C /* OpenSans-SemiboldItalic.ttf in Resources */,
 				1EAB7CA71799DBBD00F3DBAA /* InfoPlist.strings in Resources */,
-				1EAB7CAF1799DBBD00F3DBAA /* Default.png in Resources */,
-				1EAB7CB11799DBBD00F3DBAA /* Default@2x.png in Resources */,
-				1EAB7CB31799DBBD00F3DBAA /* Default-568h@2x.png in Resources */,
 				1EAB7CB91799DBBD00F3DBAA /* HexagonMainViewController.xib in Resources */,
 				0FAF4DE4179C953E00028E7A /* WebsiteCell.xib in Resources */,
 				0FAF4DE6179C953E00028E7A /* WebViewController.xib in Resources */,
@@ -806,6 +814,11 @@
 				0F114F5717B30DDB00A96F21 /* therapistgrouplocators.png in Resources */,
 				0F114F5817B30DDB00A96F21 /* wakingupalive.png in Resources */,
 				0F114F5C17B311AF00A96F21 /* nationalsuicidepreventionlifeline.png in Resources */,
+				9C758C2817B3CDA100478BF6 /* emote_icon114.png in Resources */,
+				9C758C2D17B3E73D00478BF6 /* grey_plus.png in Resources */,
+				9C758C2F17B3EBCB00478BF6 /* Default@2x.png in Resources */,
+				9C758C3117B3EBD500478BF6 /* Default-568h@2x.png in Resources */,
+				9C758C3417B3EC2000478BF6 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,6 +867,7 @@
 				9C758C2617B2D91200478BF6 /* SafeEnvironment.m in Sources */,
 				0F114DDD17B2DB6000A96F21 /* Emotion.m in Sources */,
 				0F114DE017B2DB6F00A96F21 /* NSManagedObject+FetchRequests.m in Sources */,
+				9C758C2B17B3DFC800478BF6 /* AddYourOwnResourcesTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -942,9 +956,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AfterCare/AfterCare-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/AfterCare/AfterCare-Info.plist";
+				INFOPLIST_FILE = "AfterCare/Emote-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = AfterCare;
+				PRODUCT_NAME = Emote;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -955,9 +969,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AfterCare/AfterCare-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/AfterCare/AfterCare-Info.plist";
+				INFOPLIST_FILE = "AfterCare/Emote-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = AfterCare;
+				PRODUCT_NAME = Emote;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -966,7 +980,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1EAB7C941799DBBD00F3DBAA /* Build configuration list for PBXProject "AfterCare" */ = {
+		1EAB7C941799DBBD00F3DBAA /* Build configuration list for PBXProject "Emote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1EAB7CBD1799DBBD00F3DBAA /* Debug */,
@@ -975,7 +989,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1EAB7CBF1799DBBD00F3DBAA /* Build configuration list for PBXNativeTarget "AfterCare" */ = {
+		1EAB7CBF1799DBBD00F3DBAA /* Build configuration list for PBXNativeTarget "Emote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1EAB7CC01799DBBD00F3DBAA /* Debug */,

@@ -14,6 +14,7 @@
 @dynamic name;
 @dynamic resources;
 @dynamic color;
+@dynamic emotionDescription;
 
 + (NSArray*) fetchWithNames: (NSString*) names fromManagedObjectContext: (NSManagedObjectContext*) context{
     

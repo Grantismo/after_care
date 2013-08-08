@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:AfterCare.xcodeproj">
+      location = "self:Emote.xcodeproj">
    </FileRef>
 </Workspace>

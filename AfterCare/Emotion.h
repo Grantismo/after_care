@@ -13,10 +13,12 @@
 
 @interface Emotion : NSManagedObject
 
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) UIColor *color;
+@property (nonatomic, strong) NSString * name;
+@property (nonatomic, strong) NSString* emotionDescription;
 
-@property (nonatomic, retain) NSSet *resources;
+@property (nonatomic, strong) UIColor *color;
+
+@property (nonatomic, strong) NSSet *resources;
 
 + (NSArray*) fetchWithNames: (NSString*) names fromManagedObjectContext: (NSManagedObjectContext*) context;
 @end
