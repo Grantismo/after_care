@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddYourOwnResourcesTableViewCell : UITableViewCell
+@interface AddYourOwnResourcesCell : UITableViewCell
 @property (nonatomic, strong) IBOutlet UIView* informationContentView;
 @property (nonatomic, strong) IBOutlet UILabel* descriptionLabel;
 

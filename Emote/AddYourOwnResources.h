@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "CellDataProvider.h"
 
-@interface AddYourOwnResourcesTableView : NSObject<CellDataProvider>
+@interface AddYourOwnResources : NSObject<CellDataProvider>
 
 -(UITableViewCell*) newUITableViewCell;
 -(void) onDidSelectCell;
