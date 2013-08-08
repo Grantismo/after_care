@@ -35,6 +35,7 @@
 
 -(void) onDidSelectCell{
     NewResourceViewController *controller = [[NewResourceViewController alloc] init];
+    controller.managedObjectContext = self.delegate.managedObjectContext;
 
     [self.delegate pushUIViewController:controller];
 }
