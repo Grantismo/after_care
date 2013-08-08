@@ -12,6 +12,8 @@
 
 #import "UIImageCreator.h"
 #import "StyleManager.h"
+#import "PhoneNumber.h"
+#import "TextFieldCell.h"
 
 @interface NewResourceViewController ()<UITableViewDataSource, UITableViewDelegate>{
     IBOutlet UIButton* doneButton;
@@ -21,10 +23,17 @@
     
     IBOutlet UITableViewCell* toggleCell;
     IBOutlet UISegmentedControl* toggle;
+    NSDictionary *displayNameToField;
+
 }
 
 -(IBAction) done: (id) sender;
 -(IBAction) cancel: (id) sender;
+- (NSString* ) currentResourceType;
+
+- (NSString*) displayFieldAtIndexPath: (NSIndexPath*) indexPath;
+
+- (NSArray*) currentfields;
 
 -(IBAction)toggleChanged:(UISegmentedControl*)sender;
 @end
@@ -36,13 +45,19 @@
     [super viewDidLoad];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:doneButton ];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:cancelButton];
-    NSMutableArray* mutableFields = [[NSMutableArray alloc] init];
-    [mutableFields addObject:@"url"];
-    [mutableFields addObject:@"title"];
-    [mutableFields addObject:@"descript"];
+    
+    
+    displayNameToField = @{@"url": @"url", @"title": @"title", @"description": @"descript", @"number": @"number", @"name": @"name"};
 
-    self.fields = mutableFields;
-    self.website = (Website*)[NSEntityDescription
+    
+    self.fields = @{@"Website":
+                        @[@"url", @"title", @"description"],
+                    @"PhoneNumber":
+                        @[@"number", @"name", @"description"]
+                    };
+
+    
+    self.resource = (Website*)[NSEntityDescription
                                   insertNewObjectForEntityForName:@"Website"
                                   inManagedObjectContext:self.managedObjectContext];
     
@@ -72,6 +87,10 @@
     toggle.tintColor = self.backgroundColor;
 }
 
+- (NSString* ) currentResourceType{
+    return @[@"Website", @"PhoneNumber"][toggle.selectedSegmentIndex];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -86,7 +105,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 0){
-        return self.fields.count;
+        return ((NSDictionary*) self.fields[[self currentResourceType]]).count;
     }
     else return 1;
 }
@@ -95,9 +114,9 @@
 {
     if (indexPath.section == 0){
         static NSString *CellIdentifier = @"Cell";
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        TextFieldCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            cell = [[TextFieldCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             
             cell.textLabel.text = [self fieldAtIndexPath:indexPath];
@@ -112,20 +131,33 @@
             
         }
         
+        cell.textLabel.text = [self displayFieldAtIndexPath:indexPath];
+        cell.textField.tag = indexPath.row;
+        cell.textField.delegate = self;
+        cell.textField.textColor = [UIColor blackColor];
+
+        
+        
         return cell;
     }
     else return toggleCell;
     
 }
 
+- (NSArray*) currentfields{
+    return (NSArray*) self.fields[[self currentResourceType]];
+}
+
+- (NSString*) displayFieldAtIndexPath: (NSIndexPath*) indexPath{
+    return [[self currentfields] objectAtIndex:indexPath.row];
+}
+
+
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) return 44;
     else return toggleCell.frame.size.height;
 }
 
-- (NSString*) fieldAtIndexPath: (NSIndexPath *) indexPath{
-    return [self.fields objectAtIndex:indexPath.row];
-}
 
 -(void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
     [[StyleManager sharedStyleManager] setBoldFontForLabel:cell.textLabel];
@@ -184,7 +216,7 @@
 }
 
 -(IBAction)cancel:(id)sender{
-    [self.managedObjectContext deleteObject:self.website];
+    [self.managedObjectContext deleteObject:self.resource];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -197,10 +229,19 @@
 -(IBAction)toggleChanged:(UISegmentedControl *)sender{
     switch (sender.selectedSegmentIndex) {
         case 0:
-            
+            [self.managedObjectContext deleteObject:self.resource];
+            self.resource = (Website*)[NSEntityDescription
+                                       insertNewObjectForEntityForName:@"Website"
+                                       inManagedObjectContext:self.managedObjectContext];
+            [newResourceTableView reloadData];
             break;
         case 1:
-            
+            [self.managedObjectContext deleteObject:self.resource];
+            self.resource = (PhoneNumber*)[NSEntityDescription
+                                       insertNewObjectForEntityForName:@"PhoneNumber"
+                                       inManagedObjectContext:self.managedObjectContext];
+            [newResourceTableView reloadData];
+
             break;
             
         default:
@@ -209,8 +250,9 @@
 }
 
 -(void)textFieldDidEndEditing:(UITextField *)textField{
-    NSString* field = [self.fields objectAtIndex:textField.tag];
-    [self.website setValue:textField.text forKey:field];
+    NSIndexPath* path = [NSIndexPath indexPathForRow:textField.tag inSection:0];
+    NSString* field =  [displayNameToField objectForKey:[self displayFieldAtIndexPath:path]];
+    [self.resource setValue:textField.text forKey:field];
 }
 
 @end
