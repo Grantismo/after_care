@@ -14,6 +14,9 @@
 #import "StyleManager.h"
 #import "PhoneNumber.h"
 #import "TextFieldCell.h"
+#import "Emotion.h"
+#include <stdlib.h>
+
 
 @interface NewResourceViewController ()<UITableViewDataSource, UITableViewDelegate>{
     IBOutlet UIButton* doneButton;
@@ -250,6 +253,10 @@
 -(void)textFieldDidEndEditing:(UITextField *)textField{
     NSIndexPath* path = [NSIndexPath indexPathForRow:textField.tag inSection:0];
     NSString* field =  [displayNameToField objectForKey:[self displayFieldAtIndexPath:path]];
+    self.resource.emotions = [NSSet setWithArray:[Emotion fetchWithNames: @"ALL" fromManagedObjectContext:self.managedObjectContext]];
+    int randomImageNum = (arc4random() % 5) + 1;
+    NSString* imagePath = [NSString stringWithFormat:@"default_image_%d", randomImageNum];
+    [self.resource setValue:imagePath forKey:@"imageUrl"];
     [self.resource setValue:textField.text forKey:field];
 }
 

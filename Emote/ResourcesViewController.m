@@ -41,6 +41,7 @@
     return self;
 }
 
+
 - (void)viewDidLoad{
     [super viewDidLoad];
     
@@ -85,8 +86,9 @@
     [super viewWillAppear:animated];
     
      emotionLabel.text = self.emotion.emotionDescription;
+    [self fetchResources];
     
-      [self.navigationController.navigationBar setBackgroundImage:[UIImageCreator onePixelImageForColor:self.emotion.color] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImageCreator onePixelImageForColor:self.emotion.color] forBarMetrics:UIBarMetricsDefault];
 }
 
 -(void) fetchResources{
@@ -141,13 +143,6 @@
 
 #pragma mark Actions
 
--(IBAction) addResource:(id)sender{
-    NewResourceViewController *controller = [[NewResourceViewController alloc] init];
-    [self presentViewController:controller animated:YES completion:^{
-        [self fetchResources];
-        [self.tableView reloadData];
-    }];
-}
 
 -(IBAction)popSelf:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
