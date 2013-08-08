@@ -21,5 +21,7 @@
 @property (nonatomic, retain) NSSet *emotions;
 
 -(CGFloat)cellHeight;
+- (NSMutableString *)titleWithNewLine: (NSString*) title;
+
 
 @end
