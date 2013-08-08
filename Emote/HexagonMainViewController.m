@@ -77,6 +77,9 @@
 {
     [super viewDidLoad];
     
+    if ([self.navigationController.navigationBar respondsToSelector:@selector(setShadowImage:)])
+        [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
+    
     emotions = [self.managedObjectContext executeFetchRequest:[Emotion fetchRequest: self.managedObjectContext] error:nil];
     alternateColors = [NSArray arrayWithObjects:[UIColor afterCareTransparentColor1], [UIColor afterCareTransparentColor2], [UIColor afterCareTransparentColor3], [UIColor afterCareTransparentColor4], [UIColor afterCareTransparentColor5], [UIColor afterCareTransparentColor6], [UIColor afterCareTransparentColor7], nil];
     
