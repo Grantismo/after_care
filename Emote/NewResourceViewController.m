@@ -15,6 +15,8 @@
 #import "PhoneNumber.h"
 #import "TextFieldCell.h"
 
+#import "Emotion.h"
+
 @interface NewResourceViewController ()<UITableViewDataSource, UITableViewDelegate>{
     IBOutlet UIButton* doneButton;
     IBOutlet UIButton* cancelButton;
@@ -25,6 +27,8 @@
     IBOutlet UISegmentedControl* toggle;
     NSDictionary *displayNameToField;
 
+    
+    NSArray* emotions;
 }
 
 -(IBAction) done: (id) sender;
@@ -46,6 +50,7 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:doneButton ];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:cancelButton];
     
+    emotions = [self.managedObjectContext executeFetchRequest:[Emotion fetchRequest: self.managedObjectContext] error:nil];
     
     displayNameToField = @{@"url": @"url", @"title": @"title", @"description": @"descript", @"number": @"number", @"name": @"name"};
 
@@ -75,6 +80,11 @@
     NSDictionary *attributes = [NSDictionary dictionaryWithObject:font
                                                            forKey:UITextAttributeFont];
     [toggle setTitleTextAttributes:attributes forState:UIControlStateNormal];
+    
+    newResourceTableView.frame = CGRectMake(0.0,
+                                      newResourceTableView.frame.origin.y,
+                                      newResourceTableView.frame.size.width,
+                                      newResourceTableView.frame.size.height - self.navigationController.navigationBar.frame.size.height);
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -100,19 +110,22 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (section == 0){
+    if (section == 0) return 1;
+    else if (section == 1){
         return ((NSDictionary*) self.fields[[self currentResourceType]]).count;
     }
-    else return 1;
+    else return emotions.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 0){
+    
+    if (indexPath.section == 0) return toggleCell;
+    else if (indexPath.section == 1){
         static NSString *CellIdentifier = @"Cell";
         TextFieldCell *cell = (TextFieldCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) {
@@ -121,7 +134,6 @@
             cell.inputTextField.delegate = self;
             
             cell.textLabel.backgroundColor = [UIColor clearColor];
-
         }
         
         cell.textLabel.text = [self displayFieldAtIndexPath:indexPath];
@@ -138,8 +150,30 @@
         
         return cell;
     }
-    else return toggleCell;
-    
+    else{
+        static NSString *CellIdentifier = @"EmotionCell";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        }
+        
+        Emotion* emotion = emotions[indexPath.row];
+        
+        cell.textLabel.text = emotion.name;
+        
+        
+        return cell;
+    }
+}
+
+-(NSString*) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    if (section == 0){
+        return @"Type:";
+    }
+    else if (section == 1){
+        return @"Fields:";
+    }
+    else return @"Emotions:";
 }
 
 - (NSArray*) currentfields{
@@ -152,21 +186,13 @@
 
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == 0) return 44;
-    else return toggleCell.frame.size.height;
+    if (indexPath.section == 0) return toggleCell.frame.size.height;
+    else return 44.0;
 }
 
 
 -(void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
     [[StyleManager sharedStyleManager] setBoldFontForLabel:cell.textLabel];
-}
-
-
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
 }
 
 
@@ -202,15 +228,18 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 2){
+        UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+         cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+}
+
+-(void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 2){
+        UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
 }
 
 -(IBAction)cancel:(id)sender{
