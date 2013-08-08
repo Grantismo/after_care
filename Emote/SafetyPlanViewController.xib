@@ -243,6 +243,7 @@
 						<string key="NSFrame">{{56, 446}, {209, 38}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<int key="IBUITag">1</int>
@@ -600,34 +601,43 @@
 				<reference key="IBUIFont" ref="848870966"/>
 			</object>
 			<object class="IBUIImageView" id="721260778">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-				<object class="NSCustomResource" key="IBUIImage" id="339818066">
+				<object class="NSCustomResource" key="IBUIImage" id="102324878">
 					<string key="NSClassName">NSImage</string>
-					<string key="NSResourceName">plus.png</string>
+					<string key="NSResourceName">plus_orange.png</string>
 				</object>
 			</object>
 			<object class="IBUIImageView" id="690184143">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-				<reference key="IBUIImage" ref="339818066"/>
+				<reference key="IBUIImage" ref="102324878"/>
 			</object>
 			<object class="IBUIImageView" id="861153372">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-				<reference key="IBUIImage" ref="339818066"/>
+				<reference key="IBUIImage" ref="102324878"/>
 			</object>
 			<object class="IBUICustomObject" id="272049023">
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -704,31 +714,43 @@
 				<reference key="IBUIFont" ref="848870966"/>
 			</object>
 			<object class="IBUIImageView" id="538542510">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 30}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-				<reference key="IBUIImage" ref="339818066"/>
+				<object class="NSCustomResource" key="IBUIImage" id="463100151">
+					<string key="NSClassName">NSImage</string>
+					<string key="NSResourceName">plus_yellow.png</string>
+				</object>
 			</object>
 			<object class="IBUIImageView" id="240497154">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-				<reference key="IBUIImage" ref="339818066"/>
+				<reference key="IBUIImage" ref="463100151"/>
 			</object>
 			<object class="IBUIImageView" id="436442644">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-				<reference key="IBUIImage" ref="339818066"/>
+				<reference key="IBUIImage" ref="463100151"/>
 			</object>
 			<object class="IBUICustomObject" id="1025149592">
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -805,31 +827,43 @@
 				<reference key="IBUIFont" ref="848870966"/>
 			</object>
 			<object class="IBUIImageView" id="175873602">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-				<reference key="IBUIImage" ref="339818066"/>
+				<object class="NSCustomResource" key="IBUIImage" id="873403708">
+					<string key="NSClassName">NSImage</string>
+					<string key="NSResourceName">plus_green.png</string>
+				</object>
 			</object>
 			<object class="IBUIImageView" id="128801117">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-				<reference key="IBUIImage" ref="339818066"/>
+				<reference key="IBUIImage" ref="873403708"/>
 			</object>
 			<object class="IBUIImageView" id="73408674">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-				<reference key="IBUIImage" ref="339818066"/>
+				<reference key="IBUIImage" ref="873403708"/>
 			</object>
 			<object class="IBUICustomObject" id="614526092">
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -906,31 +940,43 @@
 				<reference key="IBUIFont" ref="848870966"/>
 			</object>
 			<object class="IBUIImageView" id="362666722">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 30}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-				<reference key="IBUIImage" ref="339818066"/>
+				<object class="NSCustomResource" key="IBUIImage" id="1072107926">
+					<string key="NSClassName">NSImage</string>
+					<string key="NSResourceName">plus_blue.png</string>
+				</object>
 			</object>
 			<object class="IBUIImageView" id="147443698">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-				<reference key="IBUIImage" ref="339818066"/>
+				<reference key="IBUIImage" ref="1072107926"/>
 			</object>
 			<object class="IBUIImageView" id="592900878">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-				<reference key="IBUIImage" ref="339818066"/>
+				<reference key="IBUIImage" ref="1072107926"/>
 			</object>
 			<object class="IBUICustomObject" id="62608348">
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -1031,40 +1077,55 @@
 				<reference key="IBUIFont" ref="848870966"/>
 			</object>
 			<object class="IBUIImageView" id="491658531">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 30}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-				<reference key="IBUIImage" ref="339818066"/>
+				<object class="NSCustomResource" key="IBUIImage" id="608914097">
+					<string key="NSClassName">NSImage</string>
+					<string key="NSResourceName">plus_red.png</string>
+				</object>
 			</object>
 			<object class="IBUIImageView" id="405984762">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-				<reference key="IBUIImage" ref="339818066"/>
+				<reference key="IBUIImage" ref="608914097"/>
 			</object>
 			<object class="IBUIImageView" id="65310283">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-				<reference key="IBUIImage" ref="339818066"/>
+				<reference key="IBUIImage" ref="608914097"/>
 			</object>
 			<object class="IBUIImageView" id="297157395">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-				<reference key="IBUIImage" ref="339818066"/>
+				<reference key="IBUIImage" ref="608914097"/>
 			</object>
 			<object class="IBUICustomObject" id="1057167252">
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -1117,22 +1178,31 @@
 				<reference key="IBUIFont" ref="848870966"/>
 			</object>
 			<object class="IBUIImageView" id="911682488">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 30}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-				<reference key="IBUIImage" ref="339818066"/>
+				<object class="NSCustomResource" key="IBUIImage" id="249855991">
+					<string key="NSClassName">NSImage</string>
+					<string key="NSResourceName">plus_grey.png</string>
+				</object>
 			</object>
 			<object class="IBUIImageView" id="768237456">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">301</int>
 				<string key="NSFrameSize">{29, 29}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-				<reference key="IBUIImage" ref="339818066"/>
+				<reference key="IBUIImage" ref="249855991"/>
 			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -2378,6 +2448,17 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">SafetyPlanProfessionalsScreen</string>
 					<string key="superclassName">SafetyPlanScreen</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">addToSafetyPlan:</string>
+						<string key="NS.object.0">UIButton</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">addToSafetyPlan:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">addToSafetyPlan:</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/SafetyPlanProfessionalsScreen.h</string>
@@ -2602,7 +2683,12 @@
 			<string key="arrow.png">{20, 28}</string>
 			<string key="back-button.png">{99, 59}</string>
 			<string key="next_1.png">{447, 76}</string>
-			<string key="plus.png">{58, 58}</string>
+			<string key="plus_blue.png">{58, 58}</string>
+			<string key="plus_green.png">{58, 58}</string>
+			<string key="plus_grey.png">{58, 58}</string>
+			<string key="plus_orange.png">{58, 58}</string>
+			<string key="plus_red.png">{58, 58}</string>
+			<string key="plus_yellow.png">{58, 58}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">2083</string>
 	</data>
