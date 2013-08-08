@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "Website.h"
+#import "CellDataProviderBase.h"
 
 @interface NewResourceViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic, strong) UIColor* backgroundColor;
 
-@property (nonatomic, strong) id resource;
+@property (nonatomic, strong) CellDataProviderBase *resource;
 @property (nonatomic, strong) NSDictionary *fields;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
