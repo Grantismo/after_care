@@ -101,7 +101,7 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             
             cell.textLabel.text = [self fieldAtIndexPath:indexPath];
-          
+           
             UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(110, 10, 185, 30)];
             textField.adjustsFontSizeToFitWidth = YES;
             textField.textColor = [UIColor blackColor];
