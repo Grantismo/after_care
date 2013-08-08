@@ -42,7 +42,9 @@
     phoneCell.descriptionLabel.frame = CGRectMake(phoneCell.descriptionLabel.frame.origin.x,
                                                     phoneCell.titleLabel.frame.origin.y + size.height,
                                                     phoneCell.descriptionLabel.frame.size.width,
-                                                    phoneCell.frame.size.height - descriptionY - 8.0);
+                                                    phoneCell.phoneNumberLabel.frame.origin.y - descriptionY);
+    
+    phoneCell.phoneNumberLabel.text = self.number;
     
     phoneCell.sideImageView.image = [UIImage imageNamed:self.imageUrl];
     phoneCell.sideImageView.overlayColor = self.color;

@@ -32,6 +32,8 @@
 
     
     NSArray* emotions;
+    
+    NSMutableArray* emotionIsSelected;
 }
 
 -(IBAction) done: (id) sender;
@@ -52,6 +54,8 @@
     [super viewDidLoad];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:doneButton ];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:cancelButton];
+    
+    self.title = @"New Resource";
     
     emotions = [self.managedObjectContext executeFetchRequest:[Emotion fetchRequest: self.managedObjectContext] error:nil];
     
@@ -88,6 +92,17 @@
                                       newResourceTableView.frame.origin.y,
                                       newResourceTableView.frame.size.width,
                                       newResourceTableView.frame.size.height - self.navigationController.navigationBar.frame.size.height);
+    
+    emotionIsSelected = [[NSMutableArray alloc] initWithObjects:@YES, @YES, @YES, @YES, @YES, @YES, @YES, @YES, nil];
+    
+    
+    
+    for (int i = 0; i < emotions.count; i++) {
+        NSIndexPath* path = [NSIndexPath indexPathForRow:i inSection:2];
+        [newResourceTableView selectRowAtIndexPath:path animated:NO scrollPosition:UITableViewScrollPositionNone];
+    }
+    
+    [newResourceTableView reloadData];
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -164,6 +179,7 @@
         
         cell.textLabel.text = emotion.name;
         
+        cell.accessoryType = [[emotionIsSelected objectAtIndex:indexPath.row] boolValue] ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
         
         return cell;
     }
@@ -235,6 +251,8 @@
     if (indexPath.section == 2){
         UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
          cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        
+        [emotionIsSelected replaceObjectAtIndex:indexPath.row withObject:@YES];
     }
 }
 
@@ -242,6 +260,8 @@
     if (indexPath.section == 2){
         UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
         cell.accessoryType = UITableViewCellAccessoryNone;
+        
+        [emotionIsSelected replaceObjectAtIndex:indexPath.row withObject:@NO];
     }
 }
 

@@ -14,6 +14,7 @@
 @property (nonatomic, strong) IBOutlet UIView* informationContentView;
 @property (nonatomic, strong) IBOutlet UILabel* titleLabel;
 @property (nonatomic, strong) IBOutlet UILabel* descriptionLabel;
+@property (nonatomic, strong) IBOutlet UILabel* phoneNumberLabel;
 @property (nonatomic, strong) IBOutlet ColorTintImageView* sideImageView;
 
 
