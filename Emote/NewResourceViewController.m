@@ -10,6 +10,8 @@
 #import <CoreData/CoreData.h>
 #import "Website.h"
 
+#import "StyleManager.h"
+
 @interface NewResourceViewController (){
     IBOutlet UIButton* doneButton;
     IBOutlet UIButton* cancelButton;
@@ -37,12 +39,13 @@
                                   insertNewObjectForEntityForName:@"Website"
                                   inManagedObjectContext:self.managedObjectContext];
     
+    [cancelButton setImage:[[cancelButton imageForState:UIControlStateNormal] resizableImageWithCapInsets:UIEdgeInsetsMake(14.0, 14.0, 14.0, 14.0)] forState:UIControlStateNormal];
+    
+    [doneButton setImage:[[doneButton imageForState:UIControlStateNormal] resizableImageWithCapInsets:UIEdgeInsetsMake(14.0, 14.0, 14.0, 14.0)] forState:UIControlStateNormal];
+    
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [[StyleManager sharedStyleManager] setBoldFontForLabel:cancelButton.titleLabel];
+    [[StyleManager sharedStyleManager] setBoldFontForLabel:doneButton.titleLabel];
 }
 
 - (void)didReceiveMemoryWarning
