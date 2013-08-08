@@ -39,7 +39,7 @@
     websiteCell.titleLabel.text = titleString.uppercaseString;
     [websiteCell.titleLabel sizeToFit];
     websiteCell.descriptionLabel.text = self.descript;
-    websiteCell.descriptionLabel.textColor = [UIColor changeBrightness:self.color amount:.6];
+    websiteCell.descriptionLabel.textColor = [UIColor changeBrightness:self.color amount:0.65];
     
     websiteCell.sideImageView.image = [UIImage imageNamed:self.imageUrl];
     websiteCell.sideImageView.overlayColor = self.color;

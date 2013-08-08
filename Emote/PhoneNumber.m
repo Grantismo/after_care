@@ -33,7 +33,7 @@
     [phoneCell.titleLabel sizeToFit];
 
     phoneCell.descriptionLabel.text = self.descript;
-    phoneCell.descriptionLabel.textColor = [UIColor changeBrightness:self.color amount:.6];
+    phoneCell.descriptionLabel.textColor = [UIColor changeBrightness:self.color amount:0.65];
     
     phoneCell.sideImageView.image = [UIImage imageNamed:self.imageUrl];
     phoneCell.sideImageView.overlayColor = self.color;

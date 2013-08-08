@@ -12,9 +12,7 @@
 #import "ColorTintImageView.h"
 
 @interface AddYourOwnResourcesTableViewCell (){
-    IBOutlet UIView* informationContentView;
     IBOutlet UILabel* titleLabel;
-    IBOutlet UILabel* descriptionLabel;
     
     IBOutlet ColorTintImageView* sideImageView;
 }
@@ -25,12 +23,8 @@
 
 -(void) awakeFromNib{
     [[StyleManager sharedStyleManager] setBoldFontForLabel:titleLabel];
-    [[StyleManager sharedStyleManager] setItalicFontForLabel:descriptionLabel];
-    
-    informationContentView.backgroundColor = [UIColor greenColor];
-    
-    sideImageView.image = [UIImage imageNamed:@"default_image_1"];
-    
+    [[StyleManager sharedStyleManager] setItalicFontForLabel:self.descriptionLabel];
+            
     sideImageView.overlayColor = [UIColor greenColor];
 }
 

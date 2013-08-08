@@ -16,7 +16,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "StyleManager.h"
 
-#import "AddYourOwnResourcesTableViewCell.h"
+#import "AddYourOwnResourcesTableView.h"
 
 @interface ResourcesViewController (){
     IBOutlet UIView* navBarFooterContentView;
@@ -25,8 +25,6 @@
     IBOutlet UILabel* emotionLabel;
     
     IBOutlet UIButton* backButton;
-    
-    IBOutlet AddYourOwnResourcesTableViewCell* addNewResourceCell;
 }
 
 -(IBAction)popSelf:(id)sender;
@@ -92,14 +90,17 @@
 }
 
 -(void) fetchResources{
-    self.dataSources = [self.emotion.resources allObjects];
+    NSMutableArray* resources = [NSMutableArray arrayWithArray:[self.emotion.resources allObjects]];
+    [resources addObject: [[AddYourOwnResourcesTableView alloc] init]];
+    
     NSArray* colorChoices = [UIColor complementingColors:self.emotion.color];
 
-    for(int i = 0; i < self.dataSources.count; i++){
-        [[self.dataSources objectAtIndex:i] setValue:[colorChoices objectAtIndex:(i % colorChoices.count)]forKey:@"color"];
+    for(int i = 0; i < resources.count; i++){
+        [[resources objectAtIndex:i] setValue:[colorChoices objectAtIndex:(i % colorChoices.count)]forKey:@"color"];
         
-        [[self.dataSources objectAtIndex:i] setValue:self forKey:@"delegate"];
+        [[resources objectAtIndex:i] setValue:self forKey:@"delegate"];
     }
+    self.dataSources = resources;
 
 }
 - (id<CellDataProvider>) cellDataSourceForRowAtIndexPath:(NSIndexPath*) indexPath{
@@ -109,10 +110,7 @@
 #pragma mark - Table view data source
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row < self.dataSources.count){
-        return [[self cellDataSourceForRowAtIndexPath:indexPath] cellHeight];
-    }
-    else return addNewResourceCell.frame.size.height;
+    return [[self cellDataSourceForRowAtIndexPath:indexPath] cellHeight];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -122,32 +120,19 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.dataSources.count + 1;
+    return self.dataSources.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row < self.dataSources.count){
         return [CellFactory UITableViewCellFromDataSource:[self cellDataSourceForRowAtIndexPath:indexPath] tableView:tableView];
-    }
-    else return addNewResourceCell;
 }
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row < self.dataSources.count){
         [[self cellDataSourceForRowAtIndexPath:indexPath] onDidSelectCell];
-    }
-    else{
-        NewResourceViewController *controller = [[NewResourceViewController alloc] init];
-        
-        [self presentViewController:controller animated:YES completion:^{
-            [self fetchResources];
-            [self.tableView reloadData];
-        }];
-    }
 }
 
 - (void) pushUIViewController: (UIViewController *)controller{
@@ -158,7 +143,6 @@
 
 -(IBAction) addResource:(id)sender{
     NewResourceViewController *controller = [[NewResourceViewController alloc] init];
-    
     [self presentViewController:controller animated:YES completion:^{
         [self fetchResources];
         [self.tableView reloadData];
