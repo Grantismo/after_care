@@ -31,10 +31,10 @@
     [super viewDidLoad];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:doneButton ];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:cancelButton];
+    
+    NSDictionary *fields = @{@"Website": @{@"Url: ": @"url", @"Title: ": @"title", @"Description: ": @"descript"}, @"PhoneNumber": @{@"Number: ": @"number", @"Name: ": @"name", @"Description: ": @"descript"}};
     NSMutableArray* mutableFields = [[NSMutableArray alloc] init];
-    [mutableFields addObject:@"url"];
-    [mutableFields addObject:@"title"];
-    [mutableFields addObject:@"descript"];
+
 
     self.fields = mutableFields;
     self.website = (Website*)[NSEntityDescription
