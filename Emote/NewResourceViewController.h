@@ -11,6 +11,8 @@
 
 @interface NewResourceViewController : UIViewController <UITextFieldDelegate>
 
+@property (nonatomic, strong) UIColor* backgroundColor;
+
 @property (nonatomic, strong) Website *website;
 @property (nonatomic, strong) NSArray *fields;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;

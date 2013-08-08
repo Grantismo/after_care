@@ -32,4 +32,6 @@
 
 + (UIColor*)changeBrightness:(UIColor*)color amount:(CGFloat)amount;
 
++ (UIColor*)addBrightness:(UIColor*)color amount:(CGFloat)amount;
+
 @end

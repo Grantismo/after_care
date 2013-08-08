@@ -23,7 +23,7 @@
 
 -(void) awakeFromNib{
     [[StyleManager sharedStyleManager] setBoldFontForLabel:titleLabel];
-    [[StyleManager sharedStyleManager] setItalicFontForLabel:self.descriptionLabel];
+    //[[StyleManager sharedStyleManager] setItalicFontForLabel:self.descriptionLabel];
             
     sideImageView.overlayColor = [UIColor greenColor];
 }

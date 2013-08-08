@@ -10,9 +10,14 @@
 #import <CoreData/CoreData.h>
 #import "Website.h"
 
+#import "UIImageCreator.h"
+#import "StyleManager.h"
+
 @interface NewResourceViewController (){
     IBOutlet UIButton* doneButton;
     IBOutlet UIButton* cancelButton;
+    
+    IBOutlet UITableView* newResourceTableView;
 }
 
 -(IBAction) done: (id) sender;
@@ -25,8 +30,7 @@
 {
     [super viewDidLoad];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:doneButton ];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:cancelButton
-                                              ];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:cancelButton];
     NSMutableArray* mutableFields = [[NSMutableArray alloc] init];
     [mutableFields addObject:@"url"];
     [mutableFields addObject:@"title"];
@@ -37,12 +41,23 @@
                                   insertNewObjectForEntityForName:@"Website"
                                   inManagedObjectContext:self.managedObjectContext];
     
+    [cancelButton setImage:[[cancelButton imageForState:UIControlStateNormal] resizableImageWithCapInsets:UIEdgeInsetsMake(14.0, 14.0, 14.0, 14.0)] forState:UIControlStateNormal];
+    
+    [doneButton setImage:[[doneButton imageForState:UIControlStateNormal] resizableImageWithCapInsets:UIEdgeInsetsMake(14.0, 14.0, 14.0, 14.0)] forState:UIControlStateNormal];
+    
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [[StyleManager sharedStyleManager] setBoldFontForLabel:cancelButton.titleLabel];
+    [[StyleManager sharedStyleManager] setBoldFontForLabel:doneButton.titleLabel];
+    
+     newResourceTableView.backgroundView = nil;
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImageCreator onePixelImageForColor:self.backgroundColor] forBarMetrics:UIBarMetricsDefault];
+    
+    newResourceTableView.backgroundColor = [UIColor addBrightness:self.backgroundColor amount:.3];
 }
 
 - (void)didReceiveMemoryWarning

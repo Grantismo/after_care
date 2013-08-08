@@ -39,7 +39,16 @@
     websiteCell.titleLabel.text = titleString.uppercaseString;
     [websiteCell.titleLabel sizeToFit];
     websiteCell.descriptionLabel.text = self.descript;
-    websiteCell.descriptionLabel.textColor = [UIColor changeBrightness:self.color amount:0.65];
+    websiteCell.descriptionLabel.textColor = [UIColor changeBrightness:self.color amount:.65];
+    
+    CGSize size = [websiteCell.titleLabel.text sizeWithFont:websiteCell.titleLabel.font constrainedToSize:websiteCell.titleLabel.frame.size];
+    
+    float descriptionY = websiteCell.titleLabel.frame.origin.y + size.height + 4.0;
+    
+    websiteCell.descriptionLabel.frame = CGRectMake(websiteCell.descriptionLabel.frame.origin.x,
+                                                    websiteCell.titleLabel.frame.origin.y + size.height,
+                                                    websiteCell.descriptionLabel.frame.size.width,
+                                                    websiteCell.frame.size.height - descriptionY - 8.0);
     
     websiteCell.sideImageView.image = [UIImage imageNamed:self.imageUrl];
     websiteCell.sideImageView.overlayColor = self.color;

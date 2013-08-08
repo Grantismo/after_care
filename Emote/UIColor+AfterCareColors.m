@@ -64,7 +64,7 @@
 }
 
 +(UIColor*) afterCareTransparentColor2{
-   return [self changeBrightness:[self angryColor] amount:1.5];
+    return [self changeBrightness:[self angryColor] amount:1.5];
 }
 
 +(UIColor*) afterCareTransparentColor3{
@@ -103,6 +103,30 @@
         white += (amount-1.0);
         white = MAX(MIN(white, 1.0), 0.0);
         return [UIColor colorWithWhite:white alpha:alpha];
+    }
+    
+    return nil;
+}
+
++ (UIColor*)addBrightness:(UIColor*)color amount:(CGFloat)amount{
+    CGFloat r, g, b, a;
+    if ([color getRed:&r green:&g blue:&b alpha:&a]){
+        r += amount;
+        g += amount;
+        b += amount;
+        
+        r = MAX(MIN(r, 1.0), 0.0);
+        g = MAX(MIN(g, 1.0), 0.0);
+        b = MAX(MIN(b, 1.0), 0.0);
+        
+        return [UIColor colorWithRed:r green:g blue:b alpha:a];
+    }
+    
+    CGFloat white;
+    if ([color getWhite:&white alpha:&a]) {
+        white += amount;
+        white = MAX(MIN(white, 1.0), 0.0);
+        return [UIColor colorWithWhite:white alpha:a];
     }
     
     return nil;

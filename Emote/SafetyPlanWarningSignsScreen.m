@@ -91,7 +91,7 @@
     
     if ([manager warningSignAtIndex:0]) {
         [progressView setDotActivatedAtIndex:0];
-        [addButton1 setTitle:@"Your first warning sign." forState:UIControlStateNormal];
+        [addButton1 setTitle:[manager warningSignAtIndex:0].warningSign forState:UIControlStateNormal];
     }
     else{
         [progressView setDotDeactivatedAtIndex:0];
@@ -99,7 +99,7 @@
     }
     if ([manager warningSignAtIndex:1]) {
         [progressView setDotActivatedAtIndex:1];
-        [addButton2 setTitle:@"Your second warning sign." forState:UIControlStateNormal];
+        [addButton2 setTitle:[manager warningSignAtIndex:1].warningSign forState:UIControlStateNormal];
     }
     else{
         [progressView setDotDeactivatedAtIndex:1];
@@ -107,7 +107,7 @@
     }
     if ([manager warningSignAtIndex:2]) {
         [progressView setDotActivatedAtIndex:2];
-        [addButton3 setTitle:@"Your third warning sign." forState:UIControlStateNormal];
+        [addButton3 setTitle:[manager warningSignAtIndex:2].warningSign forState:UIControlStateNormal];
     }
     else{
         [progressView setDotDeactivatedAtIndex:2];

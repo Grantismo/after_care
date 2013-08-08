@@ -13,7 +13,6 @@
 
 -(void) awakeFromNib{
     [[StyleManager sharedStyleManager] setBoldFontForLabel:self.titleLabel];
-    [[StyleManager sharedStyleManager] setItalicFontForLabel:self.descriptionLabel];
     
     self.contentView.backgroundColor = [UIColor afterCareOffBlackColor];
 }
