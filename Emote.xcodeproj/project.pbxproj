@@ -240,7 +240,7 @@
 		1EAB7CA41799DBBD00F3DBAA /* Emote-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Emote-Info.plist"; sourceTree = "<group>"; };
 		1EAB7CA61799DBBD00F3DBAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1EAB7CA81799DBBD00F3DBAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1EAB7CAA1799DBBD00F3DBAA /* AfterCare-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AfterCare-Prefix.pch"; sourceTree = "<group>"; };
+		1EAB7CAA1799DBBD00F3DBAA /* Emote-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Emote-Prefix.pch"; sourceTree = "<group>"; };
 		1EAB7CAB1799DBBD00F3DBAA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1EAB7CAC1799DBBD00F3DBAA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1EAB7CB41799DBBD00F3DBAA /* HexagonMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HexagonMainViewController.h; sourceTree = "<group>"; };
@@ -613,7 +613,7 @@
 				1EAB7CA41799DBBD00F3DBAA /* Emote-Info.plist */,
 				1EAB7CA51799DBBD00F3DBAA /* InfoPlist.strings */,
 				1EAB7CA81799DBBD00F3DBAA /* main.m */,
-				1EAB7CAA1799DBBD00F3DBAA /* AfterCare-Prefix.pch */,
+				1EAB7CAA1799DBBD00F3DBAA /* Emote-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -955,8 +955,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/AfterCare/AfterCare-Prefix.pch";
-				INFOPLIST_FILE = "AfterCare/Emote-Info.plist";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Emote/Emote-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Emote/Emote-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = Emote;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -968,8 +968,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/AfterCare/AfterCare-Prefix.pch";
-				INFOPLIST_FILE = "AfterCare/Emote-Info.plist";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Emote/Emote-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Emote/Emote-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = Emote;
 				TARGETED_DEVICE_FAMILY = 1;
