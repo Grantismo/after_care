@@ -33,7 +33,16 @@
     [phoneCell.titleLabel sizeToFit];
 
     phoneCell.descriptionLabel.text = self.descript;
-    phoneCell.descriptionLabel.textColor = [UIColor changeBrightness:self.color amount:.6];
+    phoneCell.descriptionLabel.textColor = [UIColor changeBrightness:self.color amount:.65];
+    
+    CGSize size = [phoneCell.titleLabel.text sizeWithFont:phoneCell.titleLabel.font constrainedToSize:phoneCell.titleLabel.frame.size];
+    
+    float descriptionY = phoneCell.titleLabel.frame.origin.y + size.height + 4.0;
+    
+    phoneCell.descriptionLabel.frame = CGRectMake(phoneCell.descriptionLabel.frame.origin.x,
+                                                    phoneCell.titleLabel.frame.origin.y + size.height,
+                                                    phoneCell.descriptionLabel.frame.size.width,
+                                                    phoneCell.frame.size.height - descriptionY - 8.0);
     
     phoneCell.sideImageView.image = [UIImage imageNamed:self.imageUrl];
     phoneCell.sideImageView.overlayColor = self.color;

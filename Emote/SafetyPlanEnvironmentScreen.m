@@ -16,8 +16,8 @@
     progressView.numberOfDots = 2;
     [progressView setActivatedDotImage:[UIImage imageNamed:@"button_green"]];
     
-    addButton1.titleLabel.numberOfLines = 2;
-    addButton2.titleLabel.numberOfLines = 2;
+    addButton1.titleLabel.numberOfLines = 0;
+    addButton2.titleLabel.numberOfLines = 0;
     
     [self refreshButtonsFromSafetyPlan];
 }
@@ -89,7 +89,7 @@
     
     if ([manager safeEnvironmentAtIndex:0]) {
         [progressView setDotActivatedAtIndex:0];
-        [addButton1 setTitle:@"My first environmental safety step." forState:UIControlStateNormal];
+        [addButton1 setTitle:[manager safeEnvironmentAtIndex:0].safeEnvironment forState:UIControlStateNormal];
     }
     else{
         [progressView setDotDeactivatedAtIndex:0];
@@ -97,7 +97,7 @@
     }
     if ([manager safeEnvironmentAtIndex:1]) {
         [progressView setDotActivatedAtIndex:1];
-        [addButton2 setTitle:@"My second environmental safety step." forState:UIControlStateNormal];
+        [addButton2 setTitle:[manager safeEnvironmentAtIndex:1].safeEnvironment forState:UIControlStateNormal];
     }
     else{
         [progressView setDotDeactivatedAtIndex:1];
