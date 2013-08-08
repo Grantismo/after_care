@@ -25,7 +25,7 @@
     controller.url = [NSURL URLWithString:self.url];
     controller.navbarColor = self.color;
     
-    controller.title = self.title;
+    controller.title = self.title.capitalizedString;
     
     [self.delegate pushUIViewController:controller];
 }

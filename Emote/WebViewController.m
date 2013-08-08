@@ -58,7 +58,7 @@
     self.navigationController.navigationBar.tintColor = self.navbarColor;
     
     
-    [activityIndicator setColor:self.navbarColor];
+    [activityIndicator setColor:[UIColor changeBrightness:self.navbarColor amount:.6]];
 }
 
 #pragma mark UIWebView delegate methods
@@ -71,7 +71,7 @@
     [UIView animateWithDuration:.5 animations:^{
         activityIndicator.alpha = 0.0;
     } completion:^(BOOL finished) {
-        [activityIndicator removeFromSuperview];
+        self.navigationItem.rightBarButtonItem = nil;
     }];
 }
 
