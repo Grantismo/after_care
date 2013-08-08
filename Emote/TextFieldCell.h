@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TextFieldCell : UITableViewCell
-@property (nonatomic, strong) UITextField* textField;
+@property (nonatomic, strong, readonly) UITextField* inputTextField;
 @end

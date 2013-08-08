@@ -14,12 +14,13 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        _inputTextField = [[UITextField alloc] initWithFrame:CGRectMake(110, 10, 185, 30)];
+        _inputTextField.adjustsFontSizeToFitWidth = YES;
+        [_inputTextField setEnabled:YES];
         
-        _textField = [[UITextField alloc] initWithFrame:CGRectMake(110, 10, 185, 30)];
-        _textField.adjustsFontSizeToFitWidth = YES;
-        [_textField setEnabled:YES];
+        _inputTextField.textColor = [UIColor blackColor];
 
-        [self.contentView addSubview:_textField];
+        [self.contentView addSubview:_inputTextField];
     }
     return self;
 }

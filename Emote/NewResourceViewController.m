@@ -114,29 +114,27 @@
 {
     if (indexPath.section == 0){
         static NSString *CellIdentifier = @"Cell";
-        TextFieldCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        TextFieldCell *cell = (TextFieldCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) {
             cell = [[TextFieldCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.inputTextField.delegate = self;
             
-            cell.textLabel.text = [self fieldAtIndexPath:indexPath];
-           
-            UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(110, 10, 185, 30)];
-            textField.adjustsFontSizeToFitWidth = YES;
-            textField.textColor = [UIColor blackColor];
-            [textField setEnabled:YES];
-            textField.tag = indexPath.row;
-            textField.delegate = self;
-            [cell.contentView addSubview:textField];
-            
+            cell.textLabel.backgroundColor = [UIColor clearColor];
+
         }
         
         cell.textLabel.text = [self displayFieldAtIndexPath:indexPath];
-        cell.textField.tag = indexPath.row;
-        cell.textField.delegate = self;
-        cell.textField.textColor = [UIColor blackColor];
-
+        cell.inputTextField.tag = indexPath.row;
         
+        if ([[self displayFieldAtIndexPath:indexPath] isEqualToString:@"url"]) {
+            cell.inputTextField.keyboardType = UIKeyboardTypeURL;
+            cell.inputTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+        }
+        else{
+            cell.inputTextField.keyboardType = UIKeyboardTypeDefault;
+            cell.inputTextField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
+        }
         
         return cell;
     }
