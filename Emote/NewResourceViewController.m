@@ -13,15 +13,20 @@
 #import "UIImageCreator.h"
 #import "StyleManager.h"
 
-@interface NewResourceViewController (){
+@interface NewResourceViewController ()<UITableViewDataSource, UITableViewDelegate>{
     IBOutlet UIButton* doneButton;
     IBOutlet UIButton* cancelButton;
     
     IBOutlet UITableView* newResourceTableView;
+    
+    IBOutlet UITableViewCell* toggleCell;
+    IBOutlet UISegmentedControl* toggle;
 }
 
 -(IBAction) done: (id) sender;
 -(IBAction) cancel: (id) sender;
+
+-(IBAction)toggleChanged:(UISegmentedControl*)sender;
 @end
 
 @implementation NewResourceViewController
@@ -50,6 +55,11 @@
     [[StyleManager sharedStyleManager] setBoldFontForLabel:doneButton.titleLabel];
     
      newResourceTableView.backgroundView = nil;
+    
+    UIFont *font = [UIFont fontWithName:OPEN_SANS_BOLD size:12.0];
+    NSDictionary *attributes = [NSDictionary dictionaryWithObject:font
+                                                           forKey:UITextAttributeFont];
+    [toggle setTitleTextAttributes:attributes forState:UIControlStateNormal];
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -58,6 +68,8 @@
     [self.navigationController.navigationBar setBackgroundImage:[UIImageCreator onePixelImageForColor:self.backgroundColor] forBarMetrics:UIBarMetricsDefault];
     
     newResourceTableView.backgroundColor = [UIColor addBrightness:self.backgroundColor amount:.3];
+    
+    toggle.tintColor = self.backgroundColor;
 }
 
 - (void)didReceiveMemoryWarning
@@ -68,41 +80,55 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return self.fields.count;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if (section == 0){
+        return self.fields.count;
+    }
+    else return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    if (indexPath.section == 0){
+        static NSString *CellIdentifier = @"Cell";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            
+            cell.textLabel.text = [self fieldAtIndexPath:indexPath];
+          
+            UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(110, 10, 185, 30)];
+            textField.adjustsFontSizeToFitWidth = YES;
+            textField.textColor = [UIColor blackColor];
+            [textField setEnabled:YES];
+            textField.tag = indexPath.row;
+            textField.delegate = self;
+            [cell.contentView addSubview:textField];
+            
+        }
         
-        cell.textLabel.text = [self fieldAtIndexPath:indexPath];
-        
-        UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(110, 10, 185, 30)];
-        textField.adjustsFontSizeToFitWidth = YES;
-        textField.textColor = [UIColor blackColor];
-        [textField setEnabled:YES];
-        textField.tag = indexPath.row;
-        textField.delegate = self;
-        [cell.contentView addSubview:textField];
-
+        return cell;
     }
+    else return toggleCell;
     
-    return cell;
+}
+
+-(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) return 44;
+    else return toggleCell.frame.size.height;
 }
 
 - (NSString*) fieldAtIndexPath: (NSIndexPath *) indexPath{
     return [self.fields objectAtIndex:indexPath.row];
+}
+
+-(void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    [[StyleManager sharedStyleManager] setBoldFontForLabel:cell.textLabel];
 }
 
 
@@ -166,6 +192,20 @@
     
     [self.managedObjectContext save:nil];
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(IBAction)toggleChanged:(UISegmentedControl *)sender{
+    switch (sender.selectedSegmentIndex) {
+        case 0:
+            
+            break;
+        case 1:
+            
+            break;
+            
+        default:
+            break;
+    }
 }
 
 -(void)textFieldDidEndEditing:(UITextField *)textField{
