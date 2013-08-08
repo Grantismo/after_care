@@ -21,7 +21,7 @@
 
 
 -(void)onDidSelectCell{
-    WebViewController* controller = [[WebViewController alloc] init];
+    WebViewController* controller = [[WebViewController alloc] initWithNibName:NSStringFromClass([WebViewController class]) bundle:nil];
     controller.url = [NSURL URLWithString:self.url];
     [self.delegate pushUIViewController:controller];
 }

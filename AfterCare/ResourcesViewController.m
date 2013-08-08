@@ -16,11 +16,17 @@
 #import <QuartzCore/QuartzCore.h>
 #import "StyleManager.h"
 
+#import "AddYourOwnResourcesTableViewCell.h"
+
 @interface ResourcesViewController (){
     IBOutlet UIView* navBarFooterContentView;
     IBOutlet UIImageView* navBarFooterImageView;
     
+    IBOutlet UILabel* emotionLabel;
+    
     IBOutlet UIButton* backButton;
+    
+    IBOutlet AddYourOwnResourcesTableViewCell* addNewResourceCell;
 }
 
 -(IBAction)popSelf:(id)sender;
@@ -54,7 +60,15 @@
     navBarFooterImageView.layer.shadowRadius = 2.0;
     navBarFooterImageView.layer.shadowOpacity = .5;
     
+    emotionLabel.textColor = [UIColor changeBrightness:self.emotion.color amount:.6];
+    
     [[StyleManager sharedStyleManager] setBoldFontForLabel:backButton.titleLabel];
+    
+    //Move out of the way of safety plan nav controller whose navigation bar is the same height as this one.
+    self.tableView.frame = CGRectMake(0.0,
+                                      self.tableView.frame.origin.y,
+                                      self.tableView.frame.size.width,
+                                      self.tableView.frame.size.height - self.navigationController.navigationBar.frame.size.height);
     
 //    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addResource:)];
 // 
@@ -74,12 +88,20 @@
 
 }
 
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+     emotionLabel.text = self.emotion.emotionDescription;
+}
+
 -(void) fetchResources{
     self.dataSources = [self.emotion.resources allObjects];
     NSArray* colorChoices = [UIColor complementingColors:self.emotion.color];
 
     for(int i = 0; i < self.dataSources.count; i++){
         [[self.dataSources objectAtIndex:i] setValue:[colorChoices objectAtIndex:(i % colorChoices.count)]forKey:@"color"];
+        
+        [[self.dataSources objectAtIndex:i] setValue:self forKey:@"delegate"];
     }
 
 }
@@ -87,16 +109,13 @@
     return [self.dataSources objectAtIndex:indexPath.row];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - Table view data source
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return [[self cellDataSourceForRowAtIndexPath:indexPath] cellHeight];
+    if (indexPath.row < self.dataSources.count){
+        return [[self cellDataSourceForRowAtIndexPath:indexPath] cellHeight];
+    }
+    else return addNewResourceCell.frame.size.height;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -106,63 +125,37 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.dataSources.count;
+    return self.dataSources.count + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   
-    return [CellFactory UITableViewCellFromDataSource:[self cellDataSourceForRowAtIndexPath:indexPath] tableView:tableView];
+    if (indexPath.row < self.dataSources.count){
+        return [CellFactory UITableViewCellFromDataSource:[self cellDataSourceForRowAtIndexPath:indexPath] tableView:tableView];
+    }
+    else return addNewResourceCell;
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[self cellDataSourceForRowAtIndexPath:indexPath] onDidSelectCell];
+    if (indexPath.row < self.dataSources.count){
+        [[self cellDataSourceForRowAtIndexPath:indexPath] onDidSelectCell];
+    }
+    else{
+        NewResourceViewController *controller = [[NewResourceViewController alloc] init];
+        
+        [self presentViewController:controller animated:YES completion:^{
+            [self fetchResources];
+            [self.tableView reloadData];
+        }];
+    }
 }
 
 - (void) pushUIViewController: (UIViewController *)controller{
     [self.navigationController pushViewController:controller animated:YES];
+    controller.navigationItem.leftBarButtonItem.tintColor = self.emotion.color;
 }
 
 #pragma mark Actions

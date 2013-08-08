@@ -29,6 +29,12 @@
     [super viewDidLoad];
    
     [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
+    
+    //Move out of the way of safety plan nav controller whose navigation bar is the same height as this one.
+    self.webView.frame = CGRectMake(0.0,
+                                      self.webView.frame.origin.y,
+                                      self.webView.frame.size.width,
+                                      self.webView.frame.size.height - self.navigationController.navigationBar.frame.size.height);
 }
 
 - (void)didReceiveMemoryWarning
