@@ -559,7 +559,7 @@
 				9C758C2E17B3EBCA00478BF6 /* Default@2x.png */,
 				9C758C2717B3CDA000478BF6 /* emote_icon114.png */,
 				0F114DE417B2FBB500A96F21 /* Icon.png */,
-				1EAB7CA21799DBBD00F3DBAA /* AfterCare */,
+				1EAB7CA21799DBBD00F3DBAA /* Emote */,
 				1EAB7C9B1799DBBD00F3DBAA /* Frameworks */,
 				1EAB7C9A1799DBBD00F3DBAA /* Products */,
 			);
@@ -585,7 +585,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1EAB7CA21799DBBD00F3DBAA /* AfterCare */ = {
+		1EAB7CA21799DBBD00F3DBAA /* Emote */ = {
 			isa = PBXGroup;
 			children = (
 				0F114DE117B2DF3800A96F21 /* SeedData */,
@@ -604,7 +604,7 @@
 				1EAB7CA31799DBBD00F3DBAA /* Supporting Files */,
 				0F114C0517B04A0800A96F21 /* AfterCareDataModel.xcdatamodeld */,
 			);
-			path = AfterCare;
+			path = Emote;
 			sourceTree = "<group>";
 		};
 		1EAB7CA31799DBBD00F3DBAA /* Supporting Files */ = {
