@@ -10,11 +10,14 @@
 #import <CoreData/CoreData.h>
 #import "Website.h"
 
+#import "UIImageCreator.h"
 #import "StyleManager.h"
 
 @interface NewResourceViewController (){
     IBOutlet UIButton* doneButton;
     IBOutlet UIButton* cancelButton;
+    
+    IBOutlet UITableView* newResourceTableView;
 }
 
 -(IBAction) done: (id) sender;
@@ -27,8 +30,7 @@
 {
     [super viewDidLoad];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:doneButton ];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:cancelButton
-                                              ];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:cancelButton];
     NSMutableArray* mutableFields = [[NSMutableArray alloc] init];
     [mutableFields addObject:@"url"];
     [mutableFields addObject:@"title"];
@@ -46,6 +48,16 @@
 
     [[StyleManager sharedStyleManager] setBoldFontForLabel:cancelButton.titleLabel];
     [[StyleManager sharedStyleManager] setBoldFontForLabel:doneButton.titleLabel];
+    
+     newResourceTableView.backgroundView = nil;
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImageCreator onePixelImageForColor:self.backgroundColor] forBarMetrics:UIBarMetricsDefault];
+    
+    newResourceTableView.backgroundColor = [UIColor addBrightness:self.backgroundColor amount:.3];
 }
 
 - (void)didReceiveMemoryWarning
