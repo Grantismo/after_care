@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) IBOutlet UIWebView* webView;
 @property (nonatomic, strong) NSURL* url;
+
+@property (nonatomic, strong) UIColor* navbarColor;
 @end

@@ -73,9 +73,6 @@
 		1EAB7CA71799DBBD00F3DBAA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB7CA51799DBBD00F3DBAA /* InfoPlist.strings */; };
 		1EAB7CA91799DBBD00F3DBAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB7CA81799DBBD00F3DBAA /* main.m */; };
 		1EAB7CAD1799DBBD00F3DBAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB7CAC1799DBBD00F3DBAA /* AppDelegate.m */; };
-		1EAB7CAF1799DBBD00F3DBAA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB7CAE1799DBBD00F3DBAA /* Default.png */; };
-		1EAB7CB11799DBBD00F3DBAA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB7CB01799DBBD00F3DBAA /* Default@2x.png */; };
-		1EAB7CB31799DBBD00F3DBAA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB7CB21799DBBD00F3DBAA /* Default-568h@2x.png */; };
 		1EAB7CB61799DBBD00F3DBAA /* HexagonMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB7CB51799DBBD00F3DBAA /* HexagonMainViewController.m */; };
 		1EAB7CB91799DBBD00F3DBAA /* HexagonMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB7CB71799DBBD00F3DBAA /* HexagonMainViewController.xib */; };
 		1EAB7CC41799DCB700F3DBAA /* UIImageCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB7CC31799DCB700F3DBAA /* UIImageCreator.m */; };
@@ -142,6 +139,9 @@
 		9C758C2817B3CDA100478BF6 /* emote_icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C758C2717B3CDA000478BF6 /* emote_icon114.png */; };
 		9C758C2B17B3DFC800478BF6 /* AddYourOwnResourcesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C758C2A17B3DFC800478BF6 /* AddYourOwnResourcesTableViewCell.m */; };
 		9C758C2D17B3E73D00478BF6 /* grey_plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C758C2C17B3E73A00478BF6 /* grey_plus.png */; };
+		9C758C2F17B3EBCB00478BF6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C758C2E17B3EBCA00478BF6 /* Default@2x.png */; };
+		9C758C3117B3EBD500478BF6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C758C3017B3EBD300478BF6 /* Default-568h@2x.png */; };
+		9C758C3417B3EC2000478BF6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C758C3317B3EC1F00478BF6 /* Default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -243,9 +243,6 @@
 		1EAB7CAA1799DBBD00F3DBAA /* AfterCare-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AfterCare-Prefix.pch"; sourceTree = "<group>"; };
 		1EAB7CAB1799DBBD00F3DBAA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1EAB7CAC1799DBBD00F3DBAA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1EAB7CAE1799DBBD00F3DBAA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		1EAB7CB01799DBBD00F3DBAA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		1EAB7CB21799DBBD00F3DBAA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1EAB7CB41799DBBD00F3DBAA /* HexagonMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HexagonMainViewController.h; sourceTree = "<group>"; };
 		1EAB7CB51799DBBD00F3DBAA /* HexagonMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HexagonMainViewController.m; sourceTree = "<group>"; };
 		1EAB7CB81799DBBD00F3DBAA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HexagonMainViewController.xib; sourceTree = "<group>"; };
@@ -323,6 +320,9 @@
 		9C758C2917B3DFC800478BF6 /* AddYourOwnResourcesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddYourOwnResourcesTableViewCell.h; sourceTree = "<group>"; };
 		9C758C2A17B3DFC800478BF6 /* AddYourOwnResourcesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddYourOwnResourcesTableViewCell.m; sourceTree = "<group>"; };
 		9C758C2C17B3E73A00478BF6 /* grey_plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey_plus.png; sourceTree = "<group>"; };
+		9C758C2E17B3EBCA00478BF6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		9C758C3017B3EBD300478BF6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9C758C3317B3EC1F00478BF6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -554,6 +554,9 @@
 		1EAB7C901799DBBD00F3DBAA = {
 			isa = PBXGroup;
 			children = (
+				9C758C3317B3EC1F00478BF6 /* Default.png */,
+				9C758C3017B3EBD300478BF6 /* Default-568h@2x.png */,
+				9C758C2E17B3EBCA00478BF6 /* Default@2x.png */,
 				9C758C2717B3CDA000478BF6 /* emote_icon114.png */,
 				0F114DE417B2FBB500A96F21 /* Icon.png */,
 				1EAB7CA21799DBBD00F3DBAA /* AfterCare */,
@@ -611,9 +614,6 @@
 				1EAB7CA51799DBBD00F3DBAA /* InfoPlist.strings */,
 				1EAB7CA81799DBBD00F3DBAA /* main.m */,
 				1EAB7CAA1799DBBD00F3DBAA /* AfterCare-Prefix.pch */,
-				1EAB7CAE1799DBBD00F3DBAA /* Default.png */,
-				1EAB7CB01799DBBD00F3DBAA /* Default@2x.png */,
-				1EAB7CB21799DBBD00F3DBAA /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -739,9 +739,6 @@
 				9C15585D17AFF88500D1919C /* OpenSans-Semibold.ttf in Resources */,
 				9C15585E17AFF88500D1919C /* OpenSans-SemiboldItalic.ttf in Resources */,
 				1EAB7CA71799DBBD00F3DBAA /* InfoPlist.strings in Resources */,
-				1EAB7CAF1799DBBD00F3DBAA /* Default.png in Resources */,
-				1EAB7CB11799DBBD00F3DBAA /* Default@2x.png in Resources */,
-				1EAB7CB31799DBBD00F3DBAA /* Default-568h@2x.png in Resources */,
 				1EAB7CB91799DBBD00F3DBAA /* HexagonMainViewController.xib in Resources */,
 				0FAF4DE4179C953E00028E7A /* WebsiteCell.xib in Resources */,
 				0FAF4DE6179C953E00028E7A /* WebViewController.xib in Resources */,
@@ -819,6 +816,9 @@
 				0F114F5C17B311AF00A96F21 /* nationalsuicidepreventionlifeline.png in Resources */,
 				9C758C2817B3CDA100478BF6 /* emote_icon114.png in Resources */,
 				9C758C2D17B3E73D00478BF6 /* grey_plus.png in Resources */,
+				9C758C2F17B3EBCB00478BF6 /* Default@2x.png in Resources */,
+				9C758C3117B3EBD500478BF6 /* Default-568h@2x.png in Resources */,
+				9C758C3417B3EC2000478BF6 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

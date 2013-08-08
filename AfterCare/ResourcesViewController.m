@@ -45,15 +45,12 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    UIColor* color = self.emotion.color;
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
-    
-    [self.navigationController.navigationBar setBackgroundImage:[UIImageCreator onePixelImageForColor:color] forBarMetrics:UIBarMetricsDefault];
 
     [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
     
-    navBarFooterImageView.image = [UIImageCreator arrowImageWithSize:navBarFooterImageView.frame.size andArrowSize:CGSizeMake(20.0, 8.0) andArrowWidthRatio:.5 andColor:color];
+    navBarFooterImageView.image = [UIImageCreator arrowImageWithSize:navBarFooterImageView.frame.size andArrowSize:CGSizeMake(20.0, 8.0) andArrowWidthRatio:.5 andColor:self.emotion.color];
     
     navBarFooterImageView.layer.shadowOffset = CGSizeMake(0.0, 3.0);
     navBarFooterImageView.layer.shadowColor = [UIColor blackColor].CGColor;
@@ -92,6 +89,8 @@
     [super viewWillAppear:animated];
     
      emotionLabel.text = self.emotion.emotionDescription;
+    
+      [self.navigationController.navigationBar setBackgroundImage:[UIImageCreator onePixelImageForColor:self.emotion.color] forBarMetrics:UIBarMetricsDefault];
 }
 
 -(void) fetchResources{
@@ -155,7 +154,6 @@
 
 - (void) pushUIViewController: (UIViewController *)controller{
     [self.navigationController pushViewController:controller animated:YES];
-    controller.navigationItem.leftBarButtonItem.tintColor = self.emotion.color;
 }
 
 #pragma mark Actions

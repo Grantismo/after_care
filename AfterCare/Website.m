@@ -23,6 +23,10 @@
 -(void)onDidSelectCell{
     WebViewController* controller = [[WebViewController alloc] initWithNibName:NSStringFromClass([WebViewController class]) bundle:nil];
     controller.url = [NSURL URLWithString:self.url];
+    controller.navbarColor = self.color;
+    
+    controller.title = self.title;
+    
     [self.delegate pushUIViewController:controller];
 }
 
