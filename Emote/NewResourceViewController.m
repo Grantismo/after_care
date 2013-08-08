@@ -34,6 +34,8 @@
     NSArray* emotions;
     
     NSMutableArray* emotionIsSelected;
+    
+    BOOL killed;
 }
 
 -(IBAction) done: (id) sender;
@@ -45,6 +47,10 @@
 - (NSArray*) currentfields;
 
 -(IBAction)toggleChanged:(UISegmentedControl*)sender;
+
+-(void) keyboardUp:(NSNotification*) notification;
+-(void) keyboardDown:(NSNotification*) notification;
+
 @end
 
 @implementation NewResourceViewController
@@ -103,6 +109,10 @@
     }
     
     [newResourceTableView reloadData];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardUp:) name:UIKeyboardWillShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDown:) name:UIKeyboardWillHideNotification object:nil];
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -266,6 +276,8 @@
 }
 
 -(IBAction)cancel:(id)sender{
+    killed = TRUE;
+    
     [self.managedObjectContext deleteObject:self.resource];
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -299,23 +311,54 @@
     }
 }
 
--(void)textFieldDidEndEditing:(UITextField *)textField{
-    NSIndexPath* path = [NSIndexPath indexPathForRow:textField.tag inSection:0];
-    NSString* field =  [displayNameToField objectForKey:[self displayFieldAtIndexPath:path]];
-   
-    NSMutableSet * selectedEmotions = [[NSMutableSet alloc] init];
-
-    for(int i = 0; i < emotions.count; i++){
-        if([emotionIsSelected[i] boolValue]){
-            [selectedEmotions addObject:emotions[i]];
-        }
-    }
+-(void) keyboardUp:(NSNotification *)notification{
+    CGRect keyboardFrame = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    NSTimeInterval duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
     
-    int randomImageNum = (arc4random() % 5) + 1;
-    NSString* imagePath = [NSString stringWithFormat:@"default_image_%d", randomImageNum];
-    self.resource.emotions = selectedEmotions;
-    [self.resource setValue:imagePath forKey:@"imageUrl"];
-    [self.resource setValue:textField.text forKey:field];
+    [UIView animateWithDuration:duration animations:^{
+        newResourceTableView.frame = CGRectMake(0.0,
+                                                0.0,
+                                                newResourceTableView.frame.size.width,
+                                                keyboardFrame.origin.y - self.navigationController.navigationBar.frame.size.height - [UIApplication sharedApplication].statusBarFrame.size.height);
+    }];
+    
+    [newResourceTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+}
+
+-(void) keyboardDown:(NSNotification *)notification{
+    NSTimeInterval duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    
+    [UIView animateWithDuration:duration animations:^{
+        newResourceTableView.frame = CGRectMake(0.0,
+                                                newResourceTableView.frame.origin.y,
+                                                newResourceTableView.frame.size.width,
+                                                newResourceTableView.frame.size.height - self.navigationController.navigationBar.frame.size.height);
+    }];
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    if (!killed){
+        NSIndexPath* path = [NSIndexPath indexPathForRow:textField.tag inSection:0];
+        NSString* field =  [displayNameToField objectForKey:[self displayFieldAtIndexPath:path]];
+        
+        NSMutableSet * selectedEmotions = [[NSMutableSet alloc] init];
+        
+        for(int i = 0; i < emotions.count; i++){
+            if([emotionIsSelected[i] boolValue]){
+                [selectedEmotions addObject:emotions[i]];
+            }
+        }
+        
+        int randomImageNum = (arc4random() % 5) + 1;
+        NSString* imagePath = [NSString stringWithFormat:@"default_image_%d", randomImageNum];
+        self.resource.emotions = selectedEmotions;
+        [self.resource setValue:imagePath forKey:@"imageUrl"];
+        [self.resource setValue:textField.text forKey:field];
+    }
+}
+
+-(void) dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end
