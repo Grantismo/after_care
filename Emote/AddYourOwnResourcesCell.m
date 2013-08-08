@@ -6,12 +6,12 @@
 //  Copyright (c) 2013 TabSprint. All rights reserved.
 //
 
-#import "AddYourOwnResourcesTableViewCell.h"
+#import "AddYourOwnResourcesCell.h"
 #import "StyleManager.h"
 
 #import "ColorTintImageView.h"
 
-@interface AddYourOwnResourcesTableViewCell (){
+@interface AddYourOwnResourcesCell (){
     IBOutlet UILabel* titleLabel;
     
     IBOutlet ColorTintImageView* sideImageView;
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation AddYourOwnResourcesTableViewCell
+@implementation AddYourOwnResourcesCell
 
 -(void) awakeFromNib{
     [[StyleManager sharedStyleManager] setBoldFontForLabel:titleLabel];

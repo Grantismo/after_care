@@ -16,7 +16,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "StyleManager.h"
 
-#import "AddYourOwnResourcesTableView.h"
+#import "AddYourOwnResources.h"
 
 @interface ResourcesViewController (){
     IBOutlet UIView* navBarFooterContentView;
@@ -91,7 +91,7 @@
 
 -(void) fetchResources{
     NSMutableArray* resources = [NSMutableArray arrayWithArray:[self.emotion.resources allObjects]];
-    [resources addObject: [[AddYourOwnResourcesTableView alloc] init]];
+    [resources addObject: [[AddYourOwnResources alloc] init]];
     
     NSArray* colorChoices = [UIColor complementingColors:self.emotion.color];
 

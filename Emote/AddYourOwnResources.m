@@ -6,18 +6,18 @@
 //  Copyright (c) 2013 TabSprint. All rights reserved.
 //
 
-#import "AddYourOwnResourcesTableView.h"
+#import "AddYourOwnResources.h"
 #import "CellFactory.h"
 #import "NewResourceViewController.h"
-#import "AddYourOwnResourcesTableViewCell.h"
+#import "AddYourOwnResourcesCell.h"
 
-@implementation AddYourOwnResourcesTableView
+@implementation AddYourOwnResources
 
 - (id)init
 {
     self = [super init];
     if (self) {
-        self.reuseIdentifier = @"AddYourOwnResourcesTableViewCell";
+        self.reuseIdentifier = [NSStringFromClass(self.class) stringByAppendingString:@"Cell"];
         self.staticCellHeight = [self newUITableViewCell].frame.size.height;
 
     }
@@ -41,7 +41,7 @@
 
 
 -(void) bindToUITableViewCell: (UITableViewCell *) cell{
-    AddYourOwnResourcesTableViewCell* addCell = (AddYourOwnResourcesTableViewCell*) cell;
+    AddYourOwnResourcesCell* addCell = (AddYourOwnResourcesCell*) cell;
 
     addCell.informationContentView.backgroundColor = self.color;
     addCell.descriptionLabel.textColor = [UIColor changeBrightness:self.color amount:0.65];
