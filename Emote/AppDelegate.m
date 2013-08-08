@@ -88,7 +88,7 @@
         return _managedObjectModel;
     }
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"AfterCareDataModel" ofType:@"momd"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Emote" ofType:@"momd"];
     NSURL *momURL = [NSURL fileURLWithPath:path];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:momURL];
     
@@ -101,7 +101,7 @@
         return _persistentStoreCoordinator;
     }
     NSURL *storeUrl = [NSURL fileURLWithPath: [[self applicationDocumentsDirectory]
-                                               stringByAppendingPathComponent: @"AfterCare.sqlite"]];
+                                               stringByAppendingPathComponent: @"Emote"]];
     NSError *error = nil;
     NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
     						 [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
