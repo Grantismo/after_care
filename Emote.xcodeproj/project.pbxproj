@@ -46,6 +46,7 @@
 		0F114F5717B30DDB00A96F21 /* therapistgrouplocators.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F3517B30DDB00A96F21 /* therapistgrouplocators.png */; };
 		0F114F5817B30DDB00A96F21 /* wakingupalive.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F3617B30DDB00A96F21 /* wakingupalive.png */; };
 		0F114F5C17B311AF00A96F21 /* nationalsuicidepreventionlifeline.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F114F5B17B311AF00A96F21 /* nationalsuicidepreventionlifeline.png */; };
+		0F114F6817B42C8900A96F21 /* TextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F114F6717B42C8900A96F21 /* TextFieldCell.m */; };
 		0FAF4DE2179C953E00028E7A /* Website.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDB179C953E00028E7A /* Website.m */; };
 		0FAF4DE3179C953E00028E7A /* WebsiteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDD179C953E00028E7A /* WebsiteCell.m */; };
 		0FAF4DE4179C953E00028E7A /* WebsiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4DDE179C953E00028E7A /* WebsiteCell.xib */; };
@@ -194,6 +195,8 @@
 		0F114F3517B30DDB00A96F21 /* therapistgrouplocators.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = therapistgrouplocators.png; sourceTree = "<group>"; };
 		0F114F3617B30DDB00A96F21 /* wakingupalive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wakingupalive.png; sourceTree = "<group>"; };
 		0F114F5B17B311AF00A96F21 /* nationalsuicidepreventionlifeline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nationalsuicidepreventionlifeline.png; sourceTree = "<group>"; };
+		0F114F6617B42C8900A96F21 /* TextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldCell.h; sourceTree = "<group>"; };
+		0F114F6717B42C8900A96F21 /* TextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldCell.m; sourceTree = "<group>"; };
 		0FAF4D84179B016B00028E7A /* Apache License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Apache License.txt"; sourceTree = "<group>"; };
 		0FAF4D85179B016B00028E7A /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		0FAF4D86179B016B00028E7A /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -506,6 +509,8 @@
 				9C758C3517B4060A00478BF6 /* AddYourOwnResourcesCell.h */,
 				9C758C3617B4060B00478BF6 /* AddYourOwnResourcesCell.m */,
 				9C758C3B17B4063E00478BF6 /* AddYourOwnResourcesCell.xib */,
+				0F114F6617B42C8900A96F21 /* TextFieldCell.h */,
+				0F114F6717B42C8900A96F21 /* TextFieldCell.m */,
 			);
 			name = "Custom Cells";
 			sourceTree = "<group>";
@@ -910,6 +915,7 @@
 				0F114DE017B2DB6F00A96F21 /* NSManagedObject+FetchRequests.m in Sources */,
 				9C758C3717B4060B00478BF6 /* AddYourOwnResourcesCell.m in Sources */,
 				9C758C3A17B4061800478BF6 /* AddYourOwnResources.m in Sources */,
+				0F114F6817B42C8900A96F21 /* TextFieldCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

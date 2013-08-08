@@ -13,8 +13,8 @@
 
 @property (nonatomic, strong) UIColor* backgroundColor;
 
-@property (nonatomic, strong) Website *website;
-@property (nonatomic, strong) NSArray *fields;
+@property (nonatomic, strong) id resource;
+@property (nonatomic, strong) NSDictionary *fields;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 
