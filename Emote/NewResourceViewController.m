@@ -302,9 +302,18 @@
 -(void)textFieldDidEndEditing:(UITextField *)textField{
     NSIndexPath* path = [NSIndexPath indexPathForRow:textField.tag inSection:0];
     NSString* field =  [displayNameToField objectForKey:[self displayFieldAtIndexPath:path]];
-    self.resource.emotions = [NSSet setWithArray:[Emotion fetchWithNames: @"ALL" fromManagedObjectContext:self.managedObjectContext]];
+   
+    NSMutableSet * selectedEmotions = [[NSMutableSet alloc] init];
+
+    for(int i = 0; i < emotions.count; i++){
+        if([emotionIsSelected[i] boolValue]){
+            [selectedEmotions addObject:emotions[i]];
+        }
+    }
+    
     int randomImageNum = (arc4random() % 5) + 1;
     NSString* imagePath = [NSString stringWithFormat:@"default_image_%d", randomImageNum];
+    self.resource.emotions = selectedEmotions;
     [self.resource setValue:imagePath forKey:@"imageUrl"];
     [self.resource setValue:textField.text forKey:field];
 }
