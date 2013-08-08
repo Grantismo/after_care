@@ -13,7 +13,7 @@
 @interface ResourcesViewController : UIViewController<CellActionDelegate, UITableViewDataSource, UITableViewDelegate>
 
 - (id) initWithEmotion: (Emotion *) emotion;
-
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 @property (nonatomic, strong) NSArray* dataSources;
 @property (nonatomic, strong) IBOutlet UITableView * tableView;

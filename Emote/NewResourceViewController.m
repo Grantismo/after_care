@@ -10,8 +10,13 @@
 #import <CoreData/CoreData.h>
 #import "Website.h"
 
-@interface NewResourceViewController ()
+@interface NewResourceViewController (){
+    IBOutlet UIButton* doneButton;
+    IBOutlet UIButton* cancelButton;
+}
 
+-(IBAction) done: (id) sender;
+-(IBAction) cancel: (id) sender;
 @end
 
 @implementation NewResourceViewController
@@ -19,6 +24,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:doneButton ];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:cancelButton
+                                              ];
     NSMutableArray* mutableFields = [[NSMutableArray alloc] init];
     [mutableFields addObject:@"url"];
     [mutableFields addObject:@"title"];
@@ -136,13 +144,13 @@
 
 -(IBAction)cancel:(id)sender{
     [self.managedObjectContext deleteObject:self.website];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(IBAction)done:(id)sender{
     
     [self.managedObjectContext save:nil];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)textFieldDidEndEditing:(UITextField *)textField{

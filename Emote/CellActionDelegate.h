@@ -10,4 +10,6 @@
 
 @protocol CellActionDelegate <NSObject>
 - (void) pushUIViewController: (UIViewController *) controller;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+
 @end
