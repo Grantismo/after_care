@@ -23,13 +23,15 @@
     NSString *phoneNumber = [@"telprompt://" stringByAppendingString:self.number];
     NSLog(@"Calling number... %@", phoneNumber);
 
-    BOOL opened = [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
-
 }
 
 -(void) bindToUITableViewCell:(UITableViewCell *)cell{
     PhoneNumberCell* phoneCell = (PhoneNumberCell*) cell;
-    phoneCell.titleLabel.text = self.name.uppercaseString;
+    NSMutableString *titleString = [self titleWithNewLine: self.name];
+
+    phoneCell.titleLabel.text = titleString.uppercaseString;
+    [phoneCell.titleLabel sizeToFit];
+
     phoneCell.descriptionLabel.text = self.descript;
     phoneCell.descriptionLabel.textColor = [UIColor changeBrightness:self.color amount:.6];
     

@@ -35,6 +35,25 @@
     return self.staticCellHeight;
 }
 
+- (NSMutableString *)titleWithNewLine: (NSString*) title {
+    NSArray *titleWords = [title componentsSeparatedByString: @" "];
+    NSMutableString* titleString = [NSMutableString stringWithString:@""];
+    int charCount = 0;
+    BOOL addedNewLine = NO;
+    for(int i = 0; i < titleWords.count; i++){
+        NSString* titleWord = titleWords[i];
+        charCount += titleWord.length;
+        if((charCount > 18) && (title.length > 24) && !addedNewLine){
+            [titleString appendString:@"\n          "];
+            addedNewLine = YES;
+        }else if(i > 0){
+            [titleString appendString:@" "];
+        }
+        [titleString appendString:titleWord];
+    }
+    return titleString;
+}
+
 
 
 @end

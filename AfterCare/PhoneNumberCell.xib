@@ -2,9 +2,9 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1552</int>
-		<string key="IBDocument.SystemVersion">12E55</string>
+		<string key="IBDocument.SystemVersion">12D78</string>
 		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
-		<string key="IBDocument.AppKitVersion">1187.39</string>
+		<string key="IBDocument.AppKitVersion">1187.37</string>
 		<string key="IBDocument.HIToolboxVersion">626.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -62,7 +62,7 @@
 									<object class="IBUILabel" id="81360122">
 										<reference key="NSNextResponder" ref="112961393"/>
 										<int key="NSvFlags">300</int>
-										<string key="NSFrame">{{13, 4.5}, {280, 39}}</string>
+										<string key="NSFrame">{{13, 2}, {280, 39}}</string>
 										<reference key="NSSuperview" ref="112961393"/>
 										<reference key="NSNextKeyView" ref="657677809"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -98,7 +98,7 @@
 									<object class="IBUILabel" id="657677809">
 										<reference key="NSNextResponder" ref="112961393"/>
 										<int key="NSvFlags">297</int>
-										<string key="NSFrame">{{111, 49}, {159, 51}}</string>
+										<string key="NSFrame">{{119, 49}, {159, 51}}</string>
 										<reference key="NSSuperview" ref="112961393"/>
 										<reference key="NSNextKeyView" ref="638531602"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -141,7 +141,7 @@
 										</object>
 									</object>
 								</array>
-								<string key="NSFrame">{{4, 4}, {312, 108}}</string>
+								<string key="NSFrame">{{0, 4}, {320, 108}}</string>
 								<reference key="NSSuperview" ref="690771787"/>
 								<reference key="NSNextKeyView" ref="487962511"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -240,10 +240,10 @@
 						<int key="objectID">64</int>
 						<reference key="object" ref="112961393"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="81360122"/>
 							<reference ref="657677809"/>
 							<reference ref="638531602"/>
 							<reference ref="487962511"/>
+							<reference ref="81360122"/>
 						</array>
 						<reference key="parent" ref="436722801"/>
 					</object>

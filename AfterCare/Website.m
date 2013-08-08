@@ -26,9 +26,14 @@
     [self.delegate pushUIViewController:controller];
 }
 
+
+
 -(void) bindToUITableViewCell:(UITableViewCell *)cell{
     WebsiteCell* websiteCell = (WebsiteCell*) cell;
-    websiteCell.titleLabel.text = self.title.uppercaseString;
+    NSMutableString *titleString = [self titleWithNewLine: self.title];
+    
+    websiteCell.titleLabel.text = titleString.uppercaseString;
+    [websiteCell.titleLabel sizeToFit];
     websiteCell.descriptionLabel.text = self.descript;
     websiteCell.descriptionLabel.textColor = [UIColor changeBrightness:self.color amount:.6];
     
