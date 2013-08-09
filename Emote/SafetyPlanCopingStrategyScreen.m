@@ -94,7 +94,7 @@
     }
     if ([manager copingStrategyAtIndex:1]) {
         [progressView setDotActivatedAtIndex:1];
-        [addButton1 setTitle:[manager copingStrategyAtIndex:1].copingStrategy forState:UIControlStateNormal];
+        [addButton2 setTitle:[manager copingStrategyAtIndex:1].copingStrategy forState:UIControlStateNormal];
     }
     else{
         [progressView setDotDeactivatedAtIndex:1];
@@ -102,7 +102,7 @@
     }
     if ([manager copingStrategyAtIndex:2]) {
         [progressView setDotActivatedAtIndex:2];
-        [addButton1 setTitle:[manager copingStrategyAtIndex:2].copingStrategy forState:UIControlStateNormal];
+        [addButton3 setTitle:[manager copingStrategyAtIndex:2].copingStrategy forState:UIControlStateNormal];
     }
     else{
         [progressView setDotDeactivatedAtIndex:2];

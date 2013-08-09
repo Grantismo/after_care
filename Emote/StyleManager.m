@@ -14,7 +14,7 @@
     self = [super init];
     if (self){
         [[UINavigationBar appearance] setTitleTextAttributes:@{
-                                        UITextAttributeFont : [UIFont boldSystemFontOfSize:15.0],
+                                        UITextAttributeFont : [UIFont boldSystemFontOfSize:18.0],
                             UITextAttributeTextShadowOffset : [NSValue valueWithCGPoint:CGPointMake(0.0, 0.0)]}];
     }
     return self;

@@ -21,8 +21,9 @@
 
 -(void)onDidSelectCell{
     NSString *phoneNumber = [@"telprompt://" stringByAppendingString:self.number];
-    NSLog(@"Calling number... %@", phoneNumber);
-
+   
+    NSURL *url = [NSURL URLWithString:phoneNumber];
+    [[UIApplication sharedApplication] openURL:url];
 }
 
 -(void) bindToUITableViewCell:(UITableViewCell *)cell{
@@ -33,7 +34,7 @@
     [phoneCell.titleLabel sizeToFit];
 
     phoneCell.descriptionLabel.text = self.descript;
-    phoneCell.descriptionLabel.textColor = [UIColor changeBrightness:self.color amount:.65];
+    phoneCell.descriptionLabel.textColor = [UIColor changeBrightness:self.color amount:.55];
     
     CGSize size = [phoneCell.titleLabel.text sizeWithFont:phoneCell.titleLabel.font constrainedToSize:phoneCell.titleLabel.frame.size];
     

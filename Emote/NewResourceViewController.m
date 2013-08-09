@@ -17,6 +17,8 @@
 #import "Emotion.h"
 #include <stdlib.h>
 
+#import <QuartzCore/QuartzCore.h>
+
 
 #import "Emotion.h"
 
@@ -36,6 +38,9 @@
     NSMutableArray* emotionIsSelected;
     
     BOOL killed;
+    
+    CAShapeLayer* firstCellLayer;
+    CAShapeLayer* lastCellLayer;
 }
 
 -(IBAction) done: (id) sender;
@@ -102,11 +107,21 @@
     emotionIsSelected = [[NSMutableArray alloc] initWithObjects:@YES, @YES, @YES, @YES, @YES, @YES, @YES, @YES, nil];
     
     
+    UIBezierPath *roundedUpper = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0.0, 0.0, 302.0, 45.0) byRoundingCorners:UIRectCornerTopLeft|UIRectCornerTopRight cornerRadii:CGSizeMake(8.0f, 8.0f)];
     
-    for (int i = 0; i < emotions.count; i++) {
-        NSIndexPath* path = [NSIndexPath indexPathForRow:i inSection:2];
-        [newResourceTableView selectRowAtIndexPath:path animated:NO scrollPosition:UITableViewScrollPositionNone];
-    }
+    firstCellLayer = [[CAShapeLayer alloc] init];
+    [firstCellLayer setPath:roundedUpper.CGPath];
+    
+    firstCellLayer.borderWidth = .5;
+    firstCellLayer.borderColor = [UIColor lightGrayColor].CGColor;
+    
+    UIBezierPath *roundedLower = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0.0, 0.0, 302.0, 43.0) byRoundingCorners:UIRectCornerBottomLeft|UIRectCornerBottomRight cornerRadii:CGSizeMake(8.0f, 8.0f)];
+    
+    lastCellLayer = [[CAShapeLayer alloc] init];
+    [lastCellLayer setPath:roundedLower.CGPath];
+    
+    lastCellLayer.borderWidth = .5;
+    lastCellLayer.borderColor = [UIColor lightGrayColor].CGColor;
     
     [newResourceTableView reloadData];
     
@@ -183,7 +198,25 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            
+            cell.selectedBackgroundView = [[UIView alloc] init];
+            cell.selectedBackgroundView.backgroundColor = self.backgroundColor;
         }
+        
+        if ([emotionIsSelected[indexPath.row] boolValue]){
+            [tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
+        }
+        else{
+            [tableView deselectRowAtIndexPath:indexPath animated:NO];
+        }
+        
+        if (indexPath.row == 0){
+            cell.selectedBackgroundView.layer.mask = firstCellLayer;
+        }
+        else if (indexPath.row == emotions.count - 1){
+            cell.selectedBackgroundView.layer.mask = lastCellLayer;
+        }
+        else cell.selectedBackgroundView.layer.mask = nil;
         
         Emotion* emotion = emotions[indexPath.row];
         
@@ -222,6 +255,10 @@
 
 -(void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
     [[StyleManager sharedStyleManager] setBoldFontForLabel:cell.textLabel];
+}
+
+-(BOOL) tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath{
+    return indexPath.section == 2;
 }
 
 
@@ -353,7 +390,7 @@
         NSString* imagePath = [NSString stringWithFormat:@"default_image_%d", randomImageNum];
         self.resource.emotions = selectedEmotions;
         [self.resource setValue:imagePath forKey:@"imageUrl"];
-        [self.resource setValue:textField.text forKey:field];
+        [self.resource setValue:textField.text forKey:field]; 
     }
 }
 

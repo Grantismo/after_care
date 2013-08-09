@@ -25,6 +25,10 @@
     IBOutlet UILabel* emotionLabel;
     
     IBOutlet UIButton* backButton;
+    
+    IBOutlet UILabel* titleLabel;
+    
+    NSIndexPath* selectedIndexPath;
 }
 
 -(IBAction)popSelf:(id)sender;
@@ -36,7 +40,6 @@
 - (id) initWithEmotion: (Emotion *) emotion{
     if(self = [super initWithNibName: NSStringFromClass([ResourcesViewController class]) bundle: nil]){        
         self.emotion = emotion;
-        self.title = [NSString stringWithFormat:@"I'm Feeling %@", emotion.name.capitalizedString];
     }
     return self;
 }
@@ -47,6 +50,9 @@
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
     
+    titleLabel.text = [NSString stringWithFormat:@"I'm Feeling %@", self.emotion.name.capitalizedString];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:titleLabel];
+    
     navBarFooterImageView.image = [UIImageCreator arrowImageWithSize:navBarFooterImageView.frame.size andArrowSize:CGSizeMake(20.0, 8.0) andArrowWidthRatio:.5 andColor:self.emotion.color];
     
     navBarFooterImageView.layer.shadowOffset = CGSizeMake(0.0, 3.0);
@@ -54,7 +60,7 @@
     navBarFooterImageView.layer.shadowRadius = 2.0;
     navBarFooterImageView.layer.shadowOpacity = .5;
     
-    emotionLabel.textColor = [UIColor changeBrightness:self.emotion.color amount:.6];
+    emotionLabel.textColor = [UIColor changeBrightness:self.emotion.color amount:.55];
     
     [[StyleManager sharedStyleManager] setBoldFontForLabel:backButton.titleLabel];
     
@@ -64,20 +70,6 @@
                                       self.tableView.frame.size.width,
                                       self.tableView.frame.size.height - self.navigationController.navigationBar.frame.size.height);
     
-//    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addResource:)];
-// 
-//    self.navigationItem.rightBarButtonItem = button;
-    
-//    PhoneNumber* number = (PhoneNumber*)[NSEntityDescription
-//                              insertNewObjectForEntityForName:@"PhoneNumber"
-//                              inManagedObjectContext:self.managedObjectContext];
-//    number.name = @"SUICIDE ANONYMOUS";
-//    number.number = @"2486223655";
-//    number.descript = @"Suicideanonymous.net is a website that provides resources that provide worldwide Skype meetings and other support systems.";
-//    number.color = [UIColor depressedColor];
-
-    
-        
     [self fetchResources];
 
 }
@@ -89,6 +81,10 @@
     [self fetchResources];
     
     [self.navigationController.navigationBar setBackgroundImage:[UIImageCreator onePixelImageForColor:self.emotion.color] forBarMetrics:UIBarMetricsDefault];
+    
+    if (selectedIndexPath){
+        [self.tableView deselectRowAtIndexPath:selectedIndexPath animated:FALSE];
+    }
 }
 
 -(void) fetchResources{
@@ -132,9 +128,10 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-        [[self cellDataSourceForRowAtIndexPath:indexPath] onDidSelectCell];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [[self cellDataSourceForRowAtIndexPath:indexPath] onDidSelectCell];
+    
+    selectedIndexPath = indexPath;
 }
 
 - (void) pushUIViewController: (UIViewController *)controller{

@@ -84,10 +84,6 @@
     self.navigationItem.leftBarButtonItem = barItem;
     
     UIBarButtonItem* arrowItem = [[UIBarButtonItem alloc] initWithCustomView:littleYellowArrowImageContainer];
-    UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    flexibleSpace.width = 20.0;
-    
-    arrowItem.width = 40.0;
     
     self.navigationItem.rightBarButtonItem = arrowItem;
     

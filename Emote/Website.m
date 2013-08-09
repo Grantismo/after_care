@@ -39,7 +39,7 @@
     websiteCell.titleLabel.text = titleString.uppercaseString;
     [websiteCell.titleLabel sizeToFit];
     websiteCell.descriptionLabel.text = self.descript;
-    websiteCell.descriptionLabel.textColor = [UIColor changeBrightness:self.color amount:.65];
+    websiteCell.descriptionLabel.textColor = [UIColor changeBrightness:self.color amount:.55];
     
     CGSize size = [websiteCell.titleLabel.text sizeWithFont:websiteCell.titleLabel.font constrainedToSize:websiteCell.titleLabel.frame.size];
     

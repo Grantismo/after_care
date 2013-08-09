@@ -48,7 +48,7 @@
 									<object class="IBUILabel" id="592974436">
 										<reference key="NSNextResponder" ref="394922882"/>
 										<int key="NSvFlags">300</int>
-										<string key="NSFrame">{{13, 5}, {280, 39}}</string>
+										<string key="NSFrame">{{13, 9.5}, {280, 39}}</string>
 										<reference key="NSSuperview" ref="394922882"/>
 										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="415567265"/>
@@ -85,7 +85,7 @@
 									<object class="IBUILabel" id="415567265">
 										<reference key="NSNextResponder" ref="394922882"/>
 										<int key="NSvFlags">297</int>
-										<string key="NSFrame">{{57, 45}, {211, 51}}</string>
+										<string key="NSFrame">{{57, 53}, {211, 51}}</string>
 										<reference key="NSSuperview" ref="394922882"/>
 										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="881167818"/>
@@ -118,7 +118,7 @@
 									<object class="IBUIImageView" id="881167818">
 										<reference key="NSNextResponder" ref="394922882"/>
 										<int key="NSvFlags">296</int>
-										<string key="NSFrame">{{299, 47}, {14, 14}}</string>
+										<string key="NSFrame">{{299, 53.5}, {14, 14}}</string>
 										<reference key="NSSuperview" ref="394922882"/>
 										<reference key="NSWindow"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -130,7 +130,7 @@
 										</object>
 									</object>
 								</array>
-								<string key="NSFrame">{{0, 4}, {320, 108}}</string>
+								<string key="NSFrameSize">{320, 120}</string>
 								<reference key="NSSuperview" ref="700802836"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="592974436"/>
@@ -142,7 +142,7 @@
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
 						</array>
-						<string key="NSFrameSize">{320, 115}</string>
+						<string key="NSFrameSize">{320, 119}</string>
 						<reference key="NSSuperview" ref="361273118"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="394922882"/>
@@ -158,11 +158,12 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 				</array>
-				<string key="NSFrameSize">{320, 116}</string>
+				<string key="NSFrameSize">{320, 120}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="700802836"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
+				<bool key="IBUIOpaque">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<int key="IBUISelectionStyle">2</int>
 				<reference key="IBUIContentView" ref="700802836"/>
@@ -234,21 +235,18 @@
 						<reference key="parent" ref="361273118"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">5</int>
-						<reference key="object" ref="881167818"/>
-						<array class="NSMutableArray" key="children"/>
+						<int key="objectID">7</int>
+						<reference key="object" ref="415567265"/>
 						<reference key="parent" ref="394922882"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">6</int>
 						<reference key="object" ref="592974436"/>
-						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="394922882"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">7</int>
-						<reference key="object" ref="415567265"/>
-						<array class="NSMutableArray" key="children"/>
+						<int key="objectID">5</int>
+						<reference key="object" ref="881167818"/>
 						<reference key="parent" ref="394922882"/>
 					</object>
 				</array>
@@ -320,7 +318,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="NS.key.0">transparent_plus.png</string>
-			<string key="NS.object.0">{16, 16}</string>
+			<string key="NS.object.0">{29, 29}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">2083</string>
 	</data>
