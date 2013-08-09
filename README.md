@@ -4,7 +4,7 @@
 ##Documentation
 
 ###Objective
-Our main objective in creating Emote was connecting at risk individuals with the most relevant and useful resources in a warm and inviting way. As experts in the mobile development space, we recognized that Emote required a beautiful and intuitive interface to ensure a comfortable and enjoyable user experience.
+Our main objective in creating Emote is to connect at risk individuals with the most relevant and useful resources in a warm and inviting way. As experts in the mobile development space, we recognize that Emote requires a beautiful and intuitive interface to ensure a comfortable and enjoyable user experience.
 
 ###Overview
 The two overarching features of Emote are an easy to use safety plan accessible from anywhere in the app (with or without an internet connection), and a categorized collection of resources which give the user immediate access to hyper-relevant help. Resources are categorized by different emotional states which avoids overwhelming the user with too many resources and helps better address the user's actual needs. 
