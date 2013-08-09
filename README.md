@@ -11,16 +11,16 @@ The two overarching features of Emote are an easy to use safety plan accessible 
 
 ###Walkthrough
 ####Home Screen
-![home screen](https://raw.github.com/Grantismo/emote/HomeScreen.png)
-![resources screen](https://raw.github.com/Grantismo/emote/HomeScreen.png)
-![resource screen](https://raw.github.com/Grantismo/emote/HomeScreen.png)
-![new resource screen](https://raw.github.com/Grantismo/emote/HomeScreen.png)
-![safety plan 1](https://raw.github.com/Grantismo/emote/SafetyPlan1.png)
-![safety plan 2](https://raw.github.com/Grantismo/emote/SafetyPlan2.png)
-![safety plan 3](https://raw.github.com/Grantismo/emote/SafetyPlan3.png)
-![safety plan 4](https://raw.github.com/Grantismo/emote/SafetyPlan4.png)
-![safety plan 5](https://raw.github.com/Grantismo/emote/SafetyPlan5.png)
-![safety plan 6](https://raw.github.com/Grantismo/emote/SafetyPlan6.png)
+![home screen](https://raw.github.com/Grantismo/emote/master/HomeScreen.png)
+![resources screen](https://raw.github.com/Grantismo/emote/master/HomeScreen.png)
+![resource screen](https://raw.github.com/Grantismo/emote/master/HomeScreen.png)
+![new resource screen](https://raw.github.com/Grantismo/emote/master/HomeScreen.png)
+![safety plan 1](https://raw.github.com/Grantismo/emote/master/SafetyPlan1.png)
+![safety plan 2](https://raw.github.com/Grantismo/emote/master/SafetyPlan2.png)
+![safety plan 3](https://raw.github.com/Grantismo/emote/master/SafetyPlan3.png)
+![safety plan 4](https://raw.github.com/Grantismo/emote/master/SafetyPlan4.png)
+![safety plan 5](https://raw.github.com/Grantismo/emote/master/SafetyPlan5.png)
+![safety plan 6](https://raw.github.com/Grantismo/emote/master/SafetyPlan6.png)
 Home Screen: The user is greeted with an array of possible emotions.
 
 ###Future Modification
