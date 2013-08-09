@@ -115,8 +115,8 @@ All preloaded resources are stored in the ```resources.json``` file. In order to
 
 ##Installing Emote On A Device
 
-1. Find the "Emote.ipa file in the project directory.
-2. Double click on the file to open it iTunes.
+1. Find the "Emote.ipa" file in the project directory.
+2. Double click on the file to open it in iTunes.
 3. In iTunes, click the test device and go to the "Apps" section.
 4. You should see Emote in the list of apps on the right.
 5. Click the "Install" button.
