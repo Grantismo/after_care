@@ -64,7 +64,7 @@ We designed Emote to be extensible for future modification. There are two most l
 
 Emotions are created in the AppDelegate the first time the app is run on the users device. To change emotions, simply add to the dictionaries created in the ```seedEmotions``` method of the AppDelegate. 
 
-```
+```objective-c
 - (void)seedEmotions {
     NSDictionary *emotionColorDict = @{@"positive": [UIColor positiveColor],
                                        @"angry": [UIColor angryColor],
