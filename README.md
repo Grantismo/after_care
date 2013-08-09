@@ -15,11 +15,12 @@ The user is greeted with a scrolling list of interactive emotional states. Each 
  
 ![home screen](https://raw.github.com/Grantismo/emote/master/HomeScreen.png)
 ####Resources Screen
-The resources screen shows the user a list of interactive resources associated with the emotional state that they selected on the previous page.
-
+The resources screen shows the user a list of interactive resources associated with the emotional state that they selected on the previous page. We found that the most useful resources were websites and phone numbers, therefore each resource in the resources list will either navigate the user to an in-app web page, or prompts the user to call the number specified by the resource.
 
 ![resources screen](https://raw.github.com/Grantismo/emote/master/ResourcesScreen.png)
 ####Resource Screen
+By selecting a website resource the user is navigated to an in-app website screen that loads the website that the user selected.
+
 ![resource screen](https://raw.github.com/Grantismo/emote/master/ResourceScreen.png)
 ####Add a new resource
 ![new resource screen](https://raw.github.com/Grantismo/emote/master/NewResourceScreen.png)
