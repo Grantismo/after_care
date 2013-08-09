@@ -32,7 +32,11 @@ Not only does Emote offer an extensive set of preloaded resources, it also provi
 
 The safety plan consists of 6 discrete steps.
 
+The first step of the safety plan is to detail warning signs of systems for the user. The user is prompted to list out in text: thoughts, situations or behaviors that cause them to have suicidal symptoms. The user can edit these later or skip to the next step.
+
 ![safety plan 1](https://raw.github.com/Grantismo/emote/master/SafetyPlan1.png)
+The next step of the safety plan is to detail internal coping strategies for systems of suicide. The user is prompted to list out in text: thoughts, situations or behaviors might distract or relax them. The user can edit these later or skip to the next step.
+
 ####Safety plan (part 2)
 ![safety plan 2](https://raw.github.com/Grantismo/emote/master/SafetyPlan2.png)
 ####Safety plan (part 3)
