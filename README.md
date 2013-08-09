@@ -23,6 +23,8 @@ By selecting a website resource the user is navigated to an in-app website scree
 
 ![resource screen](https://raw.github.com/Grantismo/emote/master/ResourceScreen.png)
 ####Add a new resource
+In addition to over 30 pre-loaded website and phone number resources, Emote also gives the user the ability to add their own resource. The ability to add a custom resource more thoroughly engages the user and promotes further use of Emote. The user is allowed to add either a website or phone number resource to their list of resources and is encouraged to associate that resource with a set of emotions. That way when the user is feeling a certain way in the future they will be able to more quickly find the resource that they know they need.
+
 ![new resource screen](https://raw.github.com/Grantismo/emote/master/NewResourceScreen.png)
 
 ####Safety plan (part 1)
