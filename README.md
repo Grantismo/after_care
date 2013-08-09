@@ -11,9 +11,13 @@ The two overarching features of Emote are an easy to use safety plan accessible 
 
 ###Walkthrough
 ####Home Screen
-The user is greeted with a scrolling list of interactive emotional states. Each emotion, represented by a button, is colored using an algorithm designed to mesh all of the colors together in an appealing way. The user will then find it natural to tap the button that represents their emotional state. Upon tapping a button the user is navigated to a list of resources that we have associated with that emotion. 
+The user is greeted with a scrolling list of interactive emotional states. Each emotion, represented by a button, is colored using an algorithm designed to mesh all of the colors together in an appealing way. The user will then find it natural to tap the button that represents their emotional state. Upon tapping a button the user is navigated to a list of resources that we have associated with that emotion.
+ 
 ![home screen](https://raw.github.com/Grantismo/emote/master/HomeScreen.png)
 ####Resources Screen
+The resources screen shows the user a list of interactive resources associated with the emotional state that they selected on the previous page.
+
+
 ![resources screen](https://raw.github.com/Grantismo/emote/master/ResourcesScreen.png)
 ####Resource Screen
 ![resource screen](https://raw.github.com/Grantismo/emote/master/ResourceScreen.png)
