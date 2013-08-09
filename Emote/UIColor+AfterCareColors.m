@@ -15,7 +15,7 @@
 }
 
 +(UIColor*) afterCareOffBlackColor{
-    return UIColorFromRGB(0x2B2823, 1.0);
+    return UIColorFromRGB(0x2b2823, 1.0);
 }
 
 +(UIColor*) lonelyColor{
@@ -43,11 +43,11 @@
 }
 
 +(UIColor*) disinterestedColor{
-    return UIColorFromRGB(0x583f22, 1.0);
+    return [UIColor addBrightness:UIColorFromRGB(0x583f22, 1.0) amount:.2];
 }
 
 +(UIColor*) worthlessColor{
-    return UIColorFromRGB(0xeba2071, 1.0);
+    return UIColorFromRGB(0xeba207, 1.0);
 }
 
 

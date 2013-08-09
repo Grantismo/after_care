@@ -141,7 +141,14 @@
 }
 
 - (void)seedEmotions {
-    NSDictionary *emotionColorDict = @{@"positive": @0xcb7522, @"angry": @0xcbd6b4, @"lonely": @0x95dc8c, @"depressed": @0xefca16, @"hurt": @0x40898b, @"grateful": @0x66c0a0, @"worthless": @0xeba2071, @"disinterested": @0x583f22};
+    NSDictionary *emotionColorDict = @{@"positive": [UIColor positiveColor],
+                                       @"angry": [UIColor angryColor],
+                                       @"lonely": [UIColor lonelyColor],
+                                       @"depressed": [UIColor depressedColor],
+                                       @"hurt": [UIColor hurtColor],
+                                       @"grateful": [UIColor gratefulColor],
+                                       @"disinterested": [UIColor disinterestedColor],
+                                       @"worthless": [UIColor worthlessColor]};
     
     NSDictionary *emotionDescriptionDict = @{@"positive":
                                                  @"When you are feeling positive about recovery, it’s a great time to reach out and help others who may be going through their own struggles. Connect with them.",
@@ -162,7 +169,7 @@
     
     for(NSString* key in emotionColorDict){
         NSString* name = key;
-        UIColor* color = UIColorFromRGB([[emotionColorDict objectForKey:key] integerValue], 1.0);
+        UIColor* color = [emotionColorDict objectForKey:key];
         Emotion* emotion = (Emotion*)[NSEntityDescription
                                       insertNewObjectForEntityForName:@"Emotion"inManagedObjectContext:self.managedObjectContext];
         emotion.name = name;

@@ -47,6 +47,8 @@
 
     addCell.informationContentView.backgroundColor = self.color;
     addCell.descriptionLabel.textColor = [UIColor changeBrightness:self.color amount:0.65];
+    
+    addCell.sideImageView.overlayColor = self.color;
 }
 
 @end
