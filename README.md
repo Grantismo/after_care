@@ -12,9 +12,9 @@ The two overarching features of Emote are an easy to use safety plan accessible 
 ###Walkthrough
 ####Home Screen
 ![home screen](https://raw.github.com/Grantismo/emote/master/HomeScreen.png)
-![resources screen](https://raw.github.com/Grantismo/emote/master/HomeScreen.png)
-![resource screen](https://raw.github.com/Grantismo/emote/master/HomeScreen.png)
-![new resource screen](https://raw.github.com/Grantismo/emote/master/HomeScreen.png)
+![resources screen](https://raw.github.com/Grantismo/emote/master/ResourcesScreen.png)
+![resource screen](https://raw.github.com/Grantismo/emote/master/ResourceScreen.png)
+![new resource screen](https://raw.github.com/Grantismo/emote/master/NewResourceScreen.png)
 ![safety plan 1](https://raw.github.com/Grantismo/emote/master/SafetyPlan1.png)
 ![safety plan 2](https://raw.github.com/Grantismo/emote/master/SafetyPlan2.png)
 ![safety plan 3](https://raw.github.com/Grantismo/emote/master/SafetyPlan3.png)
