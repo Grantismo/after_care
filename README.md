@@ -28,6 +28,10 @@ In addition to over 30 pre-loaded website and phone number resources, Emote also
 ![new resource screen](https://raw.github.com/Grantismo/emote/master/NewResourceScreen.png)
 
 ####Safety plan (part 1)
+Not only does Emote offer an extensive set of preloaded resources, it also provides a screen to setup a safety plan that can be accessed from anywhere within the app. All the user has to do is tap the bar at the bottom of the screen at any time to reveal the safety plan.
+
+The safety plan consists of 6 discrete steps.
+
 ![safety plan 1](https://raw.github.com/Grantismo/emote/master/SafetyPlan1.png)
 ####Safety plan (part 2)
 ![safety plan 2](https://raw.github.com/Grantismo/emote/master/SafetyPlan2.png)
