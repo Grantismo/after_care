@@ -1,14 +1,17 @@
 # Emote
+![icon](https://raw.github.com/Grantismo/emote/Icon.png)
 
 ##Documentation
 
 ###Objective
-Our main objective in creating Emote was connecting at risk users with 
+Our main objective in creating Emote was connecting at risk individuals with the most relevant and useful resources in a warm and inviting way. We paid particular attention to the overall app aesthetics and ease of use, so the app experience was as comfortable as possible.
+
 ###Walkthrough
+Home Screen: The user is greeted with an array of possible emotions.
+![home screen](https://raw.github.com/Grantismo/emote/Icon.png)
 
 ###Future Modification
 
-![alttext](http://url/to/img.png)
 
 ##Contributors
 
