@@ -52,6 +52,8 @@ Step 5 of the safety plan is to detail professionals and agencies that the user 
 
 ![safety plan 5](https://raw.github.com/Grantismo/emote/master/SafetyPlan5.png)
 ####Safety plan (part 6)
+Step 6 of the safety plan is to actions the user can take to make their living environment more safe. The user is prompted to list out in text: habits and actions they can take to make their environment more safe. The user can edit these later or skip to the next step.
+
 ![safety plan 6](https://raw.github.com/Grantismo/emote/master/SafetyPlan6.png)
 
 ###Future Modification
