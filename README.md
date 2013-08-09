@@ -7,8 +7,9 @@
 Our main objective in creating Emote was connecting at risk individuals with the most relevant and useful resources in a warm and inviting way. We paid particular attention to the overall app aesthetics and ease of use, so the app experience was as comfortable as possible.
 
 ###Walkthrough
-Home Screen: The user is greeted with an array of possible emotions.
+####Home Screen
 ![home screen](https://raw.github.com/Grantismo/emote/Icon.png)
+Home Screen: The user is greeted with an array of possible emotions.
 
 ###Future Modification
 
