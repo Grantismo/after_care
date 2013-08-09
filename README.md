@@ -1,5 +1,15 @@
 # Emote
 
+##Documentation
+
+###Objective
+Our main objective in creating Emote was connecting at risk users with 
+###Walkthrough
+
+###Future Modification
+
+![alttext](http://url/to/img.png)
+
 ##Contributors
 
 * Grant Warman <grant.warman@gmail.com>
