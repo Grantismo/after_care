@@ -4,11 +4,23 @@
 ##Documentation
 
 ###Objective
-Our main objective in creating Emote was connecting at risk individuals with the most relevant and useful resources in a warm and inviting way. We paid particular attention to the overall app aesthetics and ease of use, so the app experience was as comfortable as possible.
+Our main objective in creating Emote was connecting at risk individuals with the most relevant and useful resources in a warm and inviting way. We paid particular attention to the overall app aesthetics and ease of use, so the user experience was as comfortable as possible.
+
+###Overview
+The two overarching features of Emote are an easy to use safety plan accessible from anywhere in the app, and a categorized collection of resources which give the user immediate access to anything from phone lines..
 
 ###Walkthrough
 ####Home Screen
-![home screen](https://raw.github.com/Grantismo/emote/Icon.png)
+![home screen](https://raw.github.com/Grantismo/emote/HomeScreen.png)
+![resources screen](https://raw.github.com/Grantismo/emote/HomeScreen.png)
+![resource screen](https://raw.github.com/Grantismo/emote/HomeScreen.png)
+![new resource screen](https://raw.github.com/Grantismo/emote/HomeScreen.png)
+![safety plan 1](https://raw.github.com/Grantismo/emote/SafetyPlan1.png)
+![safety plan 2](https://raw.github.com/Grantismo/emote/SafetyPlan2.png)
+![safety plan 3](https://raw.github.com/Grantismo/emote/SafetyPlan3.png)
+![safety plan 4](https://raw.github.com/Grantismo/emote/SafetyPlan4.png)
+![safety plan 5](https://raw.github.com/Grantismo/emote/SafetyPlan5.png)
+![safety plan 6](https://raw.github.com/Grantismo/emote/SafetyPlan6.png)
 Home Screen: The user is greeted with an array of possible emotions.
 
 ###Future Modification
