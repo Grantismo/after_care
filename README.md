@@ -9,6 +9,15 @@ Our main objective in creating Emote is to connect at risk individuals with the 
 ###Overview
 The two overarching features of Emote are an easy to use safety plan accessible from anywhere in the app (with or without an internet connection), and a categorized collection of resources which give the user immediate access to hyper-relevant help. Resources are categorized by different emotional states which avoids overwhelming the user with too many resources and helps better address the user's actual needs. 
 
+###Installing Emote On A Device
+
+1. Find the "Emote.ipa" file in the project directory.
+2. Double click on the file to open it in iTunes.
+3. In iTunes, click the test device and go to the "Apps" section.
+4. You should see Emote in the list of apps on the right.
+5. Click the "Install" button.
+6. Sync the test device and Emote should be installed on completion of the sync.
+
 ###Walkthrough
 ####Home Screen
 The user is greeted with a scrolling list of interactive emotional states. Each emotion, represented by a button, is colored using an algorithm designed to mesh all of the colors together in an appealing way. The user will then find it natural to tap the button that represents their emotional state. Upon tapping a button the user is navigated to a list of resources that we have associated with that emotion.
@@ -112,15 +121,6 @@ All preloaded resources are stored in the ```resources.json``` file. In order to
 ```
 {"title": "TITLE OF RESOURCE","description": "Description of resource", "link": "http://www.description/of/resource", "emotions": "LONELY / ANGRY / OTHER EMOTIONS"}
 ```
-
-##Installing Emote On A Device
-
-1. Find the "Emote.ipa" file in the project directory.
-2. Double click on the file to open it in iTunes.
-3. In iTunes, click the test device and go to the "Apps" section.
-4. You should see Emote in the list of apps on the right.
-5. Click the "Install" button.
-6. Sync the test device and Emote should be installed on completion of the sync.
 
 ##Contributors
 
