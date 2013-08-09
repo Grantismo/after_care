@@ -1,5 +1,5 @@
 # Emote
-![icon](https://raw.github.com/Grantismo/emote/Icon.png)
+![icon](https://raw.github.com/Grantismo/emote/master/Icon.png)
 
 ##Documentation
 
