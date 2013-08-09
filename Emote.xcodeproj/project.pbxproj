@@ -151,6 +151,7 @@
 		9C758C4A17B4141900478BF6 /* plus_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C758C4417B4141900478BF6 /* plus_red.png */; };
 		9C758C4B17B4141900478BF6 /* plus_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C758C4517B4141900478BF6 /* plus_yellow.png */; };
 		9C758C4D17B416FE00478BF6 /* right_arrow_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C758C4C17B416FA00478BF6 /* right_arrow_button.png */; };
+		9CC12A2C17B5361700AAC04F /* add_your_own_resource.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CC12A2B17B5361700AAC04F /* add_your_own_resource.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -343,6 +344,7 @@
 		9C758C4417B4141900478BF6 /* plus_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus_red.png; sourceTree = "<group>"; };
 		9C758C4517B4141900478BF6 /* plus_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus_yellow.png; sourceTree = "<group>"; };
 		9C758C4C17B416FA00478BF6 /* right_arrow_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_arrow_button.png; sourceTree = "<group>"; };
+		9CC12A2B17B5361700AAC04F /* add_your_own_resource.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_your_own_resource.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -393,6 +395,7 @@
 		0F114DE617B30D7C00A96F21 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9CC12A2B17B5361700AAC04F /* add_your_own_resource.png */,
 				0F114F5B17B311AF00A96F21 /* nationalsuicidepreventionlifeline.png */,
 				0F114F1517B30DDB00A96F21 /* 1000awesomethingscom.png */,
 				0F114F1617B30DDB00A96F21 /* aasuicidology.png */,
@@ -865,6 +868,7 @@
 				9C758C4A17B4141900478BF6 /* plus_red.png in Resources */,
 				9C758C4B17B4141900478BF6 /* plus_yellow.png in Resources */,
 				9C758C4D17B416FE00478BF6 /* right_arrow_button.png in Resources */,
+				9CC12A2C17B5361700AAC04F /* add_your_own_resource.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

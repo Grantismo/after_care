@@ -81,7 +81,15 @@
         [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
     
     emotions = [self.managedObjectContext executeFetchRequest:[Emotion fetchRequest: self.managedObjectContext] error:nil];
-    alternateColors = [NSArray arrayWithObjects:[UIColor afterCareTransparentColor1], [UIColor afterCareTransparentColor2], [UIColor afterCareTransparentColor3], [UIColor afterCareTransparentColor4], [UIColor afterCareTransparentColor5], [UIColor afterCareTransparentColor6], [UIColor afterCareTransparentColor7], nil];
+    alternateColors = [NSArray arrayWithObjects:
+                       [UIColor addBrightness:[UIColor angryColor] amount:.2],
+                       [UIColor addBrightness:[UIColor worthlessColor] amount:.2],
+                       [UIColor addBrightness:[UIColor lonelyColor] amount:.2],
+                       [UIColor addBrightness:[UIColor gratefulColor] amount:.2],
+                       [UIColor addBrightness:[UIColor hurtColor] amount:.2],
+                       [UIColor addBrightness:[UIColor depressedColor] amount:.2],
+                       [UIColor addBrightness:[UIColor positiveColor] amount:.2],
+                       nil];
     
     
     [[StyleManager sharedStyleManager] appendTitleTextAttributes:@{UITextAttributeTextColor : [UIColor afterCareOffWhiteColor]} toNavigationBar:self.navigationController.navigationBar];

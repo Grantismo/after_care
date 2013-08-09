@@ -9,12 +9,8 @@
 #import "AddYourOwnResourcesCell.h"
 #import "StyleManager.h"
 
-#import "ColorTintImageView.h"
-
 @interface AddYourOwnResourcesCell (){
     IBOutlet UILabel* titleLabel;
-    
-    IBOutlet ColorTintImageView* sideImageView;
 }
 
 @end
@@ -25,7 +21,7 @@
     [[StyleManager sharedStyleManager] setBoldFontForLabel:titleLabel];
     //[[StyleManager sharedStyleManager] setItalicFontForLabel:self.descriptionLabel];
             
-    sideImageView.overlayColor = [UIColor greenColor];
+    self.sideImageView.image = [UIImage imageNamed:@"add_your_own_resource"];
 }
 
 @end

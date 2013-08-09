@@ -50,6 +50,15 @@
 
 @end
 
+@interface ColorToDataTransformer : NSObject
+
++ (BOOL)allowsReverseTransformation;
++ (Class)transformedValueClass;
+- (id)transformedValue:(id)value;
+- (id)reverseTransformedValue:(id)value;
+
+@end
+
 @implementation ColorToDataTransformer : NSObject 
 
 + (BOOL)allowsReverseTransformation {
@@ -73,7 +82,4 @@
     return color;
 }
 
-+ (NSArray*) fetchWithNames: (NSString*) names {
-    
-}
 @end
