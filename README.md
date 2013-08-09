@@ -48,6 +48,8 @@ Step 4 of the safety plan is to detail people that the user can contact for help
 
 ![safety plan 4](https://raw.github.com/Grantismo/emote/master/SafetyPlan4.png)
 ####Safety plan (part 5)
+Step 5 of the safety plan is to detail professionals and agencies that the user can depend on. The user is prompted to list out the names and phone numbers of professionals that are equipped to handle the problems the user might be facing. The user can edit these later or skip to the next step.
+
 ![safety plan 5](https://raw.github.com/Grantismo/emote/master/SafetyPlan5.png)
 ####Safety plan (part 6)
 ![safety plan 6](https://raw.github.com/Grantismo/emote/master/SafetyPlan6.png)
