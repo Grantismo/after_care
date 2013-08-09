@@ -36,12 +36,16 @@ The first step of the safety plan is to detail warning signs of systems for the 
 
 ![safety plan 1](https://raw.github.com/Grantismo/emote/master/SafetyPlan1.png)
 ####Safety plan (part 2)
-The next step of the safety plan is to detail internal coping strategies for systems of suicide. The user is prompted to list out in text: thoughts, situations or behaviors might distract or relax them. The user can edit these later or skip to the next step.
+Step 2 of the safety plan is to detail internal coping strategies for systems of suicide. The user is prompted to list out in text: thoughts, situations or behaviors might distract or relax them. The user can edit these later or skip to the next step.
 
 ![safety plan 2](https://raw.github.com/Grantismo/emote/master/SafetyPlan2.png)
 ####Safety plan (part 3)
+Step 3 of the safety plan is to detail places and social settings that the user believes will help them with symptoms of suicide. The user is prompted to list out the names and phone numbers of places that might distract or relax them. The user can edit these later or skip to the next step.
+
 ![safety plan 3](https://raw.github.com/Grantismo/emote/master/SafetyPlan3.png)
 ####Safety plan (part 4)
+Step 4 of the safety plan is to detail people that the user can contact for help. The user is prompted to list out the names and phone numbers of people that will be able to help them feel better. The user can edit these later or skip to the next step.
+
 ![safety plan 4](https://raw.github.com/Grantismo/emote/master/SafetyPlan4.png)
 ####Safety plan (part 5)
 ![safety plan 5](https://raw.github.com/Grantismo/emote/master/SafetyPlan5.png)
