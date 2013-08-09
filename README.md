@@ -107,6 +107,11 @@ Emotions are created in the AppDelegate the first time the app is run on the use
 
 ####Adding Preloaded Resources 
 
+All preloaded resources are stored in the ```resources.json``` file. In order to add new preloaded resource simply add a row to that file following this template:
+
+```
+{"title": "TITLE OF RESOURCE","description": "Description of resource", "link": "http://www.description/of/resource", "emotions": "LONELY / ANGRY / OTHER EMOTIONS"}
+```
 
 ##Contributors
 
