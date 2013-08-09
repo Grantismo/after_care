@@ -58,6 +58,51 @@ Step 6 of the safety plan is to actions the user can take to make their living e
 
 ###Future Modification
 
+We designed Emote to be extensible for future modification. There are two most likely aspects of Emote that could need to be changed in the future. The first is adding new emotions.
+
+Emotions are created in the AppDelegate the first time the app is run on the users device. To change emotions, simply add to the list created in the ```seedEmotions``` method of the AppDelegate. 
+
+```
+- (void)seedEmotions {
+    NSDictionary *emotionColorDict = @{@"positive": [UIColor positiveColor],
+                                       @"angry": [UIColor angryColor],
+                                       @"lonely": [UIColor lonelyColor],
+                                       @"depressed": [UIColor depressedColor],
+                                       @"hurt": [UIColor hurtColor],
+                                       @"grateful": [UIColor gratefulColor],
+                                       @"disinterested": [UIColor disinterestedColor],
+                                       @"worthless": [UIColor worthlessColor]};
+    
+    NSDictionary *emotionDescriptionDict = @{@"positive":
+                                                 @"When you are feeling positive about recovery, it’s a great time to reach out and help others who may be going through their own struggles. Connect with them.",
+                                             @"angry":
+                                                 @"Anger, fear, and rage can push others away, leading to isolation and depression. These resources can connect you to people who can help you cope.",
+                                             @"lonely":
+                                                 @"Many individuals coping with suicidal thoughts feel lonely and isolated. Withdrawing further can seem natural, but these resources can connect you to others who can help.",
+                                             @"depressed":
+                                                 @"Severe depression has a high association with those considering suicide or recovering from a suicide attempt. Here are some resources and groups that can help.",
+                                             @"hurt":
+                                                 @"Feeling like you’ve been hurt or wounded is common amongst those with suicidal thoughts. Here are some resources that can help you address the hurt.",
+                                             @"grateful":
+                                                 @"Being open and honest with others who are struggling can be a true help to them, and you as well. These resources can assist during recovery, and connect you with others.",
+                                             @"worthless":
+                                                 @"Self-reproach, worthlessness and guilt are common sources of despair. You are not alone in these feelings, and these resources can connect you to others who can help.",
+                                             @"disinterested":
+                                                 @"A loss of interest or pleasure in hobbies, outdoor activites or being around friends and family can be frequent. These resources may help engage your mind and interest."};
+    
+    for(NSString* key in emotionColorDict){
+        NSString* name = key;
+        UIColor* color = [emotionColorDict objectForKey:key];
+        Emotion* emotion = (Emotion*)[NSEntityDescription
+                                      insertNewObjectForEntityForName:@"Emotion"inManagedObjectContext:self.managedObjectContext];
+        emotion.name = name;
+        emotion.color = color;
+        
+        emotion.emotionDescription = [emotionDescriptionDict objectForKey:key];
+    }
+}
+```
+
 
 ##Contributors
 
