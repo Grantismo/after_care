@@ -64,7 +64,7 @@ We designed Emote to be extensible for future modification. There are two most l
 
 Emotions are created in the AppDelegate the first time the app is run on the users device. To change emotions, simply add to the dictionaries created in the ```seedEmotions``` method of the AppDelegate. 
 
-```objective-c
+```
 - (void)seedEmotions {
     NSDictionary *emotionColorDict = @{@"positive": [UIColor positiveColor],
                                        @"angry": [UIColor angryColor],
@@ -112,6 +112,15 @@ All preloaded resources are stored in the ```resources.json``` file. In order to
 ```
 {"title": "TITLE OF RESOURCE","description": "Description of resource", "link": "http://www.description/of/resource", "emotions": "LONELY / ANGRY / OTHER EMOTIONS"}
 ```
+
+##Installing Emote On A Device
+
+1. Find the "Emote.ipa file in the project directory.
+2. Double click on the file to open it iTunes.
+3. In iTunes, click the test device and go to the "Apps" section.
+4. You should see Emote in the list of apps on the right.
+5. Click the "Install" button.
+6. Sync the test device and Emote should be installed on completion of the sync.
 
 ##Contributors
 
