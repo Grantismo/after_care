@@ -58,9 +58,11 @@ Step 6 of the safety plan is to actions the user can take to make their living e
 
 ###Future Modification
 
-We designed Emote to be extensible for future modification. There are two most likely aspects of Emote that could need to be changed in the future. The first is adding new emotions.
+We designed Emote to be extensible for future modification. There are two most likely aspects of Emote that could need to be changed in the future. 
 
-Emotions are created in the AppDelegate the first time the app is run on the users device. To change emotions, simply add to the list created in the ```seedEmotions``` method of the AppDelegate. 
+####Adding Emotions
+
+Emotions are created in the AppDelegate the first time the app is run on the users device. To change emotions, simply add to the dictionaries created in the ```seedEmotions``` method of the AppDelegate. 
 
 ```
 - (void)seedEmotions {
@@ -102,6 +104,8 @@ Emotions are created in the AppDelegate the first time the app is run on the use
     }
 }
 ```
+
+####Adding Preloaded Resources 
 
 
 ##Contributors
